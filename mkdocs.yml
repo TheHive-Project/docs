@@ -45,10 +45,10 @@ extra:
       link: "https://twitter.com/TheHive_Project"
     - icon: fontawesome/brands/github
       link: "https://github.com/TheHive-Project"
-    - icon: fontawesome/brands/gitter
-      link: "https://gitter.im/TheHive-Project/TheHive"
+    - icon: fontawesome/brands/discord
+      link: "https://chat.thehive-project.org"
 repo_name: "TheHive-Project/TheHive4py"
-repo_url: "https://github.com/TheHive-Project/TheHive4py"
+repo_url: "https://github.com/TheHive-Project/docs"
 markdown_extensions:
     - toc:
         permalink: "#"
