@@ -47,7 +47,7 @@ extra:
       link: "https://github.com/TheHive-Project"
     - icon: fontawesome/brands/discord
       link: "https://chat.thehive-project.org"
-repo_name: "TheHive-Project/TheHive4py"
+repo_name: "TheHive-Project/docs"
 repo_url: "https://github.com/TheHive-Project/docs"
 markdown_extensions:
     - toc:
