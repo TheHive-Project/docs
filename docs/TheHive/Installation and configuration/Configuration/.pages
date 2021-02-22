@@ -1,0 +1,12 @@
+nav:
+  - Secret key: 'secret.md'
+  - Database: 'database.md'
+  - File Storage: 'file_storage.md' 
+  - Indexes: 'indexes.md'
+  - Akka: 'akka.md'
+  - Authentication: 'authentication.md'
+  - Cortex connector: 'Connectors/cortex.md'
+  - MISP connector: 'Connector/misp.md'
+  - Webhooks: 'webhooks.md'
+  - Streams: 'streams.md'
+  - Logs: 'logs.md'

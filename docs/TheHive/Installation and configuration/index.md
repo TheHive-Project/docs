@@ -68,10 +68,11 @@ If you want to build TheHive from sources, you can follow [this guide](Installat
     └── secret.conf
     ```
 
+A separate [secret.conf](Configuration/secret.md) file is automatically created by Debian or RPM packages. This file should contain a secret that should be used by one instance.
 
 Various aspects can configured in the `application.conf` file:
 
-- [secret.conf](./Configuration/secret.md) 
+
 - [database](./Configuration/database.md)
 - [File storage](./Configuration/file_storage.md)
 - [Indexing](./Configuration/indexes.md)
