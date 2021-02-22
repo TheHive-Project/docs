@@ -1,5 +1,5 @@
 nav:
-    - Home: index.md
+    - Overview: index.md
     - Installation
     - Configuration
     - Architecture
