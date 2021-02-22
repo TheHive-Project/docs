@@ -86,100 +86,106 @@ Authenticate the user using an external OAuth2 authenticator server. The configu
 
 To allow users to login without previously creating them, you can enable autocreation by adding `user.autoCreateOnSso=true` to the top level of your configuration.
 
-### Example with **Keycloak**:
+### *Examples:*
 
-```yaml
-auth {
-  providers: [
-    {name: session}               # required !
-    {name: basic, realm: thehive}
-    {name: local}
-    {name: key}
-    {
-      name: oauth2
-      clientId: "CLIENT_ID"
-      clientSecret: "CLIENT_SECRET"
-      redirectUri: "http://THEHIVE_URL/api/ssoLogin"
-      responseType: "code"
-      grantType: "authorization_code"
-      authorizationUrl: "http://KEYCLOAK/auth/realms/TENANT/protocol/openid-connect/auth"
-      authorizationHeader: "Bearer"
-      tokenUrl: "http://KEYCLOAK/auth/realms/TENANT/protocol/openid-connect/token"
-      userUrl: "http://KEYCLOAK/auth/realms/TENANT/protocol/openid-connect/userinfo"
-      scope: ["openid", "email"]
-      userIdField: "email"
+=== "Keycloak"
+
+    ```yaml
+    auth {
+      providers: [
+        {name: session}               # required !
+        {name: basic, realm: thehive}
+        {name: local}
+        {name: key}
+        {
+          name: oauth2
+          clientId: "CLIENT_ID"
+          clientSecret: "CLIENT_SECRET"
+          redirectUri: "http://THEHIVE_URL/api/ssoLogin"
+          responseType: "code"
+          grantType: "authorization_code"
+          authorizationUrl: "http://KEYCLOAK/auth/realms/TENANT/protocol/openid-connect/auth"
+          authorizationHeader: "Bearer"
+          tokenUrl: "http://KEYCLOAK/auth/realms/TENANT/protocol/openid-connect/token"
+          userUrl: "http://KEYCLOAK/auth/realms/TENANT/protocol/openid-connect/userinfo"
+          scope: ["openid", "email"]
+          userIdField: "email"
+        }
+      ]
     }
-  ]
-}
-```
+    ```
 
-### Example with **Github**
+=== "Github"
 
-```yaml
-   {
-      name: oauth2
-      clientId: "CLIENT_ID"
-      clientSecret: "CLIENT_SECRET"
-      redirectUri: "http://THEHIVE_URL/api/ssoLogin"
-      responseType: code
-      grantType: "authorization_code"
-      authorizationUrl: "https://github.com/login/oauth/authorize"
-      authorizationHeader: "token"
-      tokenUrl: "https://github.com/login/oauth/access_token"
-      userUrl: "https://api.github.com/user"
-      scope: ["user"]
-      userIdField: "email"
-      #userOrganisation: ""
-    }
-```
+    ```yaml
+      {
+          name: oauth2
+          clientId: "CLIENT_ID"
+          clientSecret: "CLIENT_SECRET"
+          redirectUri: "http://THEHIVE_URL/api/ssoLogin"
+          responseType: code
+          grantType: "authorization_code"
+          authorizationUrl: "https://github.com/login/oauth/authorize"
+          authorizationHeader: "token"
+          tokenUrl: "https://github.com/login/oauth/access_token"
+          userUrl: "https://api.github.com/user"
+          scope: ["user"]
+          userIdField: "email"
+          #userOrganisation: ""
+        }
+    ```
+    
+    !!! Note
+        - `CLIENT_ID` and `CLIENT_SECRET` are created in the _OAuth Apps_ section at [https://github.com/settings/developers](https://github.com/settings/developers).
+        - this configuration requires that users set the _Public email_ in their Public Profile on [https://github.com/settings/profile](https://github.com/settings/profile).
 
-CLIENT_ID and CLIENT_SECRET are created in the _OAuth Apps_ section at [https://github.com/settings/developers](https://github.com/settings/developers).
+=== "Microsoft 365" 
 
-**Note**: this configuration requires that users set the _Public email_ in their Public Profile on [https://github.com/settings/profile](https://github.com/settings/profile).
+    ```yaml
+        {
+          name: oauth2
+          clientId: "CLIENT_ID"
+          clientSecret: "CLIENT_SECRET"
+          redirectUri: "http://THEHIVE_URL/api/ssoLogin"
+          responseType: code
+          grantType: "authorization_code"
+          authorizationUrl: "https://login.microsoftonline.com/TENANT/oauth2/v2.0/authorize"
+          authorizationHeader: "Bearer "
+          tokenUrl: "https://login.microsoftonline.com/TENANT/oauth2/v2.0/token"
+          userUrl: "https://graph.microsoft.com/v1.0/me"
+          scope: ["User.Read"]
+          userIdField: "mail"
+          #userOrganisation: "" ## if not existing in the response, use default organisation
+        }
+    ```
 
-### Example with Microsoft 365
+    !!! Note
+        To create `CLIENT_ID`, `CLIENT_SECRET` and `TENANT`, register a new app at [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
 
-```yaml
-    {
-      name: oauth2
-      clientId: "CLIENT_ID"
-      clientSecret: "CLIENT_SECRET"
-      redirectUri: "http://THEHIVE_URL/api/ssoLogin"
-      responseType: code
-      grantType: "authorization_code"
-      authorizationUrl: "https://login.microsoftonline.com/TENANT/oauth2/v2.0/authorize"
-      authorizationHeader: "Bearer "
-      tokenUrl: "https://login.microsoftonline.com/TENANT/oauth2/v2.0/token"
-      userUrl: "https://graph.microsoft.com/v1.0/me"
-      scope: ["User.Read"]
-      userIdField: "mail"
-      #userOrganisation: "" ## if not existing in the response, use default organisation
-    }
-```
+=== "Google" 
 
-To create CLIENT_ID, CLIENT_SECRET and TENANT, register a new app at [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
+    ```yaml
+        {
+          name: oauth2
+          clientId: "CLIENT_ID"
+          clientSecret: "CLIENT_SECRET"
+          redirectUri: "http://THEHIVE_URL/api/ssoLogin"
+          responseType: code
+          grantType: "authorization_code"
+          authorizationUrl: "https://accounts.google.com/o/oauth2/v2/auth"
+          authorizationHeader: "Bearer "
+          tokenUrl: "https://oauth2.googleapis.com/token"
+          userUrl: "https://openidconnect.googleapis.com/v1/userinfo"
+          scope: ["email", "profile", "openid"]
+          userIdField: "email"
+          # userOrganisation: "" ## if not existing in the response, use default organisation
+        }
+    ```
 
-### Example with Google
-
-```yaml
-    {
-      name: oauth2
-      clientId: "CLIENT_ID"
-      clientSecret: "CLIENT_SECRET"
-      redirectUri: "http://THEHIVE_URL/api/ssoLogin"
-      responseType: code
-      grantType: "authorization_code"
-      authorizationUrl: "https://accounts.google.com/o/oauth2/v2/auth"
-      authorizationHeader: "Bearer "
-      tokenUrl: "https://oauth2.googleapis.com/token"
-      userUrl: "https://openidconnect.googleapis.com/v1/userinfo"
-      scope: ["email", "profile", "openid"]
-      userIdField: "email"
-      # userOrganisation: "" ## if not existing in the response, use default organisation
-    }
-```
-
-CLIENT_ID and CLIENT_SECRET are created in the _APIs & Services_ > _Credentials_ section of the [GCP Console](https://console.cloud.google.com/apis/credentials). Instructions on how to create Oauth2 credentials at [https://support.google.com/cloud/answer/6158849](https://support.google.com/cloud/answer/6158849). For the latest reference for Google auth URLs please check Google's [.well-known/openid-configuration](https://accounts.google.com/.well-known/openid-configuration).
+    !!! Note
+        - `CLIENT_ID` and `CLIENT_SECRET` are created in the `_APIs & Services_ > _Credentials_` section of the [GCP Console](https://console.cloud.google.com/apis/credentials)
+        - Instructions on how to create Oauth2 credentials at [https://support.google.com/cloud/answer/6158849](https://support.google.com/cloud/answer/6158849)
+        - For the latest reference for Google auth URLs please check Google's [.well-known/openid-configuration](https://accounts.google.com/.well-known/openid-configuration)
 
 ## pki
 

@@ -55,8 +55,56 @@ If you want to build TheHive from sources, you can follow [this guide](Installat
 
 ## Configuration Guides
 
+!!! info ""
+    The configuration of TheHive is in files stored in the `/etc/thehive` folder:
+    
+    - `application.conf` contains all parameters and options
+    - `logback.xml` is dedicated to log management
+
+    ```
+    /etc/thehive
+    ├── application.conf
+    ├── logback.xml
+    └── secret.conf
+    ```
 
 
+Various aspects can configured in the `application.conf` file:
+
+- [secret.conf](./Configuration/secret.md) 
+- [database](./Configuration/database.md)
+- [File storage](./Configuration/file_storage.md)
+- [Indexing](./Configuration/indexes.md)
+- [Akka](./Configuration/akka.md)
+- [Authentication](./Configuration/authentication.md)
+- Connectors
+    - [Cortex: connecting to one or more organisation](./Configuration/Connectors/cortex.md)
+    - [MISP: connecting to one or more organisation](./Configuration/Connectors/MISP.md)
+- [Webhooks](./Configuration/Webhook.md)
+- [Streams](./Configuration/stream.md)
+
+
+
+
+TODO
+
+- [ ] Initialisation
+- [ ] Database
+- [ ] Index
+- [ ] File storage
+- [ ] Akka
+- [x] Authentication schemes  
+- [x] Connectors
+    - [x] Cortex
+    - [x] MISP
+- [x] Webhooks
+- [ ] Stream
+- [x] Security
+    - [x] HTTPS
+    - [x] Cassandra
+    - [x] Fail2ban
+- [ ] MISC
+- [ ] Logs
 
 ## Uses Cases
 
