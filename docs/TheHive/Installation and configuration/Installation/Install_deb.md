@@ -122,7 +122,11 @@ Later, after having installed TheHive, ensure the user `thehive` owns the path c
 chown -R thehive:thehive /opt/thp_data/files/thehive
 ```
 
-### Option 2: Hadoop
+### Option 2: S3 with Min.io
+
+
+
+### Option 3: Hadoop
 
 If you choose Hadoop distributed filesystem, proceed to installation of the software before configuring it.
 

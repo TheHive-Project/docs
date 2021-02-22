@@ -56,9 +56,21 @@ If you want to build TheHive from sources, you can follow [this guide](Installat
 ## Configuration Guides
 
 
+
+
 ## Uses Cases
 
-### Installing a stand alone server
+### Basic stand alone server
+
+Follow installation guides for you prefered operating system.
+
+### 3 nodes cluster
 
 
-### Installing a cluster
+Installing a cluster with 3 nodes: 
+  
+  - 3 TheHive servers  
+  - 3 Cassandra servers 
+  - 3 Min.IO servers
+
+Go to [this page](Architecture/3_nodes_cluster.md) for a fully detailled installation and configuration guide. 
