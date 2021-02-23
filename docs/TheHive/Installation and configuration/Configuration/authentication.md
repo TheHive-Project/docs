@@ -82,11 +82,7 @@ Authenticate the user using an external OAuth2 authenticator server. The configu
 - defaultOrganisation (string, optional) the default organisation used to login if not present on user info
 - authorizationHeader (string) prefix of the authorization header to get user info: Bearer, token, ...
 
-### User autocreation
-
-To allow users to login without previously creating them, you can enable autocreation by adding `user.autoCreateOnSso=true` to the top level of your configuration.
-
-### *Examples:*
+### *Examples*
 
 === "Keycloak"
 
@@ -186,6 +182,11 @@ To allow users to login without previously creating them, you can enable autocre
         - `CLIENT_ID` and `CLIENT_SECRET` are created in the `_APIs & Services_ > _Credentials_` section of the [GCP Console](https://console.cloud.google.com/apis/credentials)
         - Instructions on how to create Oauth2 credentials at [https://support.google.com/cloud/answer/6158849](https://support.google.com/cloud/answer/6158849)
         - For the latest reference for Google auth URLs please check Google's [.well-known/openid-configuration](https://accounts.google.com/.well-known/openid-configuration)
+
+### User autocreation
+
+To allow users to login without previously creating them, you can enable autocreation by adding `user.autoCreateOnSso=true` to the top level of your configuration.
+
 
 ## pki
 

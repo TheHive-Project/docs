@@ -10,6 +10,7 @@ TheHive can be configured to connect to local Berkeley database or Cassandra dat
 
 
     ```
+    ## Attachment storage configuration
     storage {
     ## Local filesystem
     provider: localfs
@@ -25,6 +26,7 @@ TheHive can be configured to connect to local Berkeley database or Cassandra dat
 === "Min.IO" 
 
     ```
+    ## Attachment storage configuration
     storage {
       provider: s3
       s3 {
@@ -43,7 +45,7 @@ TheHive can be configured to connect to local Berkeley database or Cassandra dat
 === "Apache Hadoop" 
 
     ```
-    ## File storage
+    ## Attachment storage configuration
     ## Hadoop filesystem (HDFS)
     provider: hdfs
     hdfs {
