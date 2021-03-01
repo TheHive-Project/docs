@@ -54,6 +54,7 @@ markdown_extensions:
         permalink: "#"
     - codehilite
     - admonition
+    - pymdownx.critic
     - pymdownx.superfences
     - pymdownx.tabbed
     - pymdownx.details

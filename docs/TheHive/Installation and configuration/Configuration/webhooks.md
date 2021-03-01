@@ -4,7 +4,9 @@ TheHive can notify external system of modification events (case creation, alert 
 
 ## Define webhook endpoints
 In application.conf add the following section:
-```
+
+```yaml
+## Webhook notification
 notification.webhook.endpoints = [
   {
     name: local
@@ -23,8 +25,11 @@ The setting `wsConfig` is the configuration of HTTP client. It contains proxy, S
 `includedTheHiveOrganisations` and `excludedTheHiveOrganisations` defines which organisations can use this endpoint. If `includedTheHiveOrganisations` is empty or contains `*`, all organisation is accepted, except those which are in `excludedTheHiveOrganisations`.
 
 ## Activate webhooks
+
 This action must be done by an organisation admin (with permission manageConfig) and requires to run a curl command:
-```
+
+
+```bash
 read -p 'Enter the URL of TheHive: ' thehive_url
 read -p 'Enter your login: ' thehive_user
 read -s -p 'Enter your password: ' thehive_password
