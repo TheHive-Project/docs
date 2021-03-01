@@ -1,5 +1,3 @@
 nav:
-  - With Debian packages: 'Install_deb.md'
-  - With RPM packages: 'Install_rpm.md'
-  - From binary packages: 'Install_binaries.md'
+  - installation_guide.md
   - Build sources: 'Build_sources.md'

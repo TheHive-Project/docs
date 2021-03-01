@@ -44,6 +44,7 @@ In the case of a cluster, all nodes have to connect to the same index: an instan
 
 ## Installation Guides
 
+- [Installation Guide](Installation/installation_guide.md)
 - Install and configure TheHive 4 on a [Debian](Installation/Install_deb.md) like operating system;
 - Install and configure TheHive 4 on a [Redhat](Installation/Install_rpm.md) like operating system;
 - Install and configure TheHive 4 from [binaries](Installation/Install_binaries.md) packages;
