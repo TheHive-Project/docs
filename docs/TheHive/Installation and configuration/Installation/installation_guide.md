@@ -27,6 +27,16 @@ This page is a step by step installation and configuration guide to get an TheHi
 
         The installation requires Java 8, so refer to your system documentation to install it.
 
+
+!!! Note
+    TheHive can be loaded by Java 11, but not the stable version of Cassandra, which still requires Java 8. 
+    If you set up a cluster for the database distinct from TheHive servers:
+
+      - Cassandra nodes can be loaded by Java 8
+      - TheHive nodes can be loaded by Java 11 
+    
+    For standalone servers, with TheHive and Cassandra on the same OS, we recommend having only Java 8 installed for both applications.
+
 ## Cassandra database
 
 Apache Cassandra is a scalable and high available database. TheHive supports the latest stable version  **3.11.x** of Cassandra.
@@ -157,233 +167,72 @@ To add security measures in Cassandra , refer the the [related administration gu
 
 To add Cassandra nodes, refer the the [related administration guide](../Administration/Clustering.md).
 
-## Choose and install attachment storage
+## File storage
 
 Files uploaded in TheHive (in *task logs* or in *observables*) can be stores in localsystem, in a Hadoop filesystem (recommended) or in the graph database.
 
-For standalone production and test servers , we recommends using local filesystem. If you think about building a cluster with TheHive, you have several possible solutions: using Hadoop or S3 services ; see the related administration guide)[../Administration/Clustering.md] for more details and an example with MinIO servers.  
+For standalone production and test servers , we recommends using local filesystem. If you think about building a cluster with TheHive, you have several possible solutions: using Hadoop or S3 services ; see the related[ administration guide](../Administration/Clustering.md) for more details and an example with MinIO servers.  
 
-### Option 1: Local filesystem
+!!! Example ""
+    === "Local Filesystem"
+
+        !!! Warning
+            This option is perfect **for standalone servers**. If you intend to build a cluster for your instance of TheHive 4 we recommend:
+            
+            - using a NFS share, common to all nodes
+            - having a look at storage solutions implementing S3 or HDFS.
+
+        To store files on the local filesystem, start by choosing the dedicated folder:
+
+        ```bash
+        mkdir -p /opt/thp/thehive/files
+        ```
+
+        This path will be used in the configuration of TheHive.
+
+        Later, after having installed TheHive, ensure the user `thehive` owns the path chosen for storing files:
+
+        ```
+        chown -R thehive:thehive /opt/thp/thehive/files
+        ```
+
+    === "S3 with Min.io"
+
+        An example of installing, configuring and use Min.IO is detailed in [this documentation](../Architecture/3_nodes_cluster.md).
+
+    === "HDFS with Hadoop"
+
+        An example of installing, configuring and use Apache Hadoop is detailed in [this documentation](./hadoop.md).
+
+
+## Indexing engine
+
+Starting from TheHive 4.1.0, a solution to store data indexes is required. These indexes should be unique and the same for all nodes of TheHive cluster. 
+
+- TheHive embed a Lucene engine you can use for standalone server
+- For clusters setups, an instance of Elasticsearch is required 
+
+!!! Example ""
+
+=== "Local lucene engine"
+
+    Create a folder dedicated to host indexes for TheHive: 
+
+    ```bash
+    mkdir /opt/thp/thehive/index
+    chown thehive:thehive -R /opt/thp/thehive/index
+    ```
+
+
+=== "Elasticsearch"
+
+    Use an existing Elasticsearch instance or install a new one. This instance should be reachable by all nodes of a cluster.
+
 
 !!! Note
-    This option is perfect if you **do not** intend to build a cluster for your instance of TheHive 4.
-
-To store files on the local filesystem, start by choosing the dedicated folder:
-
-```bash
-mkdir -p /opt/thp_data/files/thehive
-```
-
-This path will be used in the configuration of TheHive.
-
-Later, after having installed TheHive, ensure the user `thehive` owns the path chosen for storing files:
-
-```
-chown -R thehive:thehive /opt/thp_data/files/thehive
-```
-
-
-### Option 2: S3 with Min.io
-
-### Option 3: Hadoop
-
-If you choose Hadoop distributed filesystem, proceed to installation of the software before configuring it.
-
-#### Installation
-
-- Download hadoop distribution from https://hadoop.apache.org/releases.html and uncompress.
-
-```bash
-cd /tmp
-wget https://downloads.apache.org/hadoop/common/hadoop-3.1.3/hadoop-3.1.3.tar.gz
-cd /opt
-tar zxf /tmp/hadoop-3.1.3.tar.gz
-ln -s hadoop-3.1.3 hadoop
-```
-
-- Create a user and update permissions
-
-```bash
-useradd hadoop
-chown hadoop:root -R /opt/hadoop*
-```
-
-- Create a datastore and set permissions
-
-```bash
-mkdir /opt/thp_data/hdfs
-chown hadoop:root -R /opt/thp_data/hdfs
-```
-
-- Create ssh keys for `hadoop` user:
-
-```bash
-su - hadoop
-ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
-cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-chmod 0600 ~/.ssh/authorized_keys
-```
-
-- Update `.bashrc`file for `hadoop` user. Add following lines:
-
-```
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export HADOOP_HOME=/opt/hadoop
-export PATH=$PATH:$HADOOP_HOME/bin
-export PATH=$PATH:$HADOOP_HOME/sbin
-export HADOOP_MAPRED_HOME=$HADOOP_HOME
-export HADOOP_COMMON_HOME=$HADOOP_HOME
-export HADOOP_HDFS_HOME=$HADOOP_HOME
-export YARN_HOME=$HADOOP_HOME
-```
-
-
-**Note**: Apache has a well detailed [documentation](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html) for more advanced configuration with Hadoop.
-
-
-#### Configuration the Hadoop Master
-
-Configuration files are located in `etc/hadoop` (`/opt/hadoop/etc/hadoop`). They must be identical in all nodes.
-
-**Notes**:
-
-- The configuration described there is for a single node server. This node is the master node, namenode and datanode (refer to [Hadoop documentation](https://hadoop.apache.org/docs/current/) for more information). After validating this node is running successfully, refer to the [related administration guide](../Administration/Clustering.md) to add nodes;
-- Ensure you **update** the port value to something different than `9000` as it is already reserved for TheHive application service;
-
-
-- Edit the file `core-site.xml`:
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-<configuration>
-  <property>
-    <name>fs.defaultFS</name>
-    <value>hdfs://thehive1:10000</value>
-  </property>
-  <property>
-    <name>hadoop.tmp.dir</name>
-    <value>/opt/thp_data/hdfs/temp</value>
-  </property>
-  <property>
-    <name>dfs.client.block.write.replace-datanode-on-failure.best-effort</name>
-    <value>true</value>
-  </property>
-</configuration>
-```
-
-- Edit the file `hdfs-site.xml`
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-<configuration>
-  <property>
-    <name>dfs.replication</name>
-    <value>2</value>
-  </property>
-  <property>
-    <name>dfs.namenode.name.dir</name>
-    <value>/opt/thp_data/hdfs/namenode/data</value>
-  </property>
-  <property>
-    <name>dfs.datanode.name.dir</name>
-    <value>/opt/thp_data/hdfs/datanode/data</value>
-  </property>
-  <property>
-    <name>dfs.namenode.checkpoint.dir</name>
-    <value>/opt/thp_data/hdfs/checkpoint</value>
-  </property>
-  <property>
-    <name>dfs.namenode.http-address</name>
-    <value>0.0.0.0:9870</value>
-  </property>
-  <!--
-  <property>
-    <name>dfs.client.block.write.replace-datanode-on-failure.best-effort</name>
-    <value>true</value>
-  </property>
--->
-  <property>
-    <name>dfs.client.block.write.replace-datanode-on-failure.policy</name>
-    <value>NEVER</value>
-  </property>
-</configuration>
-```
-
-#### Format the volume and start services
-
-- Format  the volume
-
-```bash
-su - hadoop
-cd /opt/hadoop
-bin/hdfs namenode -format
-```
-
-#### Run it as a service
-
----
-
-Create the `/etc/systemd/system/hadoop.service` file with the following content:
-
-```
-[Unit]
-Description=Hadoop
-Documentation=https://hadoop.apache.org/docs/current/index.html
-Wants=network-online.target
-After=network-online.target
-
-[Service]
-WorkingDirectory=/opt/hadoop
-Type=forking
-
-User=hadoop
-Group=hadoop
-Environment=JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-Environment=HADOOP_HOME=/opt/hadoop
-Environment=YARN_HOME=/opt/hadoop
-Environment=HADOOP_COMMON_HOME=/opt/hadoop
-Environment=HADOOP_HDFS_HOME=/opt/hadoop
-Environment=HADOOP_MAPRED_HOME=/opt/hadoop
-Restart=on-failure
-
-TimeoutStartSec=2min
-
-
-ExecStart=/opt/hadoop/sbin/start-all.sh
-ExecStop=/opt/hadoop/sbin/stop-all.sh
-
-StandardOutput=null
-StandardError=null
-
-# Specifies the maximum file descriptor number that can be opened by this process
-LimitNOFILE=65536
-
-# Disable timeout logic and wait until process is stopped
-TimeoutStopSec=0
-
-# SIGTERM signal is used to stop the Java process
-KillSignal=SIGTERM
-
-# Java process is never killed
-SendSIGKILL=no
-
-[Install]
-WantedBy=multi-user.target
-```
-
-#### Start the service
-
-```bash
-service hadoop start
-```
-
-You can check cluster status in [http://thehive1:9870](http://thehive1:9870/)
-
-#### Add nodes
-
-To add Hadoop nodes, refer the the [related administration guide](../Administration/Clustering.md).
+    - Indexes will be created at the first start of TheHive. It can take a certain amount of time, depending the size of the database
+    - Like data and files, indexes should be part of the backup policy
+    - Indexes can removed and created again
 
 
 ## TheHive
@@ -482,9 +331,9 @@ Install TheHive 4.x package of the stable version by using the following command
             ```
 
 
-#### Installing beta versions
+#### Beta versions
 
-To follow beta versions of TheHive4, use the following setup:
+To install beta versions of TheHive4, use the following setup:
 
 !!! Example ""
 
@@ -553,7 +402,7 @@ To follow beta versions of TheHive4, use the following setup:
 
 !!! Warning
 
-    We do not recommend that configuration for production servers.
+    We recommend using or playing with Beta version **for testing purpose only**.
 
 
 ### Configuration
@@ -613,42 +462,67 @@ db {
 }
 ```
 
-#### Local filesystem
-
-If you chose [Option 1: Local filesystem](#option:1_local_filesystem) to store files:
-
-- Update permission of the folder
-
-```bash
-chown -R thehive:thehive /opt/thp_data/files/thehive
-```
-
-- add following lines to TheHive configuration file (`/etc/thehive/application.conf`)
-
-```yml
-storage {
-  provider = localfs
-  localfs.location = /opt/thp_data/files/thehive
-}
-```
-
-#### S3
+#### Filesystem
 
 
-#### Hadoop
+!!! Example ""
 
-If you chose [Option 2: Hadoop](#option:3_hadoop) to store files in a distrubuted filesystem, add following lines to TheHive configuration file (`/etc/thehive/application.conf`)
+    === "Local filesystem"
 
-```yaml
-storage {
-  provider: hdfs
-  hdfs {
-    root: "hdfs://thehive1:10000" # namenode server
-    location: "/thehive"
-    username: thehive
-  }
-}
-```
+        If you chose [Option 1: Local filesystem](#option:1_local_filesystem) to store files:
+
+        1. Ensure permission of the folder
+
+            ```bash
+            chown -R thehive:thehive /opt/thp/thehive/files
+            ```
+
+        2. add following lines to TheHive configuration file (`/etc/thehive/application.conf`)
+
+            ```yml
+            ## Storage configuration
+            storage {
+            provider = localfs
+            localfs.location = /opt/thp/thehive/files
+            }
+            ```
+
+    === "S3"
+        If you chose MinIO and a S3 object storage system to store files in a  filesystem, add following lines to TheHive configuration file (`/etc/thehive/application.conf`)
+
+        ```yaml
+        ## Storage configuration
+        storage {
+          provider: s3
+          s3 {
+            bucket = "thehive"
+            readTimeout = 1 minute
+            writeTimeout = 1 minute
+            chunkSize = 1 MB
+            endpoint = "http://<IP_ADDRESS>:9100"
+            accessKey = "<MINIO ACCESS KEY>"
+            secretKey = "<MINIO SECRET KEY>"
+          }
+        }
+        ```
+
+    === "HDFS"
+        If you chose Apache Hadoop and a HDFS filesystem to store files in a distrubuted filesystem, add following lines to TheHive configuration file (`/etc/thehive/application.conf`)
+
+        ```yaml
+        ## Storage configuration
+        storage {
+          provider: hdfs
+          hdfs {
+            root: "hdfs://thehive1:10000" # namenode server
+            location: "/thehive"
+            username: thehive
+          }
+        }
+        ```
+
+#### Indexes
+
 
 
 ### Run
