@@ -1,17 +1,36 @@
 # Migration to TheHive 4
 
-TheHive 4.0 is delivered with a tool to migrate your data from TheHive 3.x. stored in Elasticsearch. 
+TheHive 4.x is delivered with a tool to migrate your data from TheHive 3.x. stored in Elasticsearch. 
 
 ## Supported versions
 
-The tool only supports migration **from TheHive 3.4.0** and higher. 
+The tool is provided with TheHive 4.x. Depending on the target version, the migration tool supports specific versions. Here is a summary: 
 
-Technically, many reasons explain this limitation: 
 
-- A new database format has been introduced with TheHive 3.4.0,
-- Elasticsearch 6.x came with changes in data structure (mostly related to the definition of document relations)  
+| Migrating from  | Possible target version |
+| --------------- | ----------------------- | 
+| TheHive 3.4.x   | TheHive 4.0.x           |
+| TheHive 3.5.x   | TheHive 4.1.x           |
 
-So, if you want to migrate your data from TheHive 3 to TheHive 4.0, you are invited to update your current instance to TheHive 3.4.0+ before.
+
+!!! Warning ""
+
+    === "Using TheHive 3.4.x"
+        You can only migrate to TheHive 4.0.x. After that, an update to TheHive 4.1.x will be possible. 
+
+        Technically, many reasons explain this limitation: 
+
+          - A new database format has been introduced with TheHive 3.4.0,
+          - Elasticsearch 6.x came with changes in data structure (mostly related to the definition of document relations)  
+
+        So, if you want to migrate your data from TheHive 3 to TheHive 4.0, you are invited to update your current instance to TheHive 3.4.0+ before.
+
+    === "Using TheHive 3.5.x"
+        You can only process to the migration to TheHive 4.1.x. 
+
+
+    === "Using older versions"
+        You need to update your database at least to TheHive 3.4.0.
 
 ## How it works
 
@@ -30,23 +49,23 @@ This tools **must** also have access to Elasticsearch database (http://ES:9200) 
 
 ### Configuration of TheHive 4
 
----
-⚠️ **Important Note**
+!!! Warning
+    In TheHive4, users are identified by their email addresses. Thus, a domain will be appended to usernames in order to migrate users from TheHive 3. 
+    
+    TheHive 4.0 comes with a default domain named `thehive.local`. Starting the migration without explicitely specifying a domain name will result in migrating all users with a username formatted like  `user@thehive.local`. 
 
-In TheHive4, users are identified by their email addresses. Thus, a domain will be appended to usernames in order to migrate users from TheHive 3. 
-TheHive 4.0 comes with a default domain named `thehive.local`. Starting the migration without explicitely specifying a domain name will result in migrating all users with a username formatted like  `user@thehive.local`. 
+    Change the default domain name used to import existing users in the configuration file of TheHive4 (`/etc/thehive/application.conf`) ;  add or update the setting named  `auth.defaultUserDomain`: 
 
----
+    ```yaml
+    auth.defaultUserDomain: "mydomain.com"
+    ```
 
-Change the default domain name used to import existing users in the configuration file of TheHive4 (`/etc/thehive/application.conf`) ;  add or update the setting named  `auth.defaultUserDomain`: 
+    This way, the domain `mydomain.com` will be appended to user accounts imported from TheHive 3.4+ (`user@mydomain.com`).
 
-```yaml
-auth.defaultUserDomain: "mydomain.com"
-```
-
-This way, the domain `mydomain.com` will be appended to user accounts imported from TheHive 3.4+ (`user@mydomain.com`).
 
 ### Run the migration
+
+Prepare, install and configure your new instance of TheHive 4.x by following [the associated guides](../installation-and-configuration/index.md).
 
 Once TheHive4 configuration file (`/etc/thehive/application.conf`) is correctly filled you can run migration tool.
 
@@ -150,13 +169,8 @@ with:
 
 
 
----
-
-⚠️ **Note**
-
-The migration process can be very long, from several hours to several days, depending on the volume of data to migrate. We **highly** recommand to not start the application during the migration.
-
----
+!!! Warning
+    The migration process can be very long, from several hours to several days, depending on the volume of data to migrate. We **highly** recommand to not start the application during the migration.
 
 
 ### Using authentication on Cassandra
