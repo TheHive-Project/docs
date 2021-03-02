@@ -91,17 +91,18 @@ By default, data is stored in `/var/lib/cassandra`.
 ### Configuration
 
 Start by changing the `cluster_name` with `thp`. Run the command `cqlsh`: 
-```
+
+```bash
 cqlsh localhost 9042
 ```
 
-```bash
-UPDATE system.local SET cluster_name = 'thp' where key='local';
+```sql
+cqlsh> UPDATE system.local SET cluster_name = 'thp' where key='local';
 ```
 
 Exit and then run:
 
-```
+```bash
 nodetool flush
 ```
 
@@ -132,7 +133,7 @@ Then restart the service:
 !!! Example ""
     === "Debian"
 
-        ```
+        ```bash
         service cassandra restart
         ```
 
@@ -213,23 +214,21 @@ Starting from TheHive 4.1.0, a solution to store data indexes is required. These
 - For clusters setups, an instance of Elasticsearch is required 
 
 !!! Example ""
+    === "Local lucene engine"
 
-=== "Local lucene engine"
+        Create a folder dedicated to host indexes for TheHive: 
 
-    Create a folder dedicated to host indexes for TheHive: 
+        ```bash
+        mkdir /opt/thp/thehive/index
+        chown thehive:thehive -R /opt/thp/thehive/index
+        ```
 
-    ```bash
-    mkdir /opt/thp/thehive/index
-    chown thehive:thehive -R /opt/thp/thehive/index
-    ```
+    === "Elasticsearch"
 
+        Use an existing Elasticsearch instance or install a new one. This instance should be reachable by all nodes of a cluster.
 
-=== "Elasticsearch"
-
-    Use an existing Elasticsearch instance or install a new one. This instance should be reachable by all nodes of a cluster.
-
-    !!! Note
-        There is no specific requirement regarding the version of Elasticsearch used to store indexes.
+        !!! Note
+            There is no specific requirement regarding the version of Elasticsearch used to store indexes.
 
 
 !!! Note

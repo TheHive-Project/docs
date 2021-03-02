@@ -3,19 +3,32 @@
 
 ## Overview
 
-The scalability of TheHive allows it to be set up as a standalone server or as nodes inside a cluster. Any number of nodes can rely on a database and a file system also setup as standalone servers or a cluster. Before starting installing and configuring, you need to identify and define the targetted architecture.
+The scalability of TheHive allows it to be set up as a standalone server or as nodes inside a cluster. Any number of nodes can rely on a database and a file system also setup as standalone servers or a cluster. 
+
+Before starting installing and configuring, you need to identify and define the targetted architecture.
 
 ![](images/installation-configuration.png)
 
 ### Choose a setup
+The modular architecture makes it support several types of database, file storage system and indexing system. The initial choices made with the target architecture and the setup are crucial, especially for the database.
 
-The modular architecture makes it support several types of database, file storage system and indexing system. The initial choices made with the target architecture and the setup are crucial, especially for the database. 
 If high availability and fault tolerance are necessary, implementing a cluster might be the choice, and this choice determines the database, the file storage and indexing system to install.  
+
+!!! Tip "Hardware Pre-requisites"
+    Hardware requirements depends on the number of concurrent users and how they use the system. The following table give some information to choose the hardware.
+
+    | Number of users | CPU  | RAM   |
+    | --------------- | ---- | ----- |
+    | < 3             | 2    | 4-8   |
+    | < 10            | 4    | 8-16  |
+    | < 20            | 8    | 16-32 |
 
 
 ### Choose a database 
 
-Once the target setup is identified, the first choice to make is the database. Even of local Berkeley DB and Cassandra database are supported, we recommend using [Apache Cassandra](https://cassandra.apache.org/), which is a scalable and high available Database, even for standalone servers. Berkeley DB can be enough for testing purposes.
+Once the target setup is identified, the first choice to make is the database. Even of local Berkeley DB and Cassandra database are supported, we recommend using [Apache Cassandra](https://cassandra.apache.org/), which is a scalable and high available Database, even for standalone servers. 
+
+Berkeley DB can be enough for testing purposes.
 
 !!! Danger "Upgradability"
     This choice is decisive as migration from Berkeley DB to Cassandra **is not possible**.
@@ -24,6 +37,7 @@ Once the target setup is identified, the first choice to make is the database. E
 ### Choose a file storage system
 
 Like for databases, several options exist regarding file system. 
+
 Basically, for standalone setups, using the local filesystem is the easiest solution. If installing a cluster, there are several options:
 
 - Using a share NFS folder
@@ -87,7 +101,7 @@ Various aspects can configured in the `application.conf` file:
 
 Follow the [installation guides](./installation/installation-guide.md) for you prefered operating system.
 
-### 3 nodes cluster
+### Cluster with 3 TheHive nodes
 
 The folling [guide](./architecture/3_nodes_cluster.md) details all the installation and configuration steps to get a cluster with 3 nodes working. The cluster is composed of:  
   
