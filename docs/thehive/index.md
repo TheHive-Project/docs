@@ -26,25 +26,41 @@ title: Home
 
 ---
 
+
+# TheHive 
 TheHive is a scalable, open source and free Security Incident Response Platform designed to make life easier for SOCs, CSIRTs, CERTs and any information security practitioner dealing with security incidents that need to be investigated and acted upon swiftly.
 
 TheHive supports different methods to store data, files, and indexes according to your needs. However, even for a standalone, production server, we
  strongly recommend using Apache Cassandra as a scalable and fault-tolerant database. Files and indexes storage can vary, depending on your target setup ; for standalone server, the local filesystem is suitable, while sereval options are possible in the case of a cluster configuration. 
 
-This documentation provides guides for 
 
-## Guides
+## Installation and configuration guides
+[This documentation](./installation-and-configuration/index.md) contains step-by-step installation instructions for TheHive for different operating systems as well as corresponding binary archives. 
 
-- [Installation and configuration guides](Installation/README.md) : contain step-by-step installation instructions for
- TheHive 4 for different operating systems as well as corresponding binary archives.
-- [Migration guide](Administration/Migration.md): how to migrate your data from TheHive 3.4.0+.
-- [Administration guides](Administration/README.md): can help you leverage or enable more advanced features, or setup
- a more complex architecture.
-- [User guides](User/README.md): including a [Quick start guide](User/Quick-start.md) to get your instance of TheHive
- ready to use.
+All aspects of the configuration are aslo detailled in a dedicated section.
 
-## Webhooks
-Webhooks were not integrated in TheHive 4.0-RC1, but are available since TheHive-4.0-RC2. They are now part of a new notification system that is almost ready but which still needs some work. The basic webhook functionality of the TheHive-3.x releases can be configured as described [here](Administration/Webhook.md). 
+## User guides
+TheHive supports differents roles for users. Depending on if you are an administrator of the plateform, an administrator of an organisation or an analyst you can have access and run differents actions in the plateform. 
+
+The [user guides](./user-guides/index.md) aims at describing all major howtos for users according to their roles and permissions.
+
+
+## Operations
+
+Discover **how to migration from TheHive 3.x to TheHive 4.x** with our [migration guide](operations/migration.md).
+
+Several other operational guides are provided to the community.
+
+- [Setup HTTPS](./operations/https.md) with nginx or haproxy
+- [Backup and restore](operations/backup-restore.md): example on how to backup and restore data stored in Apache Cassandra
+- [Adding security](operations/cassandra-security.md) in Apache Cassandra
+- [Using Fail2Ban](operations/fail2ban.md) and block unwanted connections to the plateform 
+
+## TheHive 3
+If you are still using TheHive 3.x, the associated documentation is available [here](./legacy/thehive3/README.md)
+
+!!! Danger "End of Life"
+    TheHive 3 is coming End of Life. This version no longer benefits from new features. We recommend [migrating](./operations/migration.md) as soon as possible to TheHive 4.x.
 
 ## License
 TheHive is an open source and free software released under the [AGPL](https://github.com/TheHive-Project/TheHive/blob/master/LICENSE) (Affero General Public License). We, TheHive Project, are committed to ensure that TheHive will remain a free and open source project on the long-run.
@@ -79,3 +95,7 @@ If you need to contact the Project's team, send an email to <support@thehive-pro
       - If you have troubles with a Cortex analyzer or would like to request a new one or an improvement to an existing analyzer, please open an issue on the [analyzers' dedicated GitHub repository](https://github.com/TheHive-Project/cortex-analyzers/issues/new).
 
 ## Professional support
+
+![StrangeBee](./images/strangebee.png){: align=left width=120 }
+TheHive is fully developped and maintained by [StrangeBee](https://www.strangebee.com). Should you need specific assistance, be aware that StrangeBee also provides professional services and support. 
+
