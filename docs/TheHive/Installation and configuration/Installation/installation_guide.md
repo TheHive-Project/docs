@@ -228,6 +228,9 @@ Starting from TheHive 4.1.0, a solution to store data indexes is required. These
 
     Use an existing Elasticsearch instance or install a new one. This instance should be reachable by all nodes of a cluster.
 
+    !!! Note
+        There is no specific requirement regarding the version of Elasticsearch used to store indexes.
+
 
 !!! Note
     - Indexes will be created at the first start of TheHive. It can take a certain amount of time, depending the size of the database
@@ -469,7 +472,7 @@ db {
 
     === "Local filesystem"
 
-        If you chose [Option 1: Local filesystem](#option:1_local_filesystem) to store files:
+        If you chose to store files on the local filesystem:
 
         1. Ensure permission of the folder
 
@@ -523,6 +526,33 @@ db {
 
 #### Indexes
 
+Update the `/etc/thehive/application.conf` file accordingly to your setup. 
+
+!!! Example "" 
+    === "Lucene"
+
+        If your setup is a standalone server or you are using a common NFS share, configure TheHive like this:  
+
+        ```yaml
+        ## Index configuration
+        index.search {
+          backend : lucene
+          directory:  /opt/thp/thehive/index
+        }
+        ```
+
+    === "Elasticsearch" 
+
+        If you decided to have access to a centralised index with Elasticsearch, configure TheHive like this:  
+
+        ```yaml
+        ## Index configuration
+        index.search {
+          backend : elasticsearch
+          hostname : ["10.1.2.20"]
+          index-name : thehive
+        }
+        ```
 
 
 ### Run
