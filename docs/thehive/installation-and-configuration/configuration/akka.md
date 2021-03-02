@@ -1,8 +1,9 @@
 # Akka server
 
-> Akka is a toolkit for building highly concurrent, distributed, and resilient message-driven applications for Java and Scala
->
-> -- [https://akka.io/](https://akka.io/)
+!!! Quote
+    Akka is a toolkit for building highly concurrent, distributed, and resilient message-driven applications for Java and Scala
+
+    -- [https://akka.io/](https://akka.io/)
 
 Akka is mainly used to make several nodes of TheHive work together and offer a smooth user experience. 
 
