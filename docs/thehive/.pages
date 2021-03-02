@@ -2,7 +2,7 @@ Title: Home
 nav:
   - index.md
   - 'installation-and-configuration'
-  - 'operations'
   - 'user-guides'
+  - 'operations'
   - api
   - legacy
