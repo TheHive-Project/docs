@@ -5,7 +5,7 @@
 
 The scalability of TheHive allows it to be set up as a standalone server or as nodes inside a cluster. Any number of nodes can rely on a database and a file system also setup as standalone servers or a cluster. Before starting installing and configuring, you need to identify and define the targetted architecture.
 
-![](images/installation_configuration.png)
+![](images/installation-configuration.png)
 
 ### Choose a setup
 
@@ -42,16 +42,12 @@ In the case of a cluster, all nodes have to connect to the same index: an instan
 !!! Tip "Upgradability"
     Starting with a standalone server and Lucene and upgrading to a cluster with Elasticsearch is possible. Indices can be rebuilt. However, it can takes some time.
 
-## Installation Guides
+## Installation Guide
 
-- [Installation Guide](Installation/installation_guide.md)
-- Install and configure TheHive 4 on a [Debian](Installation/Install_deb.md) like operating system;
-- Install and configure TheHive 4 on a [Redhat](Installation/Install_rpm.md) like operating system;
-- Install and configure TheHive 4 from [binaries](Installation/Install_binaries.md) packages;
+The [following Guide](installation/installation-guide.md) let you **prepare**, **install** and **configure** TheHive and its prerequisites for Debian and RPM packages based Operating Systems, as well as for other systems and using our binary packages. 
 
 
-
-If you want to build TheHive from sources, you can follow [this guide](Installation/Build_sources.md).
+If you want to build TheHive from sources, you can follow [this guide](installation/Build-sources.md).
 
 
 ## Configuration Guides
@@ -68,32 +64,32 @@ The configuration of TheHive is in files stored in the `/etc/thehive` folder:
 └── secret.conf
 ```
 
-A separate [secret.conf](Configuration/secret.md) file is automatically created by Debian or RPM packages. This file should contain a secret that should be used by one instance.
+A separate [secret.conf](configuration/secret.md) file is automatically created by Debian or RPM packages. This file should contain a secret that should be used by one instance.
 
 Various aspects can configured in the `application.conf` file:
 
 
-- [database](./Configuration/database.md)
-- [File storage](./Configuration/file_storage.md)
-- [Indexing](./Configuration/indexes.md)
-- [Akka](./Configuration/akka.md)
-- [Authentication](./Configuration/authentication.md)
+- [database](./configuration/database.md)
+- [File storage](./configuration/file-storage.md)
+- [Indexing](./configuration/indexes.md)
+- [Akka](./configuration/akka.md)
+- [Authentication](./configuration/authentication.md)
 - Connectors
-    - [Cortex: connecting to one or more organisation](./Configuration/Connectors/cortex.md)
-    - [MISP: connecting to one or more organisation](./Configuration/Connectors/MISP.md)
-- [Webhooks](./Configuration/Webhooks.md)
-- [Streams](./Configuration/stream.md)
+    - [Cortex: connecting to one or more organisation](./configuration/connectors-cortex.md)
+    - [MISP: connecting to one or more organisation](./configuration/connectors-misp.md)
+- [Webhooks](./configuration/webhooks.md)
+- [Streams](./configuration/stream.md)
 
 
 ## Uses Cases
 
 ### Basic stand alone server
 
-Follow [installation guides](#installation-guides) for you prefered operating system.
+Follow the [installation guides](./installation/installation-guide.md) for you prefered operating system.
 
 ### 3 nodes cluster
 
-The folling [guide](Architecture/3_nodes_cluster.md) details all the installation and configuration steps to get a cluster with 3 nodes working. The cluster is composed of:  
+The folling [guide](./architecture/3_nodes_cluster.md) details all the installation and configuration steps to get a cluster with 3 nodes working. The cluster is composed of:  
   
   - 3 TheHive servers  
   - 3 Cassandra servers 

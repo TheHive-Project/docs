@@ -1,8 +1,8 @@
 Title: Home
 arrange:
   - index.md
-  - 'Installation and configuration'
-  - 'Operations'
-  - 'User guides'
-  - API
-  - Legacy
+  - 'installation-and-configuration'
+  - 'operations'
+  - 'user-guides'
+  - api
+  - legacy
