@@ -1,7 +1,6 @@
 nav:
   - Secret key: 'secret.md'
   - Database & indexes: 'database.md'
-  - Indexes: 'indexes.md'
   - File Storage: 'file-storage.md' 
   - Akka: 'akka.md'
   - Authentication: 'authentication.md'
