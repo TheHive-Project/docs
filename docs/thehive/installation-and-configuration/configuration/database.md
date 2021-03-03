@@ -19,7 +19,7 @@ According to the setup, the instance can use:
 
 A typical database configuration for TheHive looks like this:
 
-```yaml
+```
 ## Database configuration
 db {
   provider: janusgraph
@@ -80,7 +80,7 @@ Database and index engine can be different, depending on the use case and target
 
         For such use cases, local database and indexes are adequate:
 
-        1. Create a dedicated folder. This folder should belong to the user `thehive:thehive`.
+        1. Create a dedicated folder for data and for indexes. These folders should belong to the user `thehive:thehive`.
 
             ```bash
             mkdir /opt/thp/thehive/{data, index}
@@ -89,7 +89,7 @@ Database and index engine can be different, depending on the use case and target
         
         2. Configure TheHive accordingly: 
 
-            ```yaml
+            ```
             ## Database Configuration
             db {
               provider: janusgraph
@@ -114,9 +114,16 @@ Database and index engine can be different, depending on the use case and target
     === "Standalone server with Cassandra" 
 
         1. Install a Cassandra server locally
-        2. Configure TheHive accordingly 
+        2. Create a dedicated folder for indexes. This folder should belong to the user `thehive:thehive`
 
-            ```yaml
+          ```bash
+            mkdir /opt/thp/thehive/index
+            chown -R thehive:thehive /opt/thp/thehive/index
+          ```
+
+        3. Configure TheHive accordingly 
+
+            ```
             ## Database Configuration
             db {
               provider: janusgraph
@@ -151,7 +158,7 @@ Database and index engine can be different, depending on the use case and target
         2. Get access to an Elasticsearch server
         3. Configure TheHive accordingly
 
-            ```yaml
+            ```
             ## Database Configuration
             db {
               provider: janusgraph

@@ -105,7 +105,7 @@ Cortexutils is a Python library containing a set of classes that aims to make us
 ## Docker-templates
 This repository is hosting docker configurations for TheHive, Cortex and 3rd party tools integrations.
 
-![](images/docker-templates.png){: align=left width=110}
+![](images/docker-templates.png){: align=left width=100}
 <div>
   <p align="left">
     <a href="./LICENSE" target"_blank">
