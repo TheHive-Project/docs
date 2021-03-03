@@ -126,7 +126,7 @@ This repository is hosting docker configurations for TheHive, Cortex and 3rd par
 ## Awesome
 This repository aims at reference and centralise a curated list of awesome things related to TheHive & Cortex.
 
-![](images/thehive-awesome.png){: align=left width=90}
+![](images/thehive-awesome.png){: align=left width=110}
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
