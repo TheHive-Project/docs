@@ -63,7 +63,8 @@ Cortex is a powerful observable analysis and active response engine.
 ## Cortex Neurons
 Cortex neurons is the repository of  the reviewed Analyzers and Responders, contributed by the community. 
 
-![](images/cortex.png){: align=left width=110}<div>
+![](images/cortex.png){: align=left width=110}
+<div>
   <p align="left">
     <a href><img src="https://img.shields.io/github/v/tag/thehive-project/Cortex-Analyzers?style=flat&logo=github" alt="Version"></a>          
   </p>
@@ -105,7 +106,7 @@ Cortexutils is a Python library containing a set of classes that aims to make us
 ## Docker-templates
 This repository is hosting docker configurations for TheHive, Cortex and 3rd party tools integrations.
 
-![](images/docker-templates.png){: align=left width=100}
+![](images/docker-templates.png){: align=left width=110}
 <div>
   <p align="left">
     <a href="./LICENSE" target"_blank">
@@ -122,6 +123,8 @@ This repository is hosting docker configurations for TheHive, Cortex and 3rd par
 
 - Sources: [https://github.com/TheHive-Project/Docker-Templates](https://github.com/TheHive-Project/Docker-Templates)
 
+<br>
+
 
 ## Awesome
 This repository aims at reference and centralise a curated list of awesome things related to TheHive & Cortex.
@@ -132,7 +135,7 @@ This repository aims at reference and centralise a curated list of awesome thing
 
 - Website: [https://github.com/TheHive-Project/awesome](https://github.com/TheHive-Project/awesome)
 
-
+<br>
 
 
 ## TODO
