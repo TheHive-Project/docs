@@ -1,10 +1,5 @@
 # Indexes
 
-Starting with TheHive 4.1.0, indexes are managed by a dedicated engine. 
-According to the setup, the instance can use:
-
--  A local engine, **Lucene** driven by TheHive
--  A centralised engine, **Elasticsearch**.
 
 
 !!! Example
@@ -19,14 +14,20 @@ According to the setup, the instance can use:
             ```
 
         2. Configure TheHive accordingly: 
-            
+
             ```yaml
-            ## Indexes configuration
-            index{
-                search {
-                backend : lucene
-                directory:  /opt/thp/thehive/index
+            db {
+              provider: janusgraph
+              janusgraph {
+                  storage {
+                  [..]
+                  }
+                  ## Index configuration
+                  index.search {
+                  backend : lucene
+                  directory:  /opt/thp/thehive/index
                 }
+              }
             }
             ```
 
@@ -36,13 +37,19 @@ According to the setup, the instance can use:
     === "Elasticsearch"
 
         ```yaml
-        ## Indexes configuration
-        index {
-            search {
-            backend : elasticsearch
-            hostname : ["10.1.2.5"]
-            index-name : thehive
-        }
+        db {
+          provider: janusgraph
+          janusgraph {
+            storage {
+              [..]
+            }
+            ## Index configuration
+            index.search {
+              backend : elasticsearch
+              hostname : ["10.1.2.5"]
+              index-name : thehive
+            }
+          }
         }
         ```
 
