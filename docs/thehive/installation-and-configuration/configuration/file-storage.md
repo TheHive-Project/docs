@@ -18,10 +18,11 @@ TheHive can be configured to connect to local Berkeley database or Cassandra dat
             ```yaml
             ## Attachment storage configuration
             storage {
-            ## Local filesystem
-            provider: localfs
-            localfs {
-              location: /opt/thp/thehive/files
+              ## Local filesystem
+              provider: localfs
+              localfs {
+                location: /opt/thp/thehive/files
+              }
             }
             ```
 

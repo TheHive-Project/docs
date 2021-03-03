@@ -1,4 +1,4 @@
-# Installation Guide
+# Step-by-Step guide
 
 This page is a step by step installation and configuration guide to get an TheHive 4 instance up and running. This guide is illustrated with examples for Debian and RPM packages based systems and for installation from binary packages.
 
@@ -162,11 +162,43 @@ For additional configuration options, refer to:
 
 #### Security
 
-To add security measures in Cassandra , refer the the [related administration guide](../Administration/Cassandra_security.md).
+To add security measures in Cassandra , refer the the [related administration guide](../../operations/cassandra-security.md).
 
 #### Add nodes
 
-To add Cassandra nodes, refer the the [related administration guide](../Administration/Clustering.md).
+To add Cassandra nodes, refer the the [related administration guide](../architecture/3_nodes_cluster.md).
+
+## Indexing engine
+
+Starting from TheHive 4.1.0, a solution to store data indexes is required. These indexes should be unique and the same for all nodes of TheHive cluster. 
+
+- TheHive embed a Lucene engine you can use for standalone server
+- For clusters setups, an instance of Elasticsearch is required 
+
+!!! Example ""
+    === "Local lucene engine"
+
+        Create a folder dedicated to host indexes for TheHive: 
+
+        ```bash
+        mkdir /opt/thp/thehive/index
+        chown thehive:thehive -R /opt/thp/thehive/index
+        ```
+
+    === "Elasticsearch"
+
+        Use an existing Elasticsearch instance or install a new one. This instance should be reachable by all nodes of a cluster.
+
+        !!! Note
+            There is no specific requirement regarding the version of Elasticsearch used to store indexes.
+
+
+!!! Note
+    - Indexes will be created at the first start of TheHive. It can take a certain amount of time, depending the size of the database
+    - Like data and files, indexes should be part of the backup policy
+    - Indexes can removed and created again
+
+
 
 ## File storage
 
@@ -205,36 +237,6 @@ For standalone production and test servers , we recommends using local filesyste
 
         An example of installing, configuring and use Apache Hadoop is detailed in [this documentation](./hadoop.md).
 
-
-## Indexing engine
-
-Starting from TheHive 4.1.0, a solution to store data indexes is required. These indexes should be unique and the same for all nodes of TheHive cluster. 
-
-- TheHive embed a Lucene engine you can use for standalone server
-- For clusters setups, an instance of Elasticsearch is required 
-
-!!! Example ""
-    === "Local lucene engine"
-
-        Create a folder dedicated to host indexes for TheHive: 
-
-        ```bash
-        mkdir /opt/thp/thehive/index
-        chown thehive:thehive -R /opt/thp/thehive/index
-        ```
-
-    === "Elasticsearch"
-
-        Use an existing Elasticsearch instance or install a new one. This instance should be reachable by all nodes of a cluster.
-
-        !!! Note
-            There is no specific requirement regarding the version of Elasticsearch used to store indexes.
-
-
-!!! Note
-    - Indexes will be created at the first start of TheHive. It can take a certain amount of time, depending the size of the database
-    - Like data and files, indexes should be part of the backup policy
-    - Indexes can removed and created again
 
 
 ## TheHive
@@ -444,13 +446,9 @@ db {
   janusgraph {
     storage {
       backend: cql
-      hostname: [
-        "127.0.0.1"
-      ] # seed node ip addresses
-
+      hostname: ["127.0.0.1"] # seed node ip addresses
       #username: "<cassandra_username>"       # login to connect to database (if configured in Cassandra)
       #password: "<cassandra_passowrd"
-
       cql {
         cluster-name: thp       # cluster name
         keyspace: thehive           # name of the keyspace
@@ -463,6 +461,53 @@ db {
   }
 }
 ```
+
+#### Indexes
+
+Update `db.storage` configuration part in `/etc/thehive/application.conf` accordingly to your setup. 
+
+!!! Example "" 
+    === "Lucene"
+
+        If your setup is a standalone server or you are using a common NFS share, configure TheHive like this:  
+
+        ```yaml
+        db {
+          provider: janusgraph
+          janusgraph {
+            storage {
+              [..]
+            }
+            ## Index configuration
+            index.search {
+              backend : lucene
+              directory:  /opt/thp/thehive/index
+            }
+          }
+        }
+        ```
+
+    === "Elasticsearch" 
+
+        If you decided to have access to a centralised index with Elasticsearch, configure TheHive like this:  
+
+        ```yaml
+        db {
+          provider: janusgraph
+          janusgraph {
+            storage {
+              [..]
+            }
+            ## Index configuration
+            index.search {
+              backend : elasticsearch
+              hostname : ["10.1.2.20"]
+              index-name : thehive
+            }
+          }
+        }
+        ```
+
 
 #### Filesystem
 
@@ -523,37 +568,6 @@ db {
         }
         ```
 
-#### Indexes
-
-Update the `/etc/thehive/application.conf` file accordingly to your setup. 
-
-!!! Example "" 
-    === "Lucene"
-
-        If your setup is a standalone server or you are using a common NFS share, configure TheHive like this:  
-
-        ```yaml
-        ## Index configuration
-        index.search {
-          backend : lucene
-          directory:  /opt/thp/thehive/index
-        }
-        ```
-
-    === "Elasticsearch" 
-
-        If you decided to have access to a centralised index with Elasticsearch, configure TheHive like this:  
-
-        ```yaml
-        ## Index configuration
-        index.search {
-          backend : elasticsearch
-          hostname : ["10.1.2.20"]
-          index-name : thehive
-        }
-        ```
-
-
 ### Run
 
 Save configuration file and run the service:
@@ -567,7 +581,6 @@ Please note that the service may take some time to start. Once it is started, yo
 
 
 ## Advanced configuration
-
-For additional configuration options, please refer to the [Administration Guide](../Administration/README.md).
+For additional configuration options, please refer to the [Configuration Guides](../index.md#configuration-guides).
 
 

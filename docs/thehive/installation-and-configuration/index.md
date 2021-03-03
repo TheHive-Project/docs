@@ -84,8 +84,8 @@ Various aspects can configured in the `application.conf` file:
 
 
 - [database](./configuration/database.md)
-- [File storage](./configuration/file-storage.md)
 - [Indexing](./configuration/indexes.md)
+- [File storage](./configuration/file-storage.md)
 - [Akka](./configuration/akka.md)
 - [Authentication](./configuration/authentication.md)
 - Connectors

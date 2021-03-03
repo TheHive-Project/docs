@@ -1,8 +1,8 @@
 nav:
   - Secret key: 'secret.md'
-  - Database: 'database.md'
-  - File Storage: 'file-storage.md' 
+  - Database & indexes: 'database.md'
   - Indexes: 'indexes.md'
+  - File Storage: 'file-storage.md' 
   - Akka: 'akka.md'
   - Authentication: 'authentication.md'
   - Cortex connector: 'connectors-cortex.md'

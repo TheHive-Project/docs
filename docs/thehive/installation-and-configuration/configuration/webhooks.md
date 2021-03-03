@@ -11,8 +11,8 @@ The configuration can accept following parameters:
 | `name`                         | string         | the identifier of the endpoint. It is used when the webhook is setup for an organisation |
 | `version`                      | integer        | defines the format of the message. If `version` is `0`, TheHive will send messages with the same format as TheHive3. Currently TheHive only supports version 0. |
 | `wsConfig`                     | dict           | the configuration of HTTP client. It contains proxy, SSL and timeout configuration. |
-| `includedTheHiveOrganisations` | list of string | list of TheHive organisations which can use this MISP server (default: _all_ (`[*]`) |
-| `excludedTheHiveOrganisations` | list of string | list of TheHive organisations which cannot use this MISP server (default: _None_ (`[]`) ) |
+| `includedTheHiveOrganisations` | list of string | list of TheHive organisations which can use this endpoint (default: _all_ (`[*]`) |
+| `excludedTheHiveOrganisations` | list of string | list of TheHive organisations which cannot use this endpoint (default: _None_ (`[]`) ) |
 
 The following section should be added in `application.conf` : 
 
