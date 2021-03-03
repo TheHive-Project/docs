@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/installation-and-configuration/installation/installation-guide/">
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
     
     
       
@@ -41,8 +41,6 @@
       
     
     
-    
-      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../../../custom.css">
     
@@ -172,7 +170,7 @@
 
   <li class="md-tabs__item">
     <a href="../../../.." class="md-tabs__link">
-      TheHive Project
+      Home
     </a>
   </li>
 
@@ -320,7 +318,7 @@
   
     <li class="md-nav__item">
       <a href="../../../.." class="md-nav__link">
-        TheHive Project
+        Home
       </a>
     </li>
   
@@ -1300,44 +1298,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../operations/backup-restore/" class="md-nav__link">
-        Backup and restore
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../operations/cassandra-security/" class="md-nav__link">
-        Security in Apache Cassandra
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../operations/fail2ban/" class="md-nav__link">
-        Fail2ban
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../operations/https/" class="md-nav__link">
-        Https
+      <a href="../../../../update.md" class="md-nav__link">
+        Howto update
       </a>
     </li>
   
@@ -1349,7 +1311,55 @@
   
     <li class="md-nav__item">
       <a href="../../../operations/migration/" class="md-nav__link">
-        Migration to TheHive 4
+        Migration from TheHive 3.x
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/backup-restore/" class="md-nav__link">
+        Backup & restore
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/https/" class="md-nav__link">
+        Configure HTTPS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/fail2ban/" class="md-nav__link">
+        Use fail2ban
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/cassandra-security/" class="md-nav__link">
+        Cassandra & security
       </a>
     </li>
   
@@ -2493,7 +2503,7 @@ chown thehive:thehive -R /opt/thp/thehive/index
 </div>
 <h2 id="file-storage">File storage<a class="headerlink" href="#file-storage" title="Permanent link">#</a></h2>
 <p>Files uploaded in TheHive (in <em>task logs</em> or in <em>observables</em>) can be stores in localsystem, in a Hadoop filesystem (recommended) or in the graph database.</p>
-<p>For standalone production and test servers , we recommends using local filesystem. If you think about building a cluster with TheHive, you have several possible solutions: using Hadoop or S3 services ; see the related<a href="../Administration/Clustering.md"> administration guide</a> for more details and an example with MinIO servers.  </p>
+<p>For standalone production and test servers , we recommends using local filesystem. If you think about building a cluster with TheHive, you have several possible solutions: using Hadoop or S3 services ; see the <a href="../../architecture/3_nodes_cluster/">related guide</a> for more details and an example with MinIO servers.  </p>
 <div class="admonition example">
 <div class="tabbed-set" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Local Filesystem</label><div class="tabbed-content">
 <div class="admonition warning">
@@ -2513,7 +2523,7 @@ chown thehive:thehive -R /opt/thp/thehive/index
 </code></pre></div>
 </div>
 <input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">S3 with Min.io</label><div class="tabbed-content">
-<p>An example of installing, configuring and use Min.IO is detailed in <a href="../Architecture/3_nodes_cluster.md">this documentation</a>.</p>
+<p>An example of installing, configuring and use Min.IO is detailed in <a href="../../architecture/3_nodes_cluster/">this documentation</a>.</p>
 </div>
 <input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><label for="__tabbed_5_3">HDFS with Hadoop</label><div class="tabbed-content">
 <p>An example of installing, configuring and use Apache Hadoop is detailed in <a href="../hadoop/">this documentation</a>.</p>
@@ -2820,7 +2830,7 @@ localfs.location = /opt/thp/thehive/files
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 3, 2021 08:28:47</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 3, 2021 13:33:59</span>
     
   </small>
 </div>
@@ -2940,10 +2950,10 @@ localfs.location = /opt/thp/thehive/files
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.3981fc68.min.js"></script>
       
     
   </body>
