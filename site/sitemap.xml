@@ -160,15 +160,11 @@
      <lastmod>2021-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://thehive-project.github.io/docs/thehive/operations/migration/</loc>
+     <lastmod>2021-03-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/operations/backup-restore/</loc>
-     <lastmod>2021-03-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://thehive-project.github.io/docs/thehive/operations/cassandra-security/</loc>
-     <lastmod>2021-03-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://thehive-project.github.io/docs/thehive/operations/fail2ban/</loc>
      <lastmod>2021-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -176,7 +172,11 @@
      <lastmod>2021-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://thehive-project.github.io/docs/thehive/operations/migration/</loc>
+     <loc>https://thehive-project.github.io/docs/thehive/operations/fail2ban/</loc>
+     <lastmod>2021-03-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://thehive-project.github.io/docs/thehive/operations/cassandra-security/</loc>
      <lastmod>2021-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>

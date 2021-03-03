@@ -24,7 +24,7 @@ TheHive is a scalable, open source and free Security Incident Response Platform 
   </p>
 </div>
 
-- Sources: [https://github.com/TheHive-Project/TheHive]()
+- Sources: [https://github.com/TheHive-Project/TheHive](https://github.com/TheHive-Project/TheHive)
 - Documentation: [https://docs.thehive-project.org/docs/thehive/](thehive/index.md)
 
 
@@ -41,8 +41,8 @@ TheHive4py is a Python API client for TheHive.
   </p>
 </div>
 
-- Sources: [https://github.com/TheHive-Project/TheHive4py]()
-- Documentation: [https://thehive-project.github.io/TheHive4py/]()
+- Sources: [https://github.com/TheHive-Project/TheHive4py](https://github.com/TheHive-Project/TheHive4py)
+- Documentation: [https://thehive-project.github.io/TheHive4py/](https://thehive-project.github.io/TheHive4py/)
 
 
 ## Cortex
@@ -61,7 +61,7 @@ Cortex is a powerful observable analysis and active response engine.
 - Documentation: [https://github.com/TheHive-Project/CortexDocs](https://github.com/TheHive-Project/CortexDocs)
 
 ## Cortex Neurons
-Cortex neurons is the repository of published Analyzers and Responders shared by the community.
+Cortex neurons is the repository of  the reviewed Analyzers and Responders, contributed by the community. 
 
 ![](images/cortex.png){: align=left width=110}<div>
   <p align="left">
@@ -100,6 +100,11 @@ Cortexutils is a Python library containing a set of classes that aims to make us
 
 - Sources: [https://github.com/TheHive-Project/Cortexutils](https://github.com/TheHive-Project/Cortexutils)
 - Documentation: [https://github.com/TheHive-Project/Cortexutils](https://github.com/TheHive-Project/Cortexutils)
+
+
+## Docker-templates
+
+
 
 
 ## Awesome

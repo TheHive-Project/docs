@@ -170,7 +170,7 @@
 
   <li class="md-tabs__item">
     <a href="../.." class="md-tabs__link">
-      TheHive Project
+      Home
     </a>
   </li>
 
@@ -318,7 +318,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        TheHive Project
+        Home
       </a>
     </li>
   
@@ -1208,44 +1208,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../operations/backup-restore/" class="md-nav__link">
-        Backup and restore
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../operations/cassandra-security/" class="md-nav__link">
-        Security in Apache Cassandra
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../operations/fail2ban/" class="md-nav__link">
-        Fail2ban
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../operations/https/" class="md-nav__link">
-        Https
+      <a href="../../update.md" class="md-nav__link">
+        Howto update
       </a>
     </li>
   
@@ -1257,7 +1221,55 @@
   
     <li class="md-nav__item">
       <a href="../operations/migration/" class="md-nav__link">
-        Migration to TheHive 4
+        Migration from TheHive 3.x
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/backup-restore/" class="md-nav__link">
+        Backup & restore
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/https/" class="md-nav__link">
+        Configure HTTPS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/fail2ban/" class="md-nav__link">
+        Use fail2ban
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/cassandra-security/" class="md-nav__link">
+        Cassandra & security
       </a>
     </li>
   
@@ -2214,7 +2226,7 @@
 </div>
 <h2 id="installation-guide">Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">#</a></h2>
 <p>The <a href="installation/installation-guide/">following Guide</a> let you <strong>prepare</strong>, <strong>install</strong> and <strong>configure</strong> TheHive and its prerequisites for Debian and RPM packages based Operating Systems, as well as for other systems and using our binary packages. </p>
-<p>If you want to build TheHive from sources, you can follow <a href="installation/Build-sources.md">this guide</a>.</p>
+<p>If you want to build TheHive from sources, you can follow <a href="installation/build-sources/">this guide</a>.</p>
 <h2 id="configuration-guides">Configuration Guides<a class="headerlink" href="#configuration-guides" title="Permanent link">#</a></h2>
 <p>The configuration of TheHive is in files stored in the <code>/etc/thehive</code> folder:</p>
 <ul>
@@ -2229,8 +2241,7 @@
 <p>A separate <a href="configuration/secret/">secret.conf</a> file is automatically created by Debian or RPM packages. This file should contain a secret that should be used by one instance.</p>
 <p>Various aspects can configured in the <code>application.conf</code> file:</p>
 <ul>
-<li><a href="configuration/database/">database</a></li>
-<li><a href="./configuration/indexes.md">Indexing</a></li>
+<li><a href="configuration/database/">database and indexing</a></li>
 <li><a href="configuration/file-storage/">File storage</a></li>
 <li><a href="configuration/akka/">Akka</a></li>
 <li><a href="configuration/authentication/">Authentication</a></li>
@@ -2240,7 +2251,7 @@
 </ul>
 </li>
 <li><a href="configuration/webhooks/">Webhooks</a></li>
-<li><a href="./configuration/stream.md">Streams</a></li>
+<li><a href="configuration/streams/">Streams</a></li>
 </ul>
 <h2 id="uses-cases">Uses Cases<a class="headerlink" href="#uses-cases" title="Permanent link">#</a></h2>
 <h3 id="basic-stand-alone-server">Basic stand alone server<a class="headerlink" href="#basic-stand-alone-server" title="Permanent link">#</a></h3>
@@ -2260,7 +2271,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 3, 2021 08:28:47</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 3, 2021 13:33:59</span>
     
   </small>
 </div>

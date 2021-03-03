@@ -170,7 +170,7 @@
 
   <li class="md-tabs__item">
     <a href="../../../.." class="md-tabs__link">
-      TheHive Project
+      Home
     </a>
   </li>
 
@@ -318,7 +318,7 @@
   
     <li class="md-nav__item">
       <a href="../../../.." class="md-nav__link">
-        TheHive Project
+        Home
       </a>
     </li>
   
@@ -1097,44 +1097,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../operations/backup-restore/" class="md-nav__link">
-        Backup and restore
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../operations/cassandra-security/" class="md-nav__link">
-        Security in Apache Cassandra
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../operations/fail2ban/" class="md-nav__link">
-        Fail2ban
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../operations/https/" class="md-nav__link">
-        Https
+      <a href="../../../../update.md" class="md-nav__link">
+        Howto update
       </a>
     </li>
   
@@ -1146,7 +1110,55 @@
   
     <li class="md-nav__item">
       <a href="../../../operations/migration/" class="md-nav__link">
-        Migration to TheHive 4
+        Migration from TheHive 3.x
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/backup-restore/" class="md-nav__link">
+        Backup & restore
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/https/" class="md-nav__link">
+        Configure HTTPS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/fail2ban/" class="md-nav__link">
+        Use fail2ban
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/cassandra-security/" class="md-nav__link">
+        Cassandra & security
       </a>
     </li>
   
@@ -2046,7 +2058,7 @@ export YARN_HOME=$HADOOP_HOME
 <p>Configuration files are located in <code>etc/hadoop</code> (<code>/opt/hadoop/etc/hadoop</code>). They must be identical in all nodes.</p>
 <p><strong>Notes</strong>:</p>
 <ul>
-<li>The configuration described there is for a single node server. This node is the master node, namenode and datanode (refer to <a href="https://hadoop.apache.org/docs/current/">Hadoop documentation</a> for more information). After validating this node is running successfully, refer to the <a href="../Administration/Clustering.md">related administration guide</a> to add nodes;</li>
+<li>The configuration described there is for a single node server. This node is the master node, namenode and datanode (refer to <a href="https://hadoop.apache.org/docs/current/">Hadoop documentation</a> for more information). After validating this node is running successfully, refer to the <a href="../../architecture/3_nodes_cluster/">related guide</a> to add nodes;</li>
 <li>
 <p>Ensure you <strong>update</strong> the port value to something different than <code>9000</code> as it is already reserved for TheHive application service;</p>
 </li>
@@ -2169,7 +2181,7 @@ WantedBy=multi-user.target
 </code></pre></div>
 <p>You can check cluster status in <a href="http://thehive1:9870/">http://thehive1:9870</a></p>
 <h2 id="add-nodes">Add nodes<a class="headerlink" href="#add-nodes" title="Permanent link">#</a></h2>
-<p>To add Hadoop nodes, refer the the <a href="../Administration/Clustering.md">related administration guide</a>.</p>
+<p>To add Hadoop nodes, refer the the <a href="../../architecture/3_nodes_cluster/">related guide</a>.</p>
                 
                   
                     
@@ -2178,7 +2190,7 @@ WantedBy=multi-user.target
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 2, 2021 11:39:03</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 3, 2021 13:33:59</span>
     
   </small>
 </div>
