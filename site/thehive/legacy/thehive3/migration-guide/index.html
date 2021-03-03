@@ -1,0 +1,2839 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/legacy/thehive3/migration-guide/">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Migration guide - TheHive Project Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../custom.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#migration-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://thehive-project.github.io/docs" title="TheHive Project Documentation" class="md-header__button md-logo" aria-label="TheHive Project Documentation">
+      
+  <img src="../../../../images/thehive.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TheHive Project Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Migration guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/TheHive-Project/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TheHive-Project/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../.." class="md-tabs__link">
+      TheHive Project
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+        TheHive
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://github.com/TheHive-Project/CortexDocs" target="_blank" class="md-tabs__link">
+      Cortex
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://thehive-project.github.io/Cortex-Analyzers/" target="_blank" class="md-tabs__link">
+      Cortex Neurons
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://thehive-project.github.io/TheHive4py/" target="_blank" class="md-tabs__link">
+      TheHive4py
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://github.com/TheHive-Project/Cortex4py" target="_blank" class="md-tabs__link">
+      Cortex4py
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../resources/Keynotes/list/" class="md-tabs__link">
+        Resources
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://thehive-project.github.io/docs" title="TheHive Project Documentation" class="md-nav__button md-logo" aria-label="TheHive Project Documentation">
+      
+  <img src="../../../../images/thehive.png" alt="logo">
+
+    </a>
+    TheHive Project Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/TheHive-Project/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TheHive-Project/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        TheHive Project
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        TheHive
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="TheHive" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          TheHive
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Installation and configuration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installation and configuration" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installation and configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2_2">
+        Installation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/installation/installation-guide/" class="md-nav__link">
+        Step-by-Step guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/installation/build-sources/" class="md-nav__link">
+        Build sources
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_2_3">
+        Configuration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configuration" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/configuration/secret/" class="md-nav__link">
+        Secret key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/configuration/database/" class="md-nav__link">
+        Database & indexes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/configuration/file-storage/" class="md-nav__link">
+        File Storage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/configuration/akka/" class="md-nav__link">
+        Akka
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/configuration/authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/configuration/connectors-cortex/" class="md-nav__link">
+        Cortex connector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/configuration/connectors-misp/" class="md-nav__link">
+        MISP connector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/configuration/webhooks/" class="md-nav__link">
+        Webhooks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/configuration/streams/" class="md-nav__link">
+        Streams
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/configuration/logs/" class="md-nav__link">
+        Logs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" type="checkbox" id="__nav_2_2_4" >
+      
+      <label class="md-nav__link" for="__nav_2_2_4">
+        Architecture
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Architecture" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation-and-configuration/architecture/3_nodes_cluster/" class="md-nav__link">
+        Use TheHive as a cluster
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        User guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="User guides" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          User guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/" class="md-nav__link">
+        User guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" type="checkbox" id="__nav_2_3_2" >
+      
+      <label class="md-nav__link" for="__nav_2_3_2">
+        Administration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Administration" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administration/analyzer-templates/" class="md-nav__link">
+        Analyzer templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administration/custom-fields/" class="md-nav__link">
+        Custom fields
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administration/observable-types/" class="md-nav__link">
+        Observable types
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administration/organisations/" class="md-nav__link">
+        Organisations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administration/profiles/" class="md-nav__link">
+        Profiles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administration/tactics-techniques-procedures/" class="md-nav__link">
+        Tactics, Techniques & Procedures
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administration/tags-and-taxonomies/" class="md-nav__link">
+        Tags and taxonomies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administration/users/" class="md-nav__link">
+        Users
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/administration/webhooks/" class="md-nav__link">
+        Webhooks
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" type="checkbox" id="__nav_2_3_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3_3">
+        Alerts
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Alerts" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Alerts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/alerts/alert-definition/" class="md-nav__link">
+        Alert definition
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/alerts/create-alerts/" class="md-nav__link">
+        Create alerts
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" type="checkbox" id="__nav_2_3_4" >
+      
+      <label class="md-nav__link" for="__nav_2_3_4">
+        Cases
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Cases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Cases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/cases/case-definition/" class="md-nav__link">
+        Case definition
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/cases/close-case/" class="md-nav__link">
+        Close case
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/cases/create-case/" class="md-nav__link">
+        Create case
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/cases/create-observables%20/" class="md-nav__link">
+        Create observables 
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/cases/create-tasks/" class="md-nav__link">
+        Create tasks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/cases/export/" class="md-nav__link">
+        Export
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/cases/run-analyzers/" class="md-nav__link">
+        Run analyzers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/cases/run-responders/" class="md-nav__link">
+        Run responders
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/cases/sharing/" class="md-nav__link">
+        Sharing
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_5" type="checkbox" id="__nav_2_3_5" >
+      
+      <label class="md-nav__link" for="__nav_2_3_5">
+        Organisation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Organisation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Organisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/organisation/case-templates/" class="md-nav__link">
+        Case templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/organisation/ui-configuration/" class="md-nav__link">
+        Ui configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/organisation/users-management/" class="md-nav__link">
+        Users management
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      <label class="md-nav__link" for="__nav_2_4">
+        Operations
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Operations" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Operations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/backup-restore/" class="md-nav__link">
+        Backup and restore
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/cassandra-security/" class="md-nav__link">
+        Security in Apache Cassandra
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/fail2ban/" class="md-nav__link">
+        Fail2ban
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/https/" class="md-nav__link">
+        Https
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/migration/" class="md-nav__link">
+        Migration to TheHive 4
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      <label class="md-nav__link" for="__nav_2_5">
+        Api
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Api" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
+      
+      <label class="md-nav__link" for="__nav_2_6">
+        Legacy
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Legacy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Legacy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1" type="checkbox" id="__nav_2_6_1" checked>
+      
+      <label class="md-nav__link" for="__nav_2_6_1">
+        Thehive3
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Thehive3" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Thehive3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feature-set/" class="md-nav__link">
+        Feature set
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Migration guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Migration guide
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-34x-to-350" class="md-nav__link">
+    From 3.4.x to 3.5.0
+  </a>
+  
+    <nav class="md-nav" aria-label="From 3.4.x to 3.5.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-identify-the-version-of-elasticsearch-which-created-your-database-index" class="md-nav__link">
+    How to identify the version of Elasticsearch which created your database index ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-database-was-created-with-elasticsearch-5x-or-earlier" class="md-nav__link">
+    Your database was created with Elasticsearch 5.x or earlier
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-database-was-created-with-elasticsearch-6x" class="md-nav__link">
+    Your database was created with Elasticsearch 6.x
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-33x-to-340" class="md-nav__link">
+    From 3.3.x to 3.4.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-30x-to-304" class="md-nav__link">
+    From 3.0.x to 3.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-213x-to-300" class="md-nav__link">
+    From 2.13.x to 3.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-2130-or-2131-to-2132" class="md-nav__link">
+    From 2.13.0 or 2.13.1 to 2.13.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-212x-to-213x" class="md-nav__link">
+    From 2.12.x to 2.13.x
+  </a>
+  
+    <nav class="md-nav" aria-label="From 2.12.x to 2.13.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-updates" class="md-nav__link">
+    Configuration updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-role" class="md-nav__link">
+    Alert role
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch" class="md-nav__link">
+    ElasticSearch
+  </a>
+  
+    <nav class="md-nav" aria-label="ElasticSearch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-structure-migration" class="md-nav__link">
+    Data structure migration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    System requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warnings-you-can-safely-ignore-with-es-55" class="md-nav__link">
+    Warnings You Can Safely Ignore with ES 5.5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-211x-to-212x" class="md-nav__link">
+    From 2.11.x to 2.12.x
+  </a>
+  
+    <nav class="md-nav" aria-label="From 2.11.x to 2.12.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-migration" class="md-nav__link">
+    Database migration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-210x-to-211x" class="md-nav__link">
+    From 2.10.x to 2.11.x
+  </a>
+  
+    <nav class="md-nav" aria-label="From 2.10.x to 2.11.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-migration_1" class="md-nav__link">
+    Database migration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misp-to-alert" class="md-nav__link">
+    MISP to alert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-changes" class="md-nav__link">
+    Configuration changes
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#misp-certificate-authority-deprecated" class="md-nav__link">
+    MISP certificate authority deprecated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cortex-and-misp-http-client-options" class="md-nav__link">
+    Cortex and MISP HTTP client options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    Packages
+  </a>
+  
+    <nav class="md-nav" aria-label="Packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-rpm-and-deb-packages" class="md-nav__link">
+    New RPM and DEB packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_1" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1_4" type="checkbox" id="__nav_2_6_1_4" >
+      
+      <label class="md-nav__link" for="__nav_2_6_1_4">
+        Admin
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Admin" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_6_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Admin
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/admin-guide/" class="md-nav__link">
+        Administrator's guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/backup-restore/" class="md-nav__link">
+        Backup and restore data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/certauth/" class="md-nav__link">
+        Single Sign-On on TheHive with X.509 Certificates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/cluster/" class="md-nav__link">
+        Cluster Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/configuration/" class="md-nav__link">
+        Configuration Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/default-configuration/" class="md-nav__link">
+        Default configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/schema_version/" class="md-nav__link">
+        Schema version
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/updating/" class="md-nav__link">
+        Update TheHive
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/upgrade_to_thehive_3_4_and_es_6_x/" class="md-nav__link">
+        Upgrade to thehive 3 4 and es 6 x
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/upgrade_to_thehive_3_5_and_es_7_x/" class="md-nav__link">
+        Migration from Elasticsearch 6.8.2 to ES 7.x
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/webhooks/" class="md-nav__link">
+        WebHooks
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1_5" type="checkbox" id="__nav_2_6_1_5" >
+      
+      <label class="md-nav__link" for="__nav_2_6_1_5">
+        Api
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Api" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_6_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        TheHive API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/alert/" class="md-nav__link">
+        Alert
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/artifact/" class="md-nav__link">
+        Observable
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/case/" class="md-nav__link">
+        Case
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/log/" class="md-nav__link">
+        Log
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/model/" class="md-nav__link">
+        TheHive Model Definition
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/request/" class="md-nav__link">
+        Request
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/task/" class="md-nav__link">
+        Task
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/user/" class="md-nav__link">
+        User
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1_5_11" type="checkbox" id="__nav_2_6_1_5_11" >
+      
+      <label class="md-nav__link" for="__nav_2_6_1_5_11">
+        Connectors
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Connectors" data-md-level="5">
+        <label class="md-nav__title" for="__nav_2_6_1_5_11">
+          <span class="md-nav__icon md-icon"></span>
+          Connectors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/connectors/" class="md-nav__link">
+        Connectors API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1_5_11_2" type="checkbox" id="__nav_2_6_1_5_11_2" >
+      
+      <label class="md-nav__link" for="__nav_2_6_1_5_11_2">
+        Cortex
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Cortex" data-md-level="6">
+        <label class="md-nav__title" for="__nav_2_6_1_5_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cortex
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/connectors/cortex/" class="md-nav__link">
+        Cortex manipulation through TheHive
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/connectors/cortex/analyzer/" class="md-nav__link">
+        Analyzer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/connectors/cortex/job/" class="md-nav__link">
+        Job
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1_5_11_3" type="checkbox" id="__nav_2_6_1_5_11_3" >
+      
+      <label class="md-nav__link" for="__nav_2_6_1_5_11_3">
+        Misp
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Misp" data-md-level="6">
+        <label class="md-nav__title" for="__nav_2_6_1_5_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          Misp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/connectors/misp/" class="md-nav__link">
+        MISP connector
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1_6" type="checkbox" id="__nav_2_6_1_6" >
+      
+      <label class="md-nav__link" for="__nav_2_6_1_6">
+        Installation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installation" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_6_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/install-guide/" class="md-nav__link">
+        Installation Guide
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/TheHive-Project/CortexDocs" target="_blank" class="md-nav__link">
+        Cortex
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://thehive-project.github.io/Cortex-Analyzers/" target="_blank" class="md-nav__link">
+        Cortex Neurons
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://thehive-project.github.io/TheHive4py/" target="_blank" class="md-nav__link">
+        TheHive4py
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/TheHive-Project/Cortex4py" target="_blank" class="md-nav__link">
+        Cortex4py
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Resources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      <label class="md-nav__link" for="__nav_7_1">
+        Keynotes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Keynotes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Keynotes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../resources/Keynotes/list/" class="md-nav__link">
+        Additional Resources
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-34x-to-350" class="md-nav__link">
+    From 3.4.x to 3.5.0
+  </a>
+  
+    <nav class="md-nav" aria-label="From 3.4.x to 3.5.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-identify-the-version-of-elasticsearch-which-created-your-database-index" class="md-nav__link">
+    How to identify the version of Elasticsearch which created your database index ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-database-was-created-with-elasticsearch-5x-or-earlier" class="md-nav__link">
+    Your database was created with Elasticsearch 5.x or earlier
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-database-was-created-with-elasticsearch-6x" class="md-nav__link">
+    Your database was created with Elasticsearch 6.x
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-33x-to-340" class="md-nav__link">
+    From 3.3.x to 3.4.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-30x-to-304" class="md-nav__link">
+    From 3.0.x to 3.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-213x-to-300" class="md-nav__link">
+    From 2.13.x to 3.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-2130-or-2131-to-2132" class="md-nav__link">
+    From 2.13.0 or 2.13.1 to 2.13.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-212x-to-213x" class="md-nav__link">
+    From 2.12.x to 2.13.x
+  </a>
+  
+    <nav class="md-nav" aria-label="From 2.12.x to 2.13.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-updates" class="md-nav__link">
+    Configuration updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-role" class="md-nav__link">
+    Alert role
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch" class="md-nav__link">
+    ElasticSearch
+  </a>
+  
+    <nav class="md-nav" aria-label="ElasticSearch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-structure-migration" class="md-nav__link">
+    Data structure migration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    System requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warnings-you-can-safely-ignore-with-es-55" class="md-nav__link">
+    Warnings You Can Safely Ignore with ES 5.5
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-211x-to-212x" class="md-nav__link">
+    From 2.11.x to 2.12.x
+  </a>
+  
+    <nav class="md-nav" aria-label="From 2.11.x to 2.12.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-migration" class="md-nav__link">
+    Database migration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-210x-to-211x" class="md-nav__link">
+    From 2.10.x to 2.11.x
+  </a>
+  
+    <nav class="md-nav" aria-label="From 2.10.x to 2.11.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-migration_1" class="md-nav__link">
+    Database migration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misp-to-alert" class="md-nav__link">
+    MISP to alert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-changes" class="md-nav__link">
+    Configuration changes
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#misp-certificate-authority-deprecated" class="md-nav__link">
+    MISP certificate authority deprecated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cortex-and-misp-http-client-options" class="md-nav__link">
+    Cortex and MISP HTTP client options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    Packages
+  </a>
+  
+    <nav class="md-nav" aria-label="Packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-rpm-and-deb-packages" class="md-nav__link">
+    New RPM and DEB packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_1" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/TheHive-Project/docs/edit/master/docs/thehive/legacy/thehive3/migration-guide.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="migration-guide">Migration guide<a class="headerlink" href="#migration-guide" title="Permanent link">#</a></h1>
+<h2 id="from-34x-to-350">From 3.4.x to 3.5.0<a class="headerlink" href="#from-34x-to-350" title="Permanent link">#</a></h2>
+<p>Taking into account the EoL of version 6.x. of Elasticsearch, TheHive 3.5.0 is the first version to support Elasticsearch 7.x. This version introduce breaking changes.  This time,  we had no choice, we were not able to make TheHive support smoothly the ES upgrade. </p>
+<p>TheHive 3.5.0 supports Elasticsearch 7.x <strong>ONLY</strong>.</p>
+<p>This first steps before starting the upgrade process are: </p>
+<ul>
+<li>Identify the version of Elasticsearch which created your index</li>
+<li>Stop TheHive service</li>
+<li>Stop Elasticsearch service</li>
+</ul>
+<h3 id="how-to-identify-the-version-of-elasticsearch-which-created-your-database-index">How to identify the version of Elasticsearch which created your database index ?<a class="headerlink" href="#how-to-identify-the-version-of-elasticsearch-which-created-your-database-index" title="Permanent link">#</a></h3>
+<hr />
+<p>The software <code>jq</code> is required to manipulate JSON and create new indexes. More information at <a href="">https://stedolan.github.io/jq/</a>. </p>
+<hr />
+<p>Run the following command : </p>
+<div class="highlight"><pre><span></span><code>curl -s http://127.0.0.1:9200/the_hive_15?human <span class="p">|</span> jq <span class="s1">&#39;.the_hive_15.settings.index.version.created_string&#39;</span>
+</code></pre></div>
+<ul>
+<li>if the output is similar to <code>"5.x"</code>  then your database index has been created with Elasticsearch 5.x  reindexing is required, you should follow <a href="../admin/upgrade_to_thehive_3_5_and_es_7_x/">a dedicated process to upgrade</a>. </li>
+<li>If it is   <code>"6.x"</code> then your database has been created with Elasticsearch 6.</li>
+</ul>
+<h3 id="your-database-was-created-with-elasticsearch-5x-or-earlier">Your database was created with Elasticsearch 5.x or earlier<a class="headerlink" href="#your-database-was-created-with-elasticsearch-5x-or-earlier" title="Permanent link">#</a></h3>
+<p>This is where things might be complicated. This upgrade progress  requires handling the database index by updating parameters, and reindex before updating Elasticsearch, and updating TheHive.</p>
+<p>Read carefully <a href="../admin/upgrade_to_thehive_3_5_and_es_7_x/">the dedicated documentation</a>. It should help you run this specific actions on your Elasticsearch database, and also install or update application whether you are using DEB, RPM or binary packages, and even docker images.</p>
+<h3 id="your-database-was-created-with-elasticsearch-6x">Your database was created with Elasticsearch 6.x<a class="headerlink" href="#your-database-was-created-with-elasticsearch-6x" title="Permanent link">#</a></h3>
+<p>If you started using TheHive with Elasticsearch 6.x, then you just need to update the configuration of Elasticsearch to reflect this one: </p>
+<div class="highlight"><pre><span></span><code>[..]
+http.host: 127.0.0.1
+discovery.type: single-node
+cluster.name: hive
+script.allowed_types: inline
+thread_pool.search.queue_size: 100000
+thread_pool.write.queue_size: 10000
+</code></pre></div>
+<p>Following parameters *<em>are not accepted anymore</em> by Elasticsearch 7: </p>
+<ul>
+<li><code>thread_pool.index.queue_size</code></li>
+<li><code>thread_pool.bulk.queue_size</code> </li>
+</ul>
+<p>With TheHive service stopped, ensure the new version of Elasticsearch starts.</p>
+<p>If everything is ok, then TheHive 3.5.0 can be installed. To run this operation successfully, you need to <strong>update your repository configuration</strong>  if you are using DEB and RPM packages, or specify the right version to install if using docker. Read carefully the <a href="../installation/install-guide/">installation guide</a>. </p>
+<h2 id="from-33x-to-340">From 3.3.x to 3.4.0<a class="headerlink" href="#from-33x-to-340" title="Permanent link">#</a></h2>
+<p>Starting from version 3.4.0-RC1, TheHive supports Elasticsearch 6 and will continue to work with Elasticsearch 5.x.</p>
+<p>TheHive 3.4.0-RC1 and later versions communicate with Elasticsearch using its HTTP service (9200/tcp by default) instead of its legacy binary protocol (9300/tcp by default). If you have a firewall between TheHive and Elasticsearch, you probably need to update its rules to change to the new port number.</p>
+<p>The configuration file (<code>application.conf</code>) needs some modifications to reflect the protocol change:</p>
+<ul>
+<li>The setting <code>search.host</code> is replaced by <code>search.uri</code></li>
+<li>The general format of the URI is: <code>http(s)://host:port,host:port(/prefix)?querystring</code>. Multiple <code>host:port</code> combinations can be specified, separated by commas. Options can be specified using a standard URI query string syntax, eg. <code>cluster.name=hive</code>.</li>
+<li>The <code>search.cluster</code>setting is no longer used.</li>
+<li>Authentication can be configured with the <code>search.user</code> and <code>search.password</code> settings.</li>
+</ul>
+<p>When SSL/TLS is enabled, you can set a truststore and a keystore. The truststore contains the certificate authorities used to validate remote certificates. The keystore contains the certificate and the private key used to connect to the Elasticsearch cluster. The configuration is:
+<div class="highlight"><pre><span></span><code>search {
+  keyStore {
+    path: &quot;/path/to/keystore/file&quot;
+    type: &quot;JKS&quot; # or PKCS12
+    password: &quot;secret.password.of.keystore&quot;
+  }
+  trustStore {
+    path: &quot;/path/to/truststore/file&quot;
+    type: &quot;JKS&quot;
+    password: &quot;secret.password.of.truststore&quot;
+  }
+}
+</code></pre></div></p>
+<p>The Elasticsearch client also accepts the following settings:
+ - <code>circularRedirectsAllowed</code> (<code>true</code>/<code>false</code>)
+ - <code>connectionRequestTimeout</code> (number of seconds)
+ - <code>connectTimeout</code>
+ - <code>contentCompressionEnabled.foreach(requestConfigBuilder.setContentCompressionEnabled)</code>
+ - <code>search.cookieSpec</code> (??)
+ - <code>expectContinueEnabled</code> (<code>true</code>/<code>false</code>)
+ - <code>maxRedirects</code> (number)
+ - <code>proxy</code> -- not yet supported
+ - <code>proxyPreferredAuthSchemes</code> -- not yet supported
+ - <code>redirectsEnabled</code> (<code>true</code>/<code>false</code>)
+ - <code>relativeRedirectsAllowed</code> (<code>true</code>/<code>false</code>)
+ - <code>socketTimeout</code> (number of seconds)
+ - <code>targetPreferredAuthSchemes</code> (??) </p>
+<p>The configuration items <code>keepalive</code>, <code>pageSize</code>, <code>nbshards</code> and <code>nbreplicas</code> are still valid.</p>
+<p>For practical details, you can have a look <a href="../admin/upgrade_to_thehive_3_4_and_es_6_x/">here</a> for an example of migration of TheHive and Elasticsearch.</p>
+<h2 id="from-30x-to-304">From 3.0.x to 3.0.4<a class="headerlink" href="#from-30x-to-304" title="Permanent link">#</a></h2>
+<p>TheHive 3.0.4 (Cerana 0.4) comes with new MISP settings to filter events that will be imported as alerts. Please refer to <a href="../admin/configuration/#73-event-filters">MISP event filters</a> configuration section.
+The maximum number of custom fields and metrics in a case is 50 by default. If you try to put more, ElasticSearch will raise an error. You can now increase the limit by adding in your application.conf:
+<div class="highlight"><pre><span></span><code>index {
+  settings {
+    # Maximum number of nested fields
+    mapping.nested_fields.limit = 100
+  }
+}
+</code></pre></div>
+The data schema has been changed in Cerana to support some dashboard features. At the first connection, TheHive will ask you to migrate the data. A new index, called <code>the_hive_13</code> by default, will be created then.  See
+<a href="../admin/updating/">Updating</a>.</p>
+<h2 id="from-213x-to-300">From 2.13.x to 3.0.0<a class="headerlink" href="#from-213x-to-300" title="Permanent link">#</a></h2>
+<p>The schema of data has been changed in Cerana to integrate dashboard. At the first request, TheHive will ask you to migrate the data. A new index, called <code>the_hive_12</code> by default, will be created then.  See
+<a href="../admin/updating/">Updating</a>.</p>
+<h2 id="from-2130-or-2131-to-2132">From 2.13.0 or 2.13.1 to 2.13.2<a class="headerlink" href="#from-2130-or-2131-to-2132" title="Permanent link">#</a></h2>
+<p>At the first connection to TheHive 2.13.2, a migration of the database will be
+asked. This will create a new ElasticSearch index (<code>the_hive_11</code> by default). See
+<a href="../admin/updating/">Updating</a>.</p>
+<h2 id="from-212x-to-213x">From 2.12.x to 2.13.x<a class="headerlink" href="#from-212x-to-213x" title="Permanent link">#</a></h2>
+<h3 id="configuration-updates">Configuration updates<a class="headerlink" href="#configuration-updates" title="Permanent link">#</a></h3>
+<p><code>play.crypto.secret</code> is deprecated, use <code>play.http.secret.key</code> instead.</p>
+<p><code>auth.type</code> is deprecated, use <code>auth.provider</code> instead.</p>
+<p><strong>Basic authentication is disabled by default. We strongly recommand to update the clients that rely on the API to interact with TheHive to use the new API key authentication method</strong>. This feature has been added in this release. If you need to enable
+basic authentication, use <code>auth.method.basic=true</code> in <code>application.conf</code></p>
+<p>Note that the <a href="https://github.com/TheHive-Project/TheHive4py">TheHive4Py 1.3.0</a> Python library also adds
+API key authentication support.</p>
+<h3 id="alert-role">Alert role<a class="headerlink" href="#alert-role" title="Permanent link">#</a></h3>
+<p>A new role "alert" has been added. Only users with this role can create an
+alert. If you have tool that uses TheHive API to create alerts, you must give
+the ability to do it in user administration.</p>
+<h3 id="elasticsearch">ElasticSearch<a class="headerlink" href="#elasticsearch" title="Permanent link">#</a></h3>
+<p>TheHive 2.13 uses ElasticSearch 5.x. Our tests have been done on ElasticSearch
+5.5. So we recommend to use this specific version, even if TheHive should work
+perfectly with ElasticSearch 5.6 that doesn't introduce breaking changes.</p>
+<h4 id="data-structure-migration">Data structure migration<a class="headerlink" href="#data-structure-migration" title="Permanent link">#</a></h4>
+<p>Before upgrading ElasticSearch, <a href="../admin/backup-restore/">backup all your indices</a>.
+Then remove all indices except the last index of TheHive (most probably
+the_hive_10). You can list all indices with the following command:</p>
+<p><code>curl http://127.0.0.1:9200/_cat/indices</code></p>
+<p>ElasticSearch has changed the structure of its data directory (please refer to
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/_path_to_data_on_disk.html">Path to data on disk</a>).
+The node name in the path where data are stored (DATA_DIR) must be removed.
+Stop ElasticSearch and execute the following lines to change the directory
+structure:
+<div class="highlight"><pre><span></span><code>echo -n &#39;Enter the path of ElasticSearch data: &#39;
+read DATA_DIR
+echo -n &#39;Enter the name of your cluster [hive]: &#39;
+read CLUSTER_NAME
+
+mv ${DATA_DIR}/${CLUSTER_NAME:=hive}/* ${DATA_DIR}
+rmdir ${DATA_DIR}/${CLUSTER_NAME}
+</code></pre></div></p>
+<h4 id="system-requirements">System requirements<a class="headerlink" href="#system-requirements" title="Permanent link">#</a></h4>
+<p>ElasticSearch 5.x requires at least 262144 memory map areas (vm.max_map_count).
+Run sysctl -w vm.max_map_count=262144. To make this setting persistent after a
+server restart, add <code>vm.max_map_count = 262144</code> in <code>/etc/sysctl.conf</code> (or to
+<code>/etc/sysctl.d/80-elasticsearch.conf</code>)</p>
+<h4 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h4>
+<p>The configuration of ElasticSearch should contain the following settings:
+<div class="highlight"><pre><span></span><code>http.host: 127.0.0.1
+transport.host: 127.0.0.1
+cluster.name: hive
+script.inline: true
+thread_pool.index.queue_size: 100000
+thread_pool.search.queue_size: 100000
+thread_pool.bulk.queue_size: 100000
+</code></pre></div>
+Adapt <code>http.host</code> and <code>transport.host</code> to your environment.</p>
+<h4 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">#</a></h4>
+<p>The default <a href="https://store.docker.com/images/elasticsearch">ElasticSearch image</a> has
+been deprecated. It is recommended to use the
+<a href="docker.elastic.co/elasticsearch/elasticsearch">docker image from Elastic.co</a>.</p>
+<p>The new image doesn't use the same user ID so you need to change the owner of the data
+files. You can simply run <code>chown -R 1000.1000 $DATA_DIR</code> (DATA_DIR is the folder
+which contains ElasticSearch data).</p>
+<p>Then you can use the following script:
+<div class="highlight"><pre><span></span><code>docker run \
+  --name elasticsearch \
+  --hostname elasticsearch \
+  --rm \
+  --publish 127.0.0.1:9200:9200 \
+    --publish 127.0.0.1:9300:9300 \
+  --volume ***DATA_DIR***:/usr/share/elasticsearch/data \
+    -e &quot;http.host=0.0.0.0&quot; \
+    -e &quot;transport.host=0.0.0.0&quot; \
+    -e &quot;xpack.security.enabled=false&quot; \
+    -e &quot;cluster.name=hive&quot; \
+  -e &quot;script.inline=true&quot; \
+  -e &quot;thread_pool.index.queue_size=100000&quot; \
+  -e &quot;thread_pool.search.queue_size=100000&quot; \
+  -e &quot;thread_pool.bulk.queue_size=100000&quot; \
+    docker.elastic.co/elasticsearch/elasticsearch:5.5.2
+</code></pre></div></p>
+<p><strong>Note</strong>: TheHive doesn't support X-Pack. <strong>Don't enable it</strong>.</p>
+<h4 id="warnings-you-can-safely-ignore-with-es-55">Warnings You Can Safely Ignore with ES 5.5<a class="headerlink" href="#warnings-you-can-safely-ignore-with-es-55" title="Permanent link">#</a></h4>
+<p>ElasticSearch 5.5 will output the following warnings:
+ - <code>unexpected docvalues type NONE for field '_parent' (expected one of [SORTED, SORTED_SET]). Re-index with correct docvalues type.</code>
+ You can safely ignore this message. For more information see issues <a href="https://github.com/elastic/elasticsearch/issues/25849">#25849</a>
+ and <a href="https://github.com/elastic/elasticsearch/issues/26341">#26341</a>
+ - <code>License [will expire] on [***]. If you have a new license, please update it.</code>
+ Ignore this warning as TheHive doesn't use Elasticsearch's commercial features.</p>
+<p><strong>Note</strong>: ElasticSearch 5.6 fixes those warnings.</p>
+<h2 id="from-211x-to-212x">From 2.11.x to 2.12.x<a class="headerlink" href="#from-211x-to-212x" title="Permanent link">#</a></h2>
+<h3 id="database-migration">Database migration<a class="headerlink" href="#database-migration" title="Permanent link">#</a></h3>
+<p>At the first connection to TheHive 2.12, a migration of the database will be
+asked. This will create a new ElasticSearch index (the_hive_10). See
+<a href="../admin/updating/">Updating</a>.</p>
+<h2 id="from-210x-to-211x">From 2.10.x to 2.11.x<a class="headerlink" href="#from-210x-to-211x" title="Permanent link">#</a></h2>
+<h3 id="database-migration_1">Database migration<a class="headerlink" href="#database-migration_1" title="Permanent link">#</a></h3>
+<p>At the first connection to TheHive 2.11, a migration of the database will be
+asked. This will create a new ElastciSearch index (the_hive_9). See
+<a href="../admin/updating/">Updating</a>.</p>
+<h3 id="misp-to-alert">MISP to alert<a class="headerlink" href="#misp-to-alert" title="Permanent link">#</a></h3>
+<p>MISP synchronization is now done using alerting framework. MISP events are seen
+like other alert. You can use
+<a href="https://github.com/TheHive-Project/TheHive4py">TheHive4py</a> to create your own alert.</p>
+<h3 id="configuration-changes">Configuration changes<a class="headerlink" href="#configuration-changes" title="Permanent link">#</a></h3>
+<h4 id="misp-certificate-authority-deprecated">MISP certificate authority deprecated<a class="headerlink" href="#misp-certificate-authority-deprecated" title="Permanent link">#</a></h4>
+<p>Specifying certificate authority in MISP configuration using "cert" key is now
+deprecated. You must replace it by
+- before:
+<div class="highlight"><pre><span></span><code>misp {
+  [...]
+  cert = &quot;/path/to/truststore.jks&quot;
+}
+</code></pre></div>
+- after:
+<div class="highlight"><pre><span></span><code>misp {
+  [...]
+  ws.ssl.trustManager.stores = [
+    {
+      type: &quot;JKS&quot;
+      path: &quot;/path/to/truststore.jks&quot;
+    }
+  ]
+}
+</code></pre></div></p>
+<p><code>ws</code> key can be placed in MISP server section or in global MISP section. In the
+latter, ws configuration will be applied
+on all MISP instances.</p>
+<h4 id="cortex-and-misp-http-client-options">Cortex and MISP HTTP client options<a class="headerlink" href="#cortex-and-misp-http-client-options" title="Permanent link">#</a></h4>
+<p>HTTP client used by Cortex and MISP is more configurable. Proxy can be
+configured, with or without authentication. Refer to
+<a href="../admin/configuration/#8-http-client-configuration">configuration</a> for all
+possible options.</p>
+<h3 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">#</a></h3>
+<h4 id="new-rpm-and-deb-packages">New RPM and DEB packages<a class="headerlink" href="#new-rpm-and-deb-packages" title="Permanent link">#</a></h4>
+<p>RPM and DEB packages are now available. This makes the installation easier than using a
+binary package (ZIP). See the <a href="../installation/install-guide/">Installation Guide</a> for reference.</p>
+<h4 id="docker_1">Docker<a class="headerlink" href="#docker_1" title="Permanent link">#</a></h4>
+<p>All-in-One docker (containing TheHive and Cortex) is not provided any longer.
+New TheHive docker image doesn't contain ElasticSearch. We recommend to use
+docker-compose to link TheHive, ElasticSearch and Cortex dockers. For more
+information, see the <a href="../installation/install-guide/">Installation Guide</a> for reference.</p>
+<p>TheHive configuration is located in <code>/etc/thehive/application.conf</code> for all
+packages. If you use docker package you must update its location (previously was
+<code>/opt/docker/conf/application.conf</code>).</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 2, 2021 11:39:03</span>
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../feature-set/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Feature set
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../admin/admin-guide/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Administrator's guide
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://www.thehive-project.org" target="_blank" rel="noopener" title="www.thehive-project.org" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://blog.thehive-project.org" target="_blank" rel="noopener" title="blog.thehive-project.org" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/TheHive_Project" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/TheHive-Project" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://chat.thehive-project.org" target="_blank" rel="noopener" title="chat.thehive-project.org" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.3981fc68.min.js"></script>
+      
+    
+  </body>
+</html>

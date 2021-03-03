@@ -1,0 +1,3370 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/legacy/thehive3/installation/install-guide/">
+      
+      <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Installation Guide - TheHive Project Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../custom.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installation-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://thehive-project.github.io/docs" title="TheHive Project Documentation" class="md-header__button md-logo" aria-label="TheHive Project Documentation">
+      
+  <img src="../../../../../images/thehive.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TheHive Project Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/TheHive-Project/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TheHive-Project/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../.." class="md-tabs__link">
+      TheHive Project
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../" class="md-tabs__link md-tabs__link--active">
+        TheHive
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://github.com/TheHive-Project/CortexDocs" target="_blank" class="md-tabs__link">
+      Cortex
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://thehive-project.github.io/Cortex-Analyzers/" target="_blank" class="md-tabs__link">
+      Cortex Neurons
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://thehive-project.github.io/TheHive4py/" target="_blank" class="md-tabs__link">
+      TheHive4py
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://github.com/TheHive-Project/Cortex4py" target="_blank" class="md-tabs__link">
+      Cortex4py
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../resources/Keynotes/list/" class="md-tabs__link">
+        Resources
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://thehive-project.github.io/docs" title="TheHive Project Documentation" class="md-nav__button md-logo" aria-label="TheHive Project Documentation">
+      
+  <img src="../../../../../images/thehive.png" alt="logo">
+
+    </a>
+    TheHive Project Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/TheHive-Project/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TheHive-Project/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        TheHive Project
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        TheHive
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="TheHive" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          TheHive
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Installation and configuration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installation and configuration" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installation and configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2_2">
+        Installation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/installation/installation-guide/" class="md-nav__link">
+        Step-by-Step guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/installation/build-sources/" class="md-nav__link">
+        Build sources
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_2_3">
+        Configuration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configuration" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/secret/" class="md-nav__link">
+        Secret key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/database/" class="md-nav__link">
+        Database & indexes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/file-storage/" class="md-nav__link">
+        File Storage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/akka/" class="md-nav__link">
+        Akka
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/connectors-cortex/" class="md-nav__link">
+        Cortex connector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/connectors-misp/" class="md-nav__link">
+        MISP connector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/webhooks/" class="md-nav__link">
+        Webhooks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/streams/" class="md-nav__link">
+        Streams
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/configuration/logs/" class="md-nav__link">
+        Logs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" type="checkbox" id="__nav_2_2_4" >
+      
+      <label class="md-nav__link" for="__nav_2_2_4">
+        Architecture
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Architecture" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation-and-configuration/architecture/3_nodes_cluster/" class="md-nav__link">
+        Use TheHive as a cluster
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        User guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="User guides" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          User guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/" class="md-nav__link">
+        User guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" type="checkbox" id="__nav_2_3_2" >
+      
+      <label class="md-nav__link" for="__nav_2_3_2">
+        Administration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Administration" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administration/analyzer-templates/" class="md-nav__link">
+        Analyzer templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administration/custom-fields/" class="md-nav__link">
+        Custom fields
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administration/observable-types/" class="md-nav__link">
+        Observable types
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administration/organisations/" class="md-nav__link">
+        Organisations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administration/profiles/" class="md-nav__link">
+        Profiles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administration/tactics-techniques-procedures/" class="md-nav__link">
+        Tactics, Techniques & Procedures
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administration/tags-and-taxonomies/" class="md-nav__link">
+        Tags and taxonomies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administration/users/" class="md-nav__link">
+        Users
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/administration/webhooks/" class="md-nav__link">
+        Webhooks
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" type="checkbox" id="__nav_2_3_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3_3">
+        Alerts
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Alerts" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Alerts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/alerts/alert-definition/" class="md-nav__link">
+        Alert definition
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/alerts/create-alerts/" class="md-nav__link">
+        Create alerts
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" type="checkbox" id="__nav_2_3_4" >
+      
+      <label class="md-nav__link" for="__nav_2_3_4">
+        Cases
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Cases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Cases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/cases/case-definition/" class="md-nav__link">
+        Case definition
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/cases/close-case/" class="md-nav__link">
+        Close case
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/cases/create-case/" class="md-nav__link">
+        Create case
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/cases/create-observables%20/" class="md-nav__link">
+        Create observables 
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/cases/create-tasks/" class="md-nav__link">
+        Create tasks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/cases/export/" class="md-nav__link">
+        Export
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/cases/run-analyzers/" class="md-nav__link">
+        Run analyzers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/cases/run-responders/" class="md-nav__link">
+        Run responders
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/cases/sharing/" class="md-nav__link">
+        Sharing
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_5" type="checkbox" id="__nav_2_3_5" >
+      
+      <label class="md-nav__link" for="__nav_2_3_5">
+        Organisation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Organisation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Organisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/organisation/case-templates/" class="md-nav__link">
+        Case templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/organisation/ui-configuration/" class="md-nav__link">
+        Ui configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guides/organisation/users-management/" class="md-nav__link">
+        Users management
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      <label class="md-nav__link" for="__nav_2_4">
+        Operations
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Operations" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Operations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../operations/backup-restore/" class="md-nav__link">
+        Backup and restore
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../operations/cassandra-security/" class="md-nav__link">
+        Security in Apache Cassandra
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../operations/fail2ban/" class="md-nav__link">
+        Fail2ban
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../operations/https/" class="md-nav__link">
+        Https
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../operations/migration/" class="md-nav__link">
+        Migration to TheHive 4
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      <label class="md-nav__link" for="__nav_2_5">
+        Api
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Api" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
+      
+      <label class="md-nav__link" for="__nav_2_6">
+        Legacy
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Legacy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Legacy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1" type="checkbox" id="__nav_2_6_1" checked>
+      
+      <label class="md-nav__link" for="__nav_2_6_1">
+        Thehive3
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Thehive3" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Thehive3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feature-set/" class="md-nav__link">
+        Feature set
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migration-guide/" class="md-nav__link">
+        Migration guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1_4" type="checkbox" id="__nav_2_6_1_4" >
+      
+      <label class="md-nav__link" for="__nav_2_6_1_4">
+        Admin
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Admin" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_6_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Admin
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/admin-guide/" class="md-nav__link">
+        Administrator's guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/backup-restore/" class="md-nav__link">
+        Backup and restore data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/certauth/" class="md-nav__link">
+        Single Sign-On on TheHive with X.509 Certificates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/cluster/" class="md-nav__link">
+        Cluster Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/configuration/" class="md-nav__link">
+        Configuration Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/default-configuration/" class="md-nav__link">
+        Default configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/schema_version/" class="md-nav__link">
+        Schema version
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/updating/" class="md-nav__link">
+        Update TheHive
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/upgrade_to_thehive_3_4_and_es_6_x/" class="md-nav__link">
+        Upgrade to thehive 3 4 and es 6 x
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/upgrade_to_thehive_3_5_and_es_7_x/" class="md-nav__link">
+        Migration from Elasticsearch 6.8.2 to ES 7.x
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../admin/webhooks/" class="md-nav__link">
+        WebHooks
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1_5" type="checkbox" id="__nav_2_6_1_5" >
+      
+      <label class="md-nav__link" for="__nav_2_6_1_5">
+        Api
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Api" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_6_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        TheHive API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/alert/" class="md-nav__link">
+        Alert
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/artifact/" class="md-nav__link">
+        Observable
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/case/" class="md-nav__link">
+        Case
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/log/" class="md-nav__link">
+        Log
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/model/" class="md-nav__link">
+        TheHive Model Definition
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/request/" class="md-nav__link">
+        Request
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/task/" class="md-nav__link">
+        Task
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/user/" class="md-nav__link">
+        User
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1_5_11" type="checkbox" id="__nav_2_6_1_5_11" >
+      
+      <label class="md-nav__link" for="__nav_2_6_1_5_11">
+        Connectors
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Connectors" data-md-level="5">
+        <label class="md-nav__title" for="__nav_2_6_1_5_11">
+          <span class="md-nav__icon md-icon"></span>
+          Connectors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/connectors/" class="md-nav__link">
+        Connectors API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1_5_11_2" type="checkbox" id="__nav_2_6_1_5_11_2" >
+      
+      <label class="md-nav__link" for="__nav_2_6_1_5_11_2">
+        Cortex
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Cortex" data-md-level="6">
+        <label class="md-nav__title" for="__nav_2_6_1_5_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cortex
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/connectors/cortex/" class="md-nav__link">
+        Cortex manipulation through TheHive
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/connectors/cortex/analyzer/" class="md-nav__link">
+        Analyzer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/connectors/cortex/job/" class="md-nav__link">
+        Job
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1_5_11_3" type="checkbox" id="__nav_2_6_1_5_11_3" >
+      
+      <label class="md-nav__link" for="__nav_2_6_1_5_11_3">
+        Misp
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Misp" data-md-level="6">
+        <label class="md-nav__title" for="__nav_2_6_1_5_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          Misp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/connectors/misp/" class="md-nav__link">
+        MISP connector
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1_6" type="checkbox" id="__nav_2_6_1_6" checked>
+      
+      <label class="md-nav__link" for="__nav_2_6_1_6">
+        Installation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installation" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_6_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Installation Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Installation Guide
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-options" class="md-nav__link">
+    Installation Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rpm" class="md-nav__link">
+    RPM
+  </a>
+  
+    <nav class="md-nav" aria-label="RPM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#release-versions" class="md-nav__link">
+    Release versions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stable-versions-or-legacy-versions" class="md-nav__link">
+    Stable versions (or legacy versions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#following-beta-versions" class="md-nav__link">
+    Following beta versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deb" class="md-nav__link">
+    DEB
+  </a>
+  
+    <nav class="md-nav" aria-label="DEB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#release-versions_1" class="md-nav__link">
+    Release versions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stable-versions-or-legacy-versions_1" class="md-nav__link">
+    Stable versions (or legacy versions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beta-versions" class="md-nav__link">
+    Beta versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-docker-compose" class="md-nav__link">
+    Use Docker-compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-installation-of-elasticsearch" class="md-nav__link">
+    Manual Installation of Elasticsearch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customize-the-docker-image" class="md-nav__link">
+    Customize the Docker Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do-next" class="md-nav__link">
+    What to Do Next?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-release-versions" class="md-nav__link">
+    Pre-release Versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary" class="md-nav__link">
+    Binary
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-minimal-ubuntu-installation" class="md-nav__link">
+    1. Minimal Ubuntu Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-install-a-java-virtual-machine" class="md-nav__link">
+    2. Install a Java Virtual Machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-install-elasticsearch" class="md-nav__link">
+    3. Install Elasticsearch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-install-thehive" class="md-nav__link">
+    4. Install TheHive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-first-start" class="md-nav__link">
+    5. First start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-update" class="md-nav__link">
+    6. Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-configuration" class="md-nav__link">
+    7. Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-it-yourself" class="md-nav__link">
+    Build it Yourself
+  </a>
+  
+    <nav class="md-nav" aria-label="Build it Yourself">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pre-requisites" class="md-nav__link">
+    1. Pre-requisites
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Pre-requisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-build" class="md-nav__link">
+    2. Build
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-centosrhel" class="md-nav__link">
+    2.1. CentOS/RHEL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ubuntu" class="md-nav__link">
+    2.2. Ubuntu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-thehive" class="md-nav__link">
+    2.3. TheHive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-configure-and-start-elasticsearch" class="md-nav__link">
+    2.4 Configure and Start Elasticsearch
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Configure and Start Elasticsearch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-first-start" class="md-nav__link">
+    3. First start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-build-the-front-end-only" class="md-nav__link">
+    4. Build the Front-end Only
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticsearch-installation" class="md-nav__link">
+    Elasticsearch Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Elasticsearch Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-package" class="md-nav__link">
+    System Package
+  </a>
+  
+    <nav class="md-nav" aria-label="System Package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debian-ubuntu" class="md-nav__link">
+    Debian, Ubuntu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centos-redhat-opensuse" class="md-nav__link">
+    CentOS, RedHat, OpenSuSE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-service" class="md-nav__link">
+    Start the Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch-inside-a-docker" class="md-nav__link">
+    Elasticsearch inside a Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/TheHive-Project/CortexDocs" target="_blank" class="md-nav__link">
+        Cortex
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://thehive-project.github.io/Cortex-Analyzers/" target="_blank" class="md-nav__link">
+        Cortex Neurons
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://thehive-project.github.io/TheHive4py/" target="_blank" class="md-nav__link">
+        TheHive4py
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/TheHive-Project/Cortex4py" target="_blank" class="md-nav__link">
+        Cortex4py
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Resources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      <label class="md-nav__link" for="__nav_7_1">
+        Keynotes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Keynotes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Keynotes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../resources/Keynotes/list/" class="md-nav__link">
+        Additional Resources
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-options" class="md-nav__link">
+    Installation Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rpm" class="md-nav__link">
+    RPM
+  </a>
+  
+    <nav class="md-nav" aria-label="RPM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#release-versions" class="md-nav__link">
+    Release versions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stable-versions-or-legacy-versions" class="md-nav__link">
+    Stable versions (or legacy versions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#following-beta-versions" class="md-nav__link">
+    Following beta versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deb" class="md-nav__link">
+    DEB
+  </a>
+  
+    <nav class="md-nav" aria-label="DEB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#release-versions_1" class="md-nav__link">
+    Release versions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stable-versions-or-legacy-versions_1" class="md-nav__link">
+    Stable versions (or legacy versions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beta-versions" class="md-nav__link">
+    Beta versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-docker-compose" class="md-nav__link">
+    Use Docker-compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-installation-of-elasticsearch" class="md-nav__link">
+    Manual Installation of Elasticsearch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customize-the-docker-image" class="md-nav__link">
+    Customize the Docker Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do-next" class="md-nav__link">
+    What to Do Next?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-release-versions" class="md-nav__link">
+    Pre-release Versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary" class="md-nav__link">
+    Binary
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-minimal-ubuntu-installation" class="md-nav__link">
+    1. Minimal Ubuntu Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-install-a-java-virtual-machine" class="md-nav__link">
+    2. Install a Java Virtual Machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-install-elasticsearch" class="md-nav__link">
+    3. Install Elasticsearch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-install-thehive" class="md-nav__link">
+    4. Install TheHive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-first-start" class="md-nav__link">
+    5. First start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-update" class="md-nav__link">
+    6. Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-configuration" class="md-nav__link">
+    7. Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-it-yourself" class="md-nav__link">
+    Build it Yourself
+  </a>
+  
+    <nav class="md-nav" aria-label="Build it Yourself">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pre-requisites" class="md-nav__link">
+    1. Pre-requisites
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Pre-requisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-build" class="md-nav__link">
+    2. Build
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-centosrhel" class="md-nav__link">
+    2.1. CentOS/RHEL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ubuntu" class="md-nav__link">
+    2.2. Ubuntu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-thehive" class="md-nav__link">
+    2.3. TheHive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-configure-and-start-elasticsearch" class="md-nav__link">
+    2.4 Configure and Start Elasticsearch
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Configure and Start Elasticsearch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-first-start" class="md-nav__link">
+    3. First start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-build-the-front-end-only" class="md-nav__link">
+    4. Build the Front-end Only
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticsearch-installation" class="md-nav__link">
+    Elasticsearch Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Elasticsearch Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-package" class="md-nav__link">
+    System Package
+  </a>
+  
+    <nav class="md-nav" aria-label="System Package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debian-ubuntu" class="md-nav__link">
+    Debian, Ubuntu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centos-redhat-opensuse" class="md-nav__link">
+    CentOS, RedHat, OpenSuSE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-service" class="md-nav__link">
+    Start the Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch-inside-a-docker" class="md-nav__link">
+    Elasticsearch inside a Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/TheHive-Project/docs/edit/master/docs/thehive/legacy/thehive3/installation/install-guide.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="installation-guide">Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">#</a></h1>
+<hr />
+<p>⚠️ <em><strong>Please read carrefully this documentation. Depending on you make a fresh installation or update an existing version, install version 3 or version 4, repository or packages names may vary.</strong></em></p>
+<p>Current supported versions of TheHive are:
+- Version 3.5.0 and later that supports <strong>only</strong> Elasticsearch 7.x.
+- Version 4.0 and later.</p>
+<p>Instruction to  install TheHive supporting Elasticsearch 6.x (EoL in Nov. 2020) are still detailled in this documentation. </p>
+<hr />
+<p>Before installing TheHive, you need to choose the installation option which suits your environment as described below. Once you have a chosen an option and installed the software, read the <a href="../../admin/configuration/">Configuration Guide</a>. We also advise reading the <a href="../../admin/admin-guide/">Administration Guide</a>.</p>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="#installation-options">Installation Options</a><ul>
+<li><a href="#rpm">RPM</a></li>
+<li><a href="#deb">DEB</a></li>
+<li><a href="#docker">Docker</a></li>
+<li><a href="#binary">Binary</a></li>
+<li><a href="#build-it-yourself">Build it Yourself</a></li>
+</ul>
+</li>
+<li><a href="#elasticsearch-installation">Elasticsearch Installation</a><ul>
+<li><a href="#system-package">System Package</a></li>
+<li><a href="#start-the-service">Start the Service</a></li>
+<li><a href="#elasticsearch-inside-a-docker">Elasticsearch inside a Docker</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="installation-options">Installation Options<a class="headerlink" href="#installation-options" title="Permanent link">#</a></h2>
+<p>TheHive is available as:</p>
+<ul>
+<li>an <a href="#rpm">RPM package</a></li>
+<li>a <a href="#deb">DEB package</a></li>
+<li>a <a href="#docker">Docker image</a></li>
+<li>a <a href="#binary">binary package</a></li>
+</ul>
+<p>In addition, TheHive can be also be <a href="#build-it-yourself">built from the source code</a>.</p>
+<h3 id="rpm">RPM<a class="headerlink" href="#rpm" title="Permanent link">#</a></h3>
+<p>RPM packages are published on a our RPM repository. All packages are signed using our GPG key <a href="https://raw.githubusercontent.com/TheHive-Project/TheHive/master/PGP-PUBLIC-KEY">562CBC1C</a>. Its fingerprint is:</p>
+<p><code>0CD5 AC59 DE5C 5A8E 0EE1 3849 3D99 BB18 562C BC1C</code></p>
+<p>Run the following command to import the GPG key :</p>
+<div class="highlight"><pre><span></span><code>sudo rpm --import https://raw.githubusercontent.com/TheHive-Project/TheHive/master/PGP-PUBLIC-KEY
+</code></pre></div>
+<hr />
+<h4 id="release-versions">Release versions<a class="headerlink" href="#release-versions" title="Permanent link">#</a></h4>
+<p>The release repository contains packages for <strong>TheHive 3.5.0+</strong> and <strong>TheHive 4.0.0+</strong></p>
+<p>Setup your system to connect the RPM repository. Create and edit the file <code>/etc/yum.repos.d/thehive-project.repo</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>thehive-project<span class="o">]</span>
+<span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">priority</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">name</span><span class="o">=</span>TheHive-Project RPM repository
+<span class="nv">baseurl</span><span class="o">=</span>https://rpm.thehive-project.org/release/noarch
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+<p>Then you will able to install  <strong>TheHive 3.5.0+</strong>  the package using <code>yum</code>:</p>
+<div class="highlight"><pre><span></span><code>yum install thehive
+</code></pre></div>
+<p>or  install <strong>TheHive 4.0.0+</strong>:</p>
+<div class="highlight"><pre><span></span><code>yum install thehive4
+</code></pre></div>
+<hr />
+<h4 id="stable-versions-or-legacy-versions">Stable versions (or legacy versions)<a class="headerlink" href="#stable-versions-or-legacy-versions" title="Permanent link">#</a></h4>
+<p>The Stable repository  is a legacy repository and contains packages for <strong>TheHive 3.4.4 that </strong>does not support Elasticsearch version 7.x**, but version 6.x.</p>
+<p>Setup your system to connect the RPM repository. Create and edit the file <code>/etc/yum.repos.d/thehive-project.repo</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>thehive-project<span class="o">]</span>
+<span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">priority</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">name</span><span class="o">=</span>TheHive-Project RPM repository
+<span class="nv">baseurl</span><span class="o">=</span>https://rpm.thehive-project.org/stable/noarch
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+<p>Then you will able to install <strong>TheHive 3.4.4</strong> package using <code>yum</code>:</p>
+<div class="highlight"><pre><span></span><code>yum install thehive
+</code></pre></div>
+<hr />
+<h4 id="following-beta-versions">Following beta versions<a class="headerlink" href="#following-beta-versions" title="Permanent link">#</a></h4>
+<p>To follow beta versions of TheHive, use the following setup:</p>
+<p>And setup your system to connect the RPM repository. Create and edit the file <code>/etc/yum.repos.d/thehive-project.repo</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>thehive-project<span class="o">]</span>
+<span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">priority</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">name</span><span class="o">=</span>TheHive-Project RPM repository
+<span class="nv">baseurl</span><span class="o">=</span>https://rpm.thehive-project.org/beta/noarch
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+<p>Then you will able to install  beta version of  <strong>TheHive 3.x</strong>   package using <code>yum</code>:</p>
+<div class="highlight"><pre><span></span><code>yum install thehive
+</code></pre></div>
+<p>or  install beta version of <strong>TheHive 4.x</strong>:</p>
+<div class="highlight"><pre><span></span><code>yum install thehive4
+</code></pre></div>
+<p>⚠️ <strong>We do not recommend that configuration for production servers</strong></p>
+<p>Once the package is installed, proceed to the configuration using the <a href="../../admin/configuration/">Configuration Guide</a>. For additional configuration options, please refer to the <a href="../../admin/admin-guide/">Administration Guide</a>.</p>
+<hr />
+<h3 id="deb">DEB<a class="headerlink" href="#deb" title="Permanent link">#</a></h3>
+<p>Debian packages are published on a our DEB packages repository. All packages are signed using our GPG key <a href="https://raw.githubusercontent.com/TheHive-Project/TheHive/master/PGP-PUBLIC-KEY">562CBC1C</a>. Its fingerprint is:</p>
+<p><code>0CD5 AC59 DE5C 5A8E 0EE1  3849 3D99 BB18 562C BC1C</code></p>
+<hr />
+<h4 id="release-versions_1">Release versions<a class="headerlink" href="#release-versions_1" title="Permanent link">#</a></h4>
+<p>The release repository contains packages for <strong>TheHive 3.5.0+</strong> and <strong>TheHive 4.0.0+</strong></p>
+<p>Setup apt configuration  with the <code>release</code> repository:</p>
+<div class="highlight"><pre><span></span><code>curl https://raw.githubusercontent.com/TheHive-Project/TheHive/master/PGP-PUBLIC-KEY <span class="p">|</span> sudo apt-key add -
+<span class="nb">echo</span> <span class="s1">&#39;deb https://deb.thehive-project.org release main&#39;</span> <span class="p">|</span> sudo tee -a /etc/apt/sources.list.d/thehive-project.list
+sudo apt-get update
+</code></pre></div>
+<p>Then you will able to install  <strong>TheHive 3.5.0+</strong>  the package using <code>apt</code> command:</p>
+<div class="highlight"><pre><span></span><code>apt install thehive
+</code></pre></div>
+<p>or  install <strong>TheHive 4.0.0+</strong>:</p>
+<div class="highlight"><pre><span></span><code>apt install thehive4
+</code></pre></div>
+<hr />
+<h4 id="stable-versions-or-legacy-versions_1">Stable versions (or legacy versions)<a class="headerlink" href="#stable-versions-or-legacy-versions_1" title="Permanent link">#</a></h4>
+<p>The main repository  is a legacy repository and contains packages for <strong>TheHive 3.4.4</strong> that <strong>does not support Elasticsearch version 7.x</strong>, but version 6.x.</p>
+<p>Setup apt configuration  with the <code>main</code> repository:</p>
+<div class="highlight"><pre><span></span><code>curl https://raw.githubusercontent.com/TheHive-Project/TheHive/master/PGP-PUBLIC-KEY <span class="p">|</span> sudo apt-key add -
+<span class="nb">echo</span> <span class="s1">&#39;deb https://deb.thehive-project.org stable main&#39;</span> <span class="p">|</span> sudo tee -a /etc/apt/sources.list.d/thehive-project.list
+sudo apt-get update
+</code></pre></div>
+<p>Then you will able to install  <strong>TheHive 3.4.4</strong>   package using <code>apt</code> command:</p>
+<div class="highlight"><pre><span></span><code>apt install thehive
+</code></pre></div>
+<hr />
+<h4 id="beta-versions">Beta versions<a class="headerlink" href="#beta-versions" title="Permanent link">#</a></h4>
+<p>To follow beta versions of TheHive, use the following commands:</p>
+<div class="highlight"><pre><span></span><code>curl https://raw.githubusercontent.com/TheHive-Project/TheHive/master/PGP-PUBLIC-KEY <span class="p">|</span> sudo apt-key add -
+<span class="nb">echo</span> <span class="s1">&#39;deb https://deb.thehive-project.org beta main&#39;</span> <span class="p">|</span> sudo tee -a /etc/apt/sources.list.d/thehive-project.list
+sudo apt-get update
+sudo apt-get install thehive
+</code></pre></div>
+<p>⚠️ <strong>We do not recommend that configuration for production servers</strong></p>
+<hr />
+<h3 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">#</a></h3>
+<p>To use the Docker image, you must use <a href="https://www.docker.com/">Docker</a> (courtesy of Captain Obvious).</p>
+<p>TheHive requires <a href="#elasticsearch-inside-a-docker">Elasticsearch</a> to run. You can use <code>docker-compose</code> to start them together in Docker or install and configure Elasticsearch manually.</p>
+<h4 id="use-docker-compose">Use Docker-compose<a class="headerlink" href="#use-docker-compose" title="Permanent link">#</a></h4>
+<p><a href="https://docs.docker.com/compose/install/">Docker-compose</a> can start multiple dockers and link them together.</p>
+<p>The following <a href="https://raw.githubusercontent.com/TheHive-Project/TheHive/master/docker/thehive/docker-compose.yml">docker-compose.yml</a>
+file starts Elasticsearch and TheHive:
+<div class="highlight"><pre><span></span><code>version: &quot;2&quot;
+services:
+  elasticsearch:
+    image: elasticsearch:7.9.1
+    environment:
+      - http.host=0.0.0.0
+      - discovery.type=single-node
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+  cortex:
+    image: thehiveproject/cortex:3.1.0-1
+    depends_on:
+      - elasticsearch
+    ports:
+      - &quot;0.0.0.0:9001:9001&quot;
+  thehive:
+    image: thehiveproject/thehive:3.5.0-1
+    depends_on:
+      - elasticsearch
+      - cortex
+    ports:
+      - &quot;0.0.0.0:9000:9000&quot;
+    command: --cortex-port 9001
+</code></pre></div></p>
+<p>Put this file in an empty folder and run <code>docker-compose up</code>. TheHive is exposed on 9000/tcp port and Cortex on 9001/tcp. These ports can be changed by modifying the <code>docker-compose</code> file.</p>
+<p>You can specify a custom TheHive configuration file (<code>application.conf</code>) by adding the following lines in the <code>thehive</code> section of your docker-compose file:</p>
+<div class="highlight"><pre><span></span><code>volumes:
+    - /path/to/application.conf:/etc/thehive/application.conf
+</code></pre></div>
+<p>To take effect, be sure that:
+- '/path/to/application.conf' is readable for the user who runs the docker daemon (typically 644)
+- you specified <code>command: --no-config</code> in your <code>docker-compose.yml</code> file</p>
+<p>You should define where the data (i.e. the Elasticsearch database) will be located on your operating system by adding the following lines in the <code>elasticsearch</code> section of your docker-compose file:
+<div class="highlight"><pre><span></span><code>volumes:
+    - /path/to/data:/usr/share/elasticsearch/data
+</code></pre></div></p>
+<p>Running ElasticSearch in production mode requires a minimum <code>vm.max_map_count</code> of 262144. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-cli-run-prod-mode">ElasticSearch documentation</a> provides instructions on how to query and change this value.</p>
+<p>If you want to make Cortex be available on TheHive, you must create an account on Cortex, define an API key for it and provide that key to TheHive container using parameter <code>--cortex-key</code> or environment <code>TH_CORTEX_KEY</code>.</p>
+<h4 id="manual-installation-of-elasticsearch">Manual Installation of Elasticsearch<a class="headerlink" href="#manual-installation-of-elasticsearch" title="Permanent link">#</a></h4>
+<p>Elasticsearch can be installed on the same server as TheHive or on a different one. You can then configure TheHive according to the
+<a href="../../admin/admin-guide/">documentation</a> and run TheHive docker as follow:</p>
+<div class="highlight"><pre><span></span><code>docker run --volume /path/to/thehive/application.conf:/etc/thehive/application.conf thehiveproject/thehive:latest --no-config
+</code></pre></div>
+<p>You can add the <code>--publish</code> docker option to expose TheHive HTTP service.</p>
+<h4 id="customize-the-docker-image">Customize the Docker Image<a class="headerlink" href="#customize-the-docker-image" title="Permanent link">#</a></h4>
+<p>By default, the TheHive Docker image has minimal configuration:
+ - choose a random secret (<code>play.http.secret.key</code>)
+ - search for the Elasticsearch instance (host named <code>elasticsearch</code>) and add it to configuration
+ - search for a Cortex instance (host named <code>cortex</code>) and add it to configuration</p>
+<p>This behavior can be disabled by adding <code>--no-config</code> to the Docker command line:</p>
+<p><code>docker run thehiveproject/thehive:latest --no-config</code></p>
+<p>Or by adding the line <code>command: --no-config</code> in the <code>thehive</code> section of
+docker-compose file.</p>
+<p>It is possible to start database migration at startup with the parameter <code>--auto-migration</code>.
+If the initial administrator doesn't exist yet, you can request its creation with <code>--create-admin</code> followed by the user login and its password.
+You can also create a normal user with <code>--create-user</code> followed by the user login and its roles and its password.</p>
+<p>The image accepts more options. All options are available using environment variables.
+For boolean variable, <code>1</code> means true and other value means false. For multivalued variables, values are separated by coma. This is possible only with <code>--create-admin</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Env variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--no-config</code></td>
+<td>TH_NO_CONFIG</td>
+<td>Do not try to configure TheHive (add the secret and Elasticsearch)</td>
+</tr>
+<tr>
+<td><code>--no-config-secret</code></td>
+<td>TH_NO_CONFIG_SECRET</td>
+<td>Do not add the random secret to the configuration</td>
+</tr>
+<tr>
+<td><code>--secret &lt;secret&gt;</code></td>
+<td>TH_SECRET</td>
+<td>Cryptographic secret needed to secure sessions</td>
+</tr>
+<tr>
+<td><code>--show-secret</code></td>
+<td>TH_SHOW_SECRET</td>
+<td>Show the generated secret</td>
+</tr>
+<tr>
+<td><code>--no-config-es</code></td>
+<td>TH_NO_CONFIG_ES</td>
+<td>Do not add the Elasticsearch hosts to configuration</td>
+</tr>
+<tr>
+<td><code>--es-uri &lt;uri&gt;</code></td>
+<td>TH_CONFIG_ES</td>
+<td>Use this string to configure elasticsearch hosts (format: http(s)://host:port,host:port(/prefix)?querystring)</td>
+</tr>
+<tr>
+<td><code>--es-hostname &lt;host&gt;</code></td>
+<td>TH_ES_HOSTNAME</td>
+<td>Resolve this hostname to find Elasticsearch instances</td>
+</tr>
+<tr>
+<td><code>--no-config-cortex</code></td>
+<td>TH_NO_CONFIG_CORTEX</td>
+<td>Do not add Cortex configuration</td>
+</tr>
+<tr>
+<td><code>--cortex-proto &lt;proto&gt;</code></td>
+<td>TH_CORTEX_PROTO</td>
+<td>Define the protocol to connect to Cortex (default: <code>http</code>)</td>
+</tr>
+<tr>
+<td><code>--cortex-port &lt;port&gt;</code></td>
+<td>TH_CORTEX_PORT</td>
+<td>Define the port to connect to Cortex (default: <code>9001</code>)</td>
+</tr>
+<tr>
+<td><code>--cortex-url &lt;url&gt;</code></td>
+<td>TH_CORTEX_URL</td>
+<td>Add the Cortex connection</td>
+</tr>
+<tr>
+<td><code>--cortex-hostname &lt;host&gt;</code></td>
+<td>TH_CORTEX_HOSTNAME</td>
+<td>Resolve this hostname to find the Cortex instance</td>
+</tr>
+<tr>
+<td><code>--cortex-key &lt;key&gt;</code></td>
+<td>TH_CORTEX_KEY</td>
+<td>Define Cortex key</td>
+</tr>
+<tr>
+<td><code>--auto-migration</code></td>
+<td>TH_AUTO_MIGRATION</td>
+<td>Migrate the database, if needed</td>
+</tr>
+<tr>
+<td><code>--create-admin &lt;user&gt; &lt;password</code></td>
+<td>TH_CREATE_ADMIN_LOGIN TH_CREATE_ADMIN_PASSWORD</td>
+<td>Create the first admin user, if not exist yet</td>
+</tr>
+<tr>
+<td><code>--create-user &lt;user&gt; &lt;role&gt; &lt;password&gt;</code></td>
+<td>TH_CREATE_USER_LOGIN TH_CREATE_USER_ROLE TH_CREATE_USER_PASSWORD</td>
+<td>Create a user, only in conjunction with admin creation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: please remember that you must <strong><a href="#elasticsearch-installation">install and configure Elasticsearch</a></strong>.</p>
+<h4 id="what-to-do-next">What to Do Next?<a class="headerlink" href="#what-to-do-next" title="Permanent link">#</a></h4>
+<p>Once the Docker image is up and running, proceed to the configuration using the <a href="../../admin/configuration/">Configuration Guide</a>. For additional configuration options, please refer to the <a href="../../admin/admin-guide/">Administration Guide</a>.</p>
+<h4 id="pre-release-versions">Pre-release Versions<a class="headerlink" href="#pre-release-versions" title="Permanent link">#</a></h4>
+<p>If you would like to use pre-release, beta versions of our Docker images and help us find bugs to the benefit of the whole community, please use <code>thehiveproject/thehive:version-RCx</code>. For example <code>thehiveproject/thehive:3.1.0-RC1</code>.</p>
+<h3 id="binary">Binary<a class="headerlink" href="#binary" title="Permanent link">#</a></h3>
+<p>The following section contains the instructions to manually install TheHive using binaries on <strong>Ubuntu 20.04 LTS</strong>.</p>
+<h4 id="1-minimal-ubuntu-installation">1. Minimal Ubuntu Installation<a class="headerlink" href="#1-minimal-ubuntu-installation" title="Permanent link">#</a></h4>
+<p>Install a minimal Ubuntu 20.04 system with the following software:</p>
+<ul>
+<li>Java runtime environment 1.8+ (JRE)</li>
+<li>Elasticsearch 7.x</li>
+</ul>
+<p>Make sure your system is up-to-date:</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get upgrade
+</code></pre></div>
+<h4 id="2-install-a-java-virtual-machine">2. Install a Java Virtual Machine<a class="headerlink" href="#2-install-a-java-virtual-machine" title="Permanent link">#</a></h4>
+<p>You can install either Oracle Java or OpenJDK. The latter is recommended.</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get install openjdk-11-jre-headless
+</code></pre></div>
+<h4 id="3-install-elasticsearch">3. Install Elasticsearch<a class="headerlink" href="#3-install-elasticsearch" title="Permanent link">#</a></h4>
+<p>To install Elasticsearch, please read the <a href="#elasticsearch-installation">Elasticsearch Installation</a> section below.</p>
+<h4 id="4-install-thehive">4. Install TheHive<a class="headerlink" href="#4-install-thehive" title="Permanent link">#</a></h4>
+<p>Binary packages can be downloaded from <a href="https://dl.bintray.com/thehive-project/binary/">Bintray</a>. The latest version is called <a href="https://dl.bintray.com/thehive-project/binary/thehive-latest.zip">thehive-latest.zip</a>.</p>
+<p>Download and unzip the chosen binary package. TheHive files can be installed wherever you want on the filesystem. In this guide, we assume you have chosen to install them under <code>/opt</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /opt
+wget https://download.thehive-project.org/thehive-latest.zip
+unzip thehive-latest.zip
+ln -s thehive-x.x.x thehive
+</code></pre></div>
+<p><strong>Note</strong>: if you would like to use pre-release, beta versions of and help us find bugs to the benefit of the whole community, please download <code>https://download.thehive-project.org/thehive-version-RCx.zip</code>. For example <code>https://download.thehive-project.org/thehive-3.5.0-RC1-1.zip</code>.</p>
+<h4 id="5-first-start">5. First start<a class="headerlink" href="#5-first-start" title="Permanent link">#</a></h4>
+<p>It is recommended to use a dedicated, non-privileged user account to start TheHive. If so, make sure that the chosen account can create log files in <code>/opt/thehive/logs</code>.</p>
+<p>If you'd rather start the application as a service, use the following commands:</p>
+<div class="highlight"><pre><span></span><code>sudo addgroup thehive
+sudo adduser --system thehive
+sudo cp /opt/thehive/package/thehive.service /usr/lib/systemd/system
+sudo chown -R thehive:thehive /opt/thehive
+sudo chgrp thehive /etc/thehive/application.conf
+sudo chmod <span class="m">640</span> /etc/thehive/application.conf
+sudo systemctl <span class="nb">enable</span> thehive
+sudo service thehive start
+</code></pre></div>
+<p>The only required parameter in order to start TheHive is the key of the server (<code>play.http.secret.key</code>). This key is used
+to authenticate cookies that contain data. If TheHive runs in cluster mode, all instances must share the same key.
+You can generate the minimal configuration with the following commands (they assume that you have created a
+dedicated user for TheHive, named <code>thehive</code>):</p>
+<div class="highlight"><pre><span></span><code>sudo mkdir /etc/thehive
+<span class="o">(</span>cat <span class="s">&lt;&lt; _EOF_</span>
+<span class="s"># Secret key</span>
+<span class="s"># ~~~~~</span>
+<span class="s"># The secret key is used to secure cryptographics functions.</span>
+<span class="s"># If you deploy your application to several instances be sure to use the same key!</span>
+<span class="s">play.http.secret.key=&quot;$(cat /dev/urandom | tr -dc &#39;a-zA-Z0-9&#39; | fold -w 64 | head -n 1)&quot;</span>
+<span class="s">_EOF_</span>
+<span class="o">)</span> <span class="p">|</span> sudo tee -a /etc/thehive/application.conf
+</code></pre></div>
+<p>Now you can start TheHive. To do so, change your current directory to the TheHive installation directory (<code>/opt/thehive</code> in this guide), then execute:</p>
+<div class="highlight"><pre><span></span><code>bin/thehive -Dconfig.file<span class="o">=</span>/etc/thehive/application.conf
+</code></pre></div>
+<p>Please note that the service may take some time to start. Once it is started, you may launch your browser and connect to <code>http://YOUR_SERVER_ADDRESS:9000/</code>.</p>
+<p>Please note that the service may take some time to start.</p>
+<p>The first time you connect you will have to create the database schema. Click "Migrate database" to create the DB schema.</p>
+<p><img alt="" src="../../images/thehive-first-access_screenshot.png" /></p>
+<p>Once done, you should be redirected to the page for creating the administrator's account.</p>
+<p><img alt="" src="../../images/thehive-admin_account_creation.png" /></p>
+<p>Once created, you should be redirected to the login page.</p>
+<p><img alt="" src="../../images/thehive-login_page.png" /></p>
+<p><strong>Warning</strong>: at this stage, if you missed the creation of the admin account, you will not be able to do it unless you
+delete TheHive's index from Elasticsearch. In the case you made a mistake, first find out what is the current index of TheHive by running the following command on a host where the Elasticsearch DB used by TheHive is located:</p>
+<div class="highlight"><pre><span></span><code>$ curl http://127.0.0.1:9200/_cat/indices?v
+</code></pre></div>
+<p>The indexes that TheHive uses always start with<code>the_hive_</code> following by a number. Let's assume that the output of the command is:</p>
+<div class="highlight"><pre><span></span><code>health status index       uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   cortex_1    PC_pLFGBS5G2TNQYr4ajgw   <span class="m">5</span>   <span class="m">1</span>        <span class="m">609</span>            <span class="m">6</span>      <span class="m">2</span>.1mb          <span class="m">2</span>.1mb
+yellow open   the_hive_13 ft7GGTfhTr-4lSzZw5r1DQ   <span class="m">5</span>   <span class="m">1</span>     <span class="m">180131</span>            <span class="m">3</span>     <span class="m">51</span>.3mb         <span class="m">51</span>.3mb
+</code></pre></div>
+<p>The index used by TheHive is <code>the_hive_13</code>. To delete it, run the following command:</p>
+<div class="highlight"><pre><span></span><code>$ curl -X DELETE http://127.0.0.1:9200/the_hive_13
+</code></pre></div>
+<p>Then reload the page or restart TheHive.</p>
+<h4 id="6-update">6. Update<a class="headerlink" href="#6-update" title="Permanent link">#</a></h4>
+<p>To update TheHive from binaries, just stop the service, download the latest package, rebuild the link <code>/opt/thehive</code> and
+restart the service.</p>
+<div class="highlight"><pre><span></span><code>service thehive stop
+<span class="nb">cd</span> /opt
+wget https://download.thehive-project.org/thehive-latest.zip
+unzip thehive-latest.zip
+rm /opt/thehive <span class="o">&amp;&amp;</span> ln -s thehive-x.x.x thehive
+chown -R thehive:thehive /opt/thehive /opt/thehive-x.x.x
+service thehive start
+</code></pre></div>
+<h4 id="7-configuration">7. Configuration<a class="headerlink" href="#7-configuration" title="Permanent link">#</a></h4>
+<p>To configure TheHive, read the <a href="../../admin/configuration/">Configuration Guide</a>. For additional configuration options, please refer to the <a href="../../admin/admin-guide/">Administration Guide</a>.</p>
+<h3 id="build-it-yourself">Build it Yourself<a class="headerlink" href="#build-it-yourself" title="Permanent link">#</a></h3>
+<p>The following section contains a step-by-step guide to build TheHive from its sources.</p>
+<h4 id="1-pre-requisites">1. Pre-requisites<a class="headerlink" href="#1-pre-requisites" title="Permanent link">#</a></h4>
+<p>The following software are required to download and build TheHive:</p>
+<ul>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit 11</a> (JDK)</li>
+<li>git: use the system package or <a href="http://www.git-scm.com/downloads">download it</a></li>
+<li><a href="https://nodejs.org/en/download/">Node.js</a> with its package manager (NPM)</li>
+<li>Grunt: after installing Node.js, run <code>sudo npm install -g grunt-cli</code></li>
+<li>Bower: after installing Node.js, run <code>sudo npm install -g bower</code></li>
+<li><a href="https://www.elastic.co/downloads/past-releases/elasticsearch-5-6-9">Elasticsearch 5.6</a></li>
+</ul>
+<h5 id="2-build">2. Build<a class="headerlink" href="#2-build" title="Permanent link">#</a></h5>
+<p>To install the requirements and build TheHive from sources, please follow the instructions below depending on your operating system.</p>
+<h6 id="21-centosrhel">2.1. CentOS/RHEL<a class="headerlink" href="#21-centosrhel" title="Permanent link">#</a></h6>
+<p><strong>Packages</strong></p>
+<div class="highlight"><pre><span></span><code>sudo yum -y install git bzip2
+</code></pre></div>
+<p><strong>Installation of OpenJDK</strong></p>
+<div class="highlight"><pre><span></span><code>sudo yum -y install java-11-openjdk-devel
+</code></pre></div>
+<p><strong>Installation of Node.js</strong></p>
+<p>Install the EPEL repository. You should have the <em>extras</em> repository enabled, then:</p>
+<div class="highlight"><pre><span></span><code>sudo yum -y install epel-release
+</code></pre></div>
+<p>Then, you can install Node.js, Grunt, and Bower:</p>
+<div class="highlight"><pre><span></span><code>sudo yum -y install nodejs
+sudo npm install -g grunt-cli bower
+</code></pre></div>
+<p><strong>Installation of Elasticsearch</strong></p>
+<p>To install Elasticsearch, please read the <a href="#elasticsearch-installation">Elasticsearch Installation</a> section below.</p>
+<h6 id="22-ubuntu">2.2. Ubuntu<a class="headerlink" href="#22-ubuntu" title="Permanent link">#</a></h6>
+<p><strong>Packages</strong></p>
+<div class="highlight"><pre><span></span><code>sudo apt-get install git wget
+</code></pre></div>
+<p><strong>Installation of Oracle JDK</strong></p>
+<div class="highlight"><pre><span></span><code>sudo apt install openjdk-11-jdk-headless
+</code></pre></div>
+<p><strong>Installation of Node.js, Grunt and Bower</strong></p>
+<div class="highlight"><pre><span></span><code>sudo apt-get install curl
+curl -sL https://deb.nodesource.com/setup_11.x <span class="p">|</span> sudo -E bash -
+sudo apt-get install -y nodejs
+sudo npm install -g grunt-cli bower
+</code></pre></div>
+<p><strong>Installation of Elasticsearch</strong></p>
+<p>To install Elasticsearch, please read the <a href="#elasticsearch-installation">Elasticsearch Installation</a> section below.</p>
+<h6 id="23-thehive">2.3. TheHive<a class="headerlink" href="#23-thehive" title="Permanent link">#</a></h6>
+<p><strong>Download The Source</strong></p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/TheHive-Project/TheHive.git
+</code></pre></div>
+<p><strong>Build the Project</strong></p>
+<div class="highlight"><pre><span></span><code>cd TheHive
+./sbt clean stage
+</code></pre></div>
+<p>This operation may take some time to complete as it will download all dependencies  then build the back-end.
+This command cleans previous build files and creates an autonomous package in the <code>target/universal/stage</code> directory. This packages contains TheHive binaries with required libraries (<code>/lib</code>), configuration files (<code>/conf</code>) and startup scripts (<code>/bin</code>).</p>
+<p>Binaries are built and stored in <code>TheHive/target/universal/stage/</code>. You can install them in <code>/opt/thehive</code> for example.</p>
+<div class="highlight"><pre><span></span><code>sudo cp -r TheHive/target/universal/stage /opt/thehive
+</code></pre></div>
+<p>Configure TheHive, read the <a href="../../admin/configuration/">Configuration Guide</a>. For additional configuration options, please refer to the <a href="../../admin/admin-guide/">Administration Guide</a>.</p>
+<h3 id="24-configure-and-start-elasticsearch">2.4 Configure and Start Elasticsearch<a class="headerlink" href="#24-configure-and-start-elasticsearch" title="Permanent link">#</a></h3>
+<p>Edit <code>/etc/elasticsearch/elasticsearch.yml</code> and add the following lines:</p>
+<div class="highlight"><pre><span></span><code>http.host: 127.0.0.1
+discovery.type: single-node
+cluster.name: hive
+thread_pool.search.queue_size: 100000
+</code></pre></div>
+<p>Start the service:</p>
+<div class="highlight"><pre><span></span><code>service elasticsearch restart
+</code></pre></div>
+<h5 id="3-first-start">3. First start<a class="headerlink" href="#3-first-start" title="Permanent link">#</a></h5>
+<p>Follow the <a href="#4-first-start">first start</a> section of the binary installation method above to start using TheHive.</p>
+<h5 id="4-build-the-front-end-only">4. Build the Front-end Only<a class="headerlink" href="#4-build-the-front-end-only" title="Permanent link">#</a></h5>
+<p>Building the back-end builds also the front-end, so you don't need to build it separately. This section is useful only for troubleshooting or for installing the front-end on a reverse proxy.</p>
+<p>Go to the front-end directory:
+<div class="highlight"><pre><span></span><code>cd TheHive/ui
+</code></pre></div></p>
+<p>Install Node.js libraries, which are required by this step, bower libraries (JavaScript libraries downloaded by the browser). Then
+build the front-end :
+<div class="highlight"><pre><span></span><code>npm install
+bower install
+grunt build
+</code></pre></div></p>
+<p>This step generates static files (HTML, JavaScript and related resources) in  the <code>dist</code> directory. They can be readily imported on a HTTP server.</p>
+<h2 id="elasticsearch-installation">Elasticsearch Installation<a class="headerlink" href="#elasticsearch-installation" title="Permanent link">#</a></h2>
+<p>If, for some reason, you need to install Elasticsearch, it can be installed using a system package or a Docker image. Version 5.X must be used. From version 6, Elasticsearch drops <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.0/removal-of-types.html#removal-of-types">mapping type</a>.</p>
+<h3 id="system-package">System Package<a class="headerlink" href="#system-package" title="Permanent link">#</a></h3>
+<p>Install the Elasticsearch package provided by Elastic</p>
+<h4 id="debian-ubuntu">Debian, Ubuntu<a class="headerlink" href="#debian-ubuntu" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code># PGP key installation
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key D88E42B4
+
+# Alternative PGP key installation
+# wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
+# Debian repository configuration
+echo &quot;deb https://artifacts.elastic.co/packages/7.x/apt stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+
+# Install https support for apt
+sudo apt install apt-transport-https
+
+# Elasticsearch installation
+sudo apt update &amp;&amp; sudo apt install elasticsearch
+</code></pre></div>
+<p>The Debian package does not start up the service by default,  to prevent the instance from accidentally joining a cluster, without being configured appropriately.</p>
+<h4 id="centos-redhat-opensuse">CentOS, RedHat, OpenSuSE<a class="headerlink" href="#centos-redhat-opensuse" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code># PGP key installation
+sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+</code></pre></div>
+<p>Create the file <code>elasticsearch.repo</code> in <code>/etc/yum.repos.d/</code> for RedHat and CentOS, or in <code>/etc/zypp/repos.d/</code> for OpenSuSE distributions, and add the following lines:</p>
+<div class="highlight"><pre><span></span><code>[elasticsearch-5.x]
+name=Elasticsearch repository for 7.x packages
+baseurl=https://artifacts.elastic.co/packages/7.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
+</code></pre></div>
+<p>Then, you can use the following command:</p>
+<div class="highlight"><pre><span></span><code># On CentOS and older Red Hat based distributions.
+sudo yum install elasticsearch
+
+# On Fedora and other newer Red Hat distributions.
+sudo dnf install elasticsearch
+
+# On OpenSUSE based distributions.
+sudo zypper install elasticsearch
+</code></pre></div>
+<p>If you prefer using Elasticsearch inside a docker, see
+<a href="#elasticsearch-inside-a-docker">Elasticsearch inside a Docker</a>.</p>
+<h4 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h4>
+<p>It is <strong>highly recommended</strong> to avoid exposing this service to an untrusted zone.</p>
+<p>If Elasticsearch and TheHive run on the same host (and not in a docker), edit <code>/etc/elasticsearch/elasticsearch.yml</code> and
+set <code>network.host</code> parameter with <code>127.0.0.1</code>. TheHive use dynamic scripts to make partial updates. Hence, they must be activated using <code>script.inline: true</code>.</p>
+<p>The cluster name must also be set (<code>hive</code> for example). Threadpool queue size must be set with a high value (<code>100000</code>). The default size will get the queue easily overloaded.</p>
+<p>Edit <code>/etc/elasticsearch/elasticsearch.yml</code> and add the following lines:</p>
+<div class="highlight"><pre><span></span><code>http.host: 127.0.0.1
+cluster.name: hive
+thread_pool.search.queue_size: 100000
+</code></pre></div>
+<h3 id="start-the-service">Start the Service<a class="headerlink" href="#start-the-service" title="Permanent link">#</a></h3>
+<p>Now that Elasticsearch is configured, start it as a service and check whether it's running:
+<div class="highlight"><pre><span></span><code>sudo systemctl enable elasticsearch.service
+sudo systemctl start elasticsearch.service
+sudo systemctl status elasticsearch.service
+</code></pre></div></p>
+<p>The status should be <code>active (running)</code>. If it's not running, you can check for the reason in the logs:
+<div class="highlight"><pre><span></span><code>sudo journalctl -u elasticsearch.service
+</code></pre></div></p>
+<p>Note that by default, the database is stored in <code>/var/lib/elasticsearch</code> and the logs in <code>/var/log/elasticsearch</code></p>
+<h3 id="elasticsearch-inside-a-docker">Elasticsearch inside a Docker<a class="headerlink" href="#elasticsearch-inside-a-docker" title="Permanent link">#</a></h3>
+<p>You can also start Elasticsearch inside a docker. Use the following command and do not forget to specify the absolute path for persistent data on your host :</p>
+<div class="highlight"><pre><span></span><code>docker run \
+  --name elasticsearch \
+  --hostname elasticsearch \
+  --rm \
+  --publish 127.0.0.1:9200:9200 \
+      --volume ***DATA_DIR***:/usr/share/elasticsearch/data \
+    -e &quot;http.host=0.0.0.0&quot; \
+    -e &quot;discovery.type=single-node&quot; \
+    -e &quot;xpack.security.enabled=false&quot; \
+    -e &quot;cluster.name=hive&quot; \
+  -e &quot;script.inline=true&quot; \
+  -e &quot;thread_pool.index.queue_size=100000&quot; \
+  -e &quot;thread_pool.search.queue_size=100000&quot; \
+  -e &quot;thread_pool.bulk.queue_size=100000&quot; \
+    docker.elastic.co/elasticsearch/elasticsearch:7.9.1
+</code></pre></div>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 2, 2021 11:39:03</span>
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../../api/connectors/misp/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              MISP connector
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../../../../../resources/Keynotes/list/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Additional Resources
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://www.thehive-project.org" target="_blank" rel="noopener" title="www.thehive-project.org" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://blog.thehive-project.org" target="_blank" rel="noopener" title="blog.thehive-project.org" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/TheHive_Project" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/TheHive-Project" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://chat.thehive-project.org" target="_blank" rel="noopener" title="chat.thehive-project.org" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.3981fc68.min.js"></script>
+      
+    
+  </body>
+</html>
