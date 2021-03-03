@@ -61,7 +61,7 @@ Configuration files are located in `etc/hadoop` (`/opt/hadoop/etc/hadoop`). They
 
 **Notes**:
 
-- The configuration described there is for a single node server. This node is the master node, namenode and datanode (refer to [Hadoop documentation](https://hadoop.apache.org/docs/current/) for more information). After validating this node is running successfully, refer to the [related administration guide](../Administration/Clustering.md) to add nodes;
+- The configuration described there is for a single node server. This node is the master node, namenode and datanode (refer to [Hadoop documentation](https://hadoop.apache.org/docs/current/) for more information). After validating this node is running successfully, refer to the [related guide](../architecture/3_nodes_cluster.md) to add nodes;
 - Ensure you **update** the port value to something different than `9000` as it is already reserved for TheHive application service;
 
 
@@ -197,4 +197,4 @@ You can check cluster status in [http://thehive1:9870](http://thehive1:9870/)
 
 ## Add nodes
 
-To add Hadoop nodes, refer the the [related administration guide](../Administration/Clustering.md).
+To add Hadoop nodes, refer the the [related guide](../architecture/3_nodes_cluster.md).

@@ -1,6 +1,6 @@
 Title: Home
 nav:
-  - README.md
+  - Home: README.md
   - TheHive: thehive
   - Cortex: https://github.com/TheHive-Project/CortexDocs" target="_blank
   - "Cortex Neurons": https://thehive-project.github.io/Cortex-Analyzers/" target="_blank

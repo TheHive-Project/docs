@@ -1,0 +1,7 @@
+nav:
+  - 'Howto update': update.md
+  - 'Migration from TheHive 3.x': migration.md
+  - 'Backup & restore': backup-restore.md
+  - 'Configure HTTPS': https.md
+  - 'Use fail2ban': fail2ban.md  
+  - 'Cassandra & security': cassandra-security.md

@@ -61,7 +61,7 @@ In the case of a cluster, all nodes have to connect to the same index: an instan
 The [following Guide](installation/installation-guide.md) let you **prepare**, **install** and **configure** TheHive and its prerequisites for Debian and RPM packages based Operating Systems, as well as for other systems and using our binary packages. 
 
 
-If you want to build TheHive from sources, you can follow [this guide](installation/Build-sources.md).
+If you want to build TheHive from sources, you can follow [this guide](installation/build-sources.md).
 
 
 ## Configuration Guides
@@ -83,8 +83,7 @@ A separate [secret.conf](configuration/secret.md) file is automatically created 
 Various aspects can configured in the `application.conf` file:
 
 
-- [database](./configuration/database.md)
-- [Indexing](./configuration/indexes.md)
+- [database and indexing](./configuration/database.md)
 - [File storage](./configuration/file-storage.md)
 - [Akka](./configuration/akka.md)
 - [Authentication](./configuration/authentication.md)
@@ -92,7 +91,7 @@ Various aspects can configured in the `application.conf` file:
     - [Cortex: connecting to one or more organisation](./configuration/connectors-cortex.md)
     - [MISP: connecting to one or more organisation](./configuration/connectors-misp.md)
 - [Webhooks](./configuration/webhooks.md)
-- [Streams](./configuration/stream.md)
+- [Streams](./configuration/streams.md)
 
 
 ## Uses Cases
