@@ -1142,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../update.md" class="md-nav__link">
+      <a href="../../../operations/update/" class="md-nav__link">
         Howto update
       </a>
     </li>
@@ -2040,28 +2040,28 @@
 </ul>
 <h2 id="configuation">Configuation<a class="headerlink" href="#configuation" title="Permanent link">#</a></h2>
 <p>A typical database configuration for TheHive looks like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">## Database configuration</span>
-<span class="l l-Scalar l-Scalar-Plain">db {</span>
-  <span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">janusgraph</span>
-  <span class="l l-Scalar l-Scalar-Plain">janusgraph {</span>
-    <span class="l l-Scalar l-Scalar-Plain">## Storage configuration</span>
-    <span class="l l-Scalar l-Scalar-Plain">storage {</span>
-      <span class="l l-Scalar l-Scalar-Plain">backend</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">cql</span>
-      <span class="l l-Scalar l-Scalar-Plain">hostname</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;IP_ADDRESS&quot;</span><span class="p p-Indicator">]</span>
-      <span class="l l-Scalar l-Scalar-Plain">cql {</span>
-        <span class="l l-Scalar l-Scalar-Plain">cluster-name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">thp</span>
-        <span class="l l-Scalar l-Scalar-Plain">keyspace</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">thehive</span>
-      <span class="err">}</span>
-<span class=" -Error">    </span><span class="err">}</span>
-    <span class="c1">## Index configuration</span>
-    <span class="l l-Scalar l-Scalar-Plain">index {</span>
-      <span class="l l-Scalar l-Scalar-Plain">search {</span>
-        <span class="l l-Scalar l-Scalar-Plain">backend</span> <span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">lucene</span>
-        <span class="l l-Scalar l-Scalar-Plain">directory</span><span class="p p-Indicator">:</span>  <span class="l l-Scalar l-Scalar-Plain">/path/to/index/folder</span>
-      <span class="l l-Scalar l-Scalar-Plain">}</span>
-    <span class="err">}</span>
-<span class=" -Error">  </span><span class="err">}</span>
-<span class="err">}</span>
+<div class="highlight"><pre><span></span><code>## Database configuration
+db {
+  provider: janusgraph
+  janusgraph {
+    ## Storage configuration
+    storage {
+      backend: cql
+      hostname: [&quot;IP_ADDRESS&quot;]
+      cql {
+        cluster-name: thp
+        keyspace: thehive
+      }
+    }
+    ## Index configuration
+    index {
+      search {
+        backend : lucene
+        directory:  /path/to/index/folder
+      }
+    }
+  }
+}
 </code></pre></div>
 <p>with: </p>
 <table>
@@ -2155,31 +2155,31 @@
 <p>For such use cases, local database and indexes are adequate:</p>
 <ol>
 <li>
-<p>Create a dedicated folder. This folder should belong to the user <code>thehive:thehive</code>.</p>
+<p>Create a dedicated folder for data and for indexes. These folders should belong to the user <code>thehive:thehive</code>.</p>
 <div class="highlight"><pre><span></span><code>mkdir /opt/thp/thehive/<span class="o">{</span>data, index<span class="o">}</span>
 chown -R thehive:thehive /opt/thp/thehive/<span class="o">{</span>data, index<span class="o">}</span>
 </code></pre></div>
 </li>
 <li>
 <p>Configure TheHive accordingly: </p>
-<div class="highlight"><pre><span></span><code><span class="c1">## Database Configuration</span>
-<span class="l l-Scalar l-Scalar-Plain">db {</span>
-  <span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">janusgraph</span>
-  <span class="l l-Scalar l-Scalar-Plain">janusgraph {</span>
-    <span class="l l-Scalar l-Scalar-Plain">## Storage configuration</span>
-    <span class="l l-Scalar l-Scalar-Plain">storage {</span>
-      <span class="l l-Scalar l-Scalar-Plain">backend</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">berkeleyje</span>
-      <span class="l l-Scalar l-Scalar-Plain">directory</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/opt/thp/thehive/database</span>
-    <span class="l l-Scalar l-Scalar-Plain">}</span>
-    <span class="l l-Scalar l-Scalar-Plain">## Index configuration</span>
-    <span class="l l-Scalar l-Scalar-Plain">index {</span>
-      <span class="l l-Scalar l-Scalar-Plain">search {</span>
-        <span class="l l-Scalar l-Scalar-Plain">backend</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">lucene</span>
-        <span class="l l-Scalar l-Scalar-Plain">directory</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/opt/thp/thehive/index</span>
-      <span class="l l-Scalar l-Scalar-Plain">}</span>
-    <span class="l l-Scalar l-Scalar-Plain">}</span>
-  <span class="l l-Scalar l-Scalar-Plain">}</span>
-<span class="err">}</span>
+<div class="highlight"><pre><span></span><code>## Database Configuration
+db {
+  provider: janusgraph
+  janusgraph {
+    ## Storage configuration
+    storage {
+      backend: berkeleyje
+      directory: /opt/thp/thehive/database
+    }
+    ## Index configuration
+    index {
+      search {
+        backend: lucene
+        directory: /opt/thp/thehive/index
+      }
+    }
+  }
+}
 </code></pre></div>
 </li>
 </ol>
@@ -2187,33 +2187,39 @@ chown -R thehive:thehive /opt/thp/thehive/<span class="o">{</span>data, index<sp
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Standalone server with Cassandra</label><div class="tabbed-content">
 <ol>
 <li>Install a Cassandra server locally</li>
+<li>Create a dedicated folder for indexes. This folder should belong to the user <code>thehive:thehive</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code>  mkdir /opt/thp/thehive/index
+  chown -R thehive:thehive /opt/thp/thehive/index
+</code></pre></div>
+<ol>
 <li>
 <p>Configure TheHive accordingly </p>
-<div class="highlight"><pre><span></span><code><span class="c1">## Database Configuration</span>
-<span class="l l-Scalar l-Scalar-Plain">db {</span>
-  <span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">janusgraph</span>
-  <span class="l l-Scalar l-Scalar-Plain">janusgraph {</span>
-    <span class="l l-Scalar l-Scalar-Plain">## Storage configuration</span>
-    <span class="l l-Scalar l-Scalar-Plain">storage {</span>
-      <span class="l l-Scalar l-Scalar-Plain">backend</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">cql</span>
-      <span class="l l-Scalar l-Scalar-Plain">hostname</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;127.0.0.1&quot;</span><span class="p p-Indicator">]</span>
-      <span class="c1">## Cassandra authentication (if configured)</span>
-      <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;thehive_account&quot;</span>
-      <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;cassandra_password&quot;</span>
-      <span class="l l-Scalar l-Scalar-Plain">cql {</span>
-        <span class="l l-Scalar l-Scalar-Plain">cluster-name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">thp</span>
-        <span class="l l-Scalar l-Scalar-Plain">keyspace</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">thehive</span>
-      <span class="err">}</span>
-<span class=" -Error">    </span><span class="err">}</span>
-    <span class="c1">## Index configuration</span>
-    <span class="l l-Scalar l-Scalar-Plain">index {</span>
-      <span class="l l-Scalar l-Scalar-Plain">search {</span>
-        <span class="l l-Scalar l-Scalar-Plain">backend</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">lucene</span>
-        <span class="l l-Scalar l-Scalar-Plain">directory</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/opt/thp/thehive/index</span>
-      <span class="l l-Scalar l-Scalar-Plain">}</span>
-    <span class="err">}</span>
-<span class=" -Error">  </span><span class="err">}</span>
-<span class="err">}</span>
+<div class="highlight"><pre><span></span><code>## Database Configuration
+db {
+  provider: janusgraph
+  janusgraph {
+    ## Storage configuration
+    storage {
+      backend: cql
+      hostname: [&quot;127.0.0.1&quot;]
+      ## Cassandra authentication (if configured)
+      username: &quot;thehive_account&quot;
+      password: &quot;cassandra_password&quot;
+      cql {
+        cluster-name: thp
+        keyspace: thehive
+      }
+    }
+    ## Index configuration
+    index {
+      search {
+        backend: lucene
+        directory: /opt/thp/thehive/index
+      }
+    }
+  }
+}
 </code></pre></div>
 </li>
 </ol>
@@ -2224,32 +2230,32 @@ chown -R thehive:thehive /opt/thp/thehive/<span class="o">{</span>data, index<sp
 <li>Get access to an Elasticsearch server</li>
 <li>
 <p>Configure TheHive accordingly</p>
-<div class="highlight"><pre><span></span><code><span class="c1">## Database Configuration</span>
-<span class="l l-Scalar l-Scalar-Plain">db {</span>
-  <span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">janusgraph</span>
-  <span class="l l-Scalar l-Scalar-Plain">janusgraph {</span>
-    <span class="l l-Scalar l-Scalar-Plain">## Storage configuration</span>
-    <span class="l l-Scalar l-Scalar-Plain">storage {</span>
-      <span class="l l-Scalar l-Scalar-Plain">backend</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">cql</span>
-      <span class="l l-Scalar l-Scalar-Plain">hostname</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;10.1.2.1&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;10.1.2.2&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;10.1.2.3&quot;</span><span class="p p-Indicator">]</span>
-      <span class="c1">## Cassandra authentication (if configured)</span>
-      <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;thehive_account&quot;</span>
-      <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;cassandra_password&quot;</span>
-      <span class="l l-Scalar l-Scalar-Plain">cql {</span>
-        <span class="l l-Scalar l-Scalar-Plain">cluster-name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">thp</span>
-        <span class="l l-Scalar l-Scalar-Plain">keyspace</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">thehive</span>
-      <span class="err">}</span>
-<span class=" -Error">    </span><span class="err">}</span>
-    <span class="c1">## Index configuration</span>
-    <span class="l l-Scalar l-Scalar-Plain">index {</span>
-      <span class="l l-Scalar l-Scalar-Plain">search {</span>
-        <span class="l l-Scalar l-Scalar-Plain">backend</span> <span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">elasticsearch</span>
-        <span class="l l-Scalar l-Scalar-Plain">hostname</span> <span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;10.1.2.5&quot;</span><span class="p p-Indicator">]</span>
-        <span class="nt">index-name </span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">thehive</span>
-    <span class=" -Error">  </span><span class="err">}</span>
-    <span class="err">}</span>
-<span class=" -Error">  </span><span class="err">}</span>
-<span class="err">}</span>                
+<div class="highlight"><pre><span></span><code>## Database Configuration
+db {
+  provider: janusgraph
+  janusgraph {
+    ## Storage configuration
+    storage {
+      backend: cql
+      hostname: [&quot;10.1.2.1&quot;, &quot;10.1.2.2&quot;, &quot;10.1.2.3&quot;]
+      ## Cassandra authentication (if configured)
+      username: &quot;thehive_account&quot;
+      password: &quot;cassandra_password&quot;
+      cql {
+        cluster-name: thp
+        keyspace: thehive
+      }
+    }
+    ## Index configuration
+    index {
+      search {
+        backend : elasticsearch
+        hostname : [&quot;10.1.2.5&quot;]
+        index-name : thehive
+      }
+    }
+  }
+}                
 </code></pre></div>
 </li>
 </ol>
@@ -2268,7 +2274,7 @@ chown -R thehive:thehive /opt/thp/thehive/<span class="o">{</span>data, index<sp
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 3, 2021 08:28:47</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 3, 2021 14:59:51</span>
     
   </small>
 </div>
