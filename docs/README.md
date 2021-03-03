@@ -103,14 +103,30 @@ Cortexutils is a Python library containing a set of classes that aims to make us
 
 
 ## Docker-templates
+This repository is hosting docker configurations for TheHive, Cortex and 3rd party tools integrations.
 
+![](images/docker-templates.png){: align=left width=110}
+<div>
+  <p align="left">
+    <a href="./LICENSE" target"_blank">
+      <img src="https://img.shields.io/github/license/TheHive-Project/Docker-Templates" alt="License">
+    </a>
+    <a href="./LICENSE" target"_blank">
+      <img src="https://img.shields.io/docker/pulls/thehiveproject/thehive?color=%23f8c218&label=Thehive%20docker%20pulls" alt="TheHive Docker pulls">
+    </a>
+    <a href="./LICENSE" target"_blank">
+      <img src="https://img.shields.io/docker/pulls/thehiveproject/cortex?color=%2347b7b7&label=Cortex%20docker%20pulls" alt="Cortex Docker pulls">
+    </a>
+  </p>
+</div>
 
+- Sources: [https://github.com/TheHive-Project/Docker-Templates](https://github.com/TheHive-Project/Docker-Templates)
 
 
 ## Awesome
 This repository aims at reference and centralise a curated list of awesome things related to TheHive & Cortex.
 
-![](images/awesome-thehive.png){: align=left width=90}
+![](images/thehive-awesome.png){: align=left width=90}
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
