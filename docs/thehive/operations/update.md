@@ -113,6 +113,8 @@ Once your Elasticsearch instance is up and running, The configuration of TheHive
     In this configuration, all TheHive nodes should have the same configuration.
 
 
+{== XX TODO XX : Start-up phase description==}
+
 ### More information
 
 More information about the configuration of database and indexes can be found in the [dedicated configuration guide](../installation-and-configuration/architecture/configuration/../../configuration/database.md)
