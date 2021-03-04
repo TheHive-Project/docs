@@ -27,3 +27,28 @@ To access and import taxonomies, beeing `admin` or at least have the role `manag
 2. Click on `Import taxonomies` and select the file containing the libraries
  
     ![](./images/admin-import-taxonomies.png){: witdh=600}
+
+
+!!! Tip
+    A direct link to the current zip archive of [MISP-Taxonomies](https://github.com/MISP/misp-taxonomies) let you download it quickly.
+
+## Select interesting taxonomies
+
+Select the libraries you would like your user be able to use in `Case` or `Observables`, and **enable it**.
+
+<video height="450" autoplay controls muted>
+    <source src="/thehive/user-guides/administration/images/admin-taxonomy-details.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+!!! Warning
+    Taxonomies enabled are available to users when adding tags in `Cases` or `Observables`. If a tag from a disabled taxonomy comes in an `Alert`, it can be seen, and imported in Cases. But users cannot add a similar tag in other `Cases` or `Observables`. 
+
+    So you can leave a taxonomy disabled, and still receive tags issued from these taxonomies from `Alerts`.
+
+
+## Free tags 
+
+
+{== XXX TODO XXX  ==}
