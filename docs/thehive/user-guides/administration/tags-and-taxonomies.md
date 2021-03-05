@@ -1,6 +1,6 @@
 # Taxonomies and Tags
 
-!!! Warning "TheHive 4.1.0+ is required to use Taxnomies
+!!! Warning "TheHive 4.1.0+ is required to use Taxnomies"
 
 
 TheHive 4.1.0 introduces the support of Taxonomies as it is defined and published by [MISP](https://github.com/MISP/misp-taxonomies). These set of classification libraries can be used in THeHive to tag `Cases`, `Observables` and `Alerts`. 
@@ -32,7 +32,7 @@ To access and import taxonomies, beeing `admin` or at least have the role `manag
 !!! Tip
     A direct link to the current zip archive of [MISP-Taxonomies](https://github.com/MISP/misp-taxonomies) let you download it quickly.
 
-## Select interesting taxonomies
+## Enable interesting taxonomies
 
 Select the libraries you would like your user be able to use in `Case` or `Observables`, and **enable it**.
 
@@ -41,14 +41,23 @@ Select the libraries you would like your user be able to use in `Case` or `Obser
 Your browser does not support the video tag.
 </video>
 
-
 !!! Warning
-    Taxonomies enabled are available to users when adding tags in `Cases` or `Observables`. If a tag from a disabled taxonomy comes in an `Alert`, it can be seen, and imported in Cases. But users cannot add a similar tag in other `Cases` or `Observables`. 
-
-    So you can leave a taxonomy disabled, and still receive tags issued from these taxonomies from `Alerts`.
+    Enabling a taxonomy means all users of all Organisations can use one or more included tags in a `Case` or `Observable`.
 
 
-## Free tags 
+## Tags from taxonomies versus free text tags 
 
+For users, in the UI, a tag from a library that has been enabled can be selected using a dedicated view. 
+
+If a tag is imported with an `Alert` or created with the API, TheHive tries to _dissect_ it as a _machinetag_. It tries to identify a namespace, a predicate and an optional value. If successful, and if an associated taxonomy exists **and is enabled**, the tag is linked to the library ; if not, it is considered as a [free tag](#free-tags).
+
+{== XXX TODO XXX  ==}
+
+
+
+
+## How to use tags in Cases and Observables 
+
+Refer to this documentation: XXX 
 
 {== XXX TODO XXX  ==}
