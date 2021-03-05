@@ -47,9 +47,13 @@ Your browser does not support the video tag.
 
 ## Tags from taxonomies versus free text tags 
 
-For users, in the UI, users can add free text tags, and also choose to add a tag from a library in a dedicated view. 
+In the UI, users can add free text tags, and also choose to add a tag from a library in a dedicated view. 
 
-Refer to [this documentation](../cases/create-case.md) to learn about how to use tags in TheHive.
+![](./images/case-update-tags.png)
+
+Free text tags are managed at the Organisation level by users with `orgadmin` profile, or at least `manageTag` permission.
+
+Refer to appropriate pages to learn about [how to manage custom tags](../organisation/custom-tags.md), and [how to use tags](../cases/create-case.md) in TheHive.
 
 !!! Info
     If a tag is imported with an `Alert` or created with the API, TheHive tries to _dissect_ it as a _machinetag_. It tries to identify a namespace, a predicate and an optional value. 
