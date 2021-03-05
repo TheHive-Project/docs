@@ -12,7 +12,7 @@ TheHive 4.1.0 introduces the support of Taxonomies as it is defined and publishe
     - Draw inspiration from an existing definition file :-)
 
 
-By default, TheHive does not contain any taxonomie. 
+By default, TheHive does not contain any taxonomy. 
 
 
 
