@@ -1,6 +1,6 @@
 # Taxonomies and Tags
 
-!!! Warning "TheHive 4.1.0+ is required to use Taxnomies"
+!!! Warning "TheHive 4.1.0+ is required to use Taxonomies"
 
 
 TheHive 4.1.0 introduces the support of Taxonomies as it is defined and published by [MISP](https://github.com/MISP/misp-taxonomies). These set of classification libraries can be used in THeHive to tag `Cases`, `Observables` and `Alerts`. 
