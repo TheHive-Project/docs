@@ -113,7 +113,11 @@ Once your Elasticsearch instance is up and running, The configuration of TheHive
     In this configuration, all TheHive nodes should have the same configuration.
 
 
-{== XX TODO XX : Start-up phase description==}
+Restart all nodes of the cluster. 
+
+!!! Info
+    the cluster makes it work out ; one of the nodes manage the indexing process while others are waiting for it to be ready.
+
 
 ### More information
 
