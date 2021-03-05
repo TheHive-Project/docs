@@ -47,17 +47,11 @@ Your browser does not support the video tag.
 
 ## Tags from taxonomies versus free text tags 
 
-For users, in the UI, a tag from a library that has been enabled can be selected using a dedicated view. 
+For users, in the UI, users can add free text tags, and also choose to add a tag from a library in a dedicated view. 
 
-If a tag is imported with an `Alert` or created with the API, TheHive tries to _dissect_ it as a _machinetag_. It tries to identify a namespace, a predicate and an optional value. If successful, and if an associated taxonomy exists **and is enabled**, the tag is linked to the library ; if not, it is considered as a [free tag](#free-tags).
+Refer to [this documentation](../cases/create-case.md) to learn about how to use tags in TheHive.
 
-{== XXX TODO XXX  ==}
-
-
-
-
-## How to use tags in Cases and Observables 
-
-Refer to this documentation: XXX 
-
-{== XXX TODO XXX  ==}
+!!! Info
+    If a tag is imported with an `Alert` or created with the API, TheHive tries to _dissect_ it as a _machinetag_. It tries to identify a namespace, a predicate and an optional value. 
+    
+    If successful, and if an associated taxonomy exists **and is enabled**, the tag is linked to the library ; if not, it is considered as a free text tag.
