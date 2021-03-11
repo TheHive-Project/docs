@@ -93,7 +93,7 @@ Use Microsoft ActiveDirectory to authenticate the user. The configuration is:
           name: ad,
           hosts: ["dc.mydomain.local"],
           dnsDomain: "mydomain.local",
-          winDomain: "mydomain",
+          winDomain: "MYDOMAIN",
         }
       ]
     }
