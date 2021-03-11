@@ -81,6 +81,25 @@ Use Microsoft ActiveDirectory to authenticate the user. The configuration is:
 | `useSSL`       | boolean         | indicate if SSL must be used to connect to domain controller. The global trust store of the JVM is used to validate remote certificate (`JAVA_OPTS="-Djavax.net.ssl.trustStore=/path/to/truststore.jks"`) |
 
 
+!!! Example
+
+    ```yaml
+    auth {
+      providers: [
+        {name: session}
+        {name: basic, realm: thehive}
+        {name: local}
+        {
+          name: ad,
+          hosts: ["dc.mydomain.local"],
+          dnsDomain: "mydomain.local",
+          winDomain: "mydomain",
+        }
+      ]
+    }
+    ```
+
+
 ## ldap
 
 Use LDAP directory server to authenticate the user. The configuration is:
@@ -99,22 +118,22 @@ Use LDAP directory server to authenticate the user. The configuration is:
 !!! Example
 
     ```yaml
-        auth {
-          providers: [
-            {name: session}
-            {name: basic, realm: thehive}
-            {name: local}
-            {
-              name: ldap
-              hosts: [ldap1.mydomain.local, ldap2.mydomain.local]
-              bindDN: "cn=thehive,ou=services,dc=mydomain,dc=local"
-              bindPW: "SuperSecretPassword"
-              baseDN: "ou=users,dc=mydomain,dc=local"
-              filter:  "(cn={0})"
-              useSSL: true
-            }
-          ]
+    auth {
+      providers: [
+        {name: session}
+        {name: basic, realm: thehive}
+        {name: local}
+        {
+          name: ldap
+          hosts: [ldap1.mydomain.local, ldap2.mydomain.local]
+          bindDN: "cn=thehive,ou=services,dc=mydomain,dc=local"
+          bindPW: "SuperSecretPassword"
+          baseDN: "ou=users,dc=mydomain,dc=local"
+          filter:  "(cn={0})"
+          useSSL: true
         }
+      ]
+    }
     ```
 
 ## oauth2
