@@ -58,7 +58,7 @@ In the case of a cluster, all nodes have to connect to the same index: an instan
 
 ## Installation Guide
 
-The [following Guide](installation/installation-guide.md) let you **prepare**, **install** and **configure** TheHive and its prerequisites for Debian and RPM packages based Operating Systems, as well as for other systems and using our binary packages. 
+The [following Guide](installation/step-by-step-guide.md) let you **prepare**, **install** and **configure** TheHive and its prerequisites for Debian and RPM packages based Operating Systems, as well as for other systems and using our binary packages. 
 
 
 If you want to build TheHive from sources, you can follow [this guide](installation/build-sources.md).
@@ -98,7 +98,7 @@ Various aspects can configured in the `application.conf` file:
 
 ### Basic stand alone server
 
-Follow the [installation guides](./installation/installation-guide.md) for you prefered operating system.
+Follow the [installation guides](./installation/step-by-step-guide.md) for you prefered operating system.
 
 ### Cluster with 3 TheHive nodes
 
