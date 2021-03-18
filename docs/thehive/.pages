@@ -1,0 +1,8 @@
+Title: Home
+nav:
+  - index.md
+  - 'installation-and-configuration'
+  - 'user-guides'
+  - 'operations'
+  - api
+  - legacy
