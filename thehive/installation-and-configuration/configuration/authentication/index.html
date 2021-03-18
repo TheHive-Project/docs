@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/authentication/">
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
     
     
       
@@ -41,6 +41,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../../../custom.css">
     
@@ -425,8 +427,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/installation-guide/" class="md-nav__link">
-        Step-by-Step guide
+      <a href="../../installation/step-by-step-guide/" class="md-nav__link">
+        Step by step guide
       </a>
     </li>
   
@@ -860,6 +862,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../user-guides/administration/plateform-status/" class="md-nav__link">
+        Plateform status
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../user-guides/administration/profiles/" class="md-nav__link">
         Profiles
       </a>
@@ -885,7 +899,7 @@
   
     <li class="md-nav__item">
       <a href="../../../user-guides/administration/tags-and-taxonomies/" class="md-nav__link">
-        Tags and taxonomies
+        Taxonomies and Tags
       </a>
     </li>
   
@@ -1101,6 +1115,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/cases/ttps/" class="md-nav__link">
+        Ttps
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1135,6 +1161,18 @@
     <li class="md-nav__item">
       <a href="../../../user-guides/organisation/case-templates/" class="md-nav__link">
         Case templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guides/organisation/custom-tags/" class="md-nav__link">
+        Custom tags
       </a>
     </li>
   
@@ -2027,6 +2065,47 @@
   
 
           
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      <label class="md-nav__link" for="__nav_7_2">
+        Training material
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Training material" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Training material
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../resources/Training%20material/training-material/" class="md-nav__link">
+        Training material
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -2271,6 +2350,23 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">auth {</span>
+  <span class="l l-Scalar l-Scalar-Plain">providers</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
+    <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">session</span><span class="p p-Indicator">}</span>
+    <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">basic</span><span class="p p-Indicator">,</span><span class="nt"> realm</span><span class="p">:</span> <span class="nv">thehive</span><span class="p p-Indicator">}</span>
+    <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">local</span><span class="p p-Indicator">}</span>
+    <span class="p p-Indicator">{</span>
+<span class="nt">      name</span><span class="p">:</span> <span class="nv">ad</span><span class="p p-Indicator">,</span>
+<span class="nt">      hosts</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;dc.mydomain.local&quot;</span><span class="p p-Indicator">],</span>
+<span class="nt">      dnsDomain</span><span class="p">:</span> <span class="s">&quot;mydomain.local&quot;</span><span class="p p-Indicator">,</span>
+<span class="nt">      winDomain</span><span class="p">:</span> <span class="s">&quot;MYDOMAIN&quot;</span><span class="p p-Indicator">,</span>
+    <span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">]</span>
+<span class="err">}</span>
+</code></pre></div>
+</div>
 <h2 id="ldap">ldap<a class="headerlink" href="#ldap" title="Permanent link">#</a></h2>
 <p>Use LDAP directory server to authenticate the user. The configuration is:</p>
 <table>
@@ -2316,22 +2412,22 @@
 </table>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>    <span class="l l-Scalar l-Scalar-Plain">auth {</span>
-      <span class="l l-Scalar l-Scalar-Plain">providers</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
-        <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">session</span><span class="p p-Indicator">}</span>
-        <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">basic</span><span class="p p-Indicator">,</span><span class="nt"> realm</span><span class="p">:</span> <span class="nv">thehive</span><span class="p p-Indicator">}</span>
-        <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">local</span><span class="p p-Indicator">}</span>
-        <span class="p p-Indicator">{</span>
-<span class="nt">          name</span><span class="p">:</span> <span class="nv">ldap</span>
-          <span class="nv">hosts</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">ldap1.mydomain.local</span><span class="p p-Indicator">,</span> <span class="nv">ldap2.mydomain.local</span><span class="p p-Indicator">]</span>
-<span class="nt">          bindDN</span><span class="p">:</span> <span class="s">&quot;cn=thehive,ou=services,dc=mydomain,dc=local&quot;</span>
-<span class="nt">          bindPW</span><span class="p">:</span> <span class="s">&quot;SuperSecretPassword&quot;</span>
-<span class="nt">          baseDN</span><span class="p">:</span> <span class="s">&quot;ou=users,dc=mydomain,dc=local&quot;</span>
-<span class="nt">          filter</span><span class="p">:</span>  <span class="s">&quot;(cn={0})&quot;</span>
-<span class="nt">          useSSL</span><span class="p">:</span> <span class="nv">true</span>
-        <span class="p p-Indicator">}</span>
-      <span class="p p-Indicator">]</span>
-    <span class="err">}</span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">auth {</span>
+  <span class="l l-Scalar l-Scalar-Plain">providers</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
+    <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">session</span><span class="p p-Indicator">}</span>
+    <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">basic</span><span class="p p-Indicator">,</span><span class="nt"> realm</span><span class="p">:</span> <span class="nv">thehive</span><span class="p p-Indicator">}</span>
+    <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">local</span><span class="p p-Indicator">}</span>
+    <span class="p p-Indicator">{</span>
+<span class="nt">      name</span><span class="p">:</span> <span class="nv">ldap</span>
+      <span class="nv">hosts</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">ldap1.mydomain.local</span><span class="p p-Indicator">,</span> <span class="nv">ldap2.mydomain.local</span><span class="p p-Indicator">]</span>
+<span class="nt">      bindDN</span><span class="p">:</span> <span class="s">&quot;cn=thehive,ou=services,dc=mydomain,dc=local&quot;</span>
+<span class="nt">      bindPW</span><span class="p">:</span> <span class="s">&quot;SuperSecretPassword&quot;</span>
+<span class="nt">      baseDN</span><span class="p">:</span> <span class="s">&quot;ou=users,dc=mydomain,dc=local&quot;</span>
+<span class="nt">      filter</span><span class="p">:</span>  <span class="s">&quot;(cn={0})&quot;</span>
+<span class="nt">      useSSL</span><span class="p">:</span> <span class="nv">true</span>
+    <span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">]</span>
+<span class="err">}</span>
 </code></pre></div>
 </div>
 <h2 id="oauth2">oauth2<a class="headerlink" href="#oauth2" title="Permanent link">#</a></h2>
@@ -2546,7 +2642,11 @@
 <p>To allow users to login without previously creating them, you can enable autocreation by adding <code>user.autoCreateOnSso=true</code> to the top level of your configuration.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>  <span class="l l-Scalar l-Scalar-Plain">user.autoCreateOnSso=true</span>
+<div class="highlight"><pre><span></span><code>  <span class="nt">user.autoCreateOnSso</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">user.profileFieldName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">profile</span>
+  <span class="nt">user.organisationFieldName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">organisation</span>
+  <span class="nt">user.defaults.profile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">analyst</span>
+  <span class="nt">user.defaults.organisation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cert</span>
 </code></pre></div>
 </div>
 <h2 id="multi-factor-authentication">Multi-Factor Authentication<a class="headerlink" href="#multi-factor-authentication" title="Permanent link">#</a></h2>
@@ -2570,7 +2670,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 2, 2021 11:39:03</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 18, 2021 14:08:04</span>
     
   </small>
 </div>
@@ -2690,10 +2790,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3981fc68.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ca5457b8.min.js"></script>
       
     
   </body>

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/user-guides/administration/tactics-techniques-procedures/">
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
     
     
       
@@ -41,6 +41,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../../../custom.css">
     
@@ -423,8 +425,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/installation/installation-guide/" class="md-nav__link">
-        Step-by-Step guide
+      <a href="../../../installation-and-configuration/installation/step-by-step-guide/" class="md-nav__link">
+        Step by step guide
       </a>
     </li>
   
@@ -753,6 +755,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../plateform-status/" class="md-nav__link">
+        Plateform status
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../profiles/" class="md-nav__link">
         Profiles
       </a>
@@ -773,9 +787,45 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tactics, Techniques & Procedures
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Tactics, Techniques & Procedures
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import-mitre-attck-patterns" class="md-nav__link">
+    Import MITRE ATT&amp;CK patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-mitre-attck" class="md-nav__link">
+    Use MITRE ATT&amp;CK
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -787,7 +837,7 @@
   
     <li class="md-nav__item">
       <a href="../tags-and-taxonomies/" class="md-nav__link">
-        Tags and taxonomies
+        Taxonomies and Tags
       </a>
     </li>
   
@@ -1003,6 +1053,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cases/ttps/" class="md-nav__link">
+        Ttps
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1037,6 +1099,18 @@
     <li class="md-nav__item">
       <a href="../../organisation/case-templates/" class="md-nav__link">
         Case templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../organisation/custom-tags/" class="md-nav__link">
+        Custom tags
       </a>
     </li>
   
@@ -1929,6 +2003,47 @@
   
 
           
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      <label class="md-nav__link" for="__nav_7_2">
+        Training material
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Training material" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Training material
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../resources/Training%20material/training-material/" class="md-nav__link">
+        Training material
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1953,6 +2068,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import-mitre-attck-patterns" class="md-nav__link">
+    Import MITRE ATT&amp;CK patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-mitre-attck" class="md-nav__link">
+    Use MITRE ATT&amp;CK
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1969,7 +2106,32 @@
                 
                 
                 <h1 id="tactics-techniques-procedures">Tactics, Techniques &amp; Procedures<a class="headerlink" href="#tactics-techniques-procedures" title="Permanent link">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">TheHive 4.1.0+ is required to use TTPs</p>
+</div>
 <p>Starting with version 4.1.0, TheHive allows to bind <em>Cases</em> to <em>TTPs (Tactics, Techniques &amp; Procedures)</em>. The <a href="https://attack.mitre.org/">MITRE ATT&amp;CK framework</a> has been chosen to define these TTPs.</p>
+<h2 id="import-mitre-attck-patterns">Import MITRE ATT&amp;CK patterns<a class="headerlink" href="#import-mitre-attck-patterns" title="Permanent link">#</a></h2>
+<p>To access and import MITRE ATT&amp;CK patterns definition, beeing <code>admin</code> or at least have the role <code>managePattern</code> is required.</p>
+<ol>
+<li>
+<p>In the admin organisation, open the <code>ATT&amp;CK Patterns</code> menu</p>
+<p><img alt="" src="../images/menu-admin-attack-patterns.png" witdh="600" /></p>
+</li>
+<li>
+<p>Click on <code>Import MITRE ATT&amp;CK Patterns</code> and select the appropriate file</p>
+<p><img alt="" src="../images/admin-import-attack-patterns.png" witdh="600" /></p>
+</li>
+<li>
+<p>Ensure patterns are imported </p>
+<p><img alt="" src="../images/admin-attack-patterns-list.png" witdh="600" /></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A direct link to the current zip archive of <a href="https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json">MITRE ATT&amp;CK patterns</a> let you download it quickly from the official github page.</p>
+</div>
+<h2 id="use-mitre-attck">Use MITRE ATT&amp;CK<a class="headerlink" href="#use-mitre-attck" title="Permanent link">#</a></h2>
+<p>Refer to <a href="../../cases/ttps/">this page</a> to learn how to add TTPs (<em>Tactics, Techniques and Procedures</em>) to a Case.</p>
                 
                   
                     
@@ -1978,7 +2140,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 2, 2021 18:13:46</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 5, 2021 15:59:30</span>
     
   </small>
 </div>
@@ -2021,7 +2183,7 @@
               <span class="md-footer__direction">
                 Next
               </span>
-              Tags and taxonomies
+              Taxonomies and Tags
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2098,10 +2260,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3981fc68.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ca5457b8.min.js"></script>
       
     
   </body>
