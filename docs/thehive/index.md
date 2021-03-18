@@ -14,7 +14,6 @@ title: Home
     <a href="https://chat.thehive-project.org" target"_blank">
       <img src="https://img.shields.io/discord/779945042039144498" alt="Discord">
     </a>
-    <a href><img src="https://drone.strangebee.com/api/badges/TheHive-Project/TheHive/status.svg?ref=refs/heads/master" alt="Build status"></a>
     <a href="./LICENSE" target"_blank"><img src="https://img.shields.io/github/license/TheHive-Project/TheHive" alt="License"></a>
     <a href><img src="https://img.shields.io/github/v/release/thehive-project/TheHive?style=flat&logo=git-lfs" alt="Version"></a>          
   </p>
