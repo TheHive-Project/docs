@@ -50,7 +50,11 @@ notification.webhook.endpoints = [
       }
     ]
     ```
-
+Webhook endpoints can be authenticated by adding the setting `auth`. Supported methods are:
+ * basic `"auth": { "type": "basic", "username": "foo", "password": "bar" }`
+ * bearer `"auth": { "type": "bearer", "key": "foobar" }`
+ * key `"auth": { "type": "bearer", "key": "foobar" }`
+ * none (default) `"auth": { "type": "none" }`
 
 ## 2. Activate webhooks
 

@@ -283,7 +283,6 @@ Authenticate the user using an external OAuth2 authenticator server. It accepts 
             ]
           }
         ```
-
         !!! Note
             - `CLIENT_ID` and `CLIENT_SECRET` are created in the `_APIs & Services_ > _Credentials_` section of the [GCP Console](https://console.cloud.google.com/apis/credentials)
             - Instructions on how to create Oauth2 credentials at [https://support.google.com/cloud/answer/6158849](https://support.google.com/cloud/answer/6158849)
@@ -296,7 +295,11 @@ To allow users to login without previously creating them, you can enable autocre
 !!! Example
 
     ```yaml
-      user.autoCreateOnSso=true
+      user.autoCreateOnSso: true
+      user.profileFieldName: profile
+      user.organisationFieldName: organisation
+      user.defaults.profile: analyst
+      user.defaults.organisation: cert
     ```
 
 ## Multi-Factor Authentication
