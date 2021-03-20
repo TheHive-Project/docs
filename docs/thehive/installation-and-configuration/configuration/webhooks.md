@@ -11,6 +11,7 @@ The configuration can accept following parameters:
 | `name`                         | string         | the identifier of the endpoint. It is used when the webhook is setup for an organisation |
 | `version`                      | integer        | defines the format of the message. If `version` is `0`, TheHive will send messages with the same format as TheHive3. Currently TheHive only supports version 0. |
 | `wsConfig`                     | dict           | the configuration of HTTP client. It contains proxy, SSL and timeout configuration. |
+| `auth`                         | dict           | the configuration of authenticationI. It contains type, and additional options. |
 | `includedTheHiveOrganisations` | list of string | list of TheHive organisations which can use this endpoint (default: _all_ (`[*]`) |
 | `excludedTheHiveOrganisations` | list of string | list of TheHive organisations which cannot use this endpoint (default: _None_ (`[]`) ) |
 
@@ -24,11 +25,82 @@ notification.webhook.endpoints = [
     url: "http://127.0.0.1:5000/"
     version: 0
     wsConfig: {}
+    auth: {type: "none"}
     includedTheHiveOrganisations: ["*"]
     excludedTheHiveOrganisations: []
   }
 ]
 ```
+
+### Use a proxy
+
+Wehbook call can go through a proxy, in which case, Webhooks configuration requires a `wsConfig` config
+
+```yaml
+notification.webhook.endpoints = [
+  {
+    name: local
+    url: "http://127.0.0.1:5000/"
+    version: 0
+    {==wsConfig {==}
+      {==proxy {==}
+        {==host: "10.1.2.10"==}
+        {==port: 8080==}
+      {==}==}
+    {==}==}
+    auth: {
+      type: "none"
+    }
+    includedTheHiveOrganisations: ["*"]
+    excludedTheHiveOrganisations: []
+  }
+]
+```
+
+### Use an authentication method
+
+Webhook endpoints can be authenticated, in this case, Webhook configuration requires a `auth` setting. Supported methods are:
+
+=== "No Auth (Default)"
+
+    ```yaml
+      auth: { 
+          type: "none" 
+      }
+    ```
+
+=== "Basic Auth"
+
+    ```yaml
+      auth: { 
+          type: "basic", 
+          username: "foo", 
+          password: "bar" 
+      }
+    ```
+
+=== "Beared Auth"
+
+    ```yaml
+      auth: { 
+          type: "bearer", 
+          key: "foobar" 
+      }
+    ```
+
+=== "Key Auth"
+
+    ```yaml
+      auth: { 
+          type: "key", 
+          key: "foobar" 
+      }
+    ```
+
+!!! Warning
+    In 4.1.0 release, the `auth` config is *REQUIRED*.
+
+### Examples
 
 !!! Example
 
@@ -45,16 +117,15 @@ notification.webhook.endpoints = [
             port: 8080
           }
         }
+        auth: {
+          type: "bearer",
+          key: "API_KEY"
+        }
         includedTheHiveOrganisations: ["ORG1", "ORG2"]
         excludedTheHiveOrganisations: ["ORG3"]
       }
     ]
     ```
-Webhook endpoints can be authenticated by adding the setting `auth`. Supported methods are:
- * basic `"auth": { "type": "basic", "username": "foo", "password": "bar" }`
- * bearer `"auth": { "type": "bearer", "key": "foobar" }`
- * key `"auth": { "type": "bearer", "key": "foobar" }`
- * none (default) `"auth": { "type": "none" }`
 
 ## 2. Activate webhooks
 
