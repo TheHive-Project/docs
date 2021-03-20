@@ -599,6 +599,33 @@
     1. Define webhook endpoints
   </a>
   
+    <nav class="md-nav" aria-label="1. Define webhook endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-a-proxy" class="md-nav__link">
+    Use a proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-an-authentication-method" class="md-nav__link">
+    Use an authentication method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2079,6 +2106,33 @@
     1. Define webhook endpoints
   </a>
   
+    <nav class="md-nav" aria-label="1. Define webhook endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-a-proxy" class="md-nav__link">
+    Use a proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-an-authentication-method" class="md-nav__link">
+    Use an authentication method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2134,6 +2188,11 @@
 <td>the configuration of HTTP client. It contains proxy, SSL and timeout configuration.</td>
 </tr>
 <tr>
+<td><code>auth</code></td>
+<td>dict</td>
+<td>the configuration of authenticationI. It contains type, and additional options.</td>
+</tr>
+<tr>
 <td><code>includedTheHiveOrganisations</code></td>
 <td>list of string</td>
 <td>list of TheHive organisations which can use this endpoint (default: <em>all</em> (<code>[*]</code>)</td>
@@ -2153,11 +2212,69 @@
     <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="s">&quot;http://127.0.0.1:5000/&quot;</span>
     <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
     <span class="nt">wsConfig</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
+    <span class="nt">auth</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt">type</span><span class="p">:</span> <span class="s">&quot;none&quot;</span><span class="p p-Indicator">}</span>
     <span class="nt">includedTheHiveOrganisations</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;*&quot;</span><span class="p p-Indicator">]</span>
     <span class="nt">excludedTheHiveOrganisations</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class=" -Error">  </span><span class="err">}</span>
 <span class="err">]</span>
 </code></pre></div>
+<h3 id="use-a-proxy">Use a proxy<a class="headerlink" href="#use-a-proxy" title="Permanent link">#</a></h3>
+<p>Wehbook call can go through a proxy, in which case, Webhooks configuration requires a <code>wsConfig</code> config</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">notification.webhook.endpoints = [</span>
+  <span class="l l-Scalar l-Scalar-Plain">{</span>
+    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">local</span>
+    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="s">&quot;http://127.0.0.1:5000/&quot;</span>
+    <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+    <span class="l l-Scalar l-Scalar-Plain"><mark class="critic">wsConfig {</mark></span>
+      <span class="l l-Scalar l-Scalar-Plain"><mark class="critic">proxy {</mark></span>
+        <span class="l l-Scalar l-Scalar-Plain"><mark class="critic">host</span><span class="p p-Indicator">:</span> <span class="s">&quot;10.1.2.10&quot;</span><span class="l l-Scalar l-Scalar-Plain"></mark></span>
+        <span class="l l-Scalar l-Scalar-Plain"><mark class="critic">port</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</mark></span>
+      <span class="l l-Scalar l-Scalar-Plain"><mark class="critic">}</mark></span>
+    <span class="l l-Scalar l-Scalar-Plain"><mark class="critic">}</mark></span>
+    <span class="nt">auth</span><span class="p">:</span> <span class="p p-Indicator">{</span>
+<span class="nt">      type</span><span class="p">:</span> <span class="s">&quot;none&quot;</span>
+    <span class="p p-Indicator">}</span>
+    <span class="nt">includedTheHiveOrganisations</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;*&quot;</span><span class="p p-Indicator">]</span>
+    <span class="nt">excludedTheHiveOrganisations</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class=" -Error">  </span><span class="err">}</span>
+<span class="err">]</span>
+</code></pre></div>
+<h3 id="use-an-authentication-method">Use an authentication method<a class="headerlink" href="#use-an-authentication-method" title="Permanent link">#</a></h3>
+<p>Webhook endpoints can be authenticated, in this case, Webhook configuration requires a <code>auth</code> setting. Supported methods are:</p>
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">No Auth (Default)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>  <span class="nt">auth</span><span class="p">:</span> <span class="p p-Indicator">{</span> 
+<span class="nt">      type</span><span class="p">:</span> <span class="s">&quot;none&quot;</span> 
+  <span class="p p-Indicator">}</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Basic Auth</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>  <span class="nt">auth</span><span class="p">:</span> <span class="p p-Indicator">{</span> 
+<span class="nt">      type</span><span class="p">:</span> <span class="s">&quot;basic&quot;</span><span class="p p-Indicator">,</span> 
+<span class="nt">      username</span><span class="p">:</span> <span class="s">&quot;foo&quot;</span><span class="p p-Indicator">,</span> 
+<span class="nt">      password</span><span class="p">:</span> <span class="s">&quot;bar&quot;</span> 
+  <span class="p p-Indicator">}</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Beared Auth</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>  <span class="nt">auth</span><span class="p">:</span> <span class="p p-Indicator">{</span> 
+<span class="nt">      type</span><span class="p">:</span> <span class="s">&quot;bearer&quot;</span><span class="p p-Indicator">,</span> 
+<span class="nt">      key</span><span class="p">:</span> <span class="s">&quot;foobar&quot;</span> 
+  <span class="p p-Indicator">}</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Key Auth</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>  <span class="nt">auth</span><span class="p">:</span> <span class="p p-Indicator">{</span> 
+<span class="nt">      type</span><span class="p">:</span> <span class="s">&quot;key&quot;</span><span class="p p-Indicator">,</span> 
+<span class="nt">      key</span><span class="p">:</span> <span class="s">&quot;foobar&quot;</span> 
+  <span class="p p-Indicator">}</span>
+</code></pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In 4.1.0 release, the <code>auth</code> config is <em>REQUIRED</em>.</p>
+</div>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code><span class="c1">## Webhook notification</span>
@@ -2172,17 +2289,16 @@
         <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>
     <span class=" -Error">  </span><span class="err">}</span>
     <span class="err">}</span>
+    <span class="nt">auth</span><span class="p">:</span> <span class="p p-Indicator">{</span>
+<span class="nt">      type</span><span class="p">:</span> <span class="s">&quot;bearer&quot;</span><span class="p p-Indicator">,</span>
+<span class="nt">      key</span><span class="p">:</span> <span class="s">&quot;API_KEY&quot;</span>
+    <span class="p p-Indicator">}</span>
     <span class="nt">includedTheHiveOrganisations</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;ORG1&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;ORG2&quot;</span><span class="p p-Indicator">]</span>
     <span class="nt">excludedTheHiveOrganisations</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;ORG3&quot;</span><span class="p p-Indicator">]</span>
 <span class=" -Error">  </span><span class="err">}</span>
 <span class="err">]</span>
 </code></pre></div>
 </div>
-<p>Webhook endpoints can be authenticated by adding the setting <code>auth</code>. Supported methods are:
- * basic <code>"auth": { "type": "basic", "username": "foo", "password": "bar" }</code>
- * bearer <code>"auth": { "type": "bearer", "key": "foobar" }</code>
- * key <code>"auth": { "type": "bearer", "key": "foobar" }</code>
- * none (default) <code>"auth": { "type": "none" }</code></p>
 <h2 id="2-activate-webhooks">2. Activate webhooks<a class="headerlink" href="#2-activate-webhooks" title="Permanent link">#</a></h2>
 <p>This action must be done by an organisation admin (with permission <code>manageConfig</code>) and requires to run a <code>curl</code> command:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">read</span> -p <span class="s1">&#39;Enter the URL of TheHive: &#39;</span> thehive_url
@@ -2208,7 +2324,7 @@ curl -XPUT -u<span class="nv">$thehive_user</span>:<span class="nv">$thehive_pas
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 18, 2021 14:08:04</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 20, 2021 09:14:43</span>
     
   </small>
 </div>

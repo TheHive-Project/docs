@@ -2083,13 +2083,13 @@
 <div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">akka {</span>
     <span class="l l-Scalar l-Scalar-Plain">cluster.enable = on</span>
     <span class="l l-Scalar l-Scalar-Plain">actor {</span>
-    <span class="l l-Scalar l-Scalar-Plain">provider = cluster</span>
+      <span class="l l-Scalar l-Scalar-Plain">provider = cluster</span>
     <span class="l l-Scalar l-Scalar-Plain">}</span>
     <span class="l l-Scalar l-Scalar-Plain">remote.artery {</span>
-    <span class="l l-Scalar l-Scalar-Plain">canonical {</span>
-        <span class="l l-Scalar l-Scalar-Plain"><mark class="critic">hostname = &quot;10.1.2.1&quot;</mark></span>
-        <span class="l l-Scalar l-Scalar-Plain">port = 2551</span>
-    <span class="l l-Scalar l-Scalar-Plain">}</span>
+      <span class="l l-Scalar l-Scalar-Plain">canonical {</span>
+          <span class="l l-Scalar l-Scalar-Plain"><mark class="critic">hostname = &quot;10.1.2.1&quot;</mark></span>
+          <span class="l l-Scalar l-Scalar-Plain">port = 2551</span>
+      <span class="l l-Scalar l-Scalar-Plain">}</span>
     <span class="l l-Scalar l-Scalar-Plain">}</span>
     <span class="l l-Scalar l-Scalar-Plain"># seed node list contains at least one active node</span>
     <span class="l l-Scalar l-Scalar-Plain">cluster.seed-nodes = [ &quot;akka://application@10.1.2.1:2551&quot;, &quot;akka://application@10.1.2.2:2551&quot;, &quot;akka://application@10.1.2.3:2551&quot; ]</span>
@@ -2142,7 +2142,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 2, 2021 17:57:33</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 20, 2021 09:14:43</span>
     
   </small>
 </div>
