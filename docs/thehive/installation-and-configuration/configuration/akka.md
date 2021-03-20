@@ -43,13 +43,13 @@ with:
         akka {
             cluster.enable = on
             actor {
-            provider = cluster
+              provider = cluster
             }
             remote.artery {
-            canonical {
-                {==hostname = "10.1.2.1"==}
-                port = 2551
-            }
+              canonical {
+                  {==hostname = "10.1.2.1"==}
+                  port = 2551
+              }
             }
             # seed node list contains at least one active node
             cluster.seed-nodes = [ "akka://application@10.1.2.1:2551", "akka://application@10.1.2.2:2551", "akka://application@10.1.2.3:2551" ]
