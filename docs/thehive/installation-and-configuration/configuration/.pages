@@ -8,4 +8,5 @@ nav:
   - MISP connector: 'connectors-misp.md'
   - Webhooks: 'webhooks.md'
   - Streams: 'streams.md'
+  - Misc.: 'misc.md'
   - Logs: 'logs.md'
