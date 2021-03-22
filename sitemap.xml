@@ -1,331 +1,335 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://thehive-project.github.io/docs/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/installation/step-by-step-guide/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/installation/build-sources/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/secret/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/database/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/file-storage/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/akka/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/authentication/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/connectors-cortex/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/connectors-misp/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/webhooks/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/streams/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/misc/</loc>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/logs/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/architecture/3_nodes_cluster/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/administration/analyzer-templates/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/administration/custom-fields/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/administration/observable-types/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/administration/organisations/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/administration/plateform-status/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/administration/profiles/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/administration/tactics-techniques-procedures/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/administration/tags-and-taxonomies/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/administration/users/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/administration/webhooks/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/alerts/alert-definition/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/alerts/create-alerts/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/cases/case-definition/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/cases/close-case/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/cases/create-case/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/cases/create-observables%20/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/cases/create-tasks/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/cases/export/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/cases/run-analyzers/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/cases/run-responders/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/cases/sharing/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/cases/ttps/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/organisation/case-templates/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/organisation/custom-tags/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/organisation/ui-configuration/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/user-guides/organisation/users-management/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/operations/update/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/operations/migration/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/operations/backup-restore/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/operations/https/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/operations/fail2ban/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/operations/cassandra-security/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/api/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/feature-set/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/migration-guide/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/admin-guide/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/backup-restore/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/certauth/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/cluster/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/configuration/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/default-configuration/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/schema_version/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/updating/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/upgrade_to_thehive_3_4_and_es_6_x/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/upgrade_to_thehive_3_5_and_es_7_x/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/webhooks/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/alert/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/artifact/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/authentication/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/case/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/log/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/model/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/request/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/task/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/user/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/connectors/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/connectors/cortex/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/connectors/cortex/analyzer/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/connectors/cortex/job/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/connectors/misp/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/installation/install-guide/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/resources/Keynotes/list/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://thehive-project.github.io/docs/resources/Training%20material/training-material/</loc>
-     <lastmod>2021-03-20</lastmod>
+     <lastmod>2021-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

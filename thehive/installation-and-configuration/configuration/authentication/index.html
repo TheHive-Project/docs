@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/authentication/">
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
     
     
       
@@ -41,8 +41,6 @@
       
     
     
-    
-      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../../../custom.css">
     
@@ -695,6 +693,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../misc/" class="md-nav__link">
+        Misc.
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../logs/" class="md-nav__link">
         Logs
       </a>
@@ -1121,7 +1131,7 @@
   
     <li class="md-nav__item">
       <a href="../../../user-guides/cases/ttps/" class="md-nav__link">
-        Ttps
+        Tactics, Techniques and Procedures
       </a>
     </li>
   
@@ -2602,31 +2612,6 @@
 </div>
 </div>
 <input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Google</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>    <span class="c1">## Authentication</span>
-    <span class="l l-Scalar l-Scalar-Plain">auth {</span>
-    <span class="l l-Scalar l-Scalar-Plain">providers</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
-      <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">session</span><span class="p p-Indicator">}</span>
-      <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">basic</span><span class="p p-Indicator">,</span><span class="nt"> realm</span><span class="p">:</span> <span class="nv">thehive</span><span class="p p-Indicator">}</span>
-      <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">local</span><span class="p p-Indicator">}</span>
-      <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">key</span><span class="p p-Indicator">}</span>
-      <span class="p p-Indicator">{</span>
-<span class="nt">        name</span><span class="p">:</span> <span class="nv">oauth2</span>
-        <span class="nv">clientId</span><span class="p p-Indicator">:</span> <span class="s">&quot;CLIENT_ID&quot;</span>
-<span class="nt">        clientSecret</span><span class="p">:</span> <span class="s">&quot;CLIENT_SECRET&quot;</span>
-<span class="nt">        redirectUri</span><span class="p">:</span> <span class="s">&quot;http://THEHIVE_URL/api/ssoLogin&quot;</span>
-<span class="nt">        responseType</span><span class="p">:</span> <span class="nv">code</span>
-        <span class="nv">grantType</span><span class="p p-Indicator">:</span> <span class="s">&quot;authorization_code&quot;</span>
-<span class="nt">        authorizationUrl</span><span class="p">:</span> <span class="s">&quot;https://accounts.google.com/o/oauth2/v2/auth&quot;</span>
-<span class="nt">        authorizationHeader</span><span class="p">:</span> <span class="s">&quot;Bearer</span><span class="nv"> </span><span class="s">&quot;</span>
-<span class="nt">        tokenUrl</span><span class="p">:</span> <span class="s">&quot;https://oauth2.googleapis.com/token&quot;</span>
-<span class="nt">        userUrl</span><span class="p">:</span> <span class="s">&quot;https://openidconnect.googleapis.com/v1/userinfo&quot;</span>
-<span class="nt">        scope</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;email&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;profile&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;openid&quot;</span><span class="p p-Indicator">]</span>
-<span class="nt">        userIdField</span><span class="p">:</span> <span class="s">&quot;email&quot;</span>
-<span class="nt">        # userOrganisation</span><span class="p">:</span> <span class="s">&quot;&quot;</span> <span class="c1">## if not existing in the response, use default organisation</span>
-      <span class="p p-Indicator">}</span>
-    <span class="p p-Indicator">]</span>
- <span class=" -Error"> </span><span class="err">}</span>
-</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -2790,10 +2775,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.3981fc68.min.js"></script>
       
     
   </body>
