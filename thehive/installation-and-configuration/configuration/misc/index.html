@@ -2103,12 +2103,20 @@
                 
                 <h1 id="miscelleneous-settings">Miscelleneous settings<a class="headerlink" href="#miscelleneous-settings" title="Permanent link">#</a></h1>
 <h2 id="manage-content-lengh">Manage content lengh<a class="headerlink" href="#manage-content-lengh" title="Permanent link">#</a></h2>
-<p>Content length of text and files managed by the application are limited by default. Before TheHive 4.1.1, they were set to very small values.
-Default values in TheHive 4.1.1 are set with these default parameters: </p>
-<div class="highlight"><pre><span></span><code>play.http.parser.maxDiskBuffer: 128MB
-play.http.parser.maxMemoryBuffer: 256kB
+<p>Content length of text and files managed by the application are limited by default. </p>
+<p><strong>Before TheHive v4.1.1</strong>, the Play framework sets the HTTP body size limit to 100KB by default for textual content (json, xml, text, form data) and 10MB for file uploads.</p>
+<p><strong>Since TheHive v4.1.1</strong>, these values are set with default parameters: </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Max file size</span>
+<span class="nt">play.http.parser.maxDiskBuffer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">128MB</span>
+<span class="c1"># Max textual content length</span>
+<span class="nt">play.http.parser.maxMemoryBuffer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">256kB</span>
 </code></pre></div>
-<p>If you feel that these should be updated, edit <code>/etc/thehive/application.conf</code> file and update these parameters. </p>
+<p>If you feel that these should be updated, edit <code>/etc/thehive/application.conf</code> file and update these parameters accordingly. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>if you are using a NGINX reverse proxy in front of TheHive, be aware that it doesn't distinguish between text data and a file upload. </p>
+<p>So, you should also set the <code>client_max_body_size</code> parameter in your NGINX server configuration to the highest value among the two: file upload and text size defined in TheHive application.conf file.</p>
+</div>
                 
                   
                     
@@ -2117,7 +2125,7 @@ play.http.parser.maxMemoryBuffer: 256kB
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 22, 2021 18:06:38</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 23, 2021 07:07:12</span>
     
   </small>
 </div>
