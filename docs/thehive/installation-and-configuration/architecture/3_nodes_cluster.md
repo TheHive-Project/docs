@@ -283,6 +283,8 @@ storage {
     endpoint = "http://<IP_MINIO_1>:9100"
     accessKey = "<MINIO ACCESS KEY>"
     secretKey = "<MINIO SECRET KEY>"
+    region = "us-east-1"
+    `us-east-1` is the default region if none has been specified in MinIO configuration. In this case, this parameter is optional.
   }
 }
 ```
