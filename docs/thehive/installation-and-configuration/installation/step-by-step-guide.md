@@ -189,8 +189,12 @@ Starting from TheHive 4.1.0, a solution to store data indexes is required. These
 
         Use an existing Elasticsearch instance or install a new one. This instance should be reachable by all nodes of a cluster.
 
-        !!! Note
-            There is no specific requirement regarding the version of Elasticsearch used to store indexes.
+        !!! Warning
+            Elasticsearch configuration should use the default value for `script.allowed_types`, or contain the following configuration line: 
+
+            ```yaml
+            script.allowed_types: inline,stored
+            ```
 
 
 !!! Note
