@@ -189,5 +189,11 @@ Database and index engine can be different, depending on the use case and target
 
         !!! Warning
             In this configuration, all TheHive nodes should have the same configuration.
+            
+            Elasticsearch configuration should use the default value for `script.allowed_types`, or contain the following configuration line: 
+
+            ```yaml
+            script.allowed_types: inline,stored
+            ```
 
 
