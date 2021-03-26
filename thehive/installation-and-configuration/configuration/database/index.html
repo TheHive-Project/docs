@@ -2351,6 +2351,9 @@ db {
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In this configuration, all TheHive nodes should have the same configuration.</p>
+<p>Elasticsearch configuration should use the default value for <code>script.allowed_types</code>, or contain the following configuration line: </p>
+<div class="highlight"><pre><span></span><code><span class="nt">script.allowed_types</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">inline,stored</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2363,7 +2366,7 @@ db {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 3, 2021 14:59:51</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 26, 2021 10:08:58</span>
     
   </small>
 </div>

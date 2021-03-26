@@ -2101,9 +2101,13 @@ chown thehive:thehive /opt/thp/thehive/files
     <span class="l l-Scalar l-Scalar-Plain">endpoint = &quot;http://10.1.2.4:9100&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">accessKey = &quot;thehive&quot;</span>
     <span class="l l-Scalar l-Scalar-Plain">secretKey = &quot;minio_password&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">region = &quot;us-east-1&quot;</span>
   <span class="l l-Scalar l-Scalar-Plain">}</span>
 <span class="err">}</span>
+
+<span class="l l-Scalar l-Scalar-Plain">alpakka.s3.path-style-access = force</span>
 </code></pre></div>
+<p><code>us-east-1</code> is the default region if none has been specified in MinIO configuration. In this case, this parameter is optional.</p>
 </li>
 </ol>
 </div>
@@ -2137,7 +2141,7 @@ chown thehive:thehive /opt/thp/thehive/files
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 3, 2021 08:28:47</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 25, 2021 18:21:51</span>
     
   </small>
 </div>
