@@ -45,10 +45,14 @@ TheHive can be configured to connect to local Berkeley database or Cassandra dat
                 endpoint = "http://10.1.2.4:9100"
                 accessKey = "thehive"
                 secretKey = "minio_password"
+                region = "us-east-1"
               }
             }
+
+            alpakka.s3.path-style-access = force
             ```
-        
+
+            `us-east-1` is the default region if none has been specified in MinIO configuration. In this case, this parameter is optional.
 
     === "Apache Hadoop" 
 
