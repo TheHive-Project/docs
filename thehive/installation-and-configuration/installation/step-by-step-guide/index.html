@@ -2575,9 +2575,11 @@ chown thehive:thehive -R /opt/thp/thehive/index
 </div>
 <input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Elasticsearch</label><div class="tabbed-content">
 <p>Use an existing Elasticsearch instance or install a new one. This instance should be reachable by all nodes of a cluster.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There is no specific requirement regarding the version of Elasticsearch used to store indexes.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Elasticsearch configuration should use the default value for <code>script.allowed_types</code>, or contain the following configuration line: </p>
+<div class="highlight"><pre><span></span><code><span class="nt">script.allowed_types</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">inline,stored</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2919,7 +2921,7 @@ localfs.location = /opt/thp/thehive/files
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 17, 2021 19:35:50</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 26, 2021 10:18:22</span>
     
   </small>
 </div>
