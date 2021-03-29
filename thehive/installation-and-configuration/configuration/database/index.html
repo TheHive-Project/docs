@@ -488,6 +488,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../service/" class="md-nav__link">
+        Service
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -528,6 +540,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#list-of-possible-parameters" class="md-nav__link">
+    List of possible parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#use-cases" class="md-nav__link">
     Use cases
   </a>
@@ -560,7 +579,7 @@
   
     <li class="md-nav__item">
       <a href="../akka/" class="md-nav__link">
-        Akka
+        Cluster
       </a>
     </li>
   
@@ -619,32 +638,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../streams/" class="md-nav__link">
-        Streams
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../misc/" class="md-nav__link">
-        Misc.
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../logs/" class="md-nav__link">
         Logs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage-configuration/" class="md-nav__link">
+        Manage Configuration
       </a>
     </li>
   
@@ -2092,6 +2099,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#list-of-possible-parameters" class="md-nav__link">
+    List of possible parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#use-cases" class="md-nav__link">
     Use cases
   </a>
@@ -2152,7 +2166,7 @@ db {
   }
 }
 </code></pre></div>
-<p>with: </p>
+<h2 id="list-of-possible-parameters">List of possible parameters<a class="headerlink" href="#list-of-possible-parameters" title="Permanent link">#</a></h2>
 <table>
 <thead>
 <tr>
@@ -2227,6 +2241,61 @@ db {
 <td>string</td>
 <td>name of index, when using <code>elasticseach</code> engine</td>
 </tr>
+<tr>
+<td><code>index.search.elasticsearch.http.auth.type</code></td>
+<td>string</td>
+<td>Type of authentication</td>
+</tr>
+<tr>
+<td><code>index.search.elasticsearch.http.auth.basic.username</code></td>
+<td>string</td>
+<td>Username account on Elasticsearch</td>
+</tr>
+<tr>
+<td><code>index.search.elasticsearch.http.auth.basic.password</code></td>
+<td>string</td>
+<td>Password of the account on Elasticsearch</td>
+</tr>
+<tr>
+<td><code>index.search.elasticsearch.ssl.enabled</code></td>
+<td>boolean</td>
+<td>Enable SSL <code>true/false</code></td>
+</tr>
+<tr>
+<td><code>index.search.elasticsearch.ssl.truststore.location</code></td>
+<td>string</td>
+<td>Location of the truststore</td>
+</tr>
+<tr>
+<td><code>index.search.elasticsearch.ssl.truststore.password</code></td>
+<td>string</td>
+<td>Password of the truststore</td>
+</tr>
+<tr>
+<td><code>index.search.elasticsearch.ssl.keystore.location</code></td>
+<td>string</td>
+<td>Location of the keystore for client authentication</td>
+</tr>
+<tr>
+<td><code>index.search.elasticsearch.ssl.keystore.storepassword</code></td>
+<td>string</td>
+<td>Password of the keystore</td>
+</tr>
+<tr>
+<td><code>index.search.elasticsearch.ssl.keystore.keypassword</code></td>
+<td>string</td>
+<td>Password of the client certificate</td>
+</tr>
+<tr>
+<td><code>index.search.elasticsearch.ssl.disable-hostname-verification</code></td>
+<td>boolean</td>
+<td>Disable SSL verification <code>true/false</code></td>
+</tr>
+<tr>
+<td><code>index.search.elasticsearch.ssl.allow-self-signed-certificates</code></td>
+<td>boolean</td>
+<td>Allow self signe certificates <code>true/false</code></td>
+</tr>
 </tbody>
 </table>
 <div class="admonition warning">
@@ -2236,6 +2305,7 @@ db {
 <li>The <strong>initial start</strong>, or first start after configuring indexes <strong>might take some time</strong> if the database contains a large amount of data. This time is due to the indexes creation</li>
 </ul>
 </div>
+<p>More information on configuration for Elasticsearch connection: <a href="https://docs.janusgraph.org/index-backend/elasticsearch/">https://docs.janusgraph.org/index-backend/elasticsearch/</a>.</p>
 <h2 id="use-cases">Use cases<a class="headerlink" href="#use-cases" title="Permanent link">#</a></h2>
 <p>Database and index engine can be different, depending on the use case and target setup:</p>
 <div class="admonition example">
@@ -2341,6 +2411,24 @@ db {
         backend : elasticsearch
         hostname : [&quot;10.1.2.5&quot;]
         index-name : thehive
+        elasticsearch {
+          http {
+            auth {
+              type: basic
+              basic {
+                username: httpuser
+                password: httppassword
+              }
+            }
+          }
+          ssl {
+            enable: true
+            truststore {
+              location: /path/to/your/truststore.jks
+              password: truststorepwd
+            }
+          }
+        }
       }
     }
   }
@@ -2366,7 +2454,7 @@ db {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 26, 2021 10:08:58</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 29, 2021 07:55:40</span>
     
   </small>
 </div>
@@ -2388,7 +2476,7 @@ db {
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../secret/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../service/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2397,7 +2485,7 @@ db {
               <span class="md-footer__direction">
                 Previous
               </span>
-              Secret key
+              Service
             </div>
           </div>
         </a>

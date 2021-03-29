@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/streams/">
+        <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/manage-configuration/">
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
     
     
       
-        <title>Streams - TheHive Project Documentation</title>
+        <title>Manage Configuration - TheHive Project Documentation</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#streams" class="md-skip">
+        <a href="#manage-configuration-files" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Streams
+              Manage Configuration
             
           </span>
         </div>
@@ -490,6 +490,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../service/" class="md-nav__link">
+        Service
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../database/" class="md-nav__link">
         Database & indexes
       </a>
@@ -515,7 +527,7 @@
   
     <li class="md-nav__item">
       <a href="../akka/" class="md-nav__link">
-        Akka
+        Cluster
       </a>
     </li>
   
@@ -572,6 +584,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../logs/" class="md-nav__link">
+        Logs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -583,33 +607,9 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Streams
+        Manage Configuration
       </a>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../misc/" class="md-nav__link">
-        Misc.
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../logs/" class="md-nav__link">
-        Logs
-      </a>
     </li>
   
 
@@ -2052,15 +2052,68 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/TheHive-Project/docs/edit/master/docs/thehive/installation-and-configuration/configuration/streams.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/TheHive-Project/docs/edit/master/docs/thehive/installation-and-configuration/configuration/manage-configuration.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="streams">Streams<a class="headerlink" href="#streams" title="Permanent link">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">TODO</p>
-</div>
+                <h1 id="manage-configuration-files">Manage configuration files<a class="headerlink" href="#manage-configuration-files" title="Permanent link">#</a></h1>
+<p>TheHive uses <a href="https://github.com/lightbend/config/blob/master/HOCON.md">HOCON</a> as configuration file format.  This format gives enough flexibility to structure and organise the configuration of TheHive.</p>
+<p>TheHive is delivered with following files, in the folder <code>/etc/thehive</code> : </p>
+<ul>
+<li><code>logback.xml</code> containing the log policy</li>
+<li><code>secret.conf</code> containing a secret key used to create sessions. This key should be unique per instance (in the case of a cluster, this key should be the same for all nodes of this cluster)</li>
+<li><code>application.conf</code></li>
+</ul>
+<p>HOCON file format let you organise the configuration to have separate files for each purpose. It is the possible to create a <code>/etc/thehive/application.conf.d</code> folder and have several files inside that will be <em>included</em> in the main file <code>/etc/thehive/application.conf</code>. </p>
+<p>At the end, the following configuration structure is possible: </p>
+<div class="highlight"><pre><span></span><code>/etc/thehive
+|-- application.conf
+|-- application.conf.d
+|   |-- secret.conf
+|   |-- service.conf
+|   |-- database.conf
+|   |-- storage.conf
+|   |-- cluster.conf
+|   |-- authentication.conf
+|   |-- cortex.conf
+|   |-- misp.conf
+|   `-- webhooks.conf
+`-- logback.xml
+</code></pre></div>
+<p>And the content of <code>/etc/thehive/application.conf</code>: </p>
+<div class="highlight"><pre><span></span><code>###
+## Documentation is available at https://docs.thehive-project.org
+###
+
+## Include Play secret key
+# More information on secret key at https://www.playframework.com/documentation/2.8.x/ApplicationSecret
+include &quot;/etc/thehive/application.conf.d/secret.conf&quot;
+
+## Service
+include &quot;/etc/thehive/application.conf.d/service.conf&quot;
+
+## Database
+include &quot;/etc/thehive/application.conf.d/database.conf&quot;
+
+## Storage
+include &quot;/etc/thehive/application.conf.d/storage.conf&quot;
+
+## Cluster
+include &quot;/etc/thehive/application.conf.d/cluster.conf&quot;
+
+## Authentication
+include &quot;/etc/thehive/application.conf.d/authentication.conf&quot;
+
+## Cortex
+include &quot;/etc/thehive/application.conf.d/cortex.conf&quot;
+
+## MISP
+include &quot;/etc/thehive/application.conf.d/misp.conf&quot;
+
+## Webhooks
+include &quot;/etc/thehive/application.conf.d/webhooks.conf&quot;
+</code></pre></div>
                 
                   
                     
@@ -2069,7 +2122,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 3, 2021 13:33:59</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 29, 2021 07:27:12</span>
     
   </small>
 </div>
@@ -2091,7 +2144,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../webhooks/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../logs/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2100,19 +2153,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Webhooks
+              Logs
             </div>
           </div>
         </a>
       
       
-        <a href="../misc/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../../architecture/3_nodes_cluster/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Misc.
+              Use TheHive as a cluster
             </div>
           </div>
           <div class="md-footer__button md-icon">
