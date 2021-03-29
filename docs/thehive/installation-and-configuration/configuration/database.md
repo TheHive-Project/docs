@@ -61,7 +61,7 @@ db {
 | `index.search.directory`                                        | string         | path to folder where indexes should be stored, when using `lucene` engine           |
 | `index.search.hostname`                                         | list of string | list of IP addresses or hostnames when using `elasticsearch` engine           |
 | `index.search.index-name`                                       | string         | name of index, when using `elasticseach` engine           |
-| `index.search.elasticsearch.http.auth.type`                     | string         | Type of authentication |
+| `index.search.elasticsearch.http.auth.type: basic`              | string         | `basic` is the only possible value |
 | `index.search.elasticsearch.http.auth.basic.username`           | string         | Username account on Elasticsearch |
 | `index.search.elasticsearch.http.auth.basic.password`           | string         | Password of the account on Elasticsearch |
 | `index.search.elasticsearch.ssl.enabled`                        | boolean        | Enable SSL `true/false` |
