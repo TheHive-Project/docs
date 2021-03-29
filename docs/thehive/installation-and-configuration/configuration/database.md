@@ -16,7 +16,6 @@ According to the setup, the instance can use:
 
 ## Configuation 
 
-
 A typical database configuration for TheHive looks like this:
 
 ```
@@ -44,30 +43,44 @@ db {
 }
 ```
 
-with: 
+## List of possible parameters 
+
 
 | Parameter                   | Type           |  Description               |
 | --------------------------- | -------------- | ---------------------------| 
-| `provider`                  | string         | provider name. Default: `janusgraph` | 
-| `storage`                   | dict           | storage configuration                |
-| `storage.backend`           | string         | storage type. Can be `cql` or `berkeleyje` |
-| `storage.hostname`          | list of string | list of IP addresses or hostnames when using `cql` backend  |
-| `storage.directory`         | string         | local path for data when using `berkeleyje` backend  |
-| `storage.cql`               | dict           | configuration for `cql` backend _if used_                |
-| `storage.cql.cluster-name`  | string         | name of the cluster name used in the configuration of Apache Cassandra |
-| `storage.cql.keyspace`      | string         | Keyspace name used to store TheHive data in Apache Cassandra |
-| `index.search`              | dict           | configuration for indexes                |
-| `index.search.backend`      | string         | index engine. Default: `lucene` provided with TheHive. Can also be `elasticsearch`  |
-| `index.search.directory`    | string         | path to folder where indexes should be stored, when using `lucene` engine           |
-| `index.search.hostname`     | list of string | list of IP addresses or hostnames when using `elasticsearch` engine           |
-| `index.search.index-name`   | string         | name of index, when using `elasticseach` engine           |
-
-
+| `provider`                                                      | string         | provider name. Default: `janusgraph` | 
+| `storage`                                                       | dict           | storage configuration                |
+| `storage.backend`                                               | string         | storage type. Can be `cql` or `berkeleyje` |
+| `storage.hostname`                                              | list of string | list of IP addresses or hostnames when using `cql` backend  |
+| `storage.directory`                                             | string         | local path for data when using `berkeleyje` backend  |
+| `storage.cql`                                                   | dict           | configuration for `cql` backend _if used_                |
+| `storage.cql.cluster-name`                                      | string         | name of the cluster name used in the configuration of Apache Cassandra |
+| `storage.cql.keyspace`                                          | string         | Keyspace name used to store TheHive data in Apache Cassandra |
+| `index.search`                                                  | dict           | configuration for indexes                |
+| `index.search.backend`                                          | string         | index engine. Default: `lucene` provided with TheHive. Can also be `elasticsearch`  |
+| `index.search.directory`                                        | string         | path to folder where indexes should be stored, when using `lucene` engine           |
+| `index.search.hostname`                                         | list of string | list of IP addresses or hostnames when using `elasticsearch` engine           |
+| `index.search.index-name`                                       | string         | name of index, when using `elasticseach` engine           |
+| `index.search.elasticsearch.http.auth.type`                     | string         | Type of authentication |
+| `index.search.elasticsearch.http.auth.basic.username`           | string         | Username account on Elasticsearch |
+| `index.search.elasticsearch.http.auth.basic.password`           | string         | Password of the account on Elasticsearch |
+| `index.search.elasticsearch.ssl.enabled`                        | boolean        | Enable SSL `true/false` |
+| `index.search.elasticsearch.ssl.truststore.location`            | string         | Location of the truststore |
+| `index.search.elasticsearch.ssl.truststore.password`            | string         | Password of the truststore |
+| `index.search.elasticsearch.ssl.keystore.location`              | string         | Location of the keystore for client authentication  |
+| `index.search.elasticsearch.ssl.keystore.storepassword`         | string         | Password of the keystore |
+| `index.search.elasticsearch.ssl.keystore.keypassword`           | string         | Password of the client certificate |
+| `index.search.elasticsearch.ssl.disable-hostname-verification`  | boolean        | Disable SSL verification `true/false` |
+| `index.search.elasticsearch.ssl.allow-self-signed-certificates` | boolean        | Allow self signe certificates `true/false` |
 
 !!! Warning
 
     - Using Elasticsearch to manage indexes is required if you are setting up TheHive as a cluster.
     - The **initial start**, or first start after configuring indexes **might take some time** if the database contains a large amount of data. This time is due to the indexes creation
+
+
+More information on configuration for Elasticsearch connection: [https://docs.janusgraph.org/index-backend/elasticsearch/](https://docs.janusgraph.org/index-backend/elasticsearch/).
+
 
 ## Use cases
 
@@ -181,6 +194,24 @@ Database and index engine can be different, depending on the use case and target
                     backend : elasticsearch
                     hostname : ["10.1.2.5"]
                     index-name : thehive
+                    elasticsearch {
+                      http {
+                        auth {
+                          type: basic
+                          basic {
+                            username: httpuser
+                            password: httppassword
+                          }
+                        }
+                      }
+                      ssl {
+                        enable: true
+                        truststore {
+                          location: /path/to/your/truststore.jks
+                          password: truststorepwd
+                        }
+                      }
+                    }
                   }
                 }
               }
