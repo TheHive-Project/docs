@@ -2,6 +2,14 @@
 
 ## Listen address & port
 
+By default the application listens on all interfaces and port `9000`.  This is possible to specify listen address and ports with following parameters in the `application.conf` file: 
+
+```
+http.address=127.0.0.1
+http.port=9000
+```
+
+
 ## Context
 
 If you are using a reverse proxy, and you want to specify a location (ex: `/thehive`), updating the configuration of TheHive is also required
