@@ -5,3 +5,4 @@ nav:
   - 'Configure HTTPS': https.md
   - 'Use fail2ban': fail2ban.md  
   - 'Cassandra & security': cassandra-security.md
+  - 'Troubleshooting': troubleshooting.md
