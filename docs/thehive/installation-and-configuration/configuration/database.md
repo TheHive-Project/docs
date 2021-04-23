@@ -205,7 +205,7 @@ Database and index engine can be different, depending on the use case and target
                         }
                       }
                       ssl {
-                        enable: true
+                        enabled: true
                         truststore {
                           location: /path/to/your/truststore.jks
                           password: truststorepwd
