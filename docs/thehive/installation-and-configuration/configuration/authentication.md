@@ -187,6 +187,35 @@ Authenticate the user using an external OAuth2 authenticator server. It accepts 
           }
         ```
 
+    === "Okta"
+
+        ```yaml
+
+          ## Authentication
+          auth {
+            providers: [
+              {name: session}
+              {name: basic, realm: thehive}
+              {name: local}
+              {name: key}
+              {
+                name: oauth2
+                clientId: "CLIENT_ID"
+                clientSecret: "CLIENT_SECRET"
+                redirectUri: "http://THEHIVE_URL/api/ssoLogin"
+                responseType: "code"
+                grantType: "authorization_code"
+                authorizationUrl: "https://OKTA/oauth2/v1/authorize"
+                authorizationHeader: "Bearer"
+                tokenUrl: "http://OKTA/oauth2/v1/token"
+                userUrl: "http://OKTA/oauth2/v1/userinfo"
+                scope: ["openid", "email"]
+                userIdField: "email"
+              }
+            ]
+          }
+        ```
+
     === "Github"
 
         ```yaml
@@ -213,6 +242,7 @@ Authenticate the user using an external OAuth2 authenticator server. It accepts 
                 userIdField: "email"
                 #userOrganisation: ""
               }
+              
             ]
           }
         ```
