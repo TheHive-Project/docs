@@ -214,7 +214,7 @@ chown -R minio:minio /opt/minio
 Create or edit file `/opt/minio/etc/minio.conf
 
 ```
-MINIO_OPTS="server --address :9100 http://minio{1...3}/srv/hadoop/minio/{1...2}"
+MINIO_OPTS="server --address :9100 http://minio{1...3}/srv/minio/{1...2}"
 MINIO_ACCESS_KEY="<ACCESS_KEY>"
 MINIO_SECRET_KEY="<SECRET_KEY>"
 ```
