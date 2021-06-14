@@ -98,3 +98,76 @@ with:
             cluster.seed-nodes = [ "akka://application@10.1.2.1:2551", "akka://application@10.1.2.2:2551", "akka://application@10.1.2.3:2551" ]
         }
         ```
+
+
+## SSL/TLS
+
+Akka supports SSL/TLS to encrypt communications between nodes. A typical configuration with SSL support : 
+
+```yaml
+## Akka server
+akka {
+  cluster.enable = on
+  actor {
+    provider = cluster
+  }
+  remote.artery {
+    transport = tls-tcp
+    canonical {
+      hostname = "<HOSTNAME OR IP_ADDRESS>"
+      port = 2551
+    }
+
+    ssl.config-ssl-engine {
+      key-store = "<PATH TO KEYSTORE>"
+      trust-store = "<PATH TO TRUSTSTORE>"
+
+      key-store-password = "chamgeme"
+      key-password = "chamgeme"
+      trust-store-password = "chamgeme"
+
+      protocol = "TLSv1.2"
+    }
+  }
+# seed node list contains at least one active node
+  cluster.seed-nodes = [ "akka://application@HOSTNAME1:2551", "akka://application@HOSTNAME2:2551", "akka://application@HOSTNAME3:2551" ]
+}
+```
+
+!!! Note
+    Note that `akka.remote.artery.transport` has changed and `ssl.config-ssl-engine` needs to be configured. 
+    **Reference**: [https://doc.akka.io/docs/akka/current/remoting-artery.html#remote-security](https://doc.akka.io/docs/akka/current/remoting-artery.html#remote-security)
+    Use your own internal PKI of `keytool` commands to generate your certificates: [https://lightbend.github.io/ssl-config/CertificateGeneration.html#using-keytool](https://lightbend.github.io/ssl-config/CertificateGeneration.html#using-keytool)
+
+
+### Node configuration example
+
+```yaml
+## Akka server
+akka {
+  cluster.enable = on
+  actor {
+    provider = cluster
+  }
+  remote.artery {
+    transport = tls-tcp
+    canonical {
+      hostname = "10.1.2.1"
+      port = 2551
+    }
+
+    ssl.config-ssl-engine {
+      key-store = "/etc/thehive/application.conf.d/certs/10.1.2.1.jks"
+      trust-store = "/etc/thehive/application.conf.d/certs/internal_ca.jks"
+
+      key-store-password = "chamgeme"
+      key-password = "chamgeme"
+      trust-store-password = "chamgeme"
+
+      protocol = "TLSv1.2"
+    }
+  }
+# seed node list contains at least one active node
+  cluster.seed-nodes = [ "akka://application@10.1.2.1:2551", "akka://application@10.1.2.2:2551", "akka://application@10.1.2.3:2551" ]
+}
+```
