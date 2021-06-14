@@ -2532,7 +2532,7 @@
 </table>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Keycloak</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Keycloak</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>  <span class="c1">## Authentication</span>
   <span class="l l-Scalar l-Scalar-Plain">auth {</span>
     <span class="l l-Scalar l-Scalar-Plain">providers</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
@@ -2558,7 +2558,33 @@
   <span class="err">}</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Github</label><div class="tabbed-content">
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Okta</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>  <span class="c1">## Authentication</span>
+  <span class="l l-Scalar l-Scalar-Plain">auth {</span>
+    <span class="l l-Scalar l-Scalar-Plain">providers</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
+      <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">session</span><span class="p p-Indicator">}</span>
+      <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">basic</span><span class="p p-Indicator">,</span><span class="nt"> realm</span><span class="p">:</span> <span class="nv">thehive</span><span class="p p-Indicator">}</span>
+      <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">local</span><span class="p p-Indicator">}</span>
+      <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">key</span><span class="p p-Indicator">}</span>
+      <span class="p p-Indicator">{</span>
+<span class="nt">        name</span><span class="p">:</span> <span class="nv">oauth2</span>
+        <span class="nv">clientId</span><span class="p p-Indicator">:</span> <span class="s">&quot;CLIENT_ID&quot;</span>
+<span class="nt">        clientSecret</span><span class="p">:</span> <span class="s">&quot;CLIENT_SECRET&quot;</span>
+<span class="nt">        redirectUri</span><span class="p">:</span> <span class="s">&quot;http://THEHIVE_URL/api/ssoLogin&quot;</span>
+<span class="nt">        responseType</span><span class="p">:</span> <span class="s">&quot;code&quot;</span>
+<span class="nt">        grantType</span><span class="p">:</span> <span class="s">&quot;authorization_code&quot;</span>
+<span class="nt">        authorizationUrl</span><span class="p">:</span> <span class="s">&quot;https://OKTA/oauth2/v1/authorize&quot;</span>
+<span class="nt">        authorizationHeader</span><span class="p">:</span> <span class="s">&quot;Bearer&quot;</span>
+<span class="nt">        tokenUrl</span><span class="p">:</span> <span class="s">&quot;http://OKTA/oauth2/v1/token&quot;</span>
+<span class="nt">        userUrl</span><span class="p">:</span> <span class="s">&quot;http://OKTA/oauth2/v1/userinfo&quot;</span>
+<span class="nt">        scope</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;openid&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;email&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">        userIdField</span><span class="p">:</span> <span class="s">&quot;email&quot;</span>
+      <span class="p p-Indicator">}</span>
+    <span class="p p-Indicator">]</span>
+  <span class="err">}</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Github</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>  <span class="c1">## Authentication</span>
   <span class="l l-Scalar l-Scalar-Plain">auth {</span>
     <span class="l l-Scalar l-Scalar-Plain">providers</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
@@ -2581,6 +2607,7 @@
 <span class="nt">        userIdField</span><span class="p">:</span> <span class="s">&quot;email&quot;</span>
 <span class="nt">        #userOrganisation</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
       <span class="p p-Indicator">}</span>
+
     <span class="p p-Indicator">]</span>
   <span class="err">}</span>
 </code></pre></div>
@@ -2592,7 +2619,7 @@
 </ul>
 </div>
 </div>
-<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Microsoft 365</label><div class="tabbed-content">
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Microsoft 365</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>  <span class="c1">## Authentication</span>
   <span class="l l-Scalar l-Scalar-Plain">auth {</span>
     <span class="l l-Scalar l-Scalar-Plain">providers</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
@@ -2623,7 +2650,7 @@
 <p>To create <code>CLIENT_ID</code>, <code>CLIENT_SECRET</code> and <code>TENANT</code>, register a new app at <a href="https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps">https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps</a>.</p>
 </div>
 </div>
-<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Google</label><div class="tabbed-content">
+<input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5">Google</label><div class="tabbed-content">
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -2667,7 +2694,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 18, 2021 14:08:04</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 27, 2021 15:50:05</span>
     
   </small>
 </div>
