@@ -33,7 +33,7 @@ with:
 - `cluster.seed-nodes` containing the list of akka nodes and **beeing the same on all nodes** 
 
 
-!!! Example
+!!! Example "Configuration of a Cluster with 3 nodes"
 
     === "Node 1"
 
@@ -135,44 +135,53 @@ akka {
 ```
 
 !!! Note
-    Note that `akka.remote.artery.transport` has changed and `akka.ssl.config-ssl-engine` needs to be configured. 
+    Note that `akka.remote.artery.transport` has changed and `akka.ssl.config-ssl-engine` needs to be configured.
+    
     **Reference**: [https://doc.akka.io/docs/akka/current/remoting-artery.html#remote-security](https://doc.akka.io/docs/akka/current/remoting-artery.html#remote-security)
 
-    Use your own internal PKI of `keytool` commands to generate your certificates: [https://lightbend.github.io/ssl-config/CertificateGeneration.html#using-keytool](https://lightbend.github.io/ssl-config/CertificateGeneration.html#using-keytool)
+!!! Warning "About Certificates"
+    Use your own internal PKI, or `keytool` commands to generate your certificates.
+    
+    **Reference**: [https://lightbend.github.io/ssl-config/CertificateGeneration.html#using-keytool](https://lightbend.github.io/ssl-config/CertificateGeneration.html#using-keytool)
+
+    Your server certificates need to contain several extensions to make everything work properly:
+      
+        - `nonRepudiation`
+        - `dataEncipherment`
+        - `digitalSignature`
+        - `keyEncipherment`
 
 
-### Node configuration example
+!!! Example "Akka configuration with SSL for Node 1"
 
-Akka configuration with SSL for Node 1:
+    ```yaml
+    ## Akka server
+    akka {
+      cluster.enable = on
+      actor {
+        provider = cluster
+      }
+      remote.artery {
+        {==transport = tls-tcp==}
+        canonical {
+          hostname = "10.1.2.1"
+          port = 2551
+        }
 
-```yaml
-## Akka server
-akka {
-  cluster.enable = on
-  actor {
-    provider = cluster
-  }
-  remote.artery {
-    transport = tls-tcp
-    canonical {
-      hostname = "10.1.2.1"
-      port = 2551
+        ssl.config-ssl-engine {
+          key-store = "/etc/thehive/application.conf.d/certs/10.1.2.1.jks"
+          trust-store = "/etc/thehive/application.conf.d/certs/internal_ca.jks"
+
+          key-store-password = "chamgeme"
+          key-password = "chamgeme"
+          trust-store-password = "chamgeme"
+
+          protocol = "TLSv1.2"
+        }
+      }
+    # seed node list contains at least one active node
+      cluster.seed-nodes = [ "akka://application@10.1.2.1:2551", "akka://application@10.1.2.2:2551", "akka://application@10.1.2.3:2551" ]
     }
+    ```
 
-    ssl.config-ssl-engine {
-      key-store = "/etc/thehive/application.conf.d/certs/10.1.2.1.jks"
-      trust-store = "/etc/thehive/application.conf.d/certs/internal_ca.jks"
-
-      key-store-password = "chamgeme"
-      key-password = "chamgeme"
-      trust-store-password = "chamgeme"
-
-      protocol = "TLSv1.2"
-    }
-  }
-# seed node list contains at least one active node
-  cluster.seed-nodes = [ "akka://application@10.1.2.1:2551", "akka://application@10.1.2.2:2551", "akka://application@10.1.2.3:2551" ]
-}
-```
-
-Apply the same principle for the other nodes, and restart all services.
+    Apply the same principle for the other nodes, and restart all services.

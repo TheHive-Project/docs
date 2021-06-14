@@ -583,6 +583,8 @@ service thehive start
 
 Please note that the service may take some time to start. Once it is started, you may launch your browser and connect to `http://YOUR_SERVER_ADDRESS:9000/`.
 
+The default admin user is `admin@thehive.local` with password `secret`. It is recommended to change the default password.
+
 
 ## Advanced configuration
 For additional configuration options, please refer to the [Configuration Guides](../index.md#configuration-guides).
