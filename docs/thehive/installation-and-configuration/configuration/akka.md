@@ -135,12 +135,15 @@ akka {
 ```
 
 !!! Note
-    Note that `akka.remote.artery.transport` has changed and `ssl.config-ssl-engine` needs to be configured. 
+    Note that `akka.remote.artery.transport` has changed and `akka.ssl.config-ssl-engine` needs to be configured. 
     **Reference**: [https://doc.akka.io/docs/akka/current/remoting-artery.html#remote-security](https://doc.akka.io/docs/akka/current/remoting-artery.html#remote-security)
+
     Use your own internal PKI of `keytool` commands to generate your certificates: [https://lightbend.github.io/ssl-config/CertificateGeneration.html#using-keytool](https://lightbend.github.io/ssl-config/CertificateGeneration.html#using-keytool)
 
 
 ### Node configuration example
+
+Akka configuration with SSL for Node 1:
 
 ```yaml
 ## Akka server
@@ -171,3 +174,5 @@ akka {
   cluster.seed-nodes = [ "akka://application@10.1.2.1:2551", "akka://application@10.1.2.2:2551", "akka://application@10.1.2.3:2551" ]
 }
 ```
+
+Apply the same principle for the other nodes, and restart all services.
