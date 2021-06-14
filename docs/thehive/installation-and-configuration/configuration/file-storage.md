@@ -1,6 +1,6 @@
 # File storage configuration
 
-TheHive can be configured to connect to local Berkeley database or Cassandra database.
+TheHive can be configured to use local or distributed filesystems. 
 
 !!! Example
 
