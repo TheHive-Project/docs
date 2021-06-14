@@ -2239,13 +2239,21 @@
 <p class="admonition-title">About Certificates</p>
 <p>Use your own internal PKI, or <code>keytool</code> commands to generate your certificates.</p>
 <p><strong>Reference</strong>: <a href="https://lightbend.github.io/ssl-config/CertificateGeneration.html#using-keytool">https://lightbend.github.io/ssl-config/CertificateGeneration.html#using-keytool</a></p>
-<p>Your server certificates need to contain several extensions to make everything work properly:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">-</span> <span class="n">`nonRepudiation`</span>
-<span class="o">-</span> <span class="n">`dataEncipherment`</span>
-<span class="o">-</span> <span class="n">`digitalSignature`</span>
-<span class="o">-</span> <span class="n">`keyEncipherment`</span>
-</code></pre></div>
-
+<p>Your server certificates should contain various <em>KeyUsage</em> and <em>ExtendedkeyUsage</em> extensions to make everything work properly:</p>
+<ul>
+<li><em>KeyUsage</em> extensions<ul>
+<li><code>nonRepudiation</code></li>
+<li><code>dataEncipherment</code></li>
+<li><code>digitalSignature</code></li>
+<li><code>keyEncipherment</code></li>
+</ul>
+</li>
+<li><em>ExtendedkeyUsage</em> extensions<ul>
+<li><code>serverAuth</code></li>
+<li><code>clientAuth</code></li>
+</ul>
+</li>
+</ul>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Akka configuration with SSL for Node 1</p>
@@ -2287,7 +2295,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 14, 2021 13:11:47</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 14, 2021 13:39:13</span>
     
   </small>
 </div>
