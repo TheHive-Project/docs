@@ -144,12 +144,18 @@ akka {
     
     **Reference**: [https://lightbend.github.io/ssl-config/CertificateGeneration.html#using-keytool](https://lightbend.github.io/ssl-config/CertificateGeneration.html#using-keytool)
 
-    Your server certificates need to contain several extensions to make everything work properly:
-      
+    Your server certificates should contain various _KeyUsage_ and _ExtendedkeyUsage_ extensions to make everything work properly:
+        
+    - _KeyUsage_ extensions
         - `nonRepudiation`
         - `dataEncipherment`
         - `digitalSignature`
         - `keyEncipherment`
+    - _ExtendedkeyUsage_ extensions
+        - `serverAuth`
+        - `clientAuth`
+
+
 
 
 !!! Example "Akka configuration with SSL for Node 1"
