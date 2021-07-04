@@ -2214,6 +2214,21 @@ db {
 <td>local path for data when using <code>berkeleyje</code> backend</td>
 </tr>
 <tr>
+<td><code>storage.username</code></td>
+<td>string</td>
+<td>account username with <code>cql</code> backend if Cassandra auth is configured</td>
+</tr>
+<tr>
+<td><code>storage.password</code></td>
+<td>string</td>
+<td>account password with <code>cql</code> backend if Cassandra auth is configured</td>
+</tr>
+<tr>
+<td><code>storage.port</code></td>
+<td>integer</td>
+<td>port number with <code>cql</code> backend (<code>9042</code> by default). Change this if using an alternate port or a dedicated port number when using SSL with Cassandra</td>
+</tr>
+<tr>
 <td><code>storage.cql</code></td>
 <td>dict</td>
 <td>configuration for <code>cql</code> backend <em>if used</em></td>
@@ -2227,6 +2242,41 @@ db {
 <td><code>storage.cql.keyspace</code></td>
 <td>string</td>
 <td>Keyspace name used to store TheHive data in Apache Cassandra</td>
+</tr>
+<tr>
+<td><code>storage.cql.ssl.enabled</code></td>
+<td>boolean</td>
+<td><code>false</code> by default. set it to <code>true</code> if SSL is used with Cassandra</td>
+</tr>
+<tr>
+<td><code>storage.cql.ssl.truststore.location</code></td>
+<td>string</td>
+<td>path the the truststore. Specify it when using SSL with Cassandra</td>
+</tr>
+<tr>
+<td><code>storage.cql.ssl.password</code></td>
+<td>string</td>
+<td>password to access the truststore</td>
+</tr>
+<tr>
+<td><code>storage.cql.ssl.client-authentication-enabled</code></td>
+<td>boolean</td>
+<td>Enables use of a client key to authenticate with Cassandra</td>
+</tr>
+<tr>
+<td><code>storage.cql.ssl.keystore.location</code></td>
+<td>string</td>
+<td>path the the keystore. Specify it when using SSL and client auth. with Cassandra</td>
+</tr>
+<tr>
+<td><code>storage.cql.ssl.keystore.keypassword</code></td>
+<td>string</td>
+<td>password to access the key in the keystore</td>
+</tr>
+<tr>
+<td><code>storage.cql.ssl.truststore.storepassword</code></td>
+<td>string</td>
+<td>password the access the keystore</td>
 </tr>
 <tr>
 <td><code>index.search</code></td>
@@ -2466,7 +2516,7 @@ db {
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 29, 2021 08:03:05</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 4, 2021 05:56:20</span>
     
   </small>
 </div>

@@ -1238,12 +1238,19 @@
     Authentication with Cassandra
   </a>
   
-    <nav class="md-nav" aria-label="Authentication with Cassandra">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cassandra-node-to-node-encryption" class="md-nav__link">
+    Cassandra node to node encryption
+  </a>
+  
+    <nav class="md-nav" aria-label="Cassandra node to node encryption">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cassandra-configuration" class="md-nav__link">
-    Cassandra Configuration
+  <a href="#cassandra-dedicated-port-for-ssl-optional" class="md-nav__link">
+    Cassandra dedicated port for SSL (optional)
   </a>
   
 </li>
@@ -1254,11 +1261,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#securing-cassandra-connection-with-thehive" class="md-nav__link">
-    Securing Cassandra connection with TheHive
+  <a href="#client-to-node-encryption" class="md-nav__link">
+    Client to node encryption
   </a>
   
-    <nav class="md-nav" aria-label="Securing Cassandra connection with TheHive">
+    <nav class="md-nav" aria-label="Client to node encryption">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1269,15 +1276,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cassandra-configuration_1" class="md-nav__link">
-    Cassandra configuration
+  <a href="#configuring-cassandra" class="md-nav__link">
+    Configuring Cassandra
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#thehive-configuration" class="md-nav__link">
-    TheHive configuration
+  <a href="#configuring-thehive" class="md-nav__link">
+    Configuring TheHive
   </a>
   
 </li>
@@ -2139,12 +2146,19 @@
     Authentication with Cassandra
   </a>
   
-    <nav class="md-nav" aria-label="Authentication with Cassandra">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cassandra-node-to-node-encryption" class="md-nav__link">
+    Cassandra node to node encryption
+  </a>
+  
+    <nav class="md-nav" aria-label="Cassandra node to node encryption">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cassandra-configuration" class="md-nav__link">
-    Cassandra Configuration
+  <a href="#cassandra-dedicated-port-for-ssl-optional" class="md-nav__link">
+    Cassandra dedicated port for SSL (optional)
   </a>
   
 </li>
@@ -2155,11 +2169,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#securing-cassandra-connection-with-thehive" class="md-nav__link">
-    Securing Cassandra connection with TheHive
+  <a href="#client-to-node-encryption" class="md-nav__link">
+    Client to node encryption
   </a>
   
-    <nav class="md-nav" aria-label="Securing Cassandra connection with TheHive">
+    <nav class="md-nav" aria-label="Client to node encryption">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2170,15 +2184,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cassandra-configuration_1" class="md-nav__link">
-    Cassandra configuration
+  <a href="#configuring-cassandra" class="md-nav__link">
+    Configuring Cassandra
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#thehive-configuration" class="md-nav__link">
-    TheHive configuration
+  <a href="#configuring-thehive" class="md-nav__link">
+    Configuring TheHive
   </a>
   
 </li>
@@ -2208,22 +2222,31 @@
                 <h1 id="security-in-apache-cassandra">Security in Apache Cassandra<a class="headerlink" href="#security-in-apache-cassandra" title="Permanent link">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">References</p>
+<p>Internal authentication</p>
 <ul>
 <li><a href="https://docs.datastax.com/en/archived/cassandra/3.0/cassandra/configuration/secureInternalAuthenticationTOC.html">https://docs.datastax.com/en/archived/cassandra/3.0/cassandra/configuration/secureInternalAuthenticationTOC.html</a></li>
 </ul>
+<p>Node to node encryption</p>
+<ul>
+<li><a href="https://docs.datastax.com/en/archived/cassandra/3.0/cassandra/configuration/secureSSLNodeToNode.html">https://docs.datastax.com/en/archived/cassandra/3.0/cassandra/configuration/secureSSLNodeToNode.html</a></li>
+</ul>
+<p>Client to node encryption</p>
+<ul>
+<li><a href="https://docs.datastax.com/en/archived/cassandra/3.0/cassandra/configuration/secureSSLClientToNode.html">https://docs.datastax.com/en/archived/cassandra/3.0/cassandra/configuration/secureSSLClientToNode.html</a></li>
+<li><a href="https://docs.janusgraph.org/basics/configuration-reference/#storagecqlssl">https://docs.janusgraph.org/basics/configuration-reference/#storagecqlssl</a></li>
+</ul>
 </div>
 <h2 id="authentication-with-cassandra">Authentication with Cassandra<a class="headerlink" href="#authentication-with-cassandra" title="Permanent link">#</a></h2>
-<h3 id="cassandra-configuration">Cassandra Configuration<a class="headerlink" href="#cassandra-configuration" title="Permanent link">#</a></h3>
 <div class="admonition example">
-<ol>
+<ul>
 <li>Create an account and grant permissions on keyspace</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">ROLE</span> <span class="n">thehive</span> <span class="k">WITH</span> <span class="n">PASSWORD</span> <span class="o">=</span> <span class="s1">&#39;thehive1234&#39;</span> <span class="k">AND</span> <span class="n">LOGIN</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
 <span class="k">GRANT</span> <span class="k">ALL</span> <span class="n">PERMISSIONS</span> <span class="k">ON</span> <span class="n">KEYSPACE</span> <span class="n">thehive</span> <span class="k">TO</span> <span class="n">thehive</span><span class="p">;</span>
 </code></pre></div>
-<ol>
+<ul>
 <li>Configure TheHive with the account </li>
-</ol>
+</ul>
 <p>Update <code>/etc/thehive/application.conf</code> accordingly: </p>
 <div class="highlight"><pre><span></span><code>db.janusgraph {
   storage {
@@ -2241,7 +2264,34 @@
   }
 </code></pre></div>
 </div>
-<h2 id="securing-cassandra-connection-with-thehive">Securing Cassandra connection with TheHive<a class="headerlink" href="#securing-cassandra-connection-with-thehive" title="Permanent link">#</a></h2>
+<h2 id="cassandra-node-to-node-encryption">Cassandra node to node encryption<a class="headerlink" href="#cassandra-node-to-node-encryption" title="Permanent link">#</a></h2>
+<p>This document addresses communication between Cassandra servers, when a Cassandra cluster contains several nodes. </p>
+<div class="admonition example">
+<div class="highlight"><pre><span></span><code><span class="nt">server_encryption_options</span><span class="p">:</span>
+    <span class="nt">internode_encryption</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">all</span>
+    <span class="nt">keystore</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/path/to/keystore.jks</span>
+    <span class="nt">keystore_password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keystorepassword</span>
+    <span class="nt">truststore</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/path/to/truststore.jks</span>
+    <span class="nt">truststore_password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">truststorepassword</span>
+    <span class="c1"># More advanced defaults below:</span>
+    <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TLS</span>
+    <span class="nt">algorithm</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SunX509</span>
+    <span class="nt">store_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">JKS</span>
+    <span class="nt">cipher_suites</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">TLS_RSA_WITH_AES_128_CBC_SHA</span><span class="p p-Indicator">,</span><span class="nv">TLS_RSA_WITH_AES_256_CBC_SHA</span><span class="p p-Indicator">,</span><span class="nv">TLS_DHE_RSA_WITH_</span>
+<span class="nv">AES_128_CBC_SHA</span><span class="p p-Indicator">,</span><span class="nv">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</span><span class="p p-Indicator">,</span><span class="nv">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</span><span class="p p-Indicator">,</span><span class="nv">TLS_ECDHE_R</span>
+<span class="nv">SA_WITH_AES_256_CBC_SHA</span><span class="p p-Indicator">]</span>
+    <span class="nt">require_client_auth</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+</div>
+<h3 id="cassandra-dedicated-port-for-ssl-optional">Cassandra dedicated port for SSL (optional)<a class="headerlink" href="#cassandra-dedicated-port-for-ssl-optional" title="Permanent link">#</a></h3>
+<p>Optionally, you can setup a dedicated port for SSL communication. Update <code>/etc/cassandra/cassandra.yml</code> configuration file on each node: </p>
+<div class="highlight"><pre><span></span><code><span class="nt">native_transport_port_ssl</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">9142</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By doing so, all SSL communications will be done using this port. Without this parameter, SSL is setup on <code>native_transport_port</code>. (everything is explained in the <code>cassandra.yaml</code> configuration file).</p>
+</div>
+<h2 id="client-to-node-encryption">Client to node encryption<a class="headerlink" href="#client-to-node-encryption" title="Permanent link">#</a></h2>
 <p>This guide explains how to secure connection between Cassandra server and Cassandra clients (TheHive). This document doesn’t address communication between Cassandra servers, when a Cassandra cluster contains several nodes. </p>
 <h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h3>
 <p>The setup requires a valid X509 certificate for the Cassandra service. It must have standard properties of server certificate:</p>
@@ -2257,37 +2307,55 @@ The format of the certificate file is PKCS12 (file with extention p12).</p>
 </code></pre></div>
 <p>This command ask a password for file integrity checking.</p>
 <p>The command <code>keytool</code> is available in any JDK distribution.</p>
-<h3 id="cassandra-configuration_1">Cassandra configuration<a class="headerlink" href="#cassandra-configuration_1" title="Permanent link">#</a></h3>
-<p>The default location of the configuration file of Cassandra is <code>/etc/cassandra/cassandra.yaml</code>. </p>
+<h3 id="configuring-cassandra">Configuring Cassandra<a class="headerlink" href="#configuring-cassandra" title="Permanent link">#</a></h3>
 <div class="admonition example">
 <p>Locate the section <code>client_encryption_options</code> and set the following options:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">client_encryption_options</span><span class="p">:</span> 
-    <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span> 
-    <span class="nt">optional</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span> 
-    <span class="nt">keystore</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/etc/cassandra/keystore.p12</span> 
-    <span class="nt">keystore_password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cassandra</span> 
-    <span class="nt">store_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PKCS12</span> 
+<p><div class="highlight"><pre><span></span><code><span class="nt">client_encryption_options</span><span class="p">:</span>
+    <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="c1"># If enabled and optional is set to true encrypted and unencrypted connections are handled.</span>
+    <span class="nt">optional</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+    <span class="nt">keystore</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/pat/to/keystore.jks</span>
+    <span class="nt">keystore_password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keystorepassword</span>
+    <span class="nt">require_client_auth</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+    <span class="c1"># Set trustore and truststore_password if require_client_auth is true</span>
+    <span class="c1"># truststore: conf/.truststore</span>
+    <span class="c1"># truststore_password: cassandra</span>
+    <span class="c1"># More advanced defaults below:</span>
+    <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TLS</span>
+    <span class="nt">algorithm</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SunX509</span>
+    <span class="nt">store_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">JKS</span>
+    <span class="nt">cipher_suites</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">TLS_RSA_WITH_AES_128_CBC_SHA</span><span class="p p-Indicator">,</span><span class="nv">TLS_RSA_WITH_AES_256_CBC_SHA</span><span class="p p-Indicator">,</span><span class="nv">TLS_DHE_RSA_WITH_</span>
+<span class="nv">AES_128_CBC_SHA</span><span class="p p-Indicator">,</span><span class="nv">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</span><span class="p p-Indicator">,</span><span class="nv">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</span><span class="p p-Indicator">,</span><span class="nv">TLS_ECDHE_R</span>
+<span class="nv">SA_WITH_AES_256_CBC_SHA</span><span class="p p-Indicator">]</span>
 </code></pre></div>
-<p>The <code>keystore</code> value contains the location of the certificate file (in PKCS12 format). The <code>keystore_password</code> contains the password of the certificate file.</p>
+Then the service cassandra must be restarted.</p>
 </div>
-<p>Then the service cassandra must be restarted.</p>
-<h3 id="thehive-configuration">TheHive configuration<a class="headerlink" href="#thehive-configuration" title="Permanent link">#</a></h3>
-<p>In <code>application.conf</code> file: </p>
+<h3 id="configuring-thehive">Configuring TheHive<a class="headerlink" href="#configuring-thehive" title="Permanent link">#</a></h3>
 <div class="admonition example">
-<p>Specify the location of the trustore file: </p>
-<div class="highlight"><pre><span></span><code>db.janusgraph.storage { 
-  backend: cql 
-  hostname: [&quot;127.0.0.1&quot;] 
-  cql.ssl { 
-    enabled: true 
-    truststore { 
-      <mark class="critic">location: /path/to/ca.jks</mark>
-      <mark class="critic">password: cassandra</mark>
-    } 
-  } 
-}
+<p><div class="highlight"><pre><span></span><code>db.janusgraph {
+  storage {
+    ## Cassandra configuration
+    # More information at https://docs.janusgraph.org/basics/configuration-reference/#storagecql
+    backend: cql
+    hostname: [&quot;ip_node_1&quot;, &quot;ip_node_2&quot;, &quot;ip_node_3&quot;]
+    # Cassandra authentication (if configured)
+    username: &quot;thehive&quot;
+    password: &quot;thehive1234&quot;
+    <mark class="critic">port: 9142 # if alternative port has been set in Cassandra configuration</mark>
+    cql {
+      cluster-name: thp
+      keyspace: thehive
+      <mark class="critic">ssl {</mark>
+        <mark class="critic">enabled: true</mark>
+        <mark class="critic">truststore {</mark>
+          <mark class="critic">location: &quot;/path/to/truststore.jks&quot;</mark>
+          <mark class="critic">password: &quot;truststorepassword&quot;</mark>
+        <mark class="critic">}</mark>
+      }
+    }
+  }
 </code></pre></div>
-<p>The setting <code>location</code> define the location of the truststore file (generated by keytool command). The <code>password</code> is the one enter during truststore creation.</p>
+Then the service thehive must be restarted.</p>
 </div>
                 
                   
@@ -2297,7 +2365,7 @@ The format of the certificate file is PKCS12 (file with extention p12).</p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 2, 2021 17:57:33</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 4, 2021 06:51:31</span>
     
   </small>
 </div>
