@@ -53,9 +53,19 @@ db {
 | `storage.backend`                                               | string         | storage type. Can be `cql` or `berkeleyje` |
 | `storage.hostname`                                              | list of string | list of IP addresses or hostnames when using `cql` backend  |
 | `storage.directory`                                             | string         | local path for data when using `berkeleyje` backend  |
+| `storage.username `                                             | string         | account username with `cql` backend if Cassandra auth is configured |
+| `storage.password `                                             | string         | account password with `cql` backend if Cassandra auth is configured |
+| `storage.port `                                                 | integer        | port number with `cql` backend (`9042` by default). Change this if using an alternate port or a dedicated port number when using SSL with Cassandra |
 | `storage.cql`                                                   | dict           | configuration for `cql` backend _if used_                |
 | `storage.cql.cluster-name`                                      | string         | name of the cluster name used in the configuration of Apache Cassandra |
 | `storage.cql.keyspace`                                          | string         | Keyspace name used to store TheHive data in Apache Cassandra |
+| `storage.cql.ssl.enabled`                                       | boolean        | `false` by default. set it to `true` if SSL is used with Cassandra  |
+| `storage.cql.ssl.truststore.location`                           | string         | path the the truststore. Specify it when using SSL with Cassandra  |
+| `storage.cql.ssl.password`                                      | string        | password to access the truststore  |
+| `storage.cql.ssl.client-authentication-enabled`                 | boolean       | Enables use of a client key to authenticate with Cassandra  |
+| `storage.cql.ssl.keystore.location`                             | string         | path the the keystore. Specify it when using SSL and client auth. with Cassandra  |
+| `storage.cql.ssl.keystore.keypassword`                          | string         | password to access the key in the keystore  |
+| `storage.cql.ssl.truststore.storepassword`                      | string         | password the access the keystore  |
 | `index.search`                                                  | dict           | configuration for indexes                |
 | `index.search.backend`                                          | string         | index engine. Default: `lucene` provided with TheHive. Can also be `elasticsearch`  |
 | `index.search.directory`                                        | string         | path to folder where indexes should be stored, when using `lucene` engine           |
