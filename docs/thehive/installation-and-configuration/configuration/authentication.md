@@ -28,8 +28,8 @@ Authenticates HTTP requests using a cookie. This module manage the cookie creati
 | `warning`      | duration          | the time before the expiration TheHive returns a warning message |
 
 
-!!! Example 
-    
+!!! Example
+
     ```yaml
       auth {
         providers = [
@@ -144,7 +144,7 @@ Authenticate the user using an external OAuth2 authenticator server. It accepts 
 | -----------------------| ------- | ------------------------------------ |
 | `clientId`             | string             | client ID in the OAuth2 server |
 | `clientSecret`         | string             | client secret in the OAuth2 server |
-| `redirectUri`          | string             | the url of TheHive AOuth2 page ( `xxx/api/ssoLogin`) |
+| `redirectUri`          | string             | the url of TheHive AOuth2 page ( `xxx/api/v1/ssoLogin`) |
 | `responseType`         | string             | type of the response. Currently only "code" is accepted |
 | `grantType`            | string             | type of the grant. Currently only "authorization_code" is accepted |
 | `authorizationUrl`     | string             | the url of the OAuth2 server |
@@ -173,7 +173,7 @@ Authenticate the user using an external OAuth2 authenticator server. It accepts 
                 name: oauth2
                 clientId: "CLIENT_ID"
                 clientSecret: "CLIENT_SECRET"
-                redirectUri: "http://THEHIVE_URL/api/ssoLogin"
+                redirectUri: "http://THEHIVE_URL/api/v1/ssoLogin"
                 responseType: "code"
                 grantType: "authorization_code"
                 authorizationUrl: "http://KEYCLOAK/auth/realms/TENANT/protocol/openid-connect/auth"
@@ -202,7 +202,7 @@ Authenticate the user using an external OAuth2 authenticator server. It accepts 
                 name: oauth2
                 clientId: "CLIENT_ID"
                 clientSecret: "CLIENT_SECRET"
-                redirectUri: "http://THEHIVE_URL/api/ssoLogin"
+                redirectUri: "http://THEHIVE_URL/api/v1/ssoLogin"
                 responseType: "code"
                 grantType: "authorization_code"
                 authorizationUrl: "https://OKTA/oauth2/v1/authorize"
@@ -231,7 +231,7 @@ Authenticate the user using an external OAuth2 authenticator server. It accepts 
                 name: oauth2
                 clientId: "CLIENT_ID"
                 clientSecret: "CLIENT_SECRET"
-                redirectUri: "http://THEHIVE_URL/api/ssoLogin"
+                redirectUri: "http://THEHIVE_URL/api/v1/ssoLogin"
                 responseType: code
                 grantType: "authorization_code"
                 authorizationUrl: "https://github.com/login/oauth/authorize"
@@ -242,16 +242,16 @@ Authenticate the user using an external OAuth2 authenticator server. It accepts 
                 userIdField: "email"
                 #userOrganisation: ""
               }
-              
+
             ]
           }
         ```
-        
+
         !!! Note
             - `CLIENT_ID` and `CLIENT_SECRET` are created in the _OAuth Apps_ section at [https://github.com/settings/developers](https://github.com/settings/developers).
             - this configuration requires that users set the _Public email_ in their Public Profile on [https://github.com/settings/profile](https://github.com/settings/profile).
 
-    === "Microsoft 365" 
+    === "Microsoft 365"
 
         ```yaml
 
@@ -266,7 +266,7 @@ Authenticate the user using an external OAuth2 authenticator server. It accepts 
                 name: oauth2
                 clientId: "CLIENT_ID"
                 clientSecret: "CLIENT_SECRET"
-                redirectUri: "http://THEHIVE_URL/api/ssoLogin"
+                redirectUri: "http://THEHIVE_URL/api/v1/ssoLogin"
                 responseType: code
                 grantType: "authorization_code"
                 authorizationUrl: "https://login.microsoftonline.com/TENANT/oauth2/v2.0/authorize"
@@ -284,7 +284,7 @@ Authenticate the user using an external OAuth2 authenticator server. It accepts 
         !!! Note
             To create `CLIENT_ID`, `CLIENT_SECRET` and `TENANT`, register a new app at [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
 
-    === "Google" 
+    === "Google"
 
         ```yaml
 
@@ -299,7 +299,7 @@ Authenticate the user using an external OAuth2 authenticator server. It accepts 
                 name: oauth2
                 clientId: "CLIENT_ID"
                 clientSecret: "CLIENT_SECRET"
-                redirectUri: "http://THEHIVE_URL/api/ssoLogin"
+                redirectUri: "http://THEHIVE_URL/api/v1/ssoLogin"
                 responseType: code
                 grantType: "authorization_code"
                 authorizationUrl: "https://accounts.google.com/o/oauth2/v2/auth"
