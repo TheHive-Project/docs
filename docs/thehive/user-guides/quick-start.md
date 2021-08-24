@@ -61,7 +61,7 @@ From the "List of organisations" page, hit the "New Organisation" button to open
 
 Hit "Save" to confirm.
 
-![admin-add-organisation](files/admin-add-organisation.png)
+![admin-add-organisation](./images/admin-add-organisation.png)
 
 ###  Create a user
 
