@@ -1,0 +1,11 @@
+nav:
+  - index.md
+  - 'organisation'
+  - 'user'
+  - 'custom-field'
+  - 'case-template'
+  - 'alert'
+  - 'case'
+  - 'task'  
+  - 'observable' 
+  - 'dashboard'
