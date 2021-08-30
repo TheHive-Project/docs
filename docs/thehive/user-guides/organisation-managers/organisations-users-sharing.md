@@ -1,11 +1,5 @@
 # Organisations, Users and sharing
 
-  * [User role, profile and permission](#user-role--profile-and-permission)
-    + [User](#user)
-  * [Organisations and sharing](#organisations-and-sharing)
-    + [Link with other organisations](#link-with-other-organisations)
-    + [Share and effective permissions](#share-and-effective-permissions)
-
 ## User role, profile and permission
 
 ### User
