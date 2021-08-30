@@ -1,0 +1,7 @@
+Title: User guides
+nav:
+  - 'index.md'
+  - 'quick-start.md'
+  - 'administrators'
+  - 'organisation-managers'
+  - 'analysts'
