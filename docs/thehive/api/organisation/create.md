@@ -10,9 +10,9 @@ POST /api/v0/organisation
 
 ## Request
 
-### Request Body
+### Request Body Example
 
-!!! Example
+!!! Example ""
 
     ```json
     {
@@ -34,20 +34,41 @@ The following fields are required:
 
 - `201`: if organisation creation completed successfully
 - `401`: Authentication error
+- `403`: Authorization error
 
-### Response Body
+### Response Body Example
 
-!!! Example
+!!! Example ""
 
-    ```json
-    {
-        "_id": "~204804296",
-        "_type": "organisation",
-        "createdAt": 1630385478884,
-        "createdBy": "admin@thehive.local",
-        "description": "SOC team",
-        "id": "~204804296",
-        "links": [],
-        "name": "soc"
-    }
-    ```
+    === "200"
+
+        ```json
+        {
+            "_id": "~204804296",
+            "_type": "organisation",
+            "createdAt": 1630385478884,
+            "createdBy": "admin@thehive.local",
+            "description": "SOC team",
+            "id": "~204804296",
+            "links": [],
+            "name": "soc"
+        }
+        ```
+
+    === "401" 
+
+        ```json
+        {
+          "type": "AuthenticationError",
+          "message": "Authentication failure"
+        }
+        ```
+
+    === "403"
+
+        ```json
+        {
+            "type": "AuthorizationError",
+            "message": "Unauthorized action"
+        }
+        ```
