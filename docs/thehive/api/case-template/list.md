@@ -1,6 +1,6 @@
-# Create
+# Get / List
 
-Create a *Case Templates*.
+List *Case Templates*.
 
 ## Query
 
@@ -14,42 +14,28 @@ POST /api/v1/query?name=organisation-case-templates
 
     ```json
     {
-      "name": "MISPEvent",
-      "titlePrefix": "",
-      "severity": 2,
-      "tlp": 2,
-      "pap": 2,
-      "tags": [
-        "hunting"
-      ],
-      "tasks": [
+      "query": [
         {
-          "order": 0,
-          "title": "Search for IOCs on Mail gateway logs",
-          "group": "default",
-          "description": "Run queries in Mail gateway logs and look for IOcs of type IP, email addresses, hostnames, free text. "
+          "_name": "getOrganisation",
+          "idOrName": "{id}"
         },
         {
-          "order": 1,
-          "title": "Search for IOCs on Firewall logs",
-          "group": "default",
-          "description": "Run queries in firewall logs and look for IOcs of type IP, port"
+          "_name": "caseTemplates"
         },
         {
-          "order": 2,
-          "title": "Search for IOCs on Web proxy logs",
-          "group": "default",
-          "description": "Run queries in web proxy logs and look for IOcs of type IP, domain, hostname, user-agent"
+          "_name": "sort",
+          "_fields": [
+            {
+              "displayName": "asc"
+            }
+          ]
+        },
+        {
+          "_name": "page",
+          "from": 0,
+          "to": 15
         }
-      ],
-      "customFields": {
-        "hits": {
-          "integer": null,
-          "order": 1
-        }
-      },
-      "description": "Check if IOCs shared by the community have been seen on the network",
-      "displayName": "MISP"
+      ]
     }
     ```
 
@@ -61,7 +47,7 @@ POST /api/v1/query?name=organisation-case-templates
 
 ### Status codes
 
-- `201`: if query is run successfully
+- `200`: if query is run successfully
 - `401`: Authentication error
 - `403`: Authorization error
 
