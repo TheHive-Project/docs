@@ -1,6 +1,6 @@
 # Create
 
-Create an *Custom Field*.
+Create a *Custom Field*.
 
 ## Query
 
@@ -51,33 +51,21 @@ The following fields are required:
 
 ```json
 {
-  "_id": "~987889880",
-  "id": "~987889880",
-  "createdBy": "jerome@strangebee.com",
-  "updatedBy": null,
-  "createdAt": 1630323713949,
-  "updatedAt": null,
-  "_type": "alert",
-  "type": "misp event",
-  "source": "misp server",
-  "sourceRef": "1311-2",
-  "externalLink": null,
-  "case": null,
-  "title": "CISA.gov - AA21-062A Mitigate Microsoft Exchange Server Vulnerabilities",
-  "description": "Imported from MISP Event #1311.",
-  "severity": 0,
-  "date": 1630323713937,
-  "tags": [
-    "tlp:pwhite",
-    "type:OSINT",
+  "id": "~32912",
+  "name": "Business Unit",
+  "reference": "businessUnit",
+  "description": "Targetted business unit",
+  "type": "string",
+  "options": [
+    "Sales",
+    "Marketing",
+    "VIP",
+    "Security",
+    "Sys admins",
+    "HR",
+    "Procurement",
+    "Legal"
   ],
-  "tlp": 0,
-  "pap": 2,
-  "status": "New",
-  "follow": true,
-  "customFields": {},
-  "caseTemplate": null,
-  "artifacts": [],
-  "similarCases": []
+  "mandatory": false
 }
 ```
