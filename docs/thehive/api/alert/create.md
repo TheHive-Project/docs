@@ -9,7 +9,7 @@ POST /api/alert
 ```
 
 
-## Example Request Body
+##  Request Body Example
 
 ```json
 {
@@ -28,8 +28,21 @@ POST /api/alert
 }
 ```
 
+The following fields are required: 
 
-## Example Response Body
+- `title`: string
+- `source`: string
+- `sourceRef`:  string
+- `type`:  string
+
+##  Response 
+
+### Status code
+
+- `201`: if *Alert* is created successfully
+- `401`: Authentication error
+
+### Response Body Example
 
 ```json
 {
