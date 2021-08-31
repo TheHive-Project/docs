@@ -4,16 +4,12 @@ Create an *Alert*.
 
 ## Query
 
-```
+```plain
 POST /api/alert
 ```
 
 
-<<<<<<< HEAD
 ##  Request Body Example
-=======
-## Request Body Example
->>>>>>> 95875324ac38d94c052d5eded729f33bcef5d937
 
 ```json
 {
@@ -34,23 +30,19 @@ POST /api/alert
 
 The following fields are required: 
 
-<<<<<<< HEAD
-- `title`: string
-- `source`: string
-- `sourceRef`:  string
-- `type`:  string
+- `title`: (String)
+- `source`: (String)
+- `sourceRef`:  (String)
+- `type`:  (String)
 
 ##  Response 
 
-### Status code
+### Status codes
 
 - `201`: if *Alert* is created successfully
 - `401`: Authentication error
 
 ### Response Body Example
-=======
-## Response Body Example
->>>>>>> 95875324ac38d94c052d5eded729f33bcef5d937
 
 ```json
 {
