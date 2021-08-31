@@ -9,14 +9,14 @@ Update an existing Alert, like add observables, mark as read, update status ...
 ```
 
 
-## Example Request Body
+## Request Body Example
 
 ```json
 
 ```
 
 
-## Example Response Body
+## Response Body Example
 
 ```json
 

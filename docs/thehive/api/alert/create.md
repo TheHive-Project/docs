@@ -9,7 +9,11 @@ POST /api/alert
 ```
 
 
+<<<<<<< HEAD
 ##  Request Body Example
+=======
+## Request Body Example
+>>>>>>> 95875324ac38d94c052d5eded729f33bcef5d937
 
 ```json
 {
@@ -30,6 +34,7 @@ POST /api/alert
 
 The following fields are required: 
 
+<<<<<<< HEAD
 - `title`: string
 - `source`: string
 - `sourceRef`:  string
@@ -43,6 +48,9 @@ The following fields are required:
 - `401`: Authentication error
 
 ### Response Body Example
+=======
+## Response Body Example
+>>>>>>> 95875324ac38d94c052d5eded729f33bcef5d937
 
 ```json
 {
