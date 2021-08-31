@@ -9,7 +9,7 @@ POST /api/alert
 ```
 
 
-## Example Request Body
+## Request Body Example
 
 ```json
 {
@@ -29,7 +29,7 @@ POST /api/alert
 ```
 
 
-## Example Response Body
+## Response Body Example
 
 ```json
 {
