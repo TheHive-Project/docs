@@ -1,5 +1,6 @@
 nav:
   - index.md
+  - 'search'
   - 'organisation'
   - 'user'
   - 'custom-field'
