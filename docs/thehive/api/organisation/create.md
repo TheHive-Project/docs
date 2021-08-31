@@ -8,6 +8,10 @@ API to create a new TheHive organisation.
 POST /api/v0/organisation
 ```
 
+## Authorization
+
+This API requires a super admin user with `manageOrganisation` permission
+
 ## Request
 
 ### Request Body Example

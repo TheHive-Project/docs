@@ -3,25 +3,38 @@
 ## Query
 
 ```plain
-PATCH /api/v0/organisation/{ORG_ID}
+PATCH /api/v0/organisation/{id}
 ```
 
-- `ORG_ID`: Identifier or name of the organisation
+with:
+
+- `id`: id or name of the organisation.
+
+## Authorization
+
+This API requires a super admin user with `manageOrganisation` permission
+
 
 ## Request Body Example
 
-```json
-{
-    "description": "SOC level 1 team",
-    "name": "soc-level1"
-}
-```
+!!! Example ""
 
-- `name` is editable
-- `description` is editable
+    ```json
+    {
+        "description": "SOC level 1 team",
+        "name": "soc-level1"
+    }
+    ```
 
-## Response Body Example
+## Fields
 
-```json
+The following fields are editable:
 
-```
+- `name` (String)
+- `description` (String)
+
+## Response
+
+- `204`: if the organisation is updated successfully
+- `401`: Authentication error
+- `403`: Authorization error
