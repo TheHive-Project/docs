@@ -8,16 +8,9 @@ Delete an *Alert*.
 DELETE /api/alert/{id}?force=1
 ```
 
+##  Response 
 
-## Request Body Example
+### Status codes
 
-```json
-
-```
-
-
-## Response Body Example
-
-```json
-
-```
+- `204`: if *Alert* is deleted successfully
+- `401`: Authentication error

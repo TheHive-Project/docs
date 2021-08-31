@@ -1,6 +1,17 @@
 nav:
+  - list.md
   - create.md
   - update.md
+  - read.md
   - delete.md
   - promote-as-case.md
   - merge.md
+  - similar-cases.md
+  - list-observables.md
+  - add-observable.md
+  - update-observable.md
+  - delete-observable.md
+  - run-responder.md
+  - list-responder-jobs.md
+
+
