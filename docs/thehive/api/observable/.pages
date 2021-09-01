@@ -1,3 +1,5 @@
 nav:
   - create.md
   - update.md
+  - delete.md
+  - list.md
