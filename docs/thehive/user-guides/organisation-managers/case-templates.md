@@ -4,7 +4,7 @@ Some cases may share the same structure (`customfields`, `tags`, `tasks`, `descr
 
 ## List case templates
 
-The management of the case templates is accessible through the menu *Organisation > Case Templates* . To manage them your profile need to have the permission 'manageCaseTemplate' (refer to [Profiles and permissions](../Administrators/profiles.md)).
+The management of the case templates is accessible through the menu *Organisation > Case Templates* . To manage them your profile must have the permission 'manageCaseTemplate' (refer to [Profiles and permissions](../Administrators/profiles.md)).
 
 ## Create or upload template
 

@@ -1,9 +1,12 @@
 # Custom Tags
 
 `custom tags` are `tags` manually created (out of libraries). 
-You can find the list of your `custom tags` in *Organization > Custom tags*.
+
+You must have the permission `manageTag` on your profile to manage custom tags. (refer to [Profiles and permissions](../Administrators/profiles.md))
 
 ## List custom tags
+
+You can find the list of your `custom tags` in *Organization > Custom tags*.
 
 The list contains the following information, for each `tag`:
 
