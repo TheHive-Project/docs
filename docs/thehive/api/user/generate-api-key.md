@@ -14,17 +14,7 @@ with:
 
 ##  Request Body Example
 
-!!! Example "" 
-    
-    ```json
-    {
-      "password": "thehive1234"
-    }
-    ```
-
-The following fields are required: 
-
-- `password`: (String)
+The body is empty.
 
 ##  Response 
 
@@ -35,6 +25,8 @@ The following fields are required:
 - `403`: Authorization error
 
 ### Response Body Example
+
+The key in plain text.
 
 !!! Example ""
 

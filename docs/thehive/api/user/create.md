@@ -1,6 +1,6 @@
 # Create
 
-Create a *User*.
+Create an *User*.
 
 ## Query
 
@@ -18,7 +18,9 @@ POST /api/v1/user
       "login" : "jerome@strangebee.com",
       "name" : "Jerome",
       "organisation": "StrangeBee",
-      "profile": "org-admin"
+      "profile": "org-admin",
+      "email": "jerome@strangebee.com",
+      "password": "my-secret-password"
     }
     ```
 
@@ -66,6 +68,7 @@ The following fields are required:
         "manageAction"
       ],
       "organisation": "StrangeBee",
-      "organisations": []
+      "organisations": [],
+      "email": "jerome@strangebee.com"
     }
     ```

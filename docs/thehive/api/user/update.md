@@ -10,7 +10,7 @@ PATCH /api/v1/user/{id}
 
 With:
 
-- `id`: id of the user
+- `id`: id or login of the user
 
 
 ##  Request Body Example
@@ -21,15 +21,13 @@ With:
     {
       "name": "Jerome",
       "profile": "org-admin",
-      "organisation": "StrangeBee"
+      "organisation": "StrangeBee",
+      "locked": false
     }
     ```
 
-The following fields are required: 
-
-- `name`: (String)
-- `organisation`:  (String)
-- `profile`:  [admin|org-admin|analyst|read-only|any customed profile]
+The field `organisation` is used if the profile is updated (the profile of an user depends on the organisation). If not specified, the current organisation is  used.
+No fields are required.
 
 ##  Response 
 
