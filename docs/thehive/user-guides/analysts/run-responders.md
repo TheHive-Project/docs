@@ -51,7 +51,7 @@ On the `observable` *Action ribbon*, trigger the *Responders* button.
 - Success
 - Failure
 
-The report is visible in the entity where you triggered it (`case`, `observable`, `task` or `task log`)
+The report is visible in the object where you triggered it (`case`, `observable`, `task` or `task log`)
 
 In addition of the status, a text report is provided allowing you to know what happens:
 
