@@ -10,7 +10,7 @@ POST /api/v1/user/{id}/key/renew
 
 with: 
 
-- `id`: id of the user
+- `id`: id or login of the user
 
 ##  Request Body Example
 

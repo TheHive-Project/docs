@@ -10,7 +10,7 @@ GET /api/v1/user/{id}/key
 
 with: 
 
-- `id`: id of the user
+- `id`: id or login of the user
 
 ##  Response 
 

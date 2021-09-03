@@ -6,7 +6,7 @@ List users.
 ## Query
 
 ```plain
-POST /api/v1/query?name=organisation-users
+POST /api/v1/query
 ```
 
 
@@ -25,14 +25,6 @@ POST /api/v1/query?name=organisation-users
         },
         {
           "_name": "users"
-        },
-        {
-          "_name": "sort",
-          "_fields": [
-            {
-              "login": "asc"
-            }
-          ]
         },
         {
           "_name": "page",

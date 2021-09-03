@@ -10,7 +10,7 @@ DELETE /api/v1/user/{id}/force?organisation={ORG_NAME}
 
 with:
 
-- `id`: id of the user
+- `id`: id or login of the user
 - `ORG_NAME`: the organisation name from which the user is to be removed
 
 ##  Response 

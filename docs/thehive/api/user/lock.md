@@ -10,7 +10,7 @@ PATCH /api/v1/user/{id}
 
 With:
 
-- `id`: id of the user
+- `id`: id or login of the user
 
 
 ##  Request Body Example
