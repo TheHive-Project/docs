@@ -1,6 +1,6 @@
-# Get / List
+# Get
 
-get *Custom Fields*.
+Get *Custom Fields*.
 
 ## Query
 

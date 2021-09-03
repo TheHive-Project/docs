@@ -1,6 +1,6 @@
 # Create
 
-Create a *Custom Field*.
+Create a *Custom Field* (requires `manageCustomField` permission).
 
 ## Query
 

@@ -1,6 +1,6 @@
 # Update
 
-Update a *Custom Field*.
+Update a *Custom Field* (requires `manageCustomField` permission).
 
 ## Query
 
@@ -10,7 +10,7 @@ PATCH api/customField/{id}
 
 with: 
 
-- `id`: id of the custom field.
+- `id`: id or name of the custom field.
 
 
 ## Request Body Example
@@ -32,23 +32,18 @@ with:
             "HR",
             "Procurement",
             "Legal"
-        ]
+        ],
+        "mandatory": false
     }
     ```
 
-The following fields are required: 
-
-- `name`: (String)
-- `reference`: (String)
-- `description`: (String)
-- `type`: [string|integer|boolean|date|float]
-
+No fields are required.
 
 ## Response
 
 ### Status codes
 
-- `201`: if *Custom Fields* is created successfully
+- `200`: if *Custom Fields* is updated successfully
 - `401`: Authentication error
 - `403`: Authorization error
 

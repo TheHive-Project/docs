@@ -1,6 +1,6 @@
 # Delete
 
-Delete a *Custom Field*.
+Delete a *Custom Field* (requires `manageCustomField` permission).
 
 ## Query
 
@@ -10,7 +10,7 @@ DELETE /api/customField/{id}
 
 with:
 
-- `id`: id of the Custom Field.
+- `id`: id or name of the Custom Field.
 
 
 ##  Response 
