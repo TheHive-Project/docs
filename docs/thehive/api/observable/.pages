@@ -3,3 +3,5 @@ nav:
   - update.md
   - delete.md
   - list.md
+  - analyzer.md
+  - responder.md
