@@ -12,9 +12,9 @@ POST /api/v1/query?name=organisation-users
 
 ##  Request Body Example
 
-!!! Example "" 
-    
-    List last 15 users created. 
+!!! Example ""
+
+    List last 15 users created.
 
     ```json
     {
@@ -44,7 +44,7 @@ POST /api/v1/query?name=organisation-users
     }
     ```
 
-##  Response 
+##  Response
 
 ### Status codes
 

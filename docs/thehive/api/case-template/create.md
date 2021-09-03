@@ -5,7 +5,7 @@ Create a *Case Templates*.
 ## Query
 
 ```plain
-POST /api/v1/query?name=organisation-case-templates
+POST /api/case/template
 ```
 
 ### Request Body Example
@@ -53,15 +53,14 @@ POST /api/v1/query?name=organisation-case-templates
     }
     ```
 
-    With:
+`name` should be unique. Otherwise an error `400 Bad Request` is returned
 
-    - `id`: Organisation identifier of Name
-
-##  Response 
+##  Response
 
 ### Status codes
 
-- `201`: if query is run successfully
+- `201`: if template was created successfully
+- `400`: in case of error in input
 - `401`: Authentication error
 - `403`: Authorization error
 
@@ -69,103 +68,89 @@ POST /api/v1/query?name=organisation-case-templates
 
 !!! Example ""
 
-    === "200"
+    === "201"
 
         ```json
-        [
-          ...
-          {
-            "_id": "~910319824",
-            "_type": "CaseTemplate",
-            "_createdBy": "florian@strangebee.com",
-            "_updatedBy": "florian@strangebee.com",
-            "_createdAt": 1620297081745,
-            "_updatedAt": 1620389292177,
-            "name": "Phishing",
-            "displayName": "Phishing",
-            "titlePrefix": "Phishing -",
-            "description": "Phishing attempt has succeed.",
-            "severity": 2,
-            "tags": [
-              "category:Phishing"
-            ],
-            "flag": false,
-            "tlp": 2,
-            "pap": 2,
-            "customFields": [],
-            "tasks": [
-              {
-                "_id": "~677056528",
-                "_type": "Task",
-                "_createdBy": "florian@strangebee.com",
-                "_createdAt": 1620389292172,
-                "title": "Initial alert",
-                "group": "default",
-                "description": "-What happened?\n-When does it happened?\n-How did it happened?\n-How did we detected the anomaly/alert/incident?",
-                "status": "Waiting",
-                "flag": false,
-                "order": 0,
-                "extraData": {}
-              },
-              {
-                "_id": "~677060624",
-                "_type": "Task",
-                "_createdBy": "florian@strangebee.com",
-                "_createdAt": 1620389292173,
-                "title": "Remediation",
-                "group": "default",
-                "description": "Explain here all the actions performed to contain and remediate the threat.",
-                "status": "Waiting",
-                "flag": false,
-                "order": 3,
-                "extraData": {}
-              },
-              {
-                "_id": "~677064720",
-                "_type": "Task",
-                "_createdBy": "florian@strangebee.com",
-                "_createdAt": 1620389292174,
-                "title": "Lessons learnt",
-                "group": "default",
-                "description": "Write here the lessons learnt for the case.",
-                "status": "Waiting",
-                "flag": false,
-                "order": 4,
-                "extraData": {}
-              },
-              {
-                "_id": "~706662512",
-                "_type": "Task",
-                "_createdBy": "florian@strangebee.com",
-                "_createdAt": 1620389292171,
-                "title": "Notification / Communication",
-                "group": "default",
-                "description": "Write here all the communications related to this case",
-                "status": "Waiting",
-                "flag": false,
-                "order": 2,
-                "extraData": {}
-              },
-              {
-                "_id": "~789033176",
-                "_type": "Task",
-                "_createdBy": "florian@strangebee.com",
-                "_createdAt": 1620389292174,
-                "title": "Analysis",
-                "group": "default",
-                "description": "-Technical analysis of the incident\n-Current impact\n-Potential damages due to the incident\n-...",
-                "status": "Waiting",
-                "flag": false,
-                "order": 1,
-                "extraData": {}
-              }
-            ]
-          }
-        ...
-        ]
+        {
+          "_id": "~910319824",
+          "id": "~910319824",
+          "createdBy": "florian@strangebee.com",
+          "createdAt": 1630675267739,
+          "_type": "caseTemplate",
+          "name": "MISPEvent",
+          "displayName": "MISP",
+          "titlePrefix": "[MISP]",
+          "description": "Check if IOCs shared by the community have been seen on the network",
+          "severity": 2,
+          "tags": [
+            "hunting"
+          ],
+          "flag": false,
+          "tlp": 2,
+          "pap": 2,
+          "tasks": [
+            {
+              "id": "~122896536",
+              "_id": "~122896536",
+              "createdBy": "florian@strangebee.com",
+              "createdAt": 1630675267741,
+              "_type": "case_task",
+              "title": "Search for IOCs on Mail gateway logs",
+              "group": "default",
+              "description": "Run queries in Mail gateway logs and look for IOcs of type IP, email addresses, hostnames, free text. ",
+              "status": "Waiting",
+              "flag": false,
+              "order": 0
+            },
+            {
+              "id": "~81932320",
+              "_id": "~81932320",
+              "createdBy": "florian@strangebee.com",
+              "createdAt": 1630675267743,
+              "_type": "case_task",
+              "title": "Search for IOCs on Firewall logs",
+              "group": "default",
+              "description": "Run queries in firewall logs and look for IOcs of type IP, port",
+              "status": "Waiting",
+              "flag": false,
+              "order": 1
+            },
+            {
+              "id": "~81928376",
+              "_id": "~81928376",
+              "createdBy": "florian@strangebee.com",
+              "createdAt": 1630675267750,
+              "_type": "case_task",
+              "title": "Search for IOCs on Web proxy logs",
+              "group": "default",
+              "description": "Run queries in web proxy logs and look for IOcs of type IP, domain, hostname, user-agent",
+              "status": "Waiting",
+              "flag": false,
+              "order": 2
+            }
+          ],
+          "status": "Ok",
+          "customFields": {
+            "hits": {
+              "integer": null,
+              "order": 1,
+              "_id": "~122900632"
+            }
+          },
+          "metrics": {}
+        }
         ```
 
-    === "401" 
+    === "400"
+
+        ```json
+        {
+          "type": "CreateError",
+          "message": "The case template \"MISPEvent\" already exists"
+        }
+        ```
+
+    === "401"
 
         ```json
         {

@@ -1,6 +1,8 @@
 # Set password
 
-Set a *User*'s password. 
+Set a *User*'s password.
+
+The user making the query needs to be an admin of the platform
 
 ## Query
 
@@ -8,25 +10,25 @@ Set a *User*'s password.
 POST /api/v1/user/{id}/password/set
 ```
 
-with: 
+with:
 
 - `id`: id of the user
 
 ##  Request Body Example
 
-!!! Example "" 
-    
+!!! Example ""
+
     ```json
     {
       "password": "thehive1234"
     }
     ```
 
-The following fields are required: 
+The following fields are required:
 
 - `password`: (String)
 
-##  Response 
+##  Response
 
 ### Status codes
 
