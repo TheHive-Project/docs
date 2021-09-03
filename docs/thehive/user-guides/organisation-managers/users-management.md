@@ -2,7 +2,7 @@
 
 In TheHive4 you can manage `users` that belongs to your `organisation` in the Users page (*Organisation > Users*)
 
-You must have the permission `manageUser` on your profile to manage `users` of your `organisation`. (refer to [Profiles and permissions](../Administrators/profiles.md))
+You must have the permission `manageUser` on your profile to manage `users` of your `organisation`. (refer to [Profiles and permissions](../../Administrators/profiles/))
 
 ## Create new user
 

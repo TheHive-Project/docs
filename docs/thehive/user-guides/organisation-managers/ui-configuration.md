@@ -2,7 +2,7 @@
 
 You can change some user interface settings in the page UI Configuration (*Organisation > UI Configuration*)
 
-You must have the permission `manageConfig` on your profile to manage UI Configuration. (refer to [Profiles and permissions](../Administrators/profiles.md))
+You must have the permission `manageConfig` on your profile to manage UI Configuration. (refer to [Profiles and permissions](../../Administrators/profiles/))
 
 ![UI Configuration](../images/ui-configuration.png)
 

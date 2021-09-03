@@ -2,7 +2,7 @@
 
 `custom tags` are `tags` manually created (out of libraries). 
 
-You must have the permission `manageTag` on your profile to manage custom tags. (refer to [Profiles and permissions](../Administrators/profiles.md))
+You must have the permission `manageTag` on your profile to manage custom tags. (refer to [Profiles and permissions](../../Administrators/profiles/))
 
 ## List custom tags
 
