@@ -5,7 +5,7 @@ Update a *Custom Field* (requires `manageCustomField` permission).
 ## Query
 
 ```plain
-PATCH api/customField/{id}
+PATCH /api/customField/{id}
 ```
 
 with: 
@@ -88,6 +88,6 @@ No fields are required.
         ```json
         {
           "type": "AuthorizationError",
-          "message": "Your are not authorized to create custom field, you haven't the permission manageCustomField"
+          "message": "Your are not authorized to update custom field, you haven't the permission manageCustomField"
         }
         ```
