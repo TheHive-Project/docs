@@ -27,6 +27,14 @@ POST /api/v1/query
           "_name": "users"
         },
         {
+          "_name": "sort",
+          "_fields": [
+            {
+              "login": "asc"
+            }
+          ]
+        },
+        {
           "_name": "page",
           "from": 0,
           "to": 15,
