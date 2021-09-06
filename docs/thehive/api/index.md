@@ -22,8 +22,8 @@ StrangeBee provides an official library for integrating with the remote API of T
 
 ### Case Management APIs
 
-- [Alert APIs](./alert/create)
-- [Case APIs](./case/create)
-- [Task APIs](./task/create)
-- [Observable APIs](./observable/create)
-- [TTP APIs](./ttp/create)
+- [Alert APIs](./alert)
+- [Case APIs](./case)
+- [Task APIs](./task)
+- [Observable APIs](./observable)
+- [TTP APIs](./ttp)
