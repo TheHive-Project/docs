@@ -37,7 +37,7 @@ POST /api/v1/query
     }
     ```
 
-## Response Example
+## ResponseExample
 
 !!! Example ""
 

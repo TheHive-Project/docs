@@ -35,7 +35,7 @@ The only required field is `title`.
 
 The `status` can be `Waiting`, `InProgress`, `Completed` or `Cancel`.
 
-##  Response 
+## Response
 
 ### Status codes
 
@@ -43,7 +43,7 @@ The `status` can be `Waiting`, `InProgress`, `Completed` or `Cancel`.
 - `401`: Authentication error
 - `403`: Authorization error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

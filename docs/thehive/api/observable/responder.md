@@ -31,7 +31,7 @@ The following fields are required:
 - `objectId`: id of the observable to analyze
 - `responderId`: id of the cortex responder to use
 
-### Response example
+### Responseexample
 
 !!! Example ""
 
@@ -57,7 +57,7 @@ The following fields are required:
 GET /api/connector/cortex/action/case_artifact/{observableId}
 ```
 
-### Response example
+### Responseexample
 
 !!! Example
 

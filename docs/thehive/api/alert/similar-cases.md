@@ -35,14 +35,14 @@ POST /api/v1/query?name=alert-similar-cases
 
     - `id`: id of the Alert.
 
-##  Response 
+## Response
 
 ### Status codes
 
 - `200`: if auery is run successfully
 - `401`: Authentication error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

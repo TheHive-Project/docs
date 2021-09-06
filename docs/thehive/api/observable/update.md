@@ -34,7 +34,7 @@ Fields that can be updated:
 
 Once an observable is created, it is not possible to change its type or data
 
-## Response Body Example
+## ResponseBody Example
 
 ```json
 {

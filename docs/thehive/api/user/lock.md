@@ -37,7 +37,7 @@ The following fields are required:
 
 - `locked`: (Boolean)
 
-##  Response 
+## Response
 
 ### Status codes
 

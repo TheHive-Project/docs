@@ -8,7 +8,7 @@ Delete an *Alert*.
 DELETE /api/alert/{id}?force=1
 ```
 
-##  Response 
+## Response
 
 ### Status codes
 

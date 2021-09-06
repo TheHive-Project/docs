@@ -1,6 +1,6 @@
 # Use count
 
-Get *Custom Fields* use count.
+Get *Custom Field* use count by id.
 
 ## Query
 
@@ -12,7 +12,7 @@ with:
 
 - `id`: id or name of the custom field.
 
-##  Response 
+## Response
 
 ### Status codes
 
@@ -20,7 +20,7 @@ with:
 - `401`: Authentication error
 - `403`: Authorization error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

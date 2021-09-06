@@ -52,7 +52,7 @@ POST /api/v1/query
 - `401`: Authentication error
 - `403`: Authorization error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

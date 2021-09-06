@@ -1,6 +1,6 @@
 # Get
 
-Get *Custom Fields*.
+Get *Custom Field* by id;
 
 ## Query
 
@@ -8,11 +8,11 @@ Get *Custom Fields*.
 GET /api/customField/{id}
 ```
 
-with: 
+with:
 
 - `id`: id or name of the custom field.
 
-##  Response 
+## Response
 
 ### Status codes
 
@@ -20,7 +20,7 @@ with:
 - `401`: Authentication error
 - `403`: Authorization error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

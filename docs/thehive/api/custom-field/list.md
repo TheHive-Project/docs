@@ -9,7 +9,7 @@ GET /api/customField
 ```
 
 
-##  Response 
+## Response
 
 ### Status codes
 
@@ -17,7 +17,7 @@ GET /api/customField
 - `401`: Authentication error
 - `403`: Authorization error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

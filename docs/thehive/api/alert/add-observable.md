@@ -22,14 +22,14 @@ With:
 
 
 
-##  Response 
+## Response
 
 ### Status codes
 
 - `201`: if *Alert* is created successfully
 - `401`: Authentication error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

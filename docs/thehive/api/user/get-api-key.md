@@ -12,7 +12,7 @@ with:
 
 - `id`: id or login of the user
 
-##  Response 
+## Response
 
 ### Status codes
 
@@ -20,7 +20,7 @@ with:
 - `401`: Authentication error
 - `403`: Authorization error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

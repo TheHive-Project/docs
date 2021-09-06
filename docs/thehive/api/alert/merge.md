@@ -13,14 +13,14 @@ With:
 - `id1`: id of the *Alert* to merge
 - `id2`: id of the destination *Case*
 
-##  Response 
+## Response
 
 ### Status codes
 
 - `200`: if *Alert* is successfully merged
 - `401`: Authentication error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

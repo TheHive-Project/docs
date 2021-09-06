@@ -28,14 +28,14 @@ The following fields are optional:
 
 - `caseTemplate`: (String)
 
-##  Response 
+## Response
 
 ### Status codes
 
 - `201`: if *Case* is successfully created
 - `401`: Authentication error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

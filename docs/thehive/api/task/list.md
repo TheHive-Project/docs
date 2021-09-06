@@ -44,7 +44,7 @@ POST /api/v0/query
 - `200`: if *Task* is updated successfully
 - `401`: Authentication error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

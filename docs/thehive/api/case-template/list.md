@@ -43,7 +43,7 @@ POST /api/v1/query
 
     - `id`: Organisation identifier of Name
 
-##  Response 
+## Response
 
 ### Status codes
 
@@ -51,7 +51,7 @@ POST /api/v1/query
 - `401`: Authentication error
 - `403`: Authorization error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

@@ -25,14 +25,14 @@ with:
 - `id`: id of the Alert
 
 
-##  Response 
+## Response
 
 ### Status codes
 
 - `200`: if *Alert* is updated successfully
 - `401`: Authentication error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

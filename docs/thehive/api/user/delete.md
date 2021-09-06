@@ -13,7 +13,7 @@ with:
 - `id`: id or login of the user
 - `ORG_NAME`: the organisation name from which the user is to be removed
 
-##  Response 
+## Response
 
 ### Status codes
 

@@ -28,7 +28,7 @@ The following fields are required:
 - `artifactId`: id of the observable to analyze
 - `analyzerId`: id of the cortex analyzer to use
 
-### Response example
+### Responseexample
 
 !!! Example ""
 
@@ -55,7 +55,7 @@ GET /api/connector/job/{jobId}
 
 `jobId` should be the `id` returned from the creation request
 
-### Response example
+### Responseexample
 
 !!! Example
 
@@ -136,7 +136,7 @@ Replace the value of `idOrName` by the `id` of your observable
     }
     ```
 
-### Response example
+### Responseexample
 
 
 !!! Example

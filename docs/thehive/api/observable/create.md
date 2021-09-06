@@ -72,7 +72,7 @@ Other optional fields:
 - `sighted`: (Boolean) indicates if the observable was sighted **default=false**
 - `ignoreSimilarity`: (Boolean) indicates if the observable should be used or not to calculate the similarity stats **default=false**
 
-## Response Body Example
+## ResponseBody Example
 
 !!! Example ""
     === "Observables with atttachment"

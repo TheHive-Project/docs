@@ -27,14 +27,14 @@ The following fields are required:
 - `objectType`: "alert"
 - `objectId`:  (String)
 
-##  Response 
+## Response
 
 ### Status codes
 
 - `200`: if *Responder* is run successfully
 - `401`: Authentication error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

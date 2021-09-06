@@ -14,7 +14,7 @@
 ```
 
 
-## Response Body Example
+## ResponseBody Example
 
 ```json
 

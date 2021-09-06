@@ -12,7 +12,7 @@ With:
 
 - `id`: Observable identifier
 
-##  Response 
+## Response
 
 ### Status codes
 

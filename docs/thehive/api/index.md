@@ -12,23 +12,18 @@ StrangeBee provides an official library for integrating with the remote API of T
 
 ### Administration APIs
   
-  - [Manage Organisations](./organisation/create)
-  - [Manage Users](./user/create)
-  - [Manage Custom fields](./custom-field/create)
-
+- [Manage Organisations](./organisation)
+- [Manage Users](./user)
+- [Manage Custom fields](./custom-field)
 
 ### Organisation APIs
 
-  - [Manage Case Templates](./case-template/create)
+- [Manage Case Templates](./case-template)
 
 ### Case Management APIs
 
-  - [Alert APIs](./alert/create)
-  - [Case APIs](./case/create)
-  - [Task APIs](./task/create)
-  - [Observable APIs](./observable/create)
-  - [TTP APIs](./ttp/create)
-
-### Connector APIs
-
-  - Cortex APIs
+- [Alert APIs](./alert/create)
+- [Case APIs](./case/create)
+- [Task APIs](./task/create)
+- [Observable APIs](./observable/create)
+- [TTP APIs](./ttp/create)

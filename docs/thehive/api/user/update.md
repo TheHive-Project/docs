@@ -29,7 +29,7 @@ With:
 The field `organisation` is used if the profile is updated (the profile of an user depends on the organisation). If not specified, the current organisation is  used.
 No fields are required.
 
-##  Response 
+## Response
 
 ### Status codes
 

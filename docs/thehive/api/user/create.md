@@ -31,7 +31,7 @@ The following fields are required:
 - `organisation`:  (String)
 - `profile`:  [admin|org-admin|analyst|read-only|any customed profile]
 
-##  Response 
+## Response
 
 ### Status codes
 
@@ -39,7 +39,7 @@ The following fields are required:
 - `401`: Authentication error
 - `403`: Authorization error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

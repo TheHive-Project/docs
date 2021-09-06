@@ -12,12 +12,10 @@ with:
 
 - `id`: id or name of the Custom Field.
 
-
-##  Response 
+## Response
 
 ### Status codes
 
 - `204`: if *Custom Fields* is successfully deleted
 - `401`: Authentication error
 - `403`: Authorization error
-

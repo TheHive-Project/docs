@@ -16,7 +16,7 @@ with:
 
 The body is empty.
 
-##  Response 
+## Response
 
 ### Status codes
 
@@ -24,7 +24,7 @@ The body is empty.
 - `401`: Authentication error
 - `403`: Authorization error
 
-### Response Body Example
+### ResponseBody Example
 
 The key in plain text.
 

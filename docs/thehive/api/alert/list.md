@@ -46,14 +46,14 @@ POST /api/v1/query?name=alerts
     }
     ```
 
-##  Response 
+## Response
 
 ### Status codes
 
 - `200`: if query is run successfully
 - `401`: Authentication error
 
-### Response Body Example
+### ResponseBody Example
 
 !!! Example ""
 

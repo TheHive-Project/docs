@@ -12,7 +12,7 @@ with:
 
 - `id`: id or login of the user
 
-##  Response 
+## Response
 
 ### Status codes
 

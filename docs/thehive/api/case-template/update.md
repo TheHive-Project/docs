@@ -42,7 +42,7 @@ Fields that can be updated:
 - `customFields`
 - `tasks`
 
-## Response Body Example
+## ResponseBody Example
 
 !!! Example
 
