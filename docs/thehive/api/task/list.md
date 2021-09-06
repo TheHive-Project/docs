@@ -41,7 +41,7 @@ POST /api/v0/query
 
 ### Status codes
 
-- `200`: if *Task* is updated successfully
+- `200`: if query is run successfully
 - `401`: Authentication error
 
 ### ResponseBody Example
