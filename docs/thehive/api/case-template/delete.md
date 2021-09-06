@@ -1,6 +1,6 @@
 # Delete
 
-Delete a *Case Templates*.
+Delete a *Case Template* by its id.
 
 ## Query
 
@@ -12,8 +12,7 @@ With:
 
 - `id`: *Case template* identifier
 
-
-##  Response 
+## Response
 
 ### Status codes
 

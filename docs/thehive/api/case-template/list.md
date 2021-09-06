@@ -1,11 +1,11 @@
 # Get / List
 
-List *Case Templates*.
+List *Case Templates* of a given organisation.
 
 ## Query
 
 ```plain
-POST /api/v1/query?name=organisation-case-templates
+POST /api/v1/query
 ```
 
 ### Request Body Example

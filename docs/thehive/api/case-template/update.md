@@ -1,13 +1,14 @@
 # Update
 
+Update a *Case Template* by its id.
+
 ## Query
 
-```
+```plain
 PATCH /api/case/template/{id}
 ```
 
 ## Request Body Example
-
 
 !!! Example
 
