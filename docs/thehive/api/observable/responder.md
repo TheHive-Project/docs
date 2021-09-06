@@ -7,7 +7,7 @@ You need to connect TheHive to a cortex server in order to enable responders.
 
 ## Run a responder on an observable
 
-```
+```plain
 POST /api/connector/cortex/action
 ```
 
@@ -53,10 +53,9 @@ The following fields are required:
 
 ## List responder actions
 
-```
+```plain
 GET /api/connector/cortex/action/case_artifact/{observableId}
 ```
-
 
 ### Response example
 
@@ -89,4 +88,3 @@ GET /api/connector/cortex/action/case_artifact/{observableId}
     - `Deleted`
 
 - `report` is a string that contains the output of the responder
-

@@ -1,12 +1,13 @@
 # Update
 
+Update a case or alert *Observable* by its id
 ## Query
 
-```
+```plain
 PATCH /api/v0/case/artifact/{observableId}
 ```
 
-```
+```plain
 PATCH /api/v0/alert/artifact/{observableId}
 ```
 

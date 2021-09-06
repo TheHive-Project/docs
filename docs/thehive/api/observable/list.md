@@ -3,7 +3,7 @@
 ## Query
 
 ```plain
-POST /api/v1/query?name=alerts
+POST /api/v1/query
 ```
 
 ##  Request Body Example

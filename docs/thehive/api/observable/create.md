@@ -2,60 +2,60 @@
 
 Creates an observable which can be linked to a case or an alert.
 
-(The name artifcat comes from TheHive v3)
+!!! note
+  
+    (The name artifcat comes from TheHive v3)
 
 ## Query
 
 Create an observable for a case
-```
+
+```plain
 POST /api/v0/case/{caseId}/artifact
 ```
 
 Create an observable for an alert
-```
+
+```plain
 POST /api/v0/alert/{alertId}/artifact
 ```
 
 
 ## Request Example
 
-If you want to upload an observable with a `dataType` of kind attachment, you need to use a multipart request
-
 !!! Example ""
 
-
-    ```
-    curl -XPOST http://THEHIVE/api/v0/case/{caseId}/artifact -F attachment=@myFile -F _json='
-    {
-        "dataType": "file",
-        "tlp": 2,
-        "ioc": true,
-        "sighted": false,
-        "tags": [],
-        "message": "foo",
-        "data": [],
-        "isZip": false,
-        "zipPassword": ""
-    }
-    '
-    ```
-
-To add an observable with no attachment, you can post a json body
-
-!!! Example ""
-
-    ```json
-    {
-        "dataType": "hostname",
-        "tlp": 2,
-        "ioc": true,
-        "sighted": true,
-        "tags": [],
-        "data": [
-            "server.local"
-        ]
-    }
-    ```
+    === "Observable with attachment"
+        If you want to upload an observable with a `dataType` of kind attachment, you need to use a multipart request
+        ```
+        curl -XPOST http://THEHIVE/api/v0/case/{caseId}/artifact -F attachment=@myFile -F _json='
+        {
+            "dataType": "file",
+            "tlp": 2,
+            "ioc": true,
+            "sighted": false,
+            "tags": [],
+            "message": "foo",
+            "data": [],
+            "isZip": false,
+            "zipPassword": ""
+        }
+        '
+        ```
+    === "Observables without atttachment"
+        To add an observable with no attachment, you can post a json body
+        ```json
+        {
+            "dataType": "hostname",
+            "tlp": 2,
+            "ioc": true,
+            "sighted": true,
+            "tags": [],
+            "data": [
+                "server.local"
+            ]
+        }
+        ```
 
 The following fields are required:
 
@@ -74,34 +74,58 @@ Other optional fields:
 
 ## Response Body Example
 
-```json
-[
-  {
-    "_id": "~4104",
-    "id": "~4104",
-    "createdBy": "jerome@strangebee.com",
-    "createdAt": 1630508511351,
-    "_type": "case_artifact",
-    "dataType": "file",
-    "startDate": 1630508511351,
-    "attachment": {
-      "name": "server.log",
-      "hashes": [
-        "ccbda6ed6aac6cde57ebac1f011bdf1f58bf61c40c759dc4f7fccb729de10147",
-        "a09531845b3b26d5707cdf50a8bb11aa507dd88c",
-        "1f08c024363568d6eb4e18ee97618acc"
-      ],
-      "size": 37165,
-      "contentType": "application/octet-stream",
-      "id": "ccbda6ed6aac6cde57ebac1f011bdf1f58bf61c40c759dc4f7fccb729de10147"
-    },
-    "tlp": 2,
-    "tags": [],
-    "ioc": true,
-    "sighted": false,
-    "message": "my message",
-    "reports": {},
-    "stats": {}
-  }
-]
-```
+!!! Example ""
+    === "Observables with atttachment"
+        ```json
+        [
+          {
+            "_id": "~4104",
+            "id": "~4104",
+            "createdBy": "jerome@strangebee.com",
+            "createdAt": 1630508511351,
+            "_type": "case_artifact",
+            "dataType": "file",
+            "startDate": 1630508511351,
+            "attachment": {
+              "name": "server.log",
+              "hashes": [
+                "ccbda6ed6aac6cde57ebac1f011bdf1f58bf61c40c759dc4f7fccb729de10147",
+                "a09531845b3b26d5707cdf50a8bb11aa507dd88c",
+                "1f08c024363568d6eb4e18ee97618acc"
+              ],
+              "size": 37165,
+              "contentType": "application/octet-stream",
+              "id": "ccbda6ed6aac6cde57ebac1f011bdf1f58bf61c40c759dc4f7fccb729de10147"
+            },
+            "tlp": 2,
+            "tags": [],
+            "ioc": true,
+            "sighted": false,
+            "message": "my message",
+            "reports": {},
+            "stats": {}
+          }
+        ]
+        ```
+    === "Observables without atttachment"
+        ```json
+        [
+          {
+            "_id": "~4104",
+            "id": "~4104",
+            "createdBy": "jerome@strangebee.com",
+            "createdAt": 1630508511351,
+            "_type": "case_artifact",
+            "ip": "file",
+            "data": "1.2.3.4",
+            "startDate": 1630508511351,
+            "tlp": 2,
+            "tags": [],
+            "ioc": true,
+            "sighted": false,
+            "message": "my message",
+            "reports": {},
+            "stats": {}
+          }
+        ]
+        ```
