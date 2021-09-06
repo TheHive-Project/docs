@@ -55,7 +55,7 @@ You can edit the following user information from the user list (*Organisation > 
 
 To edit an `user` information, clic the *Edit user* button on the *Actions* column:
 
-![edit user](../images/edit-user.png)
+![edit user](./images/edit-user.png)
 
 ### Lock an user
 
@@ -63,7 +63,7 @@ Locking an `user` make the account unusable for any action. You can lock an `use
 
 To lock an `user`, clic on the lock button:
 
-![lock user](../images/lock-user.png)
+![lock user](./images/lock-user.png)
 
 ### Delete an user
 
@@ -79,4 +79,4 @@ Deleting an `user` is irrevocable. Recreating an `user` with the same informatio
 
 To delete an user, clic on the trash icon:
 
-![delete user](../images/delete-user.png)
+![delete user](./images/delete-user.png)

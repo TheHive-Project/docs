@@ -14,7 +14,7 @@ The list contains the following information:
 - Assignee: The `user` assigned to the `task`
 - Actions: Delete, start/close or trigger a `responder` on the `task`
 
-![task list](../images/task-list.png)
+![task list](./images/task-list.png)
 
 ## Create a task
 
@@ -22,13 +22,13 @@ You can create a `task` in a `case`. you must have the `manageCase` permission (
 
 Open your *Task list* and clic *Create task* button. On the top of the *Task list* a ribbon will appear, inviting you to fill the *Task group* and the *Task title*
 
-![create task button](../images/create-task.png)
+![create task button](./images/create-task.png)
 
 ## Task information
 
 Open your `task` to retrieve it's information (*Case > Tasks > Task*)
 
-![task information](../images/task-information.png)
+![task information](./images/task-information.png)
 
 ### Task Actions
 
@@ -36,7 +36,7 @@ Open your `task` to find the possible actions (*Case > Tasks > Task*)
 
 Task actions buttons are on the top-right of a *Task page*:
 
-![task actions](../images/task-actions.png)
+![task actions](./images/task-actions.png)
 
 You can trigger the following actions on a `task`:
 

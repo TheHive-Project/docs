@@ -6,7 +6,7 @@ To create an `observable`, open the *Observables list* (*Case > Observables*). y
 
 You will find the *Add observable* button under the *Observables* tab:
 
-![create observable button](../images/create-observable-button.png)
+![create observable button](./images/create-observable-button.png)
 
 In the pop-up, you are invited to fill the `observable`(s) details:
 
@@ -23,6 +23,6 @@ In the pop-up, you are invited to fill the `observable`(s) details:
 
 Details annoted with a '*' are mandatory. Detail annoted with '**' mean at least.
 
-![create observable](../images/create-observable.png)
+![create observable](./images/create-observable.png)
 
 Finally clic on *Create Observable(s)*

@@ -10,8 +10,8 @@ You also must have a *MISP* instance connected to your TheHive (refer to [MISP C
 
 Trigger the *Export* button on a `case` action ribbon (*Case > Export*):
 
-![case export button](../images/case-export.png)
+![case export button](./images/case-export.png)
 
 In the *MISP export* pop-up, you can chose the *MISP* instance(s) where you want to export your `case`. Clic the *Export* button to send your `case` to the *MISP* instance.
 
-![case export pop-up](../images/case-export-instance.png)
+![case export pop-up](./images/case-export-instance.png)

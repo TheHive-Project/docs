@@ -17,7 +17,7 @@ You can trigger a `responder` from a `case`.
 
 On the `case` *Action ribbon*, trigger the *Responders* button
 
-![trigger responder cases](../images/trigger-responder-cases.png)
+![trigger responder cases](./images/trigger-responder-cases.png)
 
 ## From a task 
 
@@ -25,7 +25,7 @@ You can trigger a `responder` from a `task` (*Case > Tasks > Task*)
 
 On the `task` *Action ribbon*, trigger the *Responders* button.
 
-![trigger responder task](../images/trigger-responder-task.png)
+![trigger responder task](./images/trigger-responder-task.png)
 
 ## From a task log
 
@@ -33,7 +33,7 @@ You can trigger a `responder` from a `task log` (*Case > Tasks > Task > Task log
 
 On the `task log` *Action ribbon*, trigger the *Responders* button.
 
-![trigger responder task](../images/trigger-responder-task-log.png)
+![trigger responder task](./images/trigger-responder-task-log.png)
 
 ## From an observable
 
@@ -41,7 +41,7 @@ You can trigger a `responder` from an `observable` (*Case > Observables > Observ
 
 On the `observable` *Action ribbon*, trigger the *Responders* button.
 
-![trigger responder observable](../images/trigger-responder-observable.png)
+![trigger responder observable](./images/trigger-responder-observable.png)
 
 
 ## Consult responder report
@@ -55,4 +55,4 @@ The report is visible in the object where you triggered it (`case`, `observable`
 
 In addition of the status, a text report is provided allowing you to know what happens:
 
-![responder report](../images/report-responder.png)
+![responder report](./images/report-responder.png)

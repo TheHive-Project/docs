@@ -8,7 +8,7 @@ To manage a `case` `TTPs`, you must have the `manageCase` permission (refer to [
 
 To add a `TTP` to a `case`, go to the *TTPs list* (*Case > TTPs*) then clic the *Add TTP* button:
 
-![add TTP button](../images/ttp-add-button.png)
+![add TTP button](./images/ttp-add-button.png)
 
 In the *Add Tactic, Technique and Procedure* pop-up, you can select:
 
@@ -19,7 +19,7 @@ In the *Add Tactic, Technique and Procedure* pop-up, you can select:
 
 Finally, clic on *Add TTP* in the bottom of the pop-up:
 
-![TTP selection](../images/ttp-selection.png)
+![TTP selection](./images/ttp-selection.png)
 
 ## Delete a TTP from a case
 
@@ -27,7 +27,7 @@ You can delete a `TTP` from a `case`.
 
 Go to the *TTPs list* (*Case > TTPs*), then clic on the *Delete* button in the *Actions* column:
 
-![TTP deletion](../images/delete-ttp.png)
+![TTP deletion](./images/delete-ttp.png)
 
 
 
