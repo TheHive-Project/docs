@@ -19,3 +19,4 @@ With:
 - `200`: if Case Template is deleted successfully
 - `401`: Authentication error
 - `403`: Authorization error
+- `404`: Case template does not exists (or was already deleted)

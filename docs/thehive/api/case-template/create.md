@@ -158,12 +158,3 @@ POST /api/case/template
           "message": "Authentication failure"
         }
         ```
-
-    === "403"
-
-        ```json
-        {
-          "type": "AuthorizationError",
-          "message": "Your are not authorized to create custom field, you haven't the permission manageCustomField"
-        }
-        ```
