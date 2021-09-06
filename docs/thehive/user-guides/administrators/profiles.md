@@ -32,7 +32,7 @@ A *Profile* is a set of permissions attached to a *User* and an *Organisation*. 
 
 **Note**
 
-**Read** information doesn’t require specific permission. By default, users in an organisation can see all data shared with that organisation (cf. shares, discussed in [Organisations,Users and sharing](Organisations-users-sharing.md)).
+**Read** information doesn’t require specific permission. By default, users in an organisation can see all data shared with that organisation (cf. shares, discussed in [Organisations,Users and sharing](../organisation-managers/organisations-users-sharing.md)).
 
 ---
 
