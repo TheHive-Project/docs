@@ -1,5 +1,3 @@
 nav:
+  - 'Overview': index.md
   - query.md
-  - filters.md
-  - sorting.md
-  - pagination.md

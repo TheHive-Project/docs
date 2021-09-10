@@ -91,7 +91,7 @@ Various aspects can configured in the `application.conf` file:
     - [Cortex: connecting to one or more organisation](./configuration/connectors-cortex.md)
     - [MISP: connecting to one or more organisation](./configuration/connectors-misp.md)
 - [Webhooks](./configuration/webhooks.md)
-- [Streams](./configuration/streams.md)
+- [Other service parameters](./configuration/service.md)
 
 
 ## Uses Cases

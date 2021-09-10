@@ -27,3 +27,8 @@ StrangeBee provides an official library for integrating with the remote API of T
 - [Task APIs](./task)
 - [Observable APIs](./observable)
 - [TTP APIs](./ttp)
+
+
+### Make searches
+
+- [Search APIs](./search)
