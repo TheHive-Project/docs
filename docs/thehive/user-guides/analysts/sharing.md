@@ -21,7 +21,7 @@ When you share a `case`, you have to chose:
 - To share `tasks` or not
 - To share `observables` or not
 
-![share case](./images/share-case.png)
+![share case](./images/case-share.png)
 
 ## Share a task
 
