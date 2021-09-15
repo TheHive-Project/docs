@@ -1,4 +1,4 @@
-# Create a case
+# Create Cases
 
 Creating a `case` is one of the basic TheHive functionnalities.
 

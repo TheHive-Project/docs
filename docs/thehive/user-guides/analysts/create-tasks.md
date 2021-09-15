@@ -1,4 +1,4 @@
-# Manage tasks
+# Manage Case Tasks
 
 In a TheHive `case`, you can find the tab `tasks`.
 

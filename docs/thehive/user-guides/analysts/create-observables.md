@@ -1,4 +1,4 @@
-# Create an observable
+# Create Case Observables
 
 In a TheHive `case`, you can declare `observables`. 
 

@@ -1,4 +1,4 @@
-# Close a case
+# Close Cases
 
 Closing a `case` is one of the basic TheHive functionnalities. It indicates the investigations and responses on this incident are over.
 

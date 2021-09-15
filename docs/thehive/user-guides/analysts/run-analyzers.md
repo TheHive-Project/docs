@@ -1,4 +1,4 @@
-# Run analyzers
+# Run Analyzers
 
 In TheHive4 you can run `analyzers` on `observables`.
 

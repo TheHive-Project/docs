@@ -1,4 +1,4 @@
-# Sharing
+# Sharing Cases, Tasks and Observables
 
 In TheHive4, you can share 3 type of objects:
 

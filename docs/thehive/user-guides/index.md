@@ -22,24 +22,30 @@ Administrators as users defined in the `admin` organisation, created by default 
 Organisation managers are users belonging to any organisation other than `admin` and having one of the following permissions to manage users, case template, custom tags and UI configuration. TheHive comes with a default role for organisation managers, called `org-admin`.
 
 - [Organisations, users and sharing](./organisation-managers/organisations-users-sharing.md)
-- Manage users
-- Manage Case templates
-- Manage UI configurations
+- [Manage users](./organisation-managers/users-management.md)
+- [Manage Case templates](./organisation-managers/case-templates.md)
+- [Manage custom tags](./organisation-managers/custom-tags.md)
+- [Manage UI configurations](./organisation-managers/ui-configuration.md)
 
 ## For Analysts
 
 Analysts are user belonging to any organisation other than `admin` without organisation management permissions.
 
+- [Create Alerts](./analysts/create-alerts.md)
+- [Create Cases](./analysts/create-case.md)
+- [Create Tasks](./analysts/create-tasks.md)
+- [Create Observables](./analysts/create-observables.md)
+- [Create TTPs](./analysts/ttps.md)
+- [Run Responders](./analysts/run-responders.md)
+- [Run Analyzers](./analysts/run-analyzers.md)
+- [Sharing Cases, Tasks and Observables](./analysts/sharing.md)
+- [Close Cases](./analysts/close-case.md)
+- [Export Cases to MISP](./analysts/export-case.md)
 - [User settings](./analysts/user-settings.md)
-- Create and manage Alerts
-- Create and manage Cases
-- Use Custom fields
-- Use tags
-- Use TTPs
-- Run Responders
-- Run Analyzers
-- Share a Case
-- Merge a Case
-- Export a Case
-- Create Dashboards
+
+<!-- TODO -->
+<!-- - Merge a Case -->
+<!-- - Use tags -->
+<!-- - Create Dashboards -->
+<!-- - [Use Custom fields](./analysts/) -->
 <!-- - Search and filter -->

@@ -1,4 +1,4 @@
-# Create alerts
+# Create Alerts
 
 In TheHive4, creating an `alert` is possible only through the API. (refer to [Create Alerts](../../api/alert/create.md))
 

@@ -1,4 +1,4 @@
-# Run responders
+# Run Responders
 
 In TheHive4, you can run `responders` on 4 type of objects:
 
@@ -43,8 +43,7 @@ On the `observable` *Action ribbon*, trigger the *Responders* button.
 
 ![trigger responder observable](./images/trigger-responder-observable.png)
 
-
-## Consult responder report
+## View responder report
 
 `responders` provides you a report that can have two status:
 

@@ -1,4 +1,4 @@
-# Export
+# Export Cases to MISP
 
 TheHive4 has the capability to export a `case` to a MISP instance.
 

@@ -28,6 +28,3 @@ You can delete a `TTP` from a `case`.
 Go to the *TTPs list* (*Case > TTPs*), then clic on the *Delete* button in the *Actions* column:
 
 ![TTP deletion](./images/delete-ttp.png)
-
-
-
