@@ -1,0 +1,13 @@
+Title: Analysts
+nav:
+  - "create-alerts.md"
+  - "create-case.md"
+  - "create-tasks.md"
+  - "create-observables.md"
+  - "ttps.md"
+  - "run-responders.md"
+  - "run-analyzers.md"
+  - "sharing.md"
+  - "close-case.md"
+  - "export-case.md"
+  - "user-settings.md"
