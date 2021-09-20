@@ -5,7 +5,7 @@ List observables of an *Alerts*.
 ## Query
 
 ```plain
-POST /api/v1/query?name
+POST /api/v0/query?name
 ```
 
 ##  Request Body Example
@@ -64,6 +64,7 @@ POST /api/v1/query?name
       ...
       {
         "_id": "~11111462234",
+        "id": "~11111462234",
         "_type": "Observable",
         "_createdBy": "system@thehive.local",
         "_createdAt": 1629309258431,
@@ -71,17 +72,10 @@ POST /api/v1/query?name
         "data": "1.2.3.4",
         "startDate": 1629309258431,
         "tlp": 0,
-        "tags": [],
         "ioc": false,
         "sighted": false,
         "reports": {},
-        "message": "",
-        "extraData": {
-          "seen": {
-            "seen": 3,
-            "ioc": false
-          }
-        },
+        "stats": {}
       }
       ...
     ]

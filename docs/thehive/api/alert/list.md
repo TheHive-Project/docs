@@ -65,9 +65,11 @@ POST /api/v1/query?name=alerts
         "_type": "Alert",
         "_createdBy": "florian@strangebee.com",
         "_createdAt": 1620393156944,
+        "status": "New",
         "type": "external",
         "source": "MISP server",
         "sourceRef": "event_1576",
+        "externalLink": null,
         "title": "Phishing list update 7.5.2021",
         "description": "A curated list of phishing IOCs",
         "severity": 2,
@@ -81,12 +83,10 @@ POST /api/v1/query?name=alerts
         "read": false,
         "follow": true,
         "customFields": [],
-        "observableCount": 16,
-        "extraData": {
-          "importDate": null,
-          "caseNumber": null
-        }
-      },
+        "caseTemplate": null,
+        "artifacts": [],
+        "similarCases": []
+  }
     ...
     ]
     ```
