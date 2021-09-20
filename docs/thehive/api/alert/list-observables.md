@@ -5,7 +5,7 @@ List observables of an *Alerts*.
 ## Query
 
 ```plain
-POST /api/v1/query?name=alert-observables
+POST /api/v1/query?name
 ```
 
 ##  Request Body Example
