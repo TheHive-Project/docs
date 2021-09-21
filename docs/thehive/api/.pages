@@ -5,7 +5,7 @@ nav:
   - 'custom-field'
   - 'case-template'
   - 'alert'
-  # - 'case'
+  - 'case'
   - 'task'  
   - 'observable' 
   - 'search'

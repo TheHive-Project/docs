@@ -62,7 +62,7 @@ With:
 - `401`: Authentication error
 - `404`: if the *Case* is not found
 
-### ResponseBody Example
+### Response Body Example
 
 !!! Example ""
 
