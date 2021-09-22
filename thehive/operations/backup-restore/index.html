@@ -11,8 +11,8 @@
       
         <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/operations/backup-restore/">
       
-      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.1655a90d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1118c9be.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ba0d045b.min.css">
         
           
           
@@ -42,12 +42,12 @@
     
     
     
-      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
-    
       <link rel="stylesheet" href="../../../custom.css">
     
     
       
+
+
     
     
   </head>
@@ -59,8 +59,9 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
-      
   
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -77,11 +78,9 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="https://thehive-project.github.io/docs" title="TheHive Project Documentation" class="md-header__button md-logo" aria-label="TheHive Project Documentation">
+    <a href="../../.." title="TheHive Project Documentation" class="md-header__button md-logo" aria-label="TheHive Project Documentation" data-md-component="logo">
       
   <img src="../../../images/thehive.png" alt="logo">
 
@@ -105,9 +104,8 @@
         </div>
       </div>
     </div>
-    <div class="md-header__options">
-      
-    </div>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -117,14 +115,18 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -145,7 +147,7 @@
 <a href="https://github.com/TheHive-Project/docs/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     TheHive-Project/docs
@@ -281,14 +283,12 @@
                   <div class="md-sidebar__inner">
                     
 
-
-
   
 
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://thehive-project.github.io/docs" title="TheHive Project Documentation" class="md-nav__button md-logo" aria-label="TheHive Project Documentation">
+    <a href="../../.." title="TheHive Project Documentation" class="md-nav__button md-logo" aria-label="TheHive Project Documentation" data-md-component="logo">
       
   <img src="../../../images/thehive.png" alt="logo">
 
@@ -301,7 +301,7 @@
 <a href="https://github.com/TheHive-Project/docs/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     TheHive-Project/docs
@@ -1135,6 +1135,7 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+      
         
       
       
@@ -1151,6 +1152,7 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
     
   
   
@@ -1161,6 +1163,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cassandra" class="md-nav__link">
     Cassandra
   </a>
@@ -1169,14 +1178,95 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre requisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#backup" class="md-nav__link">
     Backup
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#save-the-database-schema" class="md-nav__link">
+    Save the database schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-snapshot-and-an-archive" class="md-nav__link">
+    Create a snapshot and an archive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-data" class="md-nav__link">
+    Restore data
+  </a>
+  
+    <nav class="md-nav" aria-label="Restore data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites_1" class="md-nav__link">
+    Pre requisites
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#restore" class="md-nav__link">
+    Restore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+    <nav class="md-nav" aria-label="Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup_1" class="md-nav__link">
+    Backup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore_1" class="md-nav__link">
     Restore
   </a>
   
@@ -2580,6 +2670,7 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
     
   
   
@@ -2590,6 +2681,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cassandra" class="md-nav__link">
     Cassandra
   </a>
@@ -2598,14 +2696,95 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre requisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#backup" class="md-nav__link">
     Backup
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#save-the-database-schema" class="md-nav__link">
+    Save the database schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-snapshot-and-an-archive" class="md-nav__link">
+    Create a snapshot and an archive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-data" class="md-nav__link">
+    Restore data
+  </a>
+  
+    <nav class="md-nav" aria-label="Restore data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites_1" class="md-nav__link">
+    Pre requisites
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#restore" class="md-nav__link">
+    Restore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+    <nav class="md-nav" aria-label="Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup_1" class="md-nav__link">
+    Backup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore_1" class="md-nav__link">
     Restore
   </a>
   
@@ -2634,41 +2813,59 @@
                 
                 
                 <h1 id="backup-and-restore">Backup and restore<a class="headerlink" href="#backup-and-restore" title="Permanent link">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">References</p>
-</div>
-<ul>
-<li><a href="">https://docs.datastax.com/en/archived/cassandra/3.0/cassandra/operations/opsBackupRestore.html</a></li>
-</ul>
 <div class="admonition warning">
 <p class="admonition-title"><strong>This guide has only been tested on single node Cassandra server</strong></p>
 </div>
+<div class="admonition note references">
+<p class="admonition-title">Note</p>
+<ul>
+<li><a href="">https://docs.datastax.com/en/archived/cassandra/3.0/cassandra/operations/opsBackupRestore.html</a></li>
+</ul>
+</div>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p>To be restored successfully, TheHive requires following data beeing saved: </p>
+<ul>
+<li>The database</li>
+<li>Files</li>
+<li>optionnally, the index. </li>
+</ul>
 <h2 id="cassandra">Cassandra<a class="headerlink" href="#cassandra" title="Permanent link">#</a></h2>
-<h3 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">#</a></h3>
+<h3 id="pre-requisites">Pre requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">#</a></h3>
 <p>To backup or export database from Cassandra, following information are required: </p>
 <ul>
-<li>
-<p>Cassandra admin password</p>
-</li>
-<li>
-<p>keyspace used by thehive (default = <code>thehive</code>). This can be checked in the <code>application.conf</code>configuration file, in the database configuration in <em>storage</em>, <em>cql</em> and <code>keyspace</code> attribute. </p>
+<li>Cassandra admin password</li>
+<li>keyspace used by thehive (default = <code>thehive</code>). This can be checked in the <code>application.conf</code>configuration file, in the database configuration in <em>storage</em>, <em>cql</em> and <code>keyspace</code> attribute. </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This information can be found in TheHive configuration: </p>
 <div class="highlight"><pre><span></span><code>[..]
 db.janusgraph {
-  storage {
+    storage {
     backend: cql
     hostname: [&quot;127.0.0.1&quot;]
 
     cql {
-      cluster-name: thp
-      <mark class="critic">keyspace: thehive</mark>
+        cluster-name: thp
+        <mark class="critic">keyspace: thehive</mark> 
     }
-  }
+    }
 [..]
 </code></pre></div>
-</li>
+</div>
+<h3 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">#</a></h3>
+<p>Following actions should be performed to backup the data successfully: </p>
+<ul>
+<li>Save the database schema</li>
+<li>Create a snapshot</li>
+<li>Save the data and the schema</li>
 </ul>
+<h4 id="save-the-database-schema">Save the database schema<a class="headerlink" href="#save-the-database-schema" title="Permanent link">#</a></h4>
+<p>This can be done with the following command: </p>
+<div class="highlight"><pre><span></span><code>cqlsh -u cassandra -p &lt;CASSANDRA_PASSWORD&gt; &lt;SERVER_IP&gt; -e <span class="s2">&quot;DESCRIBE KEYSPACE &lt;KEYSPACE&gt;&quot;</span> &gt; schema.cql
+</code></pre></div>
+<h4 id="create-a-snapshot-and-an-archive">Create a snapshot and an archive<a class="headerlink" href="#create-a-snapshot-and-an-archive" title="Permanent link">#</a></h4>
 <p>Considering that your keyspace is <code>thehive</code> and <code>backup_name</code> is the name of the snapshot, run the following commands:</p>
-<div class="admonition example">
 <ol>
 <li>
 <p>Before taking snapshots</p>
@@ -2686,43 +2883,151 @@ db.janusgraph {
 </code></pre></div>
 </li>
 <li>
-<p>Remove old snapshots</p>
+<p>Remove old snapshots (if necessary)</p>
 <div class="highlight"><pre><span></span><code>nodetool -h localhost -p <span class="m">7199</span> clearsnapshot -t &lt;snapshotname&gt;
 </code></pre></div>
 </li>
 </ol>
-</div>
-<h3 id="restore">Restore<a class="headerlink" href="#restore" title="Permanent link">#</a></h3>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h4>
 <div class="admonition example">
+<p class="admonition-title">Example of script to generate backups of TheHive keyspace</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">## Create a CQL file with the schema of the KEYSPACE</span>
+<span class="c1">## and an tbz archive containing the snapshot</span>
+
+<span class="c1">## Complete variables before running:</span>
+<span class="c1">## KEYSPACE: Identify the right keyspace to save in cassandra</span>
+<span class="c1">## SNAPSHOT: choose a name for the backup</span>
+
+<span class="nv">IP</span><span class="o">=</span><span class="m">10</span>.1.1.1
+<span class="nv">SOURCE_KEYSPACE</span><span class="o">=</span><span class="s2">&quot;thehive&quot;</span>
+<span class="nv">SNAPSHOT</span><span class="o">=</span><span class="s2">&quot;thehive_20210413&quot;</span>
+
+
+<span class="c1"># Backup Cassandra</span>
+
+nodetool cleanup <span class="si">${</span><span class="nv">SOURCE_KEYSPACE</span><span class="si">}</span>
+
+nodetool snapshot <span class="si">${</span><span class="nv">SOURCE_KEYSPACE</span><span class="si">}</span>  -t <span class="si">${</span><span class="nv">SNAPSHOT</span><span class="si">}</span>
+
+<span class="nb">echo</span> -n <span class="s2">&quot;Cassandra admin password&quot;</span>:
+<span class="nb">read</span> -s CASSANDRA_PASSWORD
+
+<span class="c1">## Save schema</span>
+cqlsh -u cassandra -p <span class="si">${</span><span class="nv">CASSANDRA_PASSWORD</span><span class="si">}</span> <span class="si">${</span><span class="nv">IP</span><span class="si">}</span> -e <span class="s2">&quot;DESCRIBE KEYSPACE </span><span class="si">${</span><span class="nv">SOURCE_KEYSPACE</span><span class="si">}</span><span class="s2">&quot;</span> &gt; schema_<span class="si">${</span><span class="nv">SNAPSHOT</span><span class="si">}</span>.cql
+
+<span class="c1">## Create archive</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$?</span> <span class="o">==</span> <span class="m">0</span> <span class="o">]]</span>
+<span class="k">then</span>
+tar cjf <span class="si">${</span><span class="nv">SNAPSHOT</span><span class="si">}</span>.tbz /var/lib/cassandra/data/<span class="si">${</span><span class="nv">SOURCE_KEYSPACE</span><span class="si">}</span>/*/snapshots/<span class="si">${</span><span class="nv">SNAPSHOT</span><span class="si">}</span>/
+<span class="k">fi</span>
+</code></pre></div>
+</div>
+<h3 id="restore-data">Restore data<a class="headerlink" href="#restore-data" title="Permanent link">#</a></h3>
+<h4 id="pre-requisites_1">Pre requisites<a class="headerlink" href="#pre-requisites_1" title="Permanent link">#</a></h4>
+<p>Following data is required to restore TheHive database successfully: </p>
+<ul>
+<li>The database schema (example: <code>schema.cql</code>)</li>
+<li>A backup of the database (example: <code>backup.tbz</code>)</li>
+<li>Keyspace to restore does not exist in the database (or it will be overwritten)</li>
+</ul>
+<h4 id="restore">Restore<a class="headerlink" href="#restore" title="Permanent link">#</a></h4>
 <ol>
 <li>
+<p>Restore keyspace</p>
+<div class="highlight"><pre><span></span><code>cqlsh -u cassandra -p &lt;CASSANDRA_PASSWORD&gt; &lt;IP&gt; -e <span class="s2">&quot;source &#39;schema.cql&#39;;&quot;</span>
+</code></pre></div>
+</li>
+<li>
 <p>Unarchive backup files: </p>
-<div class="highlight"><pre><span></span><code>tar jxf /PATH/TO/backup.tbz -C /
+<div class="highlight"><pre><span></span><code>tar jxf /PATH/TO/backup.tbz -C /tmp/cassandra_backup
 </code></pre></div>
 </li>
 <li>
 <p>And restore snapshots files:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> /var/lib/cassandra/data/thehive
 
-<span class="k">for</span> I in <span class="sb">`</span>ls /var/lib/cassandra/data/thehive<span class="sb">`</span>  <span class="p">;</span> <span class="k">do</span> cp /var/lib/cassandra/data/thehive/<span class="nv">$I</span>/snapshots/backup_name/* /var/lib/cassandra/data/thehive/<span class="nv">$I</span>/ <span class="p">;</span> <span class="k">done</span>
+<span class="k">for</span> I in <span class="sb">`</span>ls /tmp/cassandra/var/lib/cassandra/data/&lt;KEYSPACE&gt;<span class="sb">`</span>  <span class="p">;</span> <span class="k">do</span> cp /tmp/cassandra/var/lib/cassandra/data/&lt;KEYSPACE&gt;/<span class="nv">$I</span>/snapshots/&lt;BACKUP_NAME&gt;/* /var/lib/cassandra/data/&lt;KEYSPACE&gt;/<span class="nv">$I</span>/ <span class="p">;</span> <span class="k">done</span>
 </code></pre></div>
 </li>
 <li>
 <p>Ensure Cassandra user keep ownership on the files: </p>
-<div class="highlight"><pre><span></span><code>chown -R cassandra:cassandra /var/lib/cassandra/data/thehive
+<div class="highlight"><pre><span></span><code>chown -R cassandra:cassandra /var/lib/cassandra/data/&lt;KEYSPACE&gt;
 </code></pre></div>
 </li>
 <li>
-<p>Restart services</p>
-<div class="highlight"><pre><span></span><code>service cassandra restart
-service thehive restart
+<p>Refresh tables</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> TABLE in <span class="sb">`</span>cqlsh -u cassandra -p &lt;CASSANDRA_PASSWORD&gt; &lt;IP&gt; -e <span class="s2">&quot;use &lt;KEYSPACE&gt;; DESC tables ;&quot;</span><span class="sb">`</span>
+<span class="k">do</span>
+nodetool refresh &lt;KEYSPACE&gt; &lt;TABLE_NAME&gt;
+<span class="k">done</span>
 </code></pre></div>
 </li>
 </ol>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Ensure no Commitlog file exist before restarting Cassandra service. (<code>/var/lib/cassandra/commitlog</code>)</p>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Example of script to restore TheHive keyspace in Cassandra</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1">## Restore a KEYSPACE and its data from a CQL file with the schema of the</span>
+<span class="c1">## KEYSPACE and an tbz archive containing the snapshot</span>
+
+<span class="c1">## Complete variables before running:</span>
+<span class="c1">## IP: IP of cassandra server</span>
+<span class="c1">## TMP: choose a TMP folder !!! this folder will be removed if exists.</span>
+<span class="c1">## SOURCE_KEYSPACE: KEYSPACE used in the backup</span>
+<span class="c1">## TARGET_KEYSPACE: new KEYSPACE name ; use same name of SOURCE_KEYSPACE if no changes</span>
+<span class="c1">## SNAPSHOT: choose a name for the backup</span>
+
+
+<span class="nv">IP</span><span class="o">=</span><span class="m">10</span>.10.10.10
+<span class="nv">TMP</span><span class="o">=</span>/tmp/cassandra_backup
+<span class="nv">SOURCE_KEYSPACE</span><span class="o">=</span><span class="s2">&quot;thehive&quot;</span>
+<span class="nv">TARGET_KEYSPACE</span><span class="o">=</span><span class="s2">&quot;thehive&quot;</span>
+<span class="nv">SNAPSHOT</span><span class="o">=</span><span class="s2">&quot;thehive_20210920&quot;</span>
+
+<span class="c1">## Uncompress data in TMP folder</span>
+rm -rf <span class="si">${</span><span class="nv">TMP</span><span class="si">}</span> <span class="o">&amp;&amp;</span> mkdir <span class="si">${</span><span class="nv">TMP</span><span class="si">}</span>
+tar jxf <span class="si">${</span><span class="nv">SNAPSHOT</span><span class="si">}</span>.tbz -C <span class="si">${</span><span class="nv">TMP</span><span class="si">}</span>
+
+<span class="c1">## Define new KEYSPACE NAME</span>
+sed -i <span class="s2">&quot;s/</span><span class="si">${</span><span class="nv">SOURCE_KEYSPACE</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">TARGET_KEYSPACE</span><span class="si">}</span><span class="s2">/g&quot;</span> schema_<span class="si">${</span><span class="nv">SNAPSHOT</span><span class="si">}</span>.cql
+
+
+
+<span class="c1">## Read Cassandra password</span>
+<span class="nb">echo</span> -n <span class="s2">&quot;Cassandra admin password: &quot;</span>
+<span class="nb">read</span> -s CASSANDRA_PASSWORD
+
+
+<span class="c1">## Restore keyspace</span>
+cqlsh -u cassandra -p <span class="si">${</span><span class="nv">CASSANDRA_PASSWORD</span><span class="si">}</span> <span class="si">${</span><span class="nv">IP</span><span class="si">}</span> -e <span class="s2">&quot;source &#39;schema_</span><span class="si">${</span><span class="nv">SNAPSHOT</span><span class="si">}</span><span class="s2">.cql&#39;;&quot;</span>
+
+
+<span class="c1">## Restore data</span>
+<span class="k">for</span> TABLE in <span class="sb">`</span>cqlsh -u cassandra -p <span class="si">${</span><span class="nv">CASSANDRA_PASSWORD</span><span class="si">}</span> <span class="si">${</span><span class="nv">IP</span><span class="si">}</span> -e <span class="s2">&quot;use </span><span class="si">${</span><span class="nv">TARGET_KEYSPACE</span><span class="si">}</span><span class="s2">; DESC tables ;&quot;</span><span class="sb">`</span>
+<span class="k">do</span>
+cp -r <span class="si">${</span><span class="nv">TMP</span><span class="si">}</span>/var/lib/cassandra/data/<span class="si">${</span><span class="nv">SOURCE_KEYSPACE</span><span class="si">}</span>/<span class="si">${</span><span class="nv">TABLE</span><span class="si">}</span>-*/snapshots/<span class="si">${</span><span class="nv">SNAPSHOT</span><span class="si">}</span>/* /var/lib/cassandra/data/<span class="si">${</span><span class="nv">TARGET_KEYSPACE</span><span class="si">}</span>/<span class="nv">$TABLE</span>-*/
+<span class="k">done</span>
+
+<span class="c1">## Change ownership</span>
+chown -R cassandra:cassandra /var/lib/cassandra/data/<span class="si">${</span><span class="nv">TARGET_KEYSPACE</span><span class="si">}</span>
+
+<span class="c1">##  Refresh tables</span>
+<span class="k">for</span> TABLE in <span class="sb">`</span>cqlsh -u cassandra -p <span class="si">${</span><span class="nv">CASSANDRA_PASSWORD</span><span class="si">}</span> <span class="si">${</span><span class="nv">IP</span><span class="si">}</span> -e <span class="s2">&quot;use </span><span class="si">${</span><span class="nv">TARGET_KEYSPACE</span><span class="si">}</span><span class="s2">; DESC tables ;&quot;</span><span class="sb">`</span>
+<span class="k">do</span>
+nodetool refresh <span class="si">${</span><span class="nv">TARGET_KEYSPACE</span><span class="si">}</span> <span class="si">${</span><span class="nv">TABLE</span><span class="si">}</span>
+<span class="k">done</span>
+</code></pre></div>
+</div>
+<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">#</a></h2>
+<h3 id="backup_1">Backup<a class="headerlink" href="#backup_1" title="Permanent link">#</a></h3>
+<p>Wether you use local or distributed files system storage, copy the content of the folder/bucket.</p>
+<h3 id="restore_1">Restore<a class="headerlink" href="#restore_1" title="Permanent link">#</a></h3>
+<p>Restore the saved files into the destination folder/bucket that will be used by TheHive.</p>
                 
                   
                     
@@ -2731,7 +3036,8 @@ service thehive restart
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 2, 2021 17:57:33</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 21, 2021 10:25:06</span>
+      
     
   </small>
 </div>
@@ -2746,6 +3052,7 @@ service thehive restart
             </article>
           </div>
         </div>
+        
       </main>
       
         
@@ -2753,7 +3060,8 @@ service thehive restart
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../migration/" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="../migration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Migration from TheHive 3.x" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2768,7 +3076,8 @@ service thehive restart
         </a>
       
       
-        <a href="../https/" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="../https/" class="md-footer__link md-footer__link--next" aria-label="Next: Configure HTTPS" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -2792,6 +3101,7 @@ service thehive restart
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
+        
       </div>
       
   <div class="md-footer-social">
@@ -2802,7 +3112,7 @@ service thehive restart
         
       
       <a href="https://www.thehive-project.org" target="_blank" rel="noopener" title="www.thehive-project.org" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M280.37 148.26 96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47 488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg>
       </a>
     
       
@@ -2811,7 +3121,7 @@ service thehive restart
         
       
       <a href="https://blog.thehive-project.org" target="_blank" rel="noopener" title="blog.thehive-project.org" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m61.7 169.4 101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>
       </a>
     
       
@@ -2851,10 +3161,10 @@ service thehive restart
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.716f8af4.min.js"></script>
       
     
   </body>
