@@ -181,8 +181,13 @@ Starting from TheHive 4.1.0, a solution to store data indexes is required. These
         Create a folder dedicated to host indexes for TheHive: 
 
         ```bash
-        mkdir /opt/thp/thehive/index
-        chown thehive:thehive -R /opt/thp/thehive/index
+        mkdir -p /opt/thp/thehive/index
+        ```
+        
+        Later, after having installed TheHive, ensure the user `thehive` owns the path chosen for storing the indexes:
+
+        ```
+        chown -R thehive:thehive /opt/thp/thehive/index
         ```
 
     === "Elasticsearch"
