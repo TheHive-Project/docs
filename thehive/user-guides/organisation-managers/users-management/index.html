@@ -68,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#users-management" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -850,7 +855,7 @@
   
     <li class="md-nav__item">
       <a href="../case-templates/" class="md-nav__link">
-        Case templates
+        Case Templates
       </a>
     </li>
   
@@ -886,7 +891,7 @@
   
     <li class="md-nav__item">
       <a href="../ui-configuration/" class="md-nav__link">
-        Ui configuration
+        UI configuration
       </a>
     </li>
   
@@ -903,10 +908,90 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Users management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Users management
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-new-user" class="md-nav__link">
+    Create new user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-users" class="md-nav__link">
+    List users
+  </a>
+  
+    <nav class="md-nav" aria-label="List users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-or-modify-a-user-password" class="md-nav__link">
+    Set or modify a user password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-renew-revoke-or-reveal-an-user-api-key" class="md-nav__link">
+    Create, renew, revoke or reveal an user API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-user-information" class="md-nav__link">
+    Edit user information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lock-an-user" class="md-nav__link">
+    Lock an user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-an-user" class="md-nav__link">
+    Delete an user
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -944,20 +1029,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../analysts/close-case/" class="md-nav__link">
-        Close case
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../analysts/create-alerts/" class="md-nav__link">
-        Create alerts
+        Create Alerts
       </a>
     </li>
   
@@ -969,19 +1042,7 @@
   
     <li class="md-nav__item">
       <a href="../../analysts/create-case/" class="md-nav__link">
-        Create case
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analysts/create-observables%20/" class="md-nav__link">
-        Create observables 
+        Create Cases
       </a>
     </li>
   
@@ -993,7 +1054,7 @@
   
     <li class="md-nav__item">
       <a href="../../analysts/create-tasks/" class="md-nav__link">
-        Create tasks
+        Manage Case Tasks
       </a>
     </li>
   
@@ -1004,44 +1065,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../analysts/export/" class="md-nav__link">
-        Export
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analysts/run-analyzers/" class="md-nav__link">
-        Run analyzers
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analysts/run-responders/" class="md-nav__link">
-        Run responders
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analysts/sharing/" class="md-nav__link">
-        Sharing
+      <a href="../../analysts/create-observables/" class="md-nav__link">
+        Create Case Observables
       </a>
     </li>
   
@@ -1054,6 +1079,66 @@
     <li class="md-nav__item">
       <a href="../../analysts/ttps/" class="md-nav__link">
         Tactics, Techniques and Procedures
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analysts/run-responders/" class="md-nav__link">
+        Run Responders
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analysts/run-analyzers/" class="md-nav__link">
+        Run Analyzers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analysts/sharing/" class="md-nav__link">
+        Sharing Cases, Tasks and Observables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analysts/close-case/" class="md-nav__link">
+        Close Cases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analysts/export-case/" class="md-nav__link">
+        Export Cases to MISP
       </a>
     </li>
   
@@ -1209,13 +1294,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
       
       <label class="md-nav__link" for="__nav_2_5">
-        Api
+        APIs
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Api" data-md-level="2">
+      <nav class="md-nav" aria-label="APIs" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
-          Api
+          APIs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1257,6 +1342,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../api/organisation/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../api/organisation/create/" class="md-nav__link">
         Create
       </a>
@@ -1270,7 +1367,31 @@
   
     <li class="md-nav__item">
       <a href="../../../api/organisation/update/" class="md-nav__link">
-        Update# Update
+        Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/organisation/list/" class="md-nav__link">
+        List/Search
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/organisation/list-links/" class="md-nav__link">
+        List links
       </a>
     </li>
   
@@ -1308,6 +1429,30 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../api/user/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/list/" class="md-nav__link">
+        List
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../api/user/create/" class="md-nav__link">
         Create
       </a>
@@ -1322,6 +1467,78 @@
     <li class="md-nav__item">
       <a href="../../../api/user/update/" class="md-nav__link">
         Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/set-password/" class="md-nav__link">
+        Set password
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/generate-api-key/" class="md-nav__link">
+        Generate API key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/revoke-api-key/" class="md-nav__link">
+        Revoke API key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/get-api-key/" class="md-nav__link">
+        Get API key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/lock/" class="md-nav__link">
+        Lock / Unlock
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/user/delete/" class="md-nav__link">
+        Delete
       </a>
     </li>
   
@@ -1359,6 +1576,30 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../api/custom-field/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/custom-field/list/" class="md-nav__link">
+        List
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../api/custom-field/create/" class="md-nav__link">
         Create
       </a>
@@ -1373,6 +1614,42 @@
     <li class="md-nav__item">
       <a href="../../../api/custom-field/update/" class="md-nav__link">
         Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/custom-field/delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/custom-field/get/" class="md-nav__link">
+        Get
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/custom-field/getUse/" class="md-nav__link">
+        Use count
       </a>
     </li>
   
@@ -1410,6 +1687,30 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../api/case-template/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case-template/list/" class="md-nav__link">
+        Get / List
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../api/case-template/create/" class="md-nav__link">
         Create
       </a>
@@ -1424,6 +1725,18 @@
     <li class="md-nav__item">
       <a href="../../../api/case-template/update/" class="md-nav__link">
         Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case-template/delete/" class="md-nav__link">
+        Delete
       </a>
     </li>
   
@@ -1461,6 +1774,30 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../api/alert/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/list/" class="md-nav__link">
+        List / Search
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../api/alert/create/" class="md-nav__link">
         Create
       </a>
@@ -1475,6 +1812,18 @@
     <li class="md-nav__item">
       <a href="../../../api/alert/update/" class="md-nav__link">
         Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/read/" class="md-nav__link">
+        Mark as Read/Unread
       </a>
     </li>
   
@@ -1516,6 +1865,90 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/similar-cases/" class="md-nav__link">
+        List similar Cases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/list-observables/" class="md-nav__link">
+        List Observables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/add-observable/" class="md-nav__link">
+        Add observables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/update-observable/" class="md-nav__link">
+        Update observable
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/delete-observable/" class="md-nav__link">
+        Add observables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/run-responder/" class="md-nav__link">
+        Run Responder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/alert/list-responder-jobs/" class="md-nav__link">
+        List responder jobs
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1548,6 +1981,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../api/case/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../api/case/create/" class="md-nav__link">
         Create
       </a>
@@ -1572,6 +2017,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../api/case/delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../api/case/merge/" class="md-nav__link">
         Merge
       </a>
@@ -1584,8 +2041,68 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../api/case/delete/" class="md-nav__link">
-        Delete
+      <a href="../../../api/case/export/" class="md-nav__link">
+        Export Case to MISP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/related-cases/" class="md-nav__link">
+        List related Cases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/related-alerts/" class="md-nav__link">
+        List related Alerts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/attachments/" class="md-nav__link">
+        List related Alerts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/run-responder/" class="md-nav__link">
+        Run responder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/case/responder-jobs/" class="md-nav__link">
+        List responder actions
       </a>
     </li>
   
@@ -1623,6 +2140,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../api/task/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../api/task/create/" class="md-nav__link">
         Create
       </a>
@@ -1637,6 +2166,126 @@
     <li class="md-nav__item">
       <a href="../../../api/task/update/" class="md-nav__link">
         Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/get/" class="md-nav__link">
+        List
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/list/" class="md-nav__link">
+        List
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/run-responder/" class="md-nav__link">
+        Run responder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/responder-jobs/" class="md-nav__link">
+        List responder actions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/create-log/" class="md-nav__link">
+        Add log
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/delete-log/" class="md-nav__link">
+        Add log
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/log-run-responder/" class="md-nav__link">
+        Run responder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/log-responder-jobs/" class="md-nav__link">
+        List responder actions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/logs/" class="md-nav__link">
+        Logs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/task/waiting-tasks/" class="md-nav__link">
+        List
       </a>
     </li>
   
@@ -1674,6 +2323,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../api/observable/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../api/observable/create/" class="md-nav__link">
         Create
       </a>
@@ -1688,6 +2349,54 @@
     <li class="md-nav__item">
       <a href="../../../api/observable/update/" class="md-nav__link">
         Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/observable/delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/observable/list/" class="md-nav__link">
+        List / Search
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/observable/analyzer/" class="md-nav__link">
+        Analyzer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/observable/responder/" class="md-nav__link">
+        Responder
       </a>
     </li>
   
@@ -1710,13 +2419,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_10" type="checkbox" id="__nav_2_5_10" >
       
       <label class="md-nav__link" for="__nav_2_5_10">
-        Dashboard
+        Search
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Dashboard" data-md-level="3">
+      <nav class="md-nav" aria-label="Search" data-md-level="3">
         <label class="md-nav__title" for="__nav_2_5_10">
           <span class="md-nav__icon md-icon"></span>
-          Dashboard
+          Search
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1725,8 +2434,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../api/dashboard/create/" class="md-nav__link">
-        Create
+      <a href="../../../api/search/" class="md-nav__link">
+        Overview
       </a>
     </li>
   
@@ -1737,8 +2446,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../api/dashboard/update/" class="md-nav__link">
-        Update
+      <a href="../../../api/search/query/" class="md-nav__link">
+        Query API
       </a>
     </li>
   
@@ -2519,6 +3228,86 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-new-user" class="md-nav__link">
+    Create new user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-users" class="md-nav__link">
+    List users
+  </a>
+  
+    <nav class="md-nav" aria-label="List users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-or-modify-a-user-password" class="md-nav__link">
+    Set or modify a user password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-renew-revoke-or-reveal-an-user-api-key" class="md-nav__link">
+    Create, renew, revoke or reveal an user API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-user-information" class="md-nav__link">
+    Edit user information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lock-an-user" class="md-nav__link">
+    Lock an user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-an-user" class="md-nav__link">
+    Delete an user
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -2529,9 +3318,62 @@
                   </a>
                 
                 
-                  <h1>Users management</h1>
-                
-                
+                <h1 id="users-management">Users management<a class="headerlink" href="#users-management" title="Permanent link">#</a></h1>
+<p>In TheHive4 you can manage <code>users</code> that belongs to your <code>organisation</code> in the Users page (<em>Organisation &gt; Users</em>)</p>
+<p>You must have the permission <code>manageUser</code> on your profile to manage <code>users</code> of your <code>organisation</code>. (refer to <a href="../../Administrators/profiles/">Profiles and permissions</a>)</p>
+<h2 id="create-new-user">Create new user<a class="headerlink" href="#create-new-user" title="Permanent link">#</a></h2>
+<p>You can create a new <code>user</code> in your <code>organisation</code>. clic the <em>Create new user</em> button in the Users page (<em>Organisation &gt; Users</em>)</p>
+<p>You must provide the following information (they are all mandatory):</p>
+<ul>
+<li>Organisation (autmatically filled, non modifiable)</li>
+<li>Login (This will be used by the <code>user</code> to authenticate)</li>
+<li>Full Name (This will be used as display name)</li>
+<li>Profile (drop-down list to set a profile, that will define <code>user</code> <code>permissions</code>)</li>
+</ul>
+<p><img alt="user management" src="../../images/add-user-user-management.png" /></p>
+<h2 id="list-users">List users<a class="headerlink" href="#list-users" title="Permanent link">#</a></h2>
+<p>You can list the <code>users</code> that belongs to your <code>organisation</code> in the Users page (<em>Organisation &gt; Users</em>)</p>
+<p>In this list you can find the following information:</p>
+<ul>
+<li>Status</li>
+<li>Login</li>
+<li>Full Name</li>
+<li>Profile</li>
+<li>API Key</li>
+<li>MFA activation </li>
+<li>Creation and last update dates</li>
+</ul>
+<h3 id="set-or-modify-a-user-password">Set or modify a user password<a class="headerlink" href="#set-or-modify-a-user-password" title="Permanent link">#</a></h3>
+<p>To set or modify a <code>user</code> password, clic the button <em>New password</em> (if the user never had a password) or <em>Edit password</em> in the column <em>Password</em> of the User list (<em>Organisation &gt; Users</em>)</p>
+<h3 id="create-renew-revoke-or-reveal-an-user-api-key">Create, renew, revoke or reveal an user API Key<a class="headerlink" href="#create-renew-revoke-or-reveal-an-user-api-key" title="Permanent link">#</a></h3>
+<p>In the column <em>API Key</em> of the <code>user</code> list (<em>Organisation &gt; Users</em>), you can:</p>
+<ul>
+<li>Create an <em>API Key</em> if the <code>user</code> never had one before</li>
+<li>Renew the <code>user</code> <em>API Key</em></li>
+<li>Revoke the <code>user</code> <em>API Key</em></li>
+<li>Reveal the <code>user</code><em>API Key</em> in your user interface.</li>
+</ul>
+<p><img alt="API Key management" src="../../images/api-key-user-management.png" /></p>
+<h3 id="edit-user-information">Edit user information<a class="headerlink" href="#edit-user-information" title="Permanent link">#</a></h3>
+<p>You can edit the following user information from the user list (<em>Organisation &gt; Users</em>):</p>
+<ul>
+<li>Full name</li>
+<li>Profile</li>
+</ul>
+<p>To edit an <code>user</code> information, clic the <em>Edit user</em> button on the <em>Actions</em> column:</p>
+<p><img alt="edit user" src="../images/edit-user.png" /></p>
+<h3 id="lock-an-user">Lock an user<a class="headerlink" href="#lock-an-user" title="Permanent link">#</a></h3>
+<p>Locking an <code>user</code> make the account unusable for any action. You can lock an <code>user</code> from the User list (<em>Organisation &gt; Users</em>).</p>
+<p>To lock an <code>user</code>, clic on the lock button:</p>
+<p><img alt="lock user" src="../images/lock-user.png" /></p>
+<h3 id="delete-an-user">Delete an user<a class="headerlink" href="#delete-an-user" title="Permanent link">#</a></h3>
+<p>You can delete an <code>user</code> from your organisation via the User list (<em>Organisation &gt; Users</em>)</p>
+<hr />
+<p>⚠️ <strong>Note</strong></p>
+<p>Deleting an <code>user</code> is irrevocable. Recreating an <code>user</code> with the same information will not reattribute the <code>cases</code> the previous account was assigned to.</p>
+<hr />
+<p>To delete an user, clic on the trash icon:</p>
+<p><img alt="delete user" src="../images/delete-user.png" /></p>
                 
                   
                     
@@ -2540,7 +3382,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 25, 2021 07:07:33</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 6, 2021 13:52:38</span>
       
     
   </small>
@@ -2565,7 +3407,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../ui-configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ui configuration" rel="prev">
+        <a href="../ui-configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UI configuration" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2574,20 +3416,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Ui configuration
+              UI configuration
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../analysts/close-case/" class="md-footer__link md-footer__link--next" aria-label="Next: Close case" rel="next">
+        <a href="../../analysts/create-alerts/" class="md-footer__link md-footer__link--next" aria-label="Next: Create Alerts" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Close case
+              Create Alerts
             </div>
           </div>
           <div class="md-footer__button md-icon">
