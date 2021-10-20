@@ -53,7 +53,7 @@ In the UI, users can add free text tags, and also choose to add a tag from a lib
 
 Free text tags are managed at the Organisation level by users with `orgadmin` profile, or at least `manageTag` permission.
 
-Refer to appropriate pages to learn about [how to manage custom tags](../organisation/custom-tags.md), and [how to use tags](../cases/create-case.md) in TheHive.
+Refer to appropriate pages to learn about [how to manage custom tags](../organisation-managers/custom-tags.md), and [how to use tags](../analysts/create-case.md) in TheHive.
 
 !!! Info
     If a tag is imported with an `Alert` or created with the API, TheHive tries to _dissect_ it as a _machinetag_. It tries to identify a namespace, a predicate and an optional value. 

@@ -1,3 +1,14 @@
 nav:
+  - 'Overview': index.md
   - create.md
   - update.md
+  - get.md
+  - list.md
+  - run-responder.md
+  - responder-jobs.md
+  - create-log.md
+  - delete-log.md
+  - log-run-responder.md
+  - log-responder-jobs.md
+  - logs.md
+  - waiting-tasks.md
