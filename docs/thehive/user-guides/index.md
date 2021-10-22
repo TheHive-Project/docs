@@ -6,8 +6,7 @@ Get a [Quick start with TheHive](quick-start.md) or follow the guides bellow for
 
 Administrators as users defined in the `admin` organisation, created by default in TheHive. Administators have the responsibility of managing the platform by defining organisations and all the platform data available for to all the organisations.
 
-- Manage organisations
-- Manage users
+- [Manage organisations](./administrators/organisations.md)
 - [Manage profiles, roles and permissions](./administrators/profiles.md)
 - [Manage Custom fields](./administrators/custom-fields.md)
 - [Manage Observable types](administrators/observable-types.md)

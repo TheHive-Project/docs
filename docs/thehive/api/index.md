@@ -1,13 +1,4 @@
 # Introduction
-
-## Authorization
-
-## Library
-
-StrangeBee provides an official library for integrating with the remote API of TheHive: 
-
-- [TheHive4py](https://thehive-project.github.io/TheHive4py/)
-
 ## APIs
 
 ### Administration APIs
@@ -32,3 +23,9 @@ StrangeBee provides an official library for integrating with the remote API of T
 ### Make searches
 
 - [Search APIs](./search)
+
+## Library
+
+StrangeBee provides an official library for integrating with the remote API of TheHive: 
+
+- [TheHive4py](https://thehive-project.github.io/TheHive4py/)
