@@ -19,10 +19,9 @@
 - [Observable APIs](./observable)
 - [TTP APIs](./ttp)
 
+<!-- ### Make searches
 
-### Make searches
-
-- [Search APIs](./search)
+- [Search APIs](./search) -->
 
 ## Library
 
