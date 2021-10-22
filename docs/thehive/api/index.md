@@ -1,6 +1,28 @@
 # Introduction
+## APIs
 
-## Authorization
+### Administration APIs
+  
+- [Manage Organisations](./organisation)
+- [Manage Users](./user)
+- [Manage Custom fields](./custom-field)
+
+### Organisation APIs
+
+- [Manage Case Templates](./case-template)
+
+### Case Management APIs
+
+- [Alert APIs](./alert)
+- [Case APIs](./case)
+- [Task APIs](./task)
+- [Observable APIs](./observable)
+- [TTP APIs](./ttp)
+
+
+### Make searches
+
+- [Search APIs](./search)
 
 ## Library
 

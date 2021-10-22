@@ -110,5 +110,5 @@ Note that users with *"org-admin"* profile have an "Organisation" menu in the ri
 
 ![Organisation configuration](./images/org-case-template.png)
 
-Now that the organisation and users are created, let's [define custom fields](./administration/custom-fields.md) and then use them to define case templates.
+Now that the organisation and users are created, let's [define custom fields](./administrators/custom-fields.md) and then use them to define case templates.
 

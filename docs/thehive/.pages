@@ -4,5 +4,5 @@ nav:
   - 'installation-and-configuration'
   - 'user-guides'
   - 'operations'
-  - api
+  - APIs: api
   - legacy

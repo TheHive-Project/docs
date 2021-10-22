@@ -42,9 +42,8 @@ GB of RAM and 60 GB of disk. You can also use a physical machine with similar sp
 ## Miscellaneous Information
 - [Feature Set](feature-set.md) **(In Progress)**
 - [Changelog](https://github.com/TheHive-Project/TheHive/blob/master/CHANGELOG.md)
-- [FAQ](FAQ.md)
-- [Training Material](training-material.md)
-- [Additional Resources](additional-resources/list.md)
+- [Training Material](/docs/resources/Virtual%20Machine/demo.md)
+- [Additional Resources](/docs/resources/Keynotes/list.md)
 - [Single Sign-On on TheHive with X.509 Certificates](admin/certauth.md) **(Experimental Feature)**
 
 ## License
@@ -56,7 +55,7 @@ Information, news and updates are regularly posted on [TheHive Project Twitter a
 ## Contributing
 We welcome your contributions. Please feel free to fork the code, play with it, make some patches and send us pull requests using [issues](https://github.com/TheHive-Project/TheHiveDocs/issues).
 
-We do have a [Code of conduct](code_of_conduct.md). Make sure to check it out before contributing.
+We do have a [Code of conduct](/docs/thehive/code-of-conduct.md). Make sure to check it out before contributing.
 
 ## Support
 Please [open an issue on GitHub](https://github.com/TheHive-Project/TheHive/issues) if you'd like to report a bug or request a feature. We are also available on [Gitter](https://gitter.im/TheHive-Project/TheHive) to help you out.

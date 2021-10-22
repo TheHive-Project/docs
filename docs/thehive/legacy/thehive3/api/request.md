@@ -36,6 +36,6 @@ curl -XPOST http://127.0.0.1:9000/api/login -F '_json=<-;type=application/json' 
 _EOF_
 ```
 
-## Response Format
+## ResponseFormat
 
 TheHive outputs JSON data.

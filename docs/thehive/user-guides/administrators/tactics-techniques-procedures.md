@@ -26,4 +26,4 @@ To access and import MITRE ATT&CK patterns definition, beeing `admin` or at leas
 
 ## Use MITRE ATT&CK
 
-Refer to [this page](../cases/ttps.md) to learn how to add TTPs (_Tactics, Techniques and Procedures_) to a Case.
+Refer to [this page](../analysts/ttps.md) to learn how to add TTPs (_Tactics, Techniques and Procedures_) to a Case.

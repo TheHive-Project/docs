@@ -7,14 +7,14 @@
 ```
 
 
-## Example Request Body
+## Request Body Example
 
 ```json
 
 ```
 
 
-## Example Response Body
+## ResponseBody Example
 
 ```json
 

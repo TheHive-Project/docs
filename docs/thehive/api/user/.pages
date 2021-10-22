@@ -1,3 +1,11 @@
 nav:
+  - 'Overview': index.md
+  - list.md
   - create.md
   - update.md
+  - set-password.md
+  - generate-api-key.md
+  - revoke-api-key.md
+  - get-api-key.md
+  - lock.md
+  - delete.md
