@@ -8,5 +8,5 @@ nav:
   - 'case'
   - 'task'  
   - 'observable' 
-  - 'search'
+  # - 'search'
   # - 'dashboard'
