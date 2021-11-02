@@ -66,7 +66,7 @@ misp {
       tags = ["misp-server-id"]
       max-age = 7 days
       exclusion {
-        organisation = ["bad organisation", "other orga"]
+        organisations = ["bad organisation", "other orga"]
         tags = ["tag1", "tag2"]
       }
       whitelist {
