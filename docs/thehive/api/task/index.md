@@ -11,9 +11,9 @@
 
 ## Case task log oprations
 
-- [List task logs](logs.md) TODO
+- [List task logs](logs.md)
 - [Create task log](create-log.md)
-- [delete task log](delete-log.md)
+- [Delete task log](delete-log.md)
 - [Run responder on log](log-run-responder.md)
 - [List responder jobs on log](log-responder-jobs.md)
 

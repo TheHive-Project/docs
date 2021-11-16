@@ -1,6 +1,6 @@
-# Add log
+# Delete log
 
-Add a *Log* to an existing task (requires `manageTask` permission).
+Delete a *Log* of an existing task (requires `manageTask` permission).
 
 ## Query
 
@@ -16,6 +16,6 @@ With:
 
 ### Status codes
 
-- `204`: if *Log* is created successfully
+- `204`: if *Log* is deleted successfully
 - `401`: Authentication error
 - `403`: Authorization error

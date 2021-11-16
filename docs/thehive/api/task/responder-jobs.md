@@ -1,4 +1,4 @@
-# List responder actions
+# List responder jobs
 
 List actions run on a task.
 
