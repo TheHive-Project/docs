@@ -1,6 +1,6 @@
-# List
+# Get case task
 
-List *Task*s of a case.
+Get *Task* of a case.
 
 ## Query
 
