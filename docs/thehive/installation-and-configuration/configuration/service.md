@@ -31,7 +31,7 @@ You need to change default setting for long polling refresh,  Set `stream.longPo
     stream.longPolling.refresh: 45 seconds
     ```
 
-## Manage content lengh
+## Manage content length
 
 Content length of text and files managed by the application are limited by default. 
 
@@ -52,5 +52,3 @@ If you feel that these should be updated, edit `/etc/thehive/application.conf` f
     if you are using a NGINX reverse proxy in front of TheHive, be aware that it doesn't distinguish between text data and a file upload. 
     
     So, you should also set the `client_max_body_size` parameter in your NGINX server configuration to the highest value among the two: file upload and text size defined in TheHive application.conf file.
-
-

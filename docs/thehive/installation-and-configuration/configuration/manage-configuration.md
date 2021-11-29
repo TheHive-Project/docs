@@ -19,6 +19,8 @@ At the end, the following configuration structure is possible:
 |-- application.conf.d
 |   |-- secret.conf
 |   |-- service.conf
+|   |-- ssl.conf
+|   |-- proxy.conf
 |   |-- database.conf
 |   |-- storage.conf
 |   |-- cluster.conf
@@ -43,6 +45,12 @@ include "/etc/thehive/application.conf.d/secret.conf"
 
 ## Service
 include "/etc/thehive/application.conf.d/service.conf"
+
+## SSL settings
+include "/etc/thehive/application.conf.d/ssl.conf"
+
+## PROXY settings
+include "/etc/thehive/application.conf.d/proxy.conf"
 
 ## Database
 include "/etc/thehive/application.conf.d/database.conf"
