@@ -22,12 +22,6 @@ SSL configuration might be requis required to connect remote services. Following
 | `wsConfig.ssl.enabledCipherSuites`       | list           | List of enabled cipher suites (see [#ciphers](#ciphers)) |
 | `wsConfig.ssl.loose.acceptAnyCertificate`| boolean        | Accept any certificates *true / false* |
 
-- wsConfig.ssl.keyManager.stores (authentification par certificat)
-- wsConfig.ssl.trustManager.stores (AC)
-- wsConfig.ssl.protocol
-- wsConfig.ssl.enabledProtocols
-- wsConfig.ssl.enabledCipherSuites
-- wsConfig.ssl.loose.acceptAnyCertificate
 
 
 ### Certificate manager
