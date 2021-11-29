@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/legacy/thehive3/migration-guide/">
+        <link rel="canonical" href="https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/ssl/">
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
     
     
       
-        <title>Migration guide - TheHive Project Documentation</title>
+        <title>SSL - TheHive Project Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migration-guide" class="md-skip">
+        <a href="#ssl" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Migration guide
+              SSL
             
           </span>
         </div>
@@ -367,14 +367,16 @@
             
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       <label class="md-nav__link" for="__nav_2_2">
         Installation and configuration
@@ -392,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -425,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/installation/step-by-step-guide/" class="md-nav__link">
+      <a href="../../installation/step-by-step-guide/" class="md-nav__link">
         Step by step guide
       </a>
     </li>
@@ -437,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/installation/build-sources/" class="md-nav__link">
+      <a href="../../installation/build-sources/" class="md-nav__link">
         Build sources
       </a>
     </li>
@@ -453,12 +455,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" checked>
       
       <label class="md-nav__link" for="__nav_2_2_3">
         Configuration
@@ -476,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/secret/" class="md-nav__link">
+      <a href="../secret/" class="md-nav__link">
         Secret key
       </a>
     </li>
@@ -488,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/service/" class="md-nav__link">
+      <a href="../service/" class="md-nav__link">
         Service
       </a>
     </li>
@@ -498,11 +502,99 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/ssl/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SSL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         SSL
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#server-configuration" class="md-nav__link">
+    Server configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectors" class="md-nav__link">
+    Connectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-configuration" class="md-nav__link">
+    Client configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Client configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificate-manager" class="md-nav__link">
+    Certificate manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocols" class="md-nav__link">
+    Protocols
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciphers" class="md-nav__link">
+    Ciphers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    Debugging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -512,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/proxy/" class="md-nav__link">
+      <a href="../proxy/" class="md-nav__link">
         Proxy
       </a>
     </li>
@@ -524,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/database/" class="md-nav__link">
+      <a href="../database/" class="md-nav__link">
         Database & indexes
       </a>
     </li>
@@ -536,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/file-storage/" class="md-nav__link">
+      <a href="../file-storage/" class="md-nav__link">
         File Storage
       </a>
     </li>
@@ -548,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/akka/" class="md-nav__link">
+      <a href="../akka/" class="md-nav__link">
         Cluster
       </a>
     </li>
@@ -560,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/authentication/" class="md-nav__link">
+      <a href="../authentication/" class="md-nav__link">
         Authentication
       </a>
     </li>
@@ -572,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/connectors-cortex/" class="md-nav__link">
+      <a href="../connectors-cortex/" class="md-nav__link">
         Cortex connector
       </a>
     </li>
@@ -584,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/connectors-misp/" class="md-nav__link">
+      <a href="../connectors-misp/" class="md-nav__link">
         MISP connector
       </a>
     </li>
@@ -596,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/webhooks/" class="md-nav__link">
+      <a href="../webhooks/" class="md-nav__link">
         Webhooks
       </a>
     </li>
@@ -608,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/logs/" class="md-nav__link">
+      <a href="../logs/" class="md-nav__link">
         Logs
       </a>
     </li>
@@ -620,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/configuration/manage-configuration/" class="md-nav__link">
+      <a href="../manage-configuration/" class="md-nav__link">
         Manage Configuration
       </a>
     </li>
@@ -659,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation-and-configuration/architecture/3_nodes_cluster/" class="md-nav__link">
+      <a href="../../architecture/3_nodes_cluster/" class="md-nav__link">
         Use TheHive as a cluster
       </a>
     </li>
@@ -2349,16 +2441,14 @@
             
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
       
       <label class="md-nav__link" for="__nav_2_6">
         Legacy
@@ -2374,14 +2464,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1" type="checkbox" id="__nav_2_6_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6_1" type="checkbox" id="__nav_2_6_1" >
       
       <label class="md-nav__link" for="__nav_2_6_1">
         Thehive3
@@ -2399,7 +2487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../../legacy/thehive3/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2411,7 +2499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../feature-set/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/feature-set/" class="md-nav__link">
         Feature set
       </a>
     </li>
@@ -2421,282 +2509,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Migration guide
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../legacy/thehive3/migration-guide/" class="md-nav__link">
         Migration guide
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#from-34x-to-350" class="md-nav__link">
-    From 3.4.x to 3.5.0
-  </a>
-  
-    <nav class="md-nav" aria-label="From 3.4.x to 3.5.0">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-to-identify-the-version-of-elasticsearch-which-created-your-database-index" class="md-nav__link">
-    How to identify the version of Elasticsearch which created your database index ?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#your-database-was-created-with-elasticsearch-5x-or-earlier" class="md-nav__link">
-    Your database was created with Elasticsearch 5.x or earlier
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#your-database-was-created-with-elasticsearch-6x" class="md-nav__link">
-    Your database was created with Elasticsearch 6.x
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-33x-to-340" class="md-nav__link">
-    From 3.3.x to 3.4.0
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-30x-to-304" class="md-nav__link">
-    From 3.0.x to 3.0.4
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-213x-to-300" class="md-nav__link">
-    From 2.13.x to 3.0.0
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-2130-or-2131-to-2132" class="md-nav__link">
-    From 2.13.0 or 2.13.1 to 2.13.2
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-212x-to-213x" class="md-nav__link">
-    From 2.12.x to 2.13.x
-  </a>
-  
-    <nav class="md-nav" aria-label="From 2.12.x to 2.13.x">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration-updates" class="md-nav__link">
-    Configuration updates
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alert-role" class="md-nav__link">
-    Alert role
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#elasticsearch" class="md-nav__link">
-    ElasticSearch
-  </a>
-  
-    <nav class="md-nav" aria-label="ElasticSearch">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-structure-migration" class="md-nav__link">
-    Data structure migration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#system-requirements" class="md-nav__link">
-    System requirements
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    Configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Docker
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#warnings-you-can-safely-ignore-with-es-55" class="md-nav__link">
-    Warnings You Can Safely Ignore with ES 5.5
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-211x-to-212x" class="md-nav__link">
-    From 2.11.x to 2.12.x
-  </a>
-  
-    <nav class="md-nav" aria-label="From 2.11.x to 2.12.x">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#database-migration" class="md-nav__link">
-    Database migration
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-210x-to-211x" class="md-nav__link">
-    From 2.10.x to 2.11.x
-  </a>
-  
-    <nav class="md-nav" aria-label="From 2.10.x to 2.11.x">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#database-migration_1" class="md-nav__link">
-    Database migration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#misp-to-alert" class="md-nav__link">
-    MISP to alert
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration-changes" class="md-nav__link">
-    Configuration changes
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration changes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#misp-certificate-authority-deprecated" class="md-nav__link">
-    MISP certificate authority deprecated
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cortex-and-misp-http-client-options" class="md-nav__link">
-    Cortex and MISP HTTP client options
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#packages" class="md-nav__link">
-    Packages
-  </a>
-  
-    <nav class="md-nav" aria-label="Packages">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#new-rpm-and-deb-packages" class="md-nav__link">
-    New RPM and DEB packages
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker_1" class="md-nav__link">
-    Docker
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2727,7 +2544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin/admin-guide/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/admin/admin-guide/" class="md-nav__link">
         Administrator's guide
       </a>
     </li>
@@ -2739,7 +2556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin/backup-restore/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/admin/backup-restore/" class="md-nav__link">
         Backup and restore data
       </a>
     </li>
@@ -2751,7 +2568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin/certauth/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/admin/certauth/" class="md-nav__link">
         Single Sign-On on TheHive with X.509 Certificates
       </a>
     </li>
@@ -2763,7 +2580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin/cluster/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/admin/cluster/" class="md-nav__link">
         Cluster Configuration
       </a>
     </li>
@@ -2775,7 +2592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin/configuration/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/admin/configuration/" class="md-nav__link">
         Configuration Guide
       </a>
     </li>
@@ -2787,7 +2604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin/default-configuration/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/admin/default-configuration/" class="md-nav__link">
         Default configuration
       </a>
     </li>
@@ -2799,7 +2616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin/schema_version/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/admin/schema_version/" class="md-nav__link">
         Schema version
       </a>
     </li>
@@ -2811,7 +2628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin/updating/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/admin/updating/" class="md-nav__link">
         Update TheHive
       </a>
     </li>
@@ -2823,7 +2640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin/upgrade_to_thehive_3_4_and_es_6_x/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/admin/upgrade_to_thehive_3_4_and_es_6_x/" class="md-nav__link">
         Upgrade to thehive 3 4 and es 6 x
       </a>
     </li>
@@ -2835,7 +2652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin/upgrade_to_thehive_3_5_and_es_7_x/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/admin/upgrade_to_thehive_3_5_and_es_7_x/" class="md-nav__link">
         Migration from Elasticsearch 6.8.2 to ES 7.x
       </a>
     </li>
@@ -2847,7 +2664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin/webhooks/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/admin/webhooks/" class="md-nav__link">
         WebHooks
       </a>
     </li>
@@ -2886,7 +2703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/" class="md-nav__link">
         TheHive API
       </a>
     </li>
@@ -2898,7 +2715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/alert/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/alert/" class="md-nav__link">
         Alert
       </a>
     </li>
@@ -2910,7 +2727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/artifact/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/artifact/" class="md-nav__link">
         Observable
       </a>
     </li>
@@ -2922,7 +2739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/authentication/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/authentication/" class="md-nav__link">
         Authentication
       </a>
     </li>
@@ -2934,7 +2751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/case/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/case/" class="md-nav__link">
         Case
       </a>
     </li>
@@ -2946,7 +2763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/log/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/log/" class="md-nav__link">
         Log
       </a>
     </li>
@@ -2958,7 +2775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/model/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/model/" class="md-nav__link">
         TheHive Model Definition
       </a>
     </li>
@@ -2970,7 +2787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/request/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/request/" class="md-nav__link">
         Request
       </a>
     </li>
@@ -2982,7 +2799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/task/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/task/" class="md-nav__link">
         Task
       </a>
     </li>
@@ -2994,7 +2811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/user/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/user/" class="md-nav__link">
         User
       </a>
     </li>
@@ -3027,7 +2844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/connectors/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/connectors/" class="md-nav__link">
         Connectors API
       </a>
     </li>
@@ -3060,7 +2877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/connectors/cortex/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/connectors/cortex/" class="md-nav__link">
         Cortex manipulation through TheHive
       </a>
     </li>
@@ -3072,7 +2889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/connectors/cortex/analyzer/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/connectors/cortex/analyzer/" class="md-nav__link">
         Analyzer
       </a>
     </li>
@@ -3084,7 +2901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/connectors/cortex/job/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/connectors/cortex/job/" class="md-nav__link">
         Job
       </a>
     </li>
@@ -3123,7 +2940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/connectors/misp/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/api/connectors/misp/" class="md-nav__link">
         MISP connector
       </a>
     </li>
@@ -3174,7 +2991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/install-guide/" class="md-nav__link">
+      <a href="../../../legacy/thehive3/installation/install-guide/" class="md-nav__link">
         Installation Guide
       </a>
     </li>
@@ -3403,235 +3220,52 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#from-34x-to-350" class="md-nav__link">
-    From 3.4.x to 3.5.0
-  </a>
-  
-    <nav class="md-nav" aria-label="From 3.4.x to 3.5.0">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-to-identify-the-version-of-elasticsearch-which-created-your-database-index" class="md-nav__link">
-    How to identify the version of Elasticsearch which created your database index ?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#your-database-was-created-with-elasticsearch-5x-or-earlier" class="md-nav__link">
-    Your database was created with Elasticsearch 5.x or earlier
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#your-database-was-created-with-elasticsearch-6x" class="md-nav__link">
-    Your database was created with Elasticsearch 6.x
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-33x-to-340" class="md-nav__link">
-    From 3.3.x to 3.4.0
+  <a href="#server-configuration" class="md-nav__link">
+    Server configuration
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#from-30x-to-304" class="md-nav__link">
-    From 3.0.x to 3.0.4
+  <a href="#connectors" class="md-nav__link">
+    Connectors
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#from-213x-to-300" class="md-nav__link">
-    From 2.13.x to 3.0.0
+  <a href="#client-configuration" class="md-nav__link">
+    Client configuration
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-2130-or-2131-to-2132" class="md-nav__link">
-    From 2.13.0 or 2.13.1 to 2.13.2
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-212x-to-213x" class="md-nav__link">
-    From 2.12.x to 2.13.x
-  </a>
-  
-    <nav class="md-nav" aria-label="From 2.12.x to 2.13.x">
+    <nav class="md-nav" aria-label="Client configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuration-updates" class="md-nav__link">
-    Configuration updates
+  <a href="#certificate-manager" class="md-nav__link">
+    Certificate manager
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alert-role" class="md-nav__link">
-    Alert role
+  <a href="#protocols" class="md-nav__link">
+    Protocols
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#elasticsearch" class="md-nav__link">
-    ElasticSearch
-  </a>
-  
-    <nav class="md-nav" aria-label="ElasticSearch">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-structure-migration" class="md-nav__link">
-    Data structure migration
+  <a href="#ciphers" class="md-nav__link">
+    Ciphers
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#system-requirements" class="md-nav__link">
-    System requirements
+  <a href="#debugging" class="md-nav__link">
+    Debugging
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    Configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Docker
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#warnings-you-can-safely-ignore-with-es-55" class="md-nav__link">
-    Warnings You Can Safely Ignore with ES 5.5
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-211x-to-212x" class="md-nav__link">
-    From 2.11.x to 2.12.x
-  </a>
-  
-    <nav class="md-nav" aria-label="From 2.11.x to 2.12.x">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#database-migration" class="md-nav__link">
-    Database migration
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-210x-to-211x" class="md-nav__link">
-    From 2.10.x to 2.11.x
-  </a>
-  
-    <nav class="md-nav" aria-label="From 2.10.x to 2.11.x">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#database-migration_1" class="md-nav__link">
-    Database migration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#misp-to-alert" class="md-nav__link">
-    MISP to alert
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration-changes" class="md-nav__link">
-    Configuration changes
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration changes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#misp-certificate-authority-deprecated" class="md-nav__link">
-    MISP certificate authority deprecated
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cortex-and-misp-http-client-options" class="md-nav__link">
-    Cortex and MISP HTTP client options
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#packages" class="md-nav__link">
-    Packages
-  </a>
-  
-    <nav class="md-nav" aria-label="Packages">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#new-rpm-and-deb-packages" class="md-nav__link">
-    New RPM and DEB packages
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker_1" class="md-nav__link">
-    Docker
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3652,250 +3286,112 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/TheHive-Project/docs/edit/master/docs/thehive/legacy/thehive3/migration-guide.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/TheHive-Project/docs/edit/master/docs/thehive/installation-and-configuration/configuration/ssl.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="migration-guide">Migration guide<a class="headerlink" href="#migration-guide" title="Permanent link">#</a></h1>
-<h2 id="from-34x-to-350">From 3.4.x to 3.5.0<a class="headerlink" href="#from-34x-to-350" title="Permanent link">#</a></h2>
-<p>Taking into account the EoL of version 6.x. of Elasticsearch, TheHive 3.5.0 is the first version to support Elasticsearch 7.x. This version introduce breaking changes.  This time,  we had no choice, we were not able to make TheHive support smoothly the ES upgrade. </p>
-<p>TheHive 3.5.0 supports Elasticsearch 7.x <strong>ONLY</strong>.</p>
-<p>This first steps before starting the upgrade process are: </p>
-<ul>
-<li>Identify the version of Elasticsearch which created your index</li>
-<li>Stop TheHive service</li>
-<li>Stop Elasticsearch service</li>
-</ul>
-<h3 id="how-to-identify-the-version-of-elasticsearch-which-created-your-database-index">How to identify the version of Elasticsearch which created your database index ?<a class="headerlink" href="#how-to-identify-the-version-of-elasticsearch-which-created-your-database-index" title="Permanent link">#</a></h3>
-<hr />
-<p>The software <code>jq</code> is required to manipulate JSON and create new indexes. More information at <a href="">https://stedolan.github.io/jq/</a>. </p>
-<hr />
-<p>Run the following command : </p>
-<div class="highlight"><pre><span></span><code>curl -s http://127.0.0.1:9200/the_hive_15?human <span class="p">|</span> jq <span class="s1">&#39;.the_hive_15.settings.index.version.created_string&#39;</span>
-</code></pre></div>
-<ul>
-<li>if the output is similar to <code>"5.x"</code>  then your database index has been created with Elasticsearch 5.x  reindexing is required, you should follow <a href="../admin/upgrade_to_thehive_3_5_and_es_7_x/">a dedicated process to upgrade</a>. </li>
-<li>If it is   <code>"6.x"</code> then your database has been created with Elasticsearch 6.</li>
-</ul>
-<h3 id="your-database-was-created-with-elasticsearch-5x-or-earlier">Your database was created with Elasticsearch 5.x or earlier<a class="headerlink" href="#your-database-was-created-with-elasticsearch-5x-or-earlier" title="Permanent link">#</a></h3>
-<p>This is where things might be complicated. This upgrade progress  requires handling the database index by updating parameters, and reindex before updating Elasticsearch, and updating TheHive.</p>
-<p>Read carefully <a href="../admin/upgrade_to_thehive_3_5_and_es_7_x/">the dedicated documentation</a>. It should help you run this specific actions on your Elasticsearch database, and also install or update application whether you are using DEB, RPM or binary packages, and even docker images.</p>
-<h3 id="your-database-was-created-with-elasticsearch-6x">Your database was created with Elasticsearch 6.x<a class="headerlink" href="#your-database-was-created-with-elasticsearch-6x" title="Permanent link">#</a></h3>
-<p>If you started using TheHive with Elasticsearch 6.x, then you just need to update the configuration of Elasticsearch to reflect this one: </p>
-<div class="highlight"><pre><span></span><code>[..]
-http.host: 127.0.0.1
-discovery.type: single-node
-cluster.name: hive
-script.allowed_types: inline
-thread_pool.search.queue_size: 100000
-thread_pool.write.queue_size: 10000
-</code></pre></div>
-<p>Following parameters *<em>are not accepted anymore</em> by Elasticsearch 7: </p>
-<ul>
-<li><code>thread_pool.index.queue_size</code></li>
-<li><code>thread_pool.bulk.queue_size</code> </li>
-</ul>
-<p>With TheHive service stopped, ensure the new version of Elasticsearch starts.</p>
-<p>If everything is ok, then TheHive 3.5.0 can be installed. To run this operation successfully, you need to <strong>update your repository configuration</strong>  if you are using DEB and RPM packages, or specify the right version to install if using docker. Read carefully the <a href="../installation/install-guide/">installation guide</a>. </p>
-<h2 id="from-33x-to-340">From 3.3.x to 3.4.0<a class="headerlink" href="#from-33x-to-340" title="Permanent link">#</a></h2>
-<p>Starting from version 3.4.0-RC1, TheHive supports Elasticsearch 6 and will continue to work with Elasticsearch 5.x.</p>
-<p>TheHive 3.4.0-RC1 and later versions communicate with Elasticsearch using its HTTP service (9200/tcp by default) instead of its legacy binary protocol (9300/tcp by default). If you have a firewall between TheHive and Elasticsearch, you probably need to update its rules to change to the new port number.</p>
-<p>The configuration file (<code>application.conf</code>) needs some modifications to reflect the protocol change:</p>
-<ul>
-<li>The setting <code>search.host</code> is replaced by <code>search.uri</code></li>
-<li>The general format of the URI is: <code>http(s)://host:port,host:port(/prefix)?querystring</code>. Multiple <code>host:port</code> combinations can be specified, separated by commas. Options can be specified using a standard URI query string syntax, eg. <code>cluster.name=hive</code>.</li>
-<li>The <code>search.cluster</code>setting is no longer used.</li>
-<li>Authentication can be configured with the <code>search.user</code> and <code>search.password</code> settings.</li>
-</ul>
-<p>When SSL/TLS is enabled, you can set a truststore and a keystore. The truststore contains the certificate authorities used to validate remote certificates. The keystore contains the certificate and the private key used to connect to the Elasticsearch cluster. The configuration is:
-<div class="highlight"><pre><span></span><code>search {
-  keyStore {
-    path: &quot;/path/to/keystore/file&quot;
-    type: &quot;JKS&quot; # or PKCS12
-    password: &quot;secret.password.of.keystore&quot;
+                <h1 id="ssl">SSL<a class="headerlink" href="#ssl" title="Permanent link">#</a></h1>
+<h2 id="server-configuration">Server configuration<a class="headerlink" href="#server-configuration" title="Permanent link">#</a></h2>
+<p>We recommend using a reverse proxy to manage SSL layer.</p>
+<h2 id="connectors">Connectors<a class="headerlink" href="#connectors" title="Permanent link">#</a></h2>
+<p>Refer to <a href="../connectors-cortex/">Cortex</a> or <a href="../connectors-misp/">MISP</a> configuration to setup specific SSL configuration of these remote services. </p>
+<h2 id="client-configuration">Client configuration<a class="headerlink" href="#client-configuration" title="Permanent link">#</a></h2>
+<p>SSL configuration might be requis required to connect remote services. Following parameters can be defined: </p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>wsConfig.ssl.keyManager.stores</code></td>
+<td>list</td>
+<td>Stores client certificates (see <a href="#certificate-manager">#certificate-manager</a> )</td>
+</tr>
+<tr>
+<td><code>wsConfig.ssl.trustManager.stores</code></td>
+<td>list</td>
+<td>Stored custom Certificate Authorities (see <a href="#certificate-manager">#certificate-manager</a></td>
+</tr>
+<tr>
+<td><code>wsConfig.ssl.protocol</code></td>
+<td>string</td>
+<td>Defines a different default protocol (see <a href="#protocols">#protocols</a>)</td>
+</tr>
+<tr>
+<td><code>wsConfig.ssl.enabledProtocols</code></td>
+<td>list</td>
+<td>List of enabled protocols (see <a href="#protocols">#protocols</a>)</td>
+</tr>
+<tr>
+<td><code>wsConfig.ssl.enabledCipherSuites</code></td>
+<td>list</td>
+<td>List of enabled cipher suites (see <a href="#ciphers">#ciphers</a>)</td>
+</tr>
+<tr>
+<td><code>wsConfig.ssl.loose.acceptAnyCertificate</code></td>
+<td>boolean</td>
+<td>Accept any certificates <em>true / false</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificate-manager">Certificate manager<a class="headerlink" href="#certificate-manager" title="Permanent link">#</a></h3>
+<p>Certificate manager is used to store client certificates and certificate authorities.</p>
+<p><code>keyManager</code> indicates which certificate HTTP client can use to authenticate itself on remote host (when certificate based authentication is used)
+<div class="highlight"><pre><span></span><code>  wsConfig.ssl.keyManager {
+    stores = [
+      {
+        type: &quot;pkcs12&quot; // JKS or PEM
+        path: &quot;mycert.p12&quot;
+        password: &quot;password1&quot;
+      }
+    ]
   }
-  trustStore {
-    path: &quot;/path/to/truststore/file&quot;
-    type: &quot;JKS&quot;
-    password: &quot;secret.password.of.truststore&quot;
+</code></pre></div></p>
+<p>Certificate authorities are configured using <code>trustManager</code> key. It is used to establish a secure connection with remote host. Server certificate must be signed by a trusted certificate authority.
+<div class="highlight"><pre><span></span><code>  wsConfig.ssl.trustManager {
+    stores = [
+      {
+        type: &quot;JKS&quot; // JKS or PEM
+        path: &quot;keystore.jks&quot;
+        password: &quot;password1&quot;
+      }
+    ]
   }
-}
 </code></pre></div></p>
-<p>The Elasticsearch client also accepts the following settings:
- - <code>circularRedirectsAllowed</code> (<code>true</code>/<code>false</code>)
- - <code>connectionRequestTimeout</code> (number of seconds)
- - <code>connectTimeout</code>
- - <code>contentCompressionEnabled.foreach(requestConfigBuilder.setContentCompressionEnabled)</code>
- - <code>search.cookieSpec</code> (??)
- - <code>expectContinueEnabled</code> (<code>true</code>/<code>false</code>)
- - <code>maxRedirects</code> (number)
- - <code>proxy</code> -- not yet supported
- - <code>proxyPreferredAuthSchemes</code> -- not yet supported
- - <code>redirectsEnabled</code> (<code>true</code>/<code>false</code>)
- - <code>relativeRedirectsAllowed</code> (<code>true</code>/<code>false</code>)
- - <code>socketTimeout</code> (number of seconds)
- - <code>targetPreferredAuthSchemes</code> (??) </p>
-<p>The configuration items <code>keepalive</code>, <code>pageSize</code>, <code>nbshards</code> and <code>nbreplicas</code> are still valid.</p>
-<p>For practical details, you can have a look <a href="../admin/upgrade_to_thehive_3_4_and_es_6_x/">here</a> for an example of migration of TheHive and Elasticsearch.</p>
-<h2 id="from-30x-to-304">From 3.0.x to 3.0.4<a class="headerlink" href="#from-30x-to-304" title="Permanent link">#</a></h2>
-<p>TheHive 3.0.4 (Cerana 0.4) comes with new MISP settings to filter events that will be imported as alerts. Please refer to <a href="../admin/configuration/#73-event-filters">MISP event filters</a> configuration section.
-The maximum number of custom fields and metrics in a case is 50 by default. If you try to put more, ElasticSearch will raise an error. You can now increase the limit by adding in your application.conf:
-<div class="highlight"><pre><span></span><code>index {
-  settings {
-    # Maximum number of nested fields
-    mapping.nested_fields.limit = 100
+<h3 id="protocols">Protocols<a class="headerlink" href="#protocols" title="Permanent link">#</a></h3>
+<p>If you want to define a different default protocol, you can set it specifically in the client:
+<div class="highlight"><pre><span></span><code>wsConfig.ssl.protocol = &quot;TLSv1.2&quot;
+</code></pre></div>
+If you want to define the list of enabled protocols, you can do so explicitly:
+<div class="highlight"><pre><span></span><code>wsConfig.ssl.enabledProtocols = [&quot;TLSv1.2&quot;, &quot;TLSv1.1&quot;, &quot;TLSv1&quot;]
+</code></pre></div></p>
+<h3 id="ciphers">Ciphers<a class="headerlink" href="#ciphers" title="Permanent link">#</a></h3>
+<p>Cipher suites can be configured using <code>wsConfig.ssl.enabledCipherSuites</code>:</p>
+<div class="highlight"><pre><span></span><code>wsConfig.ssl.enabledCipherSuites = [
+  &quot;TLS_DHE_RSA_WITH_AES_128_GCM_SHA256&quot;,
+  &quot;TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256&quot;,
+  &quot;TLS_DHE_RSA_WITH_AES_256_GCM_SHA384&quot;,
+  &quot;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&quot;,
+]
+</code></pre></div>
+<h3 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">#</a></h3>
+<p>To debug the key manager / trust manager, set the following flags:
+<div class="highlight"><pre><span></span><code>  wsConfig.ssl.debug = {
+    ssl = true
+    trustmanager = true
+    keymanager = true
+    sslctx = true
+    handshake = true
+    verbose = true
+    data = true
+    certpath = true
   }
-}
-</code></pre></div>
-The data schema has been changed in Cerana to support some dashboard features. At the first connection, TheHive will ask you to migrate the data. A new index, called <code>the_hive_13</code> by default, will be created then.  See
-<a href="../admin/updating/">Updating</a>.</p>
-<h2 id="from-213x-to-300">From 2.13.x to 3.0.0<a class="headerlink" href="#from-213x-to-300" title="Permanent link">#</a></h2>
-<p>The schema of data has been changed in Cerana to integrate dashboard. At the first request, TheHive will ask you to migrate the data. A new index, called <code>the_hive_12</code> by default, will be created then.  See
-<a href="../admin/updating/">Updating</a>.</p>
-<h2 id="from-2130-or-2131-to-2132">From 2.13.0 or 2.13.1 to 2.13.2<a class="headerlink" href="#from-2130-or-2131-to-2132" title="Permanent link">#</a></h2>
-<p>At the first connection to TheHive 2.13.2, a migration of the database will be
-asked. This will create a new ElasticSearch index (<code>the_hive_11</code> by default). See
-<a href="../admin/updating/">Updating</a>.</p>
-<h2 id="from-212x-to-213x">From 2.12.x to 2.13.x<a class="headerlink" href="#from-212x-to-213x" title="Permanent link">#</a></h2>
-<h3 id="configuration-updates">Configuration updates<a class="headerlink" href="#configuration-updates" title="Permanent link">#</a></h3>
-<p><code>play.crypto.secret</code> is deprecated, use <code>play.http.secret.key</code> instead.</p>
-<p><code>auth.type</code> is deprecated, use <code>auth.provider</code> instead.</p>
-<p><strong>Basic authentication is disabled by default. We strongly recommand to update the clients that rely on the API to interact with TheHive to use the new API key authentication method</strong>. This feature has been added in this release. If you need to enable
-basic authentication, use <code>auth.method.basic=true</code> in <code>application.conf</code></p>
-<p>Note that the <a href="https://github.com/TheHive-Project/TheHive4py">TheHive4Py 1.3.0</a> Python library also adds
-API key authentication support.</p>
-<h3 id="alert-role">Alert role<a class="headerlink" href="#alert-role" title="Permanent link">#</a></h3>
-<p>A new role "alert" has been added. Only users with this role can create an
-alert. If you have tool that uses TheHive API to create alerts, you must give
-the ability to do it in user administration.</p>
-<h3 id="elasticsearch">ElasticSearch<a class="headerlink" href="#elasticsearch" title="Permanent link">#</a></h3>
-<p>TheHive 2.13 uses ElasticSearch 5.x. Our tests have been done on ElasticSearch
-5.5. So we recommend to use this specific version, even if TheHive should work
-perfectly with ElasticSearch 5.6 that doesn't introduce breaking changes.</p>
-<h4 id="data-structure-migration">Data structure migration<a class="headerlink" href="#data-structure-migration" title="Permanent link">#</a></h4>
-<p>Before upgrading ElasticSearch, <a href="../admin/backup-restore/">backup all your indices</a>.
-Then remove all indices except the last index of TheHive (most probably
-the_hive_10). You can list all indices with the following command:</p>
-<p><code>curl http://127.0.0.1:9200/_cat/indices</code></p>
-<p>ElasticSearch has changed the structure of its data directory (please refer to
-<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/_path_to_data_on_disk.html">Path to data on disk</a>).
-The node name in the path where data are stored (DATA_DIR) must be removed.
-Stop ElasticSearch and execute the following lines to change the directory
-structure:
-<div class="highlight"><pre><span></span><code>echo -n &#39;Enter the path of ElasticSearch data: &#39;
-read DATA_DIR
-echo -n &#39;Enter the name of your cluster [hive]: &#39;
-read CLUSTER_NAME
-
-mv ${DATA_DIR}/${CLUSTER_NAME:=hive}/* ${DATA_DIR}
-rmdir ${DATA_DIR}/${CLUSTER_NAME}
 </code></pre></div></p>
-<h4 id="system-requirements">System requirements<a class="headerlink" href="#system-requirements" title="Permanent link">#</a></h4>
-<p>ElasticSearch 5.x requires at least 262144 memory map areas (vm.max_map_count).
-Run sysctl -w vm.max_map_count=262144. To make this setting persistent after a
-server restart, add <code>vm.max_map_count = 262144</code> in <code>/etc/sysctl.conf</code> (or to
-<code>/etc/sysctl.d/80-elasticsearch.conf</code>)</p>
-<h4 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h4>
-<p>The configuration of ElasticSearch should contain the following settings:
-<div class="highlight"><pre><span></span><code>http.host: 127.0.0.1
-transport.host: 127.0.0.1
-cluster.name: hive
-script.inline: true
-thread_pool.index.queue_size: 100000
-thread_pool.search.queue_size: 100000
-thread_pool.bulk.queue_size: 100000
-</code></pre></div>
-Adapt <code>http.host</code> and <code>transport.host</code> to your environment.</p>
-<h4 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">#</a></h4>
-<p>The default <a href="https://store.docker.com/images/elasticsearch">ElasticSearch image</a> has
-been deprecated. It is recommended to use the
-<a href="docker.elastic.co/elasticsearch/elasticsearch">docker image from Elastic.co</a>.</p>
-<p>The new image doesn't use the same user ID so you need to change the owner of the data
-files. You can simply run <code>chown -R 1000.1000 $DATA_DIR</code> (DATA_DIR is the folder
-which contains ElasticSearch data).</p>
-<p>Then you can use the following script:
-<div class="highlight"><pre><span></span><code>docker run \
-  --name elasticsearch \
-  --hostname elasticsearch \
-  --rm \
-  --publish 127.0.0.1:9200:9200 \
-    --publish 127.0.0.1:9300:9300 \
-  --volume ***DATA_DIR***:/usr/share/elasticsearch/data \
-    -e &quot;http.host=0.0.0.0&quot; \
-    -e &quot;transport.host=0.0.0.0&quot; \
-    -e &quot;xpack.security.enabled=false&quot; \
-    -e &quot;cluster.name=hive&quot; \
-  -e &quot;script.inline=true&quot; \
-  -e &quot;thread_pool.index.queue_size=100000&quot; \
-  -e &quot;thread_pool.search.queue_size=100000&quot; \
-  -e &quot;thread_pool.bulk.queue_size=100000&quot; \
-    docker.elastic.co/elasticsearch/elasticsearch:5.5.2
-</code></pre></div></p>
-<p><strong>Note</strong>: TheHive doesn't support X-Pack. <strong>Don't enable it</strong>.</p>
-<h4 id="warnings-you-can-safely-ignore-with-es-55">Warnings You Can Safely Ignore with ES 5.5<a class="headerlink" href="#warnings-you-can-safely-ignore-with-es-55" title="Permanent link">#</a></h4>
-<p>ElasticSearch 5.5 will output the following warnings:
- - <code>unexpected docvalues type NONE for field '_parent' (expected one of [SORTED, SORTED_SET]). Re-index with correct docvalues type.</code>
- You can safely ignore this message. For more information see issues <a href="https://github.com/elastic/elasticsearch/issues/25849">#25849</a>
- and <a href="https://github.com/elastic/elasticsearch/issues/26341">#26341</a>
- - <code>License [will expire] on [***]. If you have a new license, please update it.</code>
- Ignore this warning as TheHive doesn't use Elasticsearch's commercial features.</p>
-<p><strong>Note</strong>: ElasticSearch 5.6 fixes those warnings.</p>
-<h2 id="from-211x-to-212x">From 2.11.x to 2.12.x<a class="headerlink" href="#from-211x-to-212x" title="Permanent link">#</a></h2>
-<h3 id="database-migration">Database migration<a class="headerlink" href="#database-migration" title="Permanent link">#</a></h3>
-<p>At the first connection to TheHive 2.12, a migration of the database will be
-asked. This will create a new ElasticSearch index (the_hive_10). See
-<a href="../admin/updating/">Updating</a>.</p>
-<h2 id="from-210x-to-211x">From 2.10.x to 2.11.x<a class="headerlink" href="#from-210x-to-211x" title="Permanent link">#</a></h2>
-<h3 id="database-migration_1">Database migration<a class="headerlink" href="#database-migration_1" title="Permanent link">#</a></h3>
-<p>At the first connection to TheHive 2.11, a migration of the database will be
-asked. This will create a new ElastciSearch index (the_hive_9). See
-<a href="../admin/updating/">Updating</a>.</p>
-<h3 id="misp-to-alert">MISP to alert<a class="headerlink" href="#misp-to-alert" title="Permanent link">#</a></h3>
-<p>MISP synchronization is now done using alerting framework. MISP events are seen
-like other alert. You can use
-<a href="https://github.com/TheHive-Project/TheHive4py">TheHive4py</a> to create your own alert.</p>
-<h3 id="configuration-changes">Configuration changes<a class="headerlink" href="#configuration-changes" title="Permanent link">#</a></h3>
-<h4 id="misp-certificate-authority-deprecated">MISP certificate authority deprecated<a class="headerlink" href="#misp-certificate-authority-deprecated" title="Permanent link">#</a></h4>
-<p>Specifying certificate authority in MISP configuration using "cert" key is now
-deprecated. You must replace it by
-- before:
-<div class="highlight"><pre><span></span><code>misp {
-  [...]
-  cert = &quot;/path/to/truststore.jks&quot;
-}
-</code></pre></div>
-- after:
-<div class="highlight"><pre><span></span><code>misp {
-  [...]
-  ws.ssl.trustManager.stores = [
-    {
-      type: &quot;JKS&quot;
-      path: &quot;/path/to/truststore.jks&quot;
-    }
-  ]
-}
-</code></pre></div></p>
-<p><code>ws</code> key can be placed in MISP server section or in global MISP section. In the
-latter, ws configuration will be applied
-on all MISP instances.</p>
-<h4 id="cortex-and-misp-http-client-options">Cortex and MISP HTTP client options<a class="headerlink" href="#cortex-and-misp-http-client-options" title="Permanent link">#</a></h4>
-<p>HTTP client used by Cortex and MISP is more configurable. Proxy can be
-configured, with or without authentication. Refer to
-<a href="../admin/configuration/#8-http-client-configuration">configuration</a> for all
-possible options.</p>
-<h3 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">#</a></h3>
-<h4 id="new-rpm-and-deb-packages">New RPM and DEB packages<a class="headerlink" href="#new-rpm-and-deb-packages" title="Permanent link">#</a></h4>
-<p>RPM and DEB packages are now available. This makes the installation easier than using a
-binary package (ZIP). See the <a href="../installation/install-guide/">Installation Guide</a> for reference.</p>
-<h4 id="docker_1">Docker<a class="headerlink" href="#docker_1" title="Permanent link">#</a></h4>
-<p>All-in-One docker (containing TheHive and Cortex) is not provided any longer.
-New TheHive docker image doesn't contain ElasticSearch. We recommend to use
-docker-compose to link TheHive, ElasticSearch and Cortex dockers. For more
-information, see the <a href="../installation/install-guide/">Installation Guide</a> for reference.</p>
-<p>TheHive configuration is located in <code>/etc/thehive/application.conf</code> for all
-packages. If you use docker package you must update its location (previously was
-<code>/opt/docker/conf/application.conf</code>).</p>
                 
                   
                     
@@ -3904,7 +3400,7 @@ packages. If you use docker package you must update its location (previously was
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 2, 2021 12:39:03</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 29, 2021 09:44:26</span>
       
     
   </small>
@@ -3929,7 +3425,7 @@ packages. If you use docker package you must update its location (previously was
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../feature-set/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Feature set" rel="prev">
+        <a href="../service/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Service" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -3938,20 +3434,20 @@ packages. If you use docker package you must update its location (previously was
               <span class="md-footer__direction">
                 Previous
               </span>
-              Feature set
+              Service
             </div>
           </div>
         </a>
       
       
         
-        <a href="../admin/admin-guide/" class="md-footer__link md-footer__link--next" aria-label="Next: Administrator&#39;s guide" rel="next">
+        <a href="../proxy/" class="md-footer__link md-footer__link--next" aria-label="Next: Proxy" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Administrator's guide
+              Proxy
             </div>
           </div>
           <div class="md-footer__button md-icon">
