@@ -39,17 +39,17 @@ The following fields are required:
 !!! Example ""
 
     ```json
-{
-  "responderId": "05521ec727f75d69e828604dc5ae4bed",
-  "responderName": "JIRA_Create_Ticket_1_0",
-  "responderDefinition": "JIRA_Create_Ticket_1_0",
-  "cortexId": "CORTEX_INTERNAL",
-  "cortexJobId": "_v2EnHsB8Pn57ilsukA3",
-  "objectType": "Alert",
-  "objectId": "~947478656",
-  "status": "Waiting",
-  "startDate": 1630418550145,
-  "operations": "[]",
-  "report": "{}"
-}
+    {
+      "responderId": "05521ec727f75d69e828604dc5ae4bed",
+      "responderName": "JIRA_Create_Ticket_1_0",
+      "responderDefinition": "JIRA_Create_Ticket_1_0",
+      "cortexId": "CORTEX_INTERNAL",
+      "cortexJobId": "_v2EnHsB8Pn57ilsukA3",
+      "objectType": "Alert",
+      "objectId": "~947478656",
+      "status": "Waiting",
+      "startDate": 1630418550145,
+      "operations": "[]",
+      "report": "{}"
+    }
     ```

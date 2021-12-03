@@ -1,4 +1,4 @@
-# List responder actions
+# List responder jobs on log
 
 List actions run on a log.
 

@@ -1,4 +1,4 @@
-# List
+# List waiting tasks
 
 List all waiting *Task*s.
 
