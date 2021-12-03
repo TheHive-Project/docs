@@ -39,7 +39,7 @@ POST /api/v1/query?name=alert-similar-cases
 
 ### Status codes
 
-- `200`: if auery is run successfully
+- `200`: if query is successful
 - `401`: Authentication error
 
 ### ResponseBody Example
