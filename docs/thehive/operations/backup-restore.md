@@ -171,9 +171,9 @@ Following data is required to restore TheHive database successfully:
 5. Refresh tables
 
     ```bash
-    for TABLE in `cqlsh -u cassandra -p <CASSANDRA_PASSWORD> <IP> -e "use <KEYSPACE>; DESC tables ;"`
-    do
-    nodetool refresh <KEYSPACE> <TABLE_NAME>
+    for TABLE in `ls /var/lib/cassandra/data/<KEYSPACE>`
+    do 
+        sstableloader -d <IP> /var/lib/cassandra/data/<KEYSPACE>/<TABLE>
     done
     ```
 
@@ -205,22 +205,18 @@ Following data is required to restore TheHive database successfully:
     SNAPSHOT_INDEX="1"
 
     ## Uncompress data in TMP folder
-    rm -rf ${TMP} && mkdir ${TMP}
+    rm -rf ${TMP} && mkdir ${TMP} 
     tar jxf ${SNAPSHOT}_${SNAPSHOT_INDEX}.tbz -C ${TMP}
+
+    ## Read Cassandra password
+    echo -n "Cassandra admin password: " 
+    read -s CASSANDRA_PASSWORD
 
     ## Define new KEYSPACE NAME
     sed -i "s/${SOURCE_KEYSPACE}/${TARGET_KEYSPACE}/g" schema_${SNAPSHOT}_${SNAPSHOT_INDEX}.cql
 
-
-
-    ## Read Cassandra password
-    echo -n "Cassandra admin password: "
-    read -s CASSANDRA_PASSWORD
-
-
     ## Restore keyspace
-    cqlsh -u cassandra -p ${CASSANDRA_PASSWORD} ${IP} -e "source 'schema_${SNAPSHOT}_${SNAPSHOT_INDEX}.cql';"
-
+    cqlsh -u cassandra -p ${CASSANDRA_PASSWORD} cassandra --file schema_${SNAPSHOT}_${SNAPSHOT_INDEX}.cql
 
     ## Restore data
     for TABLE in `cqlsh -u cassandra -p ${CASSANDRA_PASSWORD} ${IP} -e "use ${TARGET_KEYSPACE}; DESC tables ;"`
@@ -231,11 +227,13 @@ Following data is required to restore TheHive database successfully:
     ## Change ownership
     chown -R cassandra:cassandra /var/lib/cassandra/data/${TARGET_KEYSPACE}
 
-    ##  Refresh tables
-    for TABLE in `cqlsh -u cassandra -p ${CASSANDRA_PASSWORD} ${IP} -e "use ${TARGET_KEYSPACE}; DESC tables ;"`
-    do
-    nodetool refresh ${TARGET_KEYSPACE} ${TABLE}
+
+    ## sstableloader
+    for TABLE in `ls /var/lib/cassandra/data/${TARGET_KEYSPACE}`
+    do 
+        sstableloader -d ${IP} /var/lib/cassandra/data/${TARGET_KEYSPACE}/${TABLE}
     done
+
     ```
 
 ## Files
