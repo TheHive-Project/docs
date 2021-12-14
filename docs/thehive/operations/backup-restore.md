@@ -106,26 +106,26 @@ Considering that your keyspace is `thehive` and `backup_name` is the name of the
     ## SNAPSHOT: choose a name for the backup
 
     IP=10.1.1.1
-    SOURCE_KEYSPACE="thehive"
-    SNAPSHOT="thehive_20210413"
-
+    SOURCE_KEYSPACE=thehive
+    SNAPSHOT=thehive_20211124
+    SNAPSHOT_INDEX=1
 
     # Backup Cassandra
 
     nodetool cleanup ${SOURCE_KEYSPACE}
 
-    nodetool snapshot ${SOURCE_KEYSPACE}  -t ${SNAPSHOT}
+    nodetool snapshot ${SOURCE_KEYSPACE}  -t ${SNAPSHOT}_${SNAPSHOT_INDEX}
 
     echo -n "Cassandra admin password":
     read -s CASSANDRA_PASSWORD
 
     ## Save schema
-    cqlsh -u cassandra -p ${CASSANDRA_PASSWORD} ${IP} -e "DESCRIBE KEYSPACE ${SOURCE_KEYSPACE}" > schema_${SNAPSHOT}.cql
+    cqlsh -u cassandra -p ${CASSANDRA_PASSWORD} ${IP} -e "DESCRIBE KEYSPACE ${SOURCE_KEYSPACE}" > schema_${SNAPSHOT}_${SNAPSHOT_INDEX}.cql
 
     ## Create archive
     if [[ $? == 0 ]]
     then
-    tar cjf ${SNAPSHOT}.tbz /var/lib/cassandra/data/${SOURCE_KEYSPACE}/*/snapshots/${SNAPSHOT}/
+    tar cjf ${SNAPSHOT}_${SNAPSHOT_INDEX}.tbz /var/lib/cassandra/data/${SOURCE_KEYSPACE}/*/snapshots/${SNAPSHOT}_${SNAPSHOT_INDEX}/
     fi
     ```
 
@@ -195,20 +195,21 @@ Following data is required to restore TheHive database successfully:
     ## SOURCE_KEYSPACE: KEYSPACE used in the backup
     ## TARGET_KEYSPACE: new KEYSPACE name ; use same name of SOURCE_KEYSPACE if no changes
     ## SNAPSHOT: choose a name for the backup
+    ## SNAPSHOT_INDEX: index of the snapshot (1, 20210401 ...)
 
-
-    IP=10.10.10.10
+    IP=10.1.1.1
     TMP=/tmp/cassandra_backup
     SOURCE_KEYSPACE="thehive"
-    TARGET_KEYSPACE="thehive"
-    SNAPSHOT="thehive_20210920"
+    TARGET_KEYSPACE=""
+    SNAPSHOT="thehive_20211124"
+    SNAPSHOT_INDEX="1"
 
     ## Uncompress data in TMP folder
     rm -rf ${TMP} && mkdir ${TMP}
-    tar jxf ${SNAPSHOT}.tbz -C ${TMP}
+    tar jxf ${SNAPSHOT}_${SNAPSHOT_INDEX}.tbz -C ${TMP}
 
     ## Define new KEYSPACE NAME
-    sed -i "s/${SOURCE_KEYSPACE}/${TARGET_KEYSPACE}/g" schema_${SNAPSHOT}.cql
+    sed -i "s/${SOURCE_KEYSPACE}/${TARGET_KEYSPACE}/g" schema_${SNAPSHOT}_${SNAPSHOT_INDEX}.cql
 
 
 
@@ -218,13 +219,13 @@ Following data is required to restore TheHive database successfully:
 
 
     ## Restore keyspace
-    cqlsh -u cassandra -p ${CASSANDRA_PASSWORD} ${IP} -e "source 'schema_${SNAPSHOT}.cql';"
+    cqlsh -u cassandra -p ${CASSANDRA_PASSWORD} ${IP} -e "source 'schema_${SNAPSHOT}_${SNAPSHOT_INDEX}.cql';"
 
 
     ## Restore data
     for TABLE in `cqlsh -u cassandra -p ${CASSANDRA_PASSWORD} ${IP} -e "use ${TARGET_KEYSPACE}; DESC tables ;"`
     do
-    cp -r ${TMP}/var/lib/cassandra/data/${SOURCE_KEYSPACE}/${TABLE}-*/snapshots/${SNAPSHOT}/* /var/lib/cassandra/data/${TARGET_KEYSPACE}/$TABLE-*/
+    cp -r ${TMP}/var/lib/cassandra/data/${SOURCE_KEYSPACE}/${TABLE}-*/snapshots/${SNAPSHOT}_${SNAPSHOT_INDEX}/* /var/lib/cassandra/data/${TARGET_KEYSPACE}/$TABLE-*/
     done
 
     ## Change ownership
