@@ -563,6 +563,46 @@
     Certificate manager
   </a>
   
+    <nav class="md-nav" aria-label="Certificate manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-certificate-authority" class="md-nav__link">
+    Custom Certificate Authority
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Certificate Authority">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-configuration" class="md-nav__link">
+    Global configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-dedicated-trust-stores" class="md-nav__link">
+    Use dedicated trust stores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-certificates" class="md-nav__link">
+    Client certificates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -3246,6 +3286,46 @@
     Certificate manager
   </a>
   
+    <nav class="md-nav" aria-label="Certificate manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-certificate-authority" class="md-nav__link">
+    Custom Certificate Authority
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Certificate Authority">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-configuration" class="md-nav__link">
+    Global configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-dedicated-trust-stores" class="md-nav__link">
+    Use dedicated trust stores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-certificates" class="md-nav__link">
+    Client certificates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -3341,23 +3421,39 @@
 </table>
 <h3 id="certificate-manager">Certificate manager<a class="headerlink" href="#certificate-manager" title="Permanent link">#</a></h3>
 <p>Certificate manager is used to store client certificates and certificate authorities.</p>
+<h4 id="custom-certificate-authority">Custom Certificate Authority<a class="headerlink" href="#custom-certificate-authority" title="Permanent link">#</a></h4>
+<h5 id="global-configuration">Global configuration<a class="headerlink" href="#global-configuration" title="Permanent link">#</a></h5>
+<p>If setting up a custom Certificate Auhority (to connect web proxies, remote services ...) is required globally in the application, the better solution consists of installing it on the OS and restarting TheHive. </p>
+<div class="admonition example">
+<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Debian</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>apt-get install -y ca-certificates-java
+mkdir /usr/share/ca-certificates/extra
+cp mysctomcert.crt /usr/share/ca-certificates/extra
+dpkg-reconfigure ca-certificates
+service thehive restart
+</code></pre></div>
+</div>
+</div>
+</div>
+<h5 id="use-dedicated-trust-stores">Use dedicated trust stores<a class="headerlink" href="#use-dedicated-trust-stores" title="Permanent link">#</a></h5>
+<p>the other way, is to use the <code>trustManager</code> key in TheHive configuration. It is used to establish a secure connection with remote host. Server certificate must be signed by a trusted certificate authority.
+<div class="highlight"><pre><span></span><code>  wsConfig.ssl.trustManager {
+    stores = [
+      {
+        type: &quot;JKS&quot; // JKS or PEM
+        path: &quot;keystore.jks&quot;
+        password: &quot;password1&quot;
+      }
+    ]
+  }
+</code></pre></div></p>
+<h4 id="client-certificates">Client certificates<a class="headerlink" href="#client-certificates" title="Permanent link">#</a></h4>
 <p><code>keyManager</code> indicates which certificate HTTP client can use to authenticate itself on remote host (when certificate based authentication is used)
 <div class="highlight"><pre><span></span><code>  wsConfig.ssl.keyManager {
     stores = [
       {
         type: &quot;pkcs12&quot; // JKS or PEM
         path: &quot;mycert.p12&quot;
-        password: &quot;password1&quot;
-      }
-    ]
-  }
-</code></pre></div></p>
-<p>Certificate authorities are configured using <code>trustManager</code> key. It is used to establish a secure connection with remote host. Server certificate must be signed by a trusted certificate authority.
-<div class="highlight"><pre><span></span><code>  wsConfig.ssl.trustManager {
-    stores = [
-      {
-        type: &quot;JKS&quot; // JKS or PEM
-        path: &quot;keystore.jks&quot;
         password: &quot;password1&quot;
       }
     ]
@@ -3400,7 +3496,7 @@ If you want to define the list of enabled protocols, you can do so explicitly:
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 29, 2021 09:44:26</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 29, 2021 14:20:38</span>
       
     
   </small>
