@@ -31,7 +31,7 @@ Certificate manager is used to store client certificates and certificate authori
 
 ##### Global configuration 
 
-If setting up a custom Certificate Auhority (to connect web proxies, remote services ...) is required globally in the application, the better solution consists of installing it on the OS and restarting TheHive. 
+If setting up a custom Certificate Authority (to connect web proxies, remote services ...) is required globally in the application, the better solution consists of installing it on the OS and restarting TheHive. 
 
 !!! Example ""
 
