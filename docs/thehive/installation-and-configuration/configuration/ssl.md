@@ -27,6 +27,42 @@ SSL configuration might be requis required to connect remote services. Following
 ### Certificate manager
 Certificate manager is used to store client certificates and certificate authorities.
 
+#### Custom Certificate Authority
+
+##### Global configuration 
+
+If setting up a custom Certificate Auhority (to connect web proxies, remote services ...) is required globally in the application, the better solution consists of installing it on the OS and restarting TheHive. 
+
+!!! Example ""
+
+    === "Debian"
+
+        ```bash
+        apt-get install -y ca-certificates-java
+        mkdir /usr/share/ca-certificates/extra
+        cp mysctomcert.crt /usr/share/ca-certificates/extra
+        dpkg-reconfigure ca-certificates
+        service thehive restart
+        ```
+
+
+##### Use dedicated trust stores 
+
+the other way, is to use the `trustManager` key in TheHive configuration. It is used to establish a secure connection with remote host. Server certificate must be signed by a trusted certificate authority.
+```
+  wsConfig.ssl.trustManager {
+    stores = [
+      {
+        type: "JKS" // JKS or PEM
+        path: "keystore.jks"
+        password: "password1"
+      }
+    ]
+  }
+```
+
+#### Client certificates
+
 `keyManager` indicates which certificate HTTP client can use to authenticate itself on remote host (when certificate based authentication is used)
 ```
   wsConfig.ssl.keyManager {
@@ -34,19 +70,6 @@ Certificate manager is used to store client certificates and certificate authori
       {
         type: "pkcs12" // JKS or PEM
         path: "mycert.p12"
-        password: "password1"
-      }
-    ]
-  }
-```
-
-Certificate authorities are configured using `trustManager` key. It is used to establish a secure connection with remote host. Server certificate must be signed by a trusted certificate authority.
-```
-  wsConfig.ssl.trustManager {
-    stores = [
-      {
-        type: "JKS" // JKS or PEM
-        path: "keystore.jks"
         password: "password1"
       }
     ]
