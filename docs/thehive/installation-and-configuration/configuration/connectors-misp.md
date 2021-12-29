@@ -21,7 +21,7 @@ Several parameters can be configured for one server :
 | `url`                          | string         | url to connect to the MISP instance |
 | `auth`                         | dict           | method used to authenticate on the server (_key_ if using API keys) |
 | `purpose`                      | string         | define the purpose of the server MISP: `ImportOnly`, `ExportOnly` or `ImportAndExport` (default: `ImportAndExport`) |
-| `wsConfig`                     | dict           | network configuration dedicated to Play Framework for SSL and proxy |
+| `wsConfig`                     | dict           | network configuration dedicated to Play Framework for [SSL](ssl.md) and [proxy](proxy.md) |
 | `caseTemplate`                 | string         | case template used by default in TheHive to import events as Alerts |
 | `tags`                         | list of string | tags to be added to events imported as Alerts in TheHive |
 | `exportCaseTags`               | boolean        | indicate if the tags of the case should be exported to MISP event (default: false) |

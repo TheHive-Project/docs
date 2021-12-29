@@ -17,7 +17,7 @@ TheHive is able to connect more than one Cortex organisation. Several parameters
 | `name`                         | string         | name given to the Cortex instance (eg: _Cortex-Internal_) |
 | `url`                          | string         | url to connect to the Cortex instance |
 | `auth`                         | dict           | method used to authenticate on the server (_bearer_ if using API keys) |
-| `wsConfig`                     | dict           | network configuration dedicated to Play Framework for SSL and proxy |
+| `wsConfig`                     | dict           | network configuration dedicated to Play Framework for [SSL](ssl.md) and [proxy](proxy.md) |
 | `refreshDelay`                 | duration       | frequency of job updates checks (default: `5 seconds`) |
 | `maxRetryOnError`              | integer        | maximum number of successive errors before give up (default: `3`) |
 | `statusCheckInterval`          | duration       | check remote Cortex status time interval (default: `1 minute`) |

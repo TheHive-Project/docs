@@ -1,6 +1,8 @@
 nav:
   - Secret key: 'secret.md'
   - Service: 'service.md'
+  - SSL: 'ssl.md'
+  - Proxy: 'proxy.md'
   - Database & indexes: 'database.md'
   - File Storage: 'file-storage.md' 
   - Cluster: 'akka.md'
