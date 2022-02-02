@@ -3469,35 +3469,6 @@ Accepted units are:
 </tr>
 </tbody>
 </table>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">TheHive 3.4.x + Elasticsearch 6.x </label><div class="tabbed-content">
-<p>When migrating, start a new database, create an organisation named <code>StrangeBee</code>, add all users in this organisation, and <strong>do not keep</strong> audit trails older than 90d. </p>
-<div class="admonition warning">
-<p class="admonition-title">Requirements</p>
-<p>The option <code>--es-single-type true</code> is <strong>mandatory</strong> to migrate data from Elasticsearch 6.x</p>
-</div>
-<div class="highlight"><pre><span></span><code>/opt/thehive/bin/migrate <span class="se">\</span>
---drop-database  <span class="se">\</span>
---input /etc/thehive/thehive3.conf <span class="se">\</span>
---output /etc/thehive/application.conf <span class="se">\</span>
---main-organisation StrangeBee <span class="se">\</span>
---max-audit-age 90d <span class="se">\</span>
---es-single-type <span class="nb">true</span>
-</code></pre></div>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">TheHive 3.5.x + Elasticsearch 7.x</label><div class="tabbed-content">
-<p>When migrating, start a new database, create an organisation named <code>StrangeBee</code>, add all users in this organisation, and <strong>do not keep</strong> alert trails created before the March, 25th of 2019. </p>
-<div class="highlight"><pre><span></span><code>/opt/thehive/bin/migrate <span class="se">\</span>
---drop-database  <span class="se">\</span>
---input /etc/thehive/thehive3.conf <span class="se">\</span>
---output /etc/thehive/application.conf <span class="se">\</span>
---main-organisation StrangeBee <span class="se">\</span>
---alert-from-date <span class="m">20190325</span>
-</code></pre></div>
-</div>
-</div>
-</div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The migration process can be very long, from several hours to several days, depending on the volume of data to migrate. We <strong>highly</strong> recommand to not start the application during the migration.</p>
@@ -3532,7 +3503,7 @@ Accepted units are:
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 2, 2022 07:39:46</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 2, 2022 08:42:17</span>
       
     
   </small>
