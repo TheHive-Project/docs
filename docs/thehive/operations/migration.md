@@ -4,33 +4,13 @@ TheHive 4.x is delivered with a tool to migrate your data from TheHive 3.x. stor
 
 ## Supported versions
 
-The tool is provided with TheHive 4.x. Depending on the target version, the migration tool supports specific versions. Here is a summary: 
+Starting with TheHive 4.1.17, the migration tool supports migrating data from both TheHive 3.4.x and 3.5.x. 
 
+| Migrating from                     | Possible target version |
+| ---------------------------------- | ----------------------- | 
+| TheHive 3.4.x + Elasticsearch 6.x  | TheHive 4.1.17+         |
+| TheHive 3.5.x + Elasticsearch 7.x  | TheHive 4.1.17+         |
 
-| Migrating from  | Possible target version |
-| --------------- | ----------------------- | 
-| TheHive 3.4.x   | TheHive 4.0.x           |
-| TheHive 3.5.x   | TheHive 4.1.x           |
-
-
-!!! Warning ""
-
-    === "Using TheHive 3.4.x"
-        You can only migrate to TheHive 4.0.x. After that, an update to TheHive 4.1.x will be possible. 
-
-        Technically, many reasons explain this limitation: 
-
-          - A new database format has been introduced with TheHive 3.4.0,
-          - Elasticsearch 6.x came with changes in data structure (mostly related to the definition of document relations)  
-
-        So, if you want to migrate your data from TheHive 3 to TheHive 4.0, you are invited to update your current instance to TheHive 3.4.0+ before.
-
-    === "Using TheHive 3.5.x"
-        You can only process to the migration to TheHive 4.1.x. 
-
-
-    === "Using older versions"
-        You need to update your database at least to TheHive 3.4.0.
 
 ## How it works
 
@@ -42,8 +22,8 @@ In order to migrate the data:
 
 - TheHive 4 **must** be installed on the system running the migration tool; 
 
-- TheHive4 **must** be configured ; in particular **database** and **file storage** ;  
-- The service `thehive` **must be stopped** (`service thehive stop`) . 
+- TheHive4 **must** be configured ; in particular **database**, **index**, and **file storage** ;  
+- The service `thehive` **must be stopped** (`service thehive stop`) on the target server. 
 
 This tools **must** also have access to Elasticsearch database (http://ES:9200) used by TheHive 3, and the configuration file of TheHive 3.x instance. 
 
@@ -52,7 +32,7 @@ This tools **must** also have access to Elasticsearch database (http://ES:9200) 
 !!! Warning
     In TheHive4, users are identified by their email addresses. Thus, a domain will be appended to usernames in order to migrate users from TheHive 3. 
     
-    TheHive 4.0 comes with a default domain named `thehive.local`. Starting the migration without explicitely specifying a domain name will result in migrating all users with a username formatted like  `user@thehive.local`. 
+    TheHive 4.x comes with a default domain named `thehive.local`. Starting the migration without explicitely specifying a domain name will result in migrating all users with a username formatted like  `user@thehive.local`. 
 
     Change the default domain name used to import existing users in the configuration file of TheHive4 (`/etc/thehive/application.conf`) ;  add or update the setting named  `auth.defaultUserDomain`: 
 
@@ -67,29 +47,44 @@ This tools **must** also have access to Elasticsearch database (http://ES:9200) 
 
 Prepare, install and configure your new instance of TheHive 4.x by following [the associated guides](../installation-and-configuration/index.md).
 
-Once TheHive4 configuration file (`/etc/thehive/application.conf`) is correctly filled you can run migration tool.
+Once TheHive4 configuration file (`/etc/thehive/application.conf`) is correctly filled the `migrate` command ca be executed.
+
+!!! Info
+    This recommended to run this program as the user in charge of running TheHive service ( `thehive` if you are installing the application with DEB or RPM package)
+
 
 The program comes with a large set of options: 
 
 ```
 # /opt/thehive/bin/migrate --help
-TheHive migration tool 4.0.4-1
+TheHive migration tool 4.1.17-1
 Usage: migrate [options]
 
   -v, --version
   -h, --help
+  -l, --logger-config <file>
+                           logback configuration file
   -c, --config <file>      global configuration file
   -i, --input <file>       TheHive3 configuration file
   -o, --output <file>      TheHive4 configuration file
   -d, --drop-database      Drop TheHive4 database before migration
+  -r, --resume             Resume migration (or migrate on existing database)
   -m, --main-organisation <organisation>
   -u, --es-uri http://ip1:port,ip2:port
                            TheHive3 ElasticSearch URI
-  -i, --es-index <index>   TheHive3 ElasticSearch index name
+  -e, --es-index <index>   TheHive3 ElasticSearch index name
+  -x, --es-index-version <index>
+                           TheHive3 ElasticSearch index name version number (default: autodetect)
   -a, --es-keepalive <duration>
                            TheHive3 ElasticSearch keepalive
   -p, --es-pagesize <value>
                            TheHive3 ElasticSearch page size
+  -s, --es-single-type <bool>
+                           Elasticsearch single type
+  -y, --transaction-pagesize <value>
+                           page size for each transaction
+  -t, --thread-count <value>
+                           number of threads
   --max-case-age <duration>
                            migrate only cases whose age is less than <duration>
   --min-case-age <duration>
@@ -133,6 +128,8 @@ Usage: migrate [options]
                            migration only audits with this objectType (case, case_artifact, case_task, ...)
   --exclude-audit-objectTypes <value>
                            don't migration audits with this objectType (case, case_artifact, case_task, ...)
+  --case-number-shift <value>
+                           transpose case number by adding this value
 Accepted date formats are "yyyyMMdd[HH[mm[ss]]]" and "MMdd"
 The Format for duration is: <length> <unit>.
 Accepted units are:
@@ -170,8 +167,40 @@ with:
 | `--es-index`              | specifies the index used in Elasticsearch. |
 
 
+!!! Example
 
-!!! Warning
+    === "TheHive 3.4.x + Elasticsearch 6.x "
+
+        When migrating, start a new database, create an organisation named `StrangeBee`, add all users in this organisation, and **do not keep** audit trails older than 90d. 
+
+        !!! Warning "Requirements"
+            The option `--es-single-type true` is **mandatory** to migrate data from Elasticsearch 6.x
+
+        ```bash
+        /opt/thehive/bin/migrate \
+        --drop-database  \
+        --input /etc/thehive/thehive3.conf \
+        --output /etc/thehive/application.conf \
+        --main-organisation StrangeBee \
+        --max-audit-age 90d \
+        --es-single-type true
+        ```
+
+    === "TheHive 3.5.x + Elasticsearch 7.x"
+
+        When migrating, start a new database, create an organisation named `StrangeBee`, add all users in this organisation, and **do not keep** alert trails created before the March, 25th of 2019. 
+
+        ```bash
+        /opt/thehive/bin/migrate \
+        --drop-database  \
+        --input /etc/thehive/thehive3.conf \
+        --output /etc/thehive/application.conf \
+        --main-organisation StrangeBee \
+        --alert-from-date 20190325
+        ```
+
+
+!!! Info
     The migration process can be very long, from several hours to several days, depending on the volume of data to migrate. We **highly** recommand to not start the application during the migration.
 
 
@@ -188,14 +217,11 @@ GRANT CREATE on ALL KEYSPACES to username;
 
 The migration tool generates some logs during the process. By default, every 10 sec. a log is generated with information regarding the situation of the migration: 
 
-```log
+```
 [info] o.t.t.m.Migrate - [Migrate cases and alerts] CaseTemplate/Task:32 Organisation:1/1 Case/Task:160/201 Case:31/52 Job:103/138 ObservableType:3/17 Alert:25/235 Audit:3207/2986 CaseTemplate:6/6 Alert/Observable:700(52ms) Case/Observable:1325/1665 User:9/9 CustomField:13/13 Case/Task/Log:20/27
 ```
 
-!!! Warning
-    Numbers of Observables, Cases and others are estimations and not a definite value as computing these number can be very tedious. 
-
-
+Numbers of Observables, Cases and others are estimations and not a definite value as computing these number can be very tedious. 
 
 !!! Info "Files from MISP imported with TheHive 2.13 and earlier"
     It is important to notice that migrating Cases/Alerts containing MISP event that were imported with TheHive 2.13 (_Sept 2017_) or older, will cause observable files not being imported in TheHive 4. 
