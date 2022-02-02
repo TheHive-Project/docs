@@ -167,39 +167,6 @@ with:
 | `--es-index`              | specifies the index used in Elasticsearch. |
 
 
-!!! Example
-
-    === "TheHive 3.4.x + Elasticsearch 6.x "
-
-        When migrating, start a new database, create an organisation named `StrangeBee`, add all users in this organisation, and **do not keep** audit trails older than 90d. 
-
-        !!! Warning "Requirements"
-            The option `--es-single-type true` is **mandatory** to migrate data from Elasticsearch 6.x
-
-        ```bash
-        /opt/thehive/bin/migrate \
-        --drop-database  \
-        --input /etc/thehive/thehive3.conf \
-        --output /etc/thehive/application.conf \
-        --main-organisation StrangeBee \
-        --max-audit-age 90d \
-        --es-single-type true
-        ```
-
-    === "TheHive 3.5.x + Elasticsearch 7.x"
-
-        When migrating, start a new database, create an organisation named `StrangeBee`, add all users in this organisation, and **do not keep** alert trails created before the March, 25th of 2019. 
-
-        ```bash
-        /opt/thehive/bin/migrate \
-        --drop-database  \
-        --input /etc/thehive/thehive3.conf \
-        --output /etc/thehive/application.conf \
-        --main-organisation StrangeBee \
-        --alert-from-date 20190325
-        ```
-
-
 !!! Info
     The migration process can be very long, from several hours to several days, depending on the volume of data to migrate. We **highly** recommand to not start the application during the migration.
 
