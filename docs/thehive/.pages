@@ -5,4 +5,4 @@ nav:
   - 'user-guides'
   - 'operations'
   - APIs: api
-  - legacy
+  # - legacy

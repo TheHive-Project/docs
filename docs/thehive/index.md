@@ -13,14 +13,28 @@ title: Home
     <a href="https://chat.thehive-project.org" target"_blank"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg?sanitize=true&logo=discord" alt="Discord"></a>
     <a href="https://chat.thehive-project.org" target"_blank">
       <img src="https://img.shields.io/discord/779945042039144498" alt="Discord">
-    </a>
-    <a href="./LICENSE" target"_blank"><img src="https://img.shields.io/github/license/TheHive-Project/TheHive" alt="License"></a>
-    <a href><img src="https://img.shields.io/github/v/release/thehive-project/TheHive?style=flat&logo=git-lfs" alt="Version"></a>          
+    </a>   
   </p>
 </div>
 
 
 ---
+
+!!! Tip "The new version of TheHive is available! Learn more on the dedicated documentation site: [https://docs.strangebee.com](https://docs.strangebee.com)"
+
+
+
+# TheHive :fontawesome-solid-5: by [©StrangeBee](https://www.strangebee.com)
+The version 5 of TheHive is available! Technical documentation is hosted by StrangeBee. Learn how to download, install and configure it at [https://docs.strangebee.com](https://docs.strangebee.com).
+
+More information available at [https://www.strangebee.com](https://www.strangebee.com). 
+
+
+---
+
+
+# TheHive 4  <a href="./LICENSE" target"_blank"><img src="https://img.shields.io/github/license/TheHive-Project/TheHive" alt="License"></a> <a href><img src="https://img.shields.io/github/v/release/thehive-project/TheHive?style=flat&logo=git-lfs" alt="Version"></a>    
+
 
 **Source Code**: [https://github.com/thehive-project/TheHive/](https://github.com/thehive-project/TheHive/)
 
@@ -29,7 +43,6 @@ title: Home
 ---
 
 
-# TheHive 
 TheHive is a scalable, open source and free Security Incident Response Platform designed to make life easier for SOCs, CSIRTs, CERTs and any information security practitioner dealing with security incidents that need to be investigated and acted upon swiftly.
 
 TheHive supports different methods to store data, files, and indexes according to your needs. However, even for a standalone, production server, we
@@ -58,11 +71,11 @@ Several other operational guides are provided to the community.
 - [Adding security](operations/cassandra-security.md) in Apache Cassandra
 - [Using Fail2Ban](operations/fail2ban.md) and block unwanted connections to the plateform 
 
-## TheHive 3
+<!-- ## TheHive 3
 If you are still using TheHive 3.x, the associated documentation is available [here](./legacy/thehive3/README.md)
 
 !!! Danger "End of Life"
-    TheHive 3 is coming End of Life. This version no longer benefits from new features. We recommend [migrating](./operations/migration.md) as soon as possible to TheHive 4.x.
+    TheHive 3 is coming End of Life. This version no longer benefits from new features. We recommend [migrating](./operations/migration.md) as soon as possible to TheHive 4.x. -->
 
 ## License
 TheHive is an open source and free software released under the [AGPL](https://github.com/TheHive-Project/TheHive/blob/master/LICENSE) (Affero General Public License). We, TheHive Project, are committed to ensure that TheHive will remain a free and open source project on the long-run.

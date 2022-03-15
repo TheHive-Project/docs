@@ -37,7 +37,7 @@ extra_css:
 
 extra:
   social:
-    - icon: fontawesome/solid/home
+    - icon: fontawesome/solid/house
       link: "https://www.thehive-project.org"
     - icon: fontawesome/brands/wordpress
       link: "https://blog.thehive-project.org"
@@ -56,8 +56,13 @@ markdown_extensions:
     - codehilite
     - admonition
     - pymdownx.critic
-    - pymdownx.superfences
-    - pymdownx.tabbed
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.tabbed:
+        alternate_style: true
     - pymdownx.details
     - pymdownx.tasklist:
         custom_checkbox: true
