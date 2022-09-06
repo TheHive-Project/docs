@@ -17,7 +17,8 @@
 - `docker.container.memorySwappiness`: (integer) Tune a container’s memory swappiness behavior. Accepts an integer between 0 and 100
 - `docker.container.networkMode`: (string) name of the network
 - `docker.container.privileged`: (boolean) Give extended privileges to this container
-
+- `job.directory`: (string) Folder used by Cortex binary inside the container to share input and output data of Analyzers & Responders
+- `job.dockerDirectory` = (string) Folder on the host used by Analyzers & Responders to share input and output data with Cortex
 
 ## Dockerized analyzers / responders
 

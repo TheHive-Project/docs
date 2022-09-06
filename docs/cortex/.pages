@@ -5,3 +5,4 @@ nav:
   - Installation & configuration: 'installation-and-configuration'
   - 'user-guides'
   - 'operations'
+  - 'API': 'api'

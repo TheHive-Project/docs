@@ -87,7 +87,7 @@ Please [open an issue on GitHub](https://github.com/TheHive-Project/Cortex/issue
 If you need to contact the Project's team, send an email to <support@thehive-project.org>.
 
 !!! Note
-      - If you have problems with [Cortex4py](https://github.com/TheHive-Project/Cortex4y), please [open an issue on its dedicated repository](https://github.com/TheHive-Project/Cortex4py/issues/new).
+      - If you have problems with [Cortex4py](https://github.com/TheHive-Project/Cortex4py), please [open an issue on its dedicated repository](https://github.com/TheHive-Project/Cortex4py/issues/new).
       - If you encounter an issue with Cortex or would like to request a Cortex-related feature, please [open an issue on its dedicated GitHub repository](https://github.com/TheHive-Project/Cortex/issues/new).
       - If you have troubles with a Cortex analyzer or would like to request a new one or an improvement to an existing analyzer, please open an issue on the [analyzers' dedicated GitHub repository](https://github.com/TheHive-Project/cortex-analyzers/issues/new).
 

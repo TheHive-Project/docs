@@ -56,7 +56,6 @@ To run Analyzers&Responders with Docker images, Cortex should be able have acces
     [..]
     ```
 
-
 ## Store & run programs on the host
 
 ### Additionnal packages
