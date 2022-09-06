@@ -78,7 +78,7 @@ If you are still using TheHive 3.x, the associated documentation is available [h
     TheHive 3 is coming End of Life. This version no longer benefits from new features. We recommend [migrating](./operations/migration.md) as soon as possible to TheHive 4.x. -->
 
 ## License
-TheHive is an open source and free software released under the [AGPL](https://github.com/TheHive-Project/TheHive/blob/master/LICENSE) (Affero General Public License). We, TheHive Project, are committed to ensure that TheHive will remain a free and open source project on the long-run.
+TheHive 4 is an open source and free software released under the [AGPL](https://github.com/TheHive-Project/TheHive/blob/master/LICENSE) (Affero General Public License). 
 
 ## Updates and community discussions
 Information, news and updates are regularly posted on several communication channels:
@@ -100,7 +100,7 @@ We welcome your contributions. Please feel free to fork the code, play with it, 
 We do have a [Code of conduct](./code-of-conduct.md). Make sure to check it out before contributing.
 
 ## Community support
-Please [open an issue on GitHub](https://github.com/TheHive-Project/TheHive/issues) if you'd like to report a bug or request a feature. We are also available on [Gitter](https://gitter.im/TheHive-Project/TheHive) to help you out.
+Please [open an issue on GitHub](https://github.com/TheHive-Project/TheHive/issues) if you'd like to report a bug or request a feature. We are also available on [Discord](https://chat.thehive-project.org) to help you out.
 
 If you need to contact the Project's team, send an email to <support@thehive-project.org>.
 

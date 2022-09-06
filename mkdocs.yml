@@ -2,8 +2,12 @@ site_name: TheHive Project Documentation
 
 # mkdocs.yml
 site_url: https://thehive-project.github.io/docs
+# theme:
+#   name: "material"
 theme:
-  name: "material"
+  name: material
+  palette:
+    scheme: default
   logo: 'images/thehive.png'
   features:
     - navigation.instant
@@ -56,13 +60,9 @@ markdown_extensions:
     - codehilite
     - admonition
     - pymdownx.critic
-    - pymdownx.superfences:
-        custom_fences:
-          - name: mermaid
-            class: mermaid
-            format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.superfences
     - pymdownx.tabbed:
-        alternate_style: true
+        alternate_style: true 
     - pymdownx.details
     - pymdownx.tasklist:
         custom_checkbox: true
