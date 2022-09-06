@@ -1,0 +1,8 @@
+Title: Home
+nav:
+  - index.md
+  - 'Download': 'download'
+  - Installation & configuration: 'installation-and-configuration'
+  - 'user-guides'
+  - 'operations'
+  - 'API': 'api'

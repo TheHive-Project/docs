@@ -1,0 +1,4 @@
+nav:
+  - Backup & Restore: backup-restore.md
+  - Analyzers/Responders input and output: input-output.md
+  - Upgrade to Cortex 3.1: upgrade_to_cortex_3_1_and_es7_x.md

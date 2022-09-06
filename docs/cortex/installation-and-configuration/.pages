@@ -1,0 +1,12 @@
+nav:
+    - index.md
+    - Step by step guide: step-by-step-guide.md
+    - Set up a secret key: secret.md
+    - Authentication options: authentication.md
+    - Database configuration: database.md
+    - Configure Analyzers & Responders: analyzers-responders.md
+    - Docker parameters: docker.md
+    - Using Cortex behind a proxy: proxy-settings.md
+    - SSL configuration: ssl.md
+    - Advanced configuration: advanced-configuration.md
+    - 'Run Cortex with Docker': run-cortex-with-docker.md

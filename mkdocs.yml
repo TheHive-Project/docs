@@ -2,8 +2,12 @@ site_name: TheHive Project Documentation
 
 # mkdocs.yml
 site_url: https://thehive-project.github.io/docs
+# theme:
+#   name: "material"
 theme:
-  name: "material"
+  name: material
+  palette:
+    scheme: default
   logo: 'images/thehive.png'
   features:
     - navigation.instant
@@ -37,7 +41,7 @@ extra_css:
 
 extra:
   social:
-    - icon: fontawesome/solid/home
+    - icon: fontawesome/solid/house
       link: "https://www.thehive-project.org"
     - icon: fontawesome/brands/wordpress
       link: "https://blog.thehive-project.org"
@@ -57,7 +61,8 @@ markdown_extensions:
     - admonition
     - pymdownx.critic
     - pymdownx.superfences
-    - pymdownx.tabbed
+    - pymdownx.tabbed:
+        alternate_style: true 
     - pymdownx.details
     - pymdownx.tasklist:
         custom_checkbox: true
