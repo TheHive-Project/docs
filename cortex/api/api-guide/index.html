@@ -1,0 +1,5678 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://thehive-project.github.io/docs/cortex/api/api-guide/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.4.0">
+    
+    
+      
+        <title>API Guide - TheHive Project Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="TheHive Project Documentation" class="md-header__button md-logo" aria-label="TheHive Project Documentation" data-md-component="logo">
+      
+  <img src="../../../images/thehive.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TheHive Project Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TheHive-Project/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TheHive-Project/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../thehive/" class="md-tabs__link">
+        TheHive
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Cortex
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://thehive-project.github.io/Cortex-Analyzers/" target="_blank" class="md-tabs__link">
+      Cortex Neurons
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://thehive-project.github.io/TheHive4py/" target="_blank" class="md-tabs__link">
+      TheHive4py
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://github.com/TheHive-Project/Cortex4py" target="_blank" class="md-tabs__link">
+      Cortex4py
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../resources/Keynotes/list/" class="md-tabs__link">
+        Resources
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="TheHive Project Documentation" class="md-nav__button md-logo" aria-label="TheHive Project Documentation" data-md-component="logo">
+      
+  <img src="../../../images/thehive.png" alt="logo">
+
+    </a>
+    TheHive Project Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TheHive-Project/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TheHive-Project/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../thehive/">TheHive</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="TheHive" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          TheHive
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../thehive/installation-and-configuration/">Installation and configuration</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Installation and configuration" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installation and configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_2">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/installation/step-by-step-guide/" class="md-nav__link">
+        Step by step guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/installation/build-sources/" class="md-nav__link">
+        Build sources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_3">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configuration" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/secret/" class="md-nav__link">
+        Secret key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/service/" class="md-nav__link">
+        Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/ssl/" class="md-nav__link">
+        SSL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/proxy/" class="md-nav__link">
+        Proxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/database/" class="md-nav__link">
+        Database & indexes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/file-storage/" class="md-nav__link">
+        File Storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/akka/" class="md-nav__link">
+        Cluster
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/connectors-cortex/" class="md-nav__link">
+        Cortex connector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/connectors-misp/" class="md-nav__link">
+        MISP connector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/webhooks/" class="md-nav__link">
+        Webhooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/logs/" class="md-nav__link">
+        Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/configuration/manage-configuration/" class="md-nav__link">
+        Manage Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" type="checkbox" id="__nav_2_2_4" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_4">
+          Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/installation-and-configuration/architecture/3_nodes_cluster/" class="md-nav__link">
+        Use TheHive as a cluster
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../thehive/user-guides/">User guides</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="User guides" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          User guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/quick-start/" class="md-nav__link">
+        Quick start with TheHive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" type="checkbox" id="__nav_2_3_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_3">
+          Administrators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Administrators" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Administrators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/administrators/analyzer-templates/" class="md-nav__link">
+        Manage analyzer template
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/administrators/custom-fields/" class="md-nav__link">
+        Manage custom fields
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/administrators/observable-types/" class="md-nav__link">
+        Manage observable types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/administrators/organisations/" class="md-nav__link">
+        Organisations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/administrators/plateform-status/" class="md-nav__link">
+        Plateform status
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/administrators/profiles/" class="md-nav__link">
+        User Profiles management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/administrators/tactics-techniques-procedures/" class="md-nav__link">
+        Tactics, Techniques & Procedures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/administrators/tags-and-taxonomies/" class="md-nav__link">
+        Taxonomies and Tags
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" type="checkbox" id="__nav_2_3_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_4">
+          Organisation managers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Organisation managers" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Organisation managers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/organisation-managers/case-templates/" class="md-nav__link">
+        Case Templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/organisation-managers/custom-tags/" class="md-nav__link">
+        Custom tags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/organisation-managers/organisations-users-sharing/" class="md-nav__link">
+        Organisations, Users and sharing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/organisation-managers/ui-configuration/" class="md-nav__link">
+        UI configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/organisation-managers/users-management/" class="md-nav__link">
+        Users management
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_5" type="checkbox" id="__nav_2_3_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_5">
+          Analysts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Analysts" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Analysts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/analysts/create-alerts/" class="md-nav__link">
+        Create Alerts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/analysts/create-case/" class="md-nav__link">
+        Create Cases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/analysts/create-tasks/" class="md-nav__link">
+        Manage Case Tasks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/analysts/create-observables/" class="md-nav__link">
+        Create Case Observables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/analysts/ttps/" class="md-nav__link">
+        Tactics, Techniques and Procedures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/analysts/run-responders/" class="md-nav__link">
+        Run Responders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/analysts/run-analyzers/" class="md-nav__link">
+        Run Analyzers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/analysts/sharing/" class="md-nav__link">
+        Sharing Cases, Tasks and Observables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/analysts/close-case/" class="md-nav__link">
+        Close Cases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/analysts/export-case/" class="md-nav__link">
+        Export Cases to MISP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/user-guides/analysts/user-settings/" class="md-nav__link">
+        User settings configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          Operations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Operations" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Operations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/operations/update/" class="md-nav__link">
+        Howto update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/operations/migration/" class="md-nav__link">
+        Migration from TheHive 3.x
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/operations/backup-restore/" class="md-nav__link">
+        Backup & restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/operations/https/" class="md-nav__link">
+        Configure HTTPS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/operations/fail2ban/" class="md-nav__link">
+        Use fail2ban
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/operations/cassandra-security/" class="md-nav__link">
+        Cassandra & security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/operations/troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../thehive/api/">APIs</a>
+          
+            <label for="__nav_2_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="APIs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_2" type="checkbox" id="__nav_2_5_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../thehive/api/organisation/">Organisation</a>
+          
+            <label for="__nav_2_5_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Organisation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Organisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/organisation/create/" class="md-nav__link">
+        Create
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/organisation/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/organisation/list/" class="md-nav__link">
+        List/Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/organisation/list-links/" class="md-nav__link">
+        List links
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_3" type="checkbox" id="__nav_2_5_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../thehive/api/user/">User</a>
+          
+            <label for="__nav_2_5_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="User" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          User
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/user/list/" class="md-nav__link">
+        List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/user/create/" class="md-nav__link">
+        Create
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/user/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/user/set-password/" class="md-nav__link">
+        Set password
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/user/generate-api-key/" class="md-nav__link">
+        Generate API key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/user/revoke-api-key/" class="md-nav__link">
+        Revoke API key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/user/get-api-key/" class="md-nav__link">
+        Get API key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/user/lock/" class="md-nav__link">
+        Lock / Unlock
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/user/delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_4" type="checkbox" id="__nav_2_5_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../thehive/api/custom-field/">Custom field</a>
+          
+            <label for="__nav_2_5_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Custom field" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Custom field
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/custom-field/list/" class="md-nav__link">
+        List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/custom-field/create/" class="md-nav__link">
+        Create
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/custom-field/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/custom-field/delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/custom-field/get/" class="md-nav__link">
+        Get
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/custom-field/getUse/" class="md-nav__link">
+        Use count
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_5" type="checkbox" id="__nav_2_5_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../thehive/api/case-template/">Case template</a>
+          
+            <label for="__nav_2_5_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Case template" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Case template
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case-template/list/" class="md-nav__link">
+        Get / List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case-template/create/" class="md-nav__link">
+        Create
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case-template/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case-template/delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_6" type="checkbox" id="__nav_2_5_6" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../thehive/api/alert/">Alert</a>
+          
+            <label for="__nav_2_5_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Alert" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          Alert
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/list/" class="md-nav__link">
+        List / Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/create/" class="md-nav__link">
+        Create
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/read/" class="md-nav__link">
+        Mark as Read/Unread
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/promote-as-case/" class="md-nav__link">
+        Promote
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/merge/" class="md-nav__link">
+        Merge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/similar-cases/" class="md-nav__link">
+        List similar Cases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/list-observables/" class="md-nav__link">
+        List Observables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/add-observable/" class="md-nav__link">
+        Add observables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/update-observable/" class="md-nav__link">
+        Update observable
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/delete-observable/" class="md-nav__link">
+        Add observables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/run-responder/" class="md-nav__link">
+        Run Responder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/alert/list-responder-jobs/" class="md-nav__link">
+        List responder actions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_7" type="checkbox" id="__nav_2_5_7" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../thehive/api/case/">Case</a>
+          
+            <label for="__nav_2_5_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Case" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          Case
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case/create/" class="md-nav__link">
+        Create
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case/delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case/merge/" class="md-nav__link">
+        Merge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case/export/" class="md-nav__link">
+        Export Case to MISP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case/related-cases/" class="md-nav__link">
+        List related Cases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case/related-alerts/" class="md-nav__link">
+        List related Alerts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case/attachments/" class="md-nav__link">
+        List related Alerts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case/run-responder/" class="md-nav__link">
+        Run responder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/case/responder-jobs/" class="md-nav__link">
+        List responder actions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_8" type="checkbox" id="__nav_2_5_8" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../thehive/api/task/">Task</a>
+          
+            <label for="__nav_2_5_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Task" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          Task
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/task/create/" class="md-nav__link">
+        Create
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/task/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/task/get/" class="md-nav__link">
+        Get case task
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/task/list/" class="md-nav__link">
+        List case tasks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/task/run-responder/" class="md-nav__link">
+        Run responder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/task/responder-jobs/" class="md-nav__link">
+        List responder jobs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/task/create-log/" class="md-nav__link">
+        Add log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/task/delete-log/" class="md-nav__link">
+        Delete log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/task/log-run-responder/" class="md-nav__link">
+        Run responder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/task/log-responder-jobs/" class="md-nav__link">
+        List responder jobs on log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/task/logs/" class="md-nav__link">
+        List task logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/task/waiting-tasks/" class="md-nav__link">
+        List waiting tasks
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_9" type="checkbox" id="__nav_2_5_9" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../thehive/api/observable/">Observable</a>
+          
+            <label for="__nav_2_5_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Observable" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          Observable
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/observable/create/" class="md-nav__link">
+        Create
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/observable/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/observable/delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/observable/list/" class="md-nav__link">
+        List / Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/observable/analyzer/" class="md-nav__link">
+        Analyzer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../thehive/api/observable/responder/" class="md-nav__link">
+        Responder
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">Cortex</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Cortex" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Cortex
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../download/">Download</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Download" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Download
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../installation-and-configuration/">Installation & configuration</a>
+          
+            <label for="__nav_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Installation & configuration" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Installation & configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-and-configuration/step-by-step-guide/" class="md-nav__link">
+        Step by step guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-and-configuration/secret/" class="md-nav__link">
+        Set up a secret key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-and-configuration/authentication/" class="md-nav__link">
+        Authentication options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-and-configuration/database/" class="md-nav__link">
+        Database configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-and-configuration/analyzers-responders/" class="md-nav__link">
+        Configure Analyzers & Responders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-and-configuration/docker/" class="md-nav__link">
+        Docker parameters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-and-configuration/proxy-settings/" class="md-nav__link">
+        Using Cortex behind a proxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-and-configuration/ssl/" class="md-nav__link">
+        SSL configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-and-configuration/advanced-configuration/" class="md-nav__link">
+        Advanced configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation-and-configuration/run-cortex-with-docker/" class="md-nav__link">
+        Run Cortex with Docker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          User guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User guides" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          User guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/first-start/" class="md-nav__link">
+        First start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/roles/" class="md-nav__link">
+        User roles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Operations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Operations" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Operations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/backup-restore/" class="md-nav__link">
+        Backup & Restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/input-output/" class="md-nav__link">
+        Analyzers/Responders input and output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/upgrade_to_cortex_3_1_and_es7_x/" class="md-nav__link">
+        Upgrade to Cortex 3.1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        API Guide
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-response-formats" class="md-nav__link">
+    Request &amp; Response Formats
+  </a>
+  
+    <nav class="md-nav" aria-label="Request &amp; Response Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-string" class="md-nav__link">
+    Query String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-encoded-form" class="md-nav__link">
+    URL-encoded Form
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-part" class="md-nav__link">
+    Multi-part
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-format" class="md-nav__link">
+    Response Format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generating-api-keys-with-an-orgadmin-account" class="md-nav__link">
+    Generating API Keys with an orgAdmin Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-api-keys-with-a-superadmin-account" class="md-nav__link">
+    Generating API Keys with a superAdmin Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticating-with-an-api-key" class="md-nav__link">
+    Authenticating with an API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-basic-authentication" class="md-nav__link">
+    Using Basic Authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organization-apis" class="md-nav__link">
+    Organization APIs
+  </a>
+  
+    <nav class="md-nav" aria-label="Organization APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organization-model" class="md-nav__link">
+    Organization Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtain-details" class="md-nav__link">
+    Obtain Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-users" class="md-nav__link">
+    List Users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-enabled-analyzers" class="md-nav__link">
+    List Enabled Analyzers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-apis" class="md-nav__link">
+    User APIs
+  </a>
+  
+    <nav class="md-nav" aria-label="User APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-model" class="md-nav__link">
+    User Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all" class="md-nav__link">
+    List All
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-users-within-an-organization" class="md-nav__link">
+    List Users within an Organization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_1" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_1" class="md-nav__link">
+    Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-details" class="md-nav__link">
+    Get Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-a-password" class="md-nav__link">
+    Set a Password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-a-password" class="md-nav__link">
+    Change a password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-and-renew-an-api-key" class="md-nav__link">
+    Set and Renew an API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-an-api-key" class="md-nav__link">
+    Get an API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revoke-an-api-key" class="md-nav__link">
+    Revoke an API Key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-apis" class="md-nav__link">
+    Job APIs
+  </a>
+  
+    <nav class="md-nav" aria-label="Job APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#job-model" class="md-nav__link">
+    Job Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-and-search" class="md-nav__link">
+    List and Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-details_1" class="md-nav__link">
+    Get Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-details-and-report" class="md-nav__link">
+    Get Details and Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wait-and-get-job-report" class="md-nav__link">
+    Wait and Get Job Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-artifacts" class="md-nav__link">
+    Get Artifacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_1" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyzer-apis" class="md-nav__link">
+    Analyzer APIs
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyzer APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyzer-model" class="md-nav__link">
+    Analyzer Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable" class="md-nav__link">
+    Enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-and-search_1" class="md-nav__link">
+    List and Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-details_2" class="md-nav__link">
+    Get Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-by-type" class="md-nav__link">
+    Get By Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_2" class="md-nav__link">
+    Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable" class="md-nav__link">
+    Disable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous-apis" class="md-nav__link">
+    Miscellaneous APIs
+  </a>
+  
+    <nav class="md-nav" aria-label="Miscellaneous APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paging-and-sorting" class="md-nav__link">
+    Paging and Sorting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-create-a-responder/" class="md-nav__link">
+        How to Write and Submit a Responder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-create-an-analyzer/" class="md-nav__link">
+        How to Write and Submit an Analyzer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://thehive-project.github.io/Cortex-Analyzers/" target="_blank" class="md-nav__link">
+        Cortex Neurons
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://thehive-project.github.io/TheHive4py/" target="_blank" class="md-nav__link">
+        TheHive4py
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/TheHive-Project/Cortex4py" target="_blank" class="md-nav__link">
+        Cortex4py
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Keynotes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Keynotes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Keynotes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/Keynotes/list/" class="md-nav__link">
+        Additional Resources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          Virtual Machine
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Virtual Machine" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Virtual Machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/Virtual%20Machine/demo/" class="md-nav__link">
+        Demo VM
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-response-formats" class="md-nav__link">
+    Request &amp; Response Formats
+  </a>
+  
+    <nav class="md-nav" aria-label="Request &amp; Response Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-string" class="md-nav__link">
+    Query String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-encoded-form" class="md-nav__link">
+    URL-encoded Form
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-part" class="md-nav__link">
+    Multi-part
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-format" class="md-nav__link">
+    Response Format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generating-api-keys-with-an-orgadmin-account" class="md-nav__link">
+    Generating API Keys with an orgAdmin Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-api-keys-with-a-superadmin-account" class="md-nav__link">
+    Generating API Keys with a superAdmin Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticating-with-an-api-key" class="md-nav__link">
+    Authenticating with an API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-basic-authentication" class="md-nav__link">
+    Using Basic Authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organization-apis" class="md-nav__link">
+    Organization APIs
+  </a>
+  
+    <nav class="md-nav" aria-label="Organization APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organization-model" class="md-nav__link">
+    Organization Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtain-details" class="md-nav__link">
+    Obtain Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-users" class="md-nav__link">
+    List Users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-enabled-analyzers" class="md-nav__link">
+    List Enabled Analyzers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-apis" class="md-nav__link">
+    User APIs
+  </a>
+  
+    <nav class="md-nav" aria-label="User APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-model" class="md-nav__link">
+    User Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all" class="md-nav__link">
+    List All
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-users-within-an-organization" class="md-nav__link">
+    List Users within an Organization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_1" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_1" class="md-nav__link">
+    Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-details" class="md-nav__link">
+    Get Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-a-password" class="md-nav__link">
+    Set a Password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-a-password" class="md-nav__link">
+    Change a password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-and-renew-an-api-key" class="md-nav__link">
+    Set and Renew an API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-an-api-key" class="md-nav__link">
+    Get an API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revoke-an-api-key" class="md-nav__link">
+    Revoke an API Key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-apis" class="md-nav__link">
+    Job APIs
+  </a>
+  
+    <nav class="md-nav" aria-label="Job APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#job-model" class="md-nav__link">
+    Job Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-and-search" class="md-nav__link">
+    List and Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-details_1" class="md-nav__link">
+    Get Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-details-and-report" class="md-nav__link">
+    Get Details and Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wait-and-get-job-report" class="md-nav__link">
+    Wait and Get Job Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-artifacts" class="md-nav__link">
+    Get Artifacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_1" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyzer-apis" class="md-nav__link">
+    Analyzer APIs
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyzer APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyzer-model" class="md-nav__link">
+    Analyzer Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable" class="md-nav__link">
+    Enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-and-search_1" class="md-nav__link">
+    List and Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-details_2" class="md-nav__link">
+    Get Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-by-type" class="md-nav__link">
+    Get By Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_2" class="md-nav__link">
+    Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable" class="md-nav__link">
+    Disable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous-apis" class="md-nav__link">
+    Miscellaneous APIs
+  </a>
+  
+    <nav class="md-nav" aria-label="Miscellaneous APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paging-and-sorting" class="md-nav__link">
+    Paging and Sorting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/TheHive-Project/docs/edit/master/docs/cortex/api/api-guide.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="api-guide">API Guide<a class="headerlink" href="#api-guide" title="Permanent link">#</a></h1>
+<p>This guide applies only to Cortex 2 and newer. It is not applicable to Cortex 1.</p>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="#introduction">Introduction</a><ul>
+<li><a href="#request--response-formats">Request &amp; Response Formats</a></li>
+<li><a href="#authentication">Authentication</a></li>
+</ul>
+</li>
+<li><a href="#organization-apis">Organization APIs</a><ul>
+<li><a href="#organization-model">Organization Model</a></li>
+<li><a href="#list">List</a></li>
+<li><a href="#create">Create</a></li>
+<li><a href="#update">Update</a></li>
+<li><a href="#delete">Delete</a></li>
+<li><a href="#obtain-details">Obtain Details</a></li>
+<li><a href="#list-users">List Users</a></li>
+<li><a href="#list-enabled-analyzers">List Enabled Analyzers</a></li>
+</ul>
+</li>
+<li><a href="#user-apis">User APIs</a><ul>
+<li><a href="#user-model">User Model</a></li>
+<li><a href="#list-all">List All</a></li>
+<li><a href="#list-users-within-an-organization">List Users within an Organization</a></li>
+<li><a href="#search">Search</a></li>
+<li><a href="#create-1">Create</a></li>
+<li><a href="#update-1">Update</a></li>
+<li><a href="#get-details">Get Details</a></li>
+<li><a href="#set-a-password">Set a Password</a></li>
+<li><a href="#change-a-password">Change a password</a></li>
+<li><a href="#set-and-renew-an-api-key">Set and Renew an API Key</a></li>
+<li><a href="#get-an-api-key">Get an API Key</a></li>
+<li><a href="#revoke-an-api-key">Revoke an API Key</a></li>
+</ul>
+</li>
+<li><a href="#job-apis">Job APIs</a><ul>
+<li><a href="#job-model">Job Model</a></li>
+<li><a href="#list-and-search">List and Search</a></li>
+<li><a href="#get-details-1">Get Details</a></li>
+<li><a href="#get-details-and-report">Get Details and Report</a></li>
+<li><a href="#wait-and-get-job-report">Wait and Get Job Report</a></li>
+<li><a href="#get-artifacts">Get Artifacts</a></li>
+<li><a href="#delete-1">Delete</a></li>
+</ul>
+</li>
+<li><a href="#analyzer-apis">Analyzer APIs</a><ul>
+<li><a href="#analyzer-model">Analyzer Model</a></li>
+<li><a href="#enable">Enable</a></li>
+<li><a href="#list-and-search-1">List and Search</a></li>
+<li><a href="#get-details-2">Get Details</a></li>
+<li><a href="#get-by-type">Get By Type</a></li>
+<li><a href="#update-2">Update</a></li>
+<li><a href="#run">Run</a></li>
+<li><a href="#disable">Disable</a></li>
+</ul>
+</li>
+<li><a href="#miscellaneous-apis">Miscellaneous APIs</a><ul>
+<li><a href="#paging-and-sorting">Paging and Sorting</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
+<p>Cortex 2 offers a REST API that can be leveraged by various applications and programs to interact with it. The following guide describe the Cortex 2 API to allow developers to interface the powerful observable analysis engine with other SIRPs (Security Incident Response Platforms) besides TheHive, TIPs (Threat Intelligence Platforms), SIEMs or scripts. Please note that the Web UI of Cortex 2 exclusively leverage the REST API to interact with the back-end.</p>
+<p><strong>Note</strong>: You can use <a href="https://github.com/TheHive-Project/Cortex4py">Cortex4py</a>, the Python library we provide, to facilitate interaction with the REST API of Cortex. You need Cortex4py 2.0.0 or later as earlier versions are not compatible with Cortex 2.</p>
+<p>All the exposed APIs share the same <a href="#request--response-formats">request &amp; response formats</a> and <a href="#authentication">authentication strategies</a> as described below.</p>
+<p>There are also some transverse parameters supported by several calls, in addition to <a href="#miscellaneous-apis">utility APIs</a>.</p>
+<p>If you want to create an analyzer, please read the <a href="../how-to-create-an-analyzer/">How to Write and Submit an Analyzer </a> guide.</p>
+<h3 id="request-response-formats">Request &amp; Response Formats<a class="headerlink" href="#request-response-formats" title="Permanent link">#</a></h3>
+<p>Cortex accepts several parameter formats within a HTTP request. They can be used indifferently. Input data can be:</p>
+<ul>
+<li>A query string</li>
+<li>A URL-encoded form</li>
+<li>A multi-part</li>
+<li>JSON</li>
+</ul>
+<p>Hence, the requests shown below are equivalent.</p>
+<h4 id="query-string">Query String<a class="headerlink" href="#query-string" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code>curl -XPOST <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/login?user=me&amp;password=secret&#39;</span>
+</code></pre></div>
+<h4 id="url-encoded-form">URL-encoded Form<a class="headerlink" href="#url-encoded-form" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code>curl -XPOST <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/login&#39;</span> -d <span class="nv">user</span><span class="o">=</span>me -d <span class="nv">password</span><span class="o">=</span>secret
+</code></pre></div>
+<h4 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code>curl -XPOST https://CORTEX_APP_URL:9001/api/login -H <span class="s1">&#39;Content-Type: application/json&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;user&quot;: &quot;me&quot;,</span>
+<span class="s1">  &quot;password&quot;: &quot;secret&quot;</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<h4 id="multi-part">Multi-part<a class="headerlink" href="#multi-part" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code>curl -XPOST https://CORTEX_APP_URL:9001/api/login -F <span class="s1">&#39;_json=&lt;-;type=application/json&#39;</span> <span class="s">&lt;&lt; _EOF_</span>
+<span class="s">{</span>
+<span class="s">  &quot;user&quot;: &quot;me&quot;,</span>
+<span class="s">  &quot;password&quot;: &quot;secret&quot;</span>
+<span class="s">}</span>
+<span class="s">_EOF_</span>
+</code></pre></div>
+<h4 id="response-format">Response Format<a class="headerlink" href="#response-format" title="Permanent link">#</a></h4>
+<p>For each request submitted, Cortex will respond back with JSON data. For example, if the authentication request is successful, Cortex should return the following output:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;me&quot;</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;me&quot;</span><span class="p">,</span><span class="nt">&quot;roles&quot;</span><span class="p">:[</span><span class="s2">&quot;read&quot;</span><span class="p">,</span><span class="s2">&quot;analyze&quot;</span><span class="p">,</span><span class="s2">&quot;orgadmin&quot;</span><span class="p">]}</span><span class="w"></span>
+</code></pre></div>
+<p>If not, Cortex should return an authentication error:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;AuthenticationError&quot;</span><span class="p">,</span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="s2">&quot;Authentication failure&quot;</span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">#</a></h3>
+<p>Most API calls require authentication. Credentials can be provided using a <strong>session cookie</strong>, an <strong>API key</strong> or directly using HTTP <strong>basic
+authentication</strong> (if this method is specifically enabled).</p>
+<p>Session cookies are better suited for browser authentication. Hence, <strong>we recommend authenticating with API keys</strong> when calling the Cortex APIs.</p>
+<h4 id="generating-api-keys-with-an-orgadmin-account">Generating API Keys with an orgAdmin Account<a class="headerlink" href="#generating-api-keys-with-an-orgadmin-account" title="Permanent link">#</a></h4>
+<p>API keys can be generated using the Web UI. To do so, connect using an <code>orgAdmin</code> account then click on <em>Organization</em> and then on the <code>Create API Key</code> button in the row corresponding to the user you intend to use for API authentication. Once the API key has been created, click on <code>Reveal</code> to display the API key then click on the <em>copy to clipboard</em> button if you wish to copy the key to your system's clipboard.</p>
+<p>If the user is not yet created, start by clicking on <code>Add user</code> to create it then follow the steps mentioned above.</p>
+<h4 id="generating-api-keys-with-a-superadmin-account">Generating API Keys with a superAdmin Account<a class="headerlink" href="#generating-api-keys-with-a-superadmin-account" title="Permanent link">#</a></h4>
+<p>You can use a <code>superAdmin</code> account to achieve the same result as described above. Once authenticated, click on <em>Users</em> then on the <code>Create API Key</code> button in the row corresponding to the user you intend to use for API authentication. Please <strong>make sure the user is in the right organization</strong> by thoroughly reading its name, which is shown below the user name. Once the API key has been created, click on <code>Reveal</code> to display the API key then click on the <em>copy to clipboard</em> button if you wish to copy the key to your system's clipboard.</p>
+<h4 id="authenticating-with-an-api-key">Authenticating with an API Key<a class="headerlink" href="#authenticating-with-an-api-key" title="Permanent link">#</a></h4>
+<p>Once you have generated an API key you can use it, for example, to list the Cortex jobs thanks to the following <code>curl</code> command:</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># Using API key</span>
+curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> https://CORTEX_APP_URL:9001/api/job
+</code></pre></div>
+As you can see in the example above, we instructed <code>curl</code> to add the <em>Authorization</em> header to the request. The value of the header is <code>Bearer: **API_KEY**</code>. So if your API key is <code>GPX20GUAQWwpqnhA6JpOwNGPMfWuxsX3</code>, the <code>curl</code> command above would look like the following:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Using API key</span>
+curl -H <span class="s1">&#39;Authorization: Bearer GPX20GUAQWwpqnhA6JpOwNGPMfWuxsX3&#39;</span> https://CORTEX_APP_URL:9001/api/job
+</code></pre></div>
+<h4 id="using-basic-authentication">Using Basic Authentication<a class="headerlink" href="#using-basic-authentication" title="Permanent link">#</a></h4>
+<p>Cortex also supports basic authentication but it is disabled by default for security reasons. <strong>If you absolutely need to use it</strong>, you can enable it by adding <code>auth.method.basic=true</code> to the configuration file (<code>/etc/cortex/application.conf</code> by default). Once you do, restart the Cortex service. You can then, for example, list the Cortex jobs using the following <code>curl</code> command:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Using basic authentication</span>
+curl -u mylogin:mypassword https://CORTEX_APP_URL:9001/api/job
+</code></pre></div>
+<h2 id="organization-apis">Organization APIs<a class="headerlink" href="#organization-apis" title="Permanent link">#</a></h2>
+<p>Cortex offers a set of APIs to create, update and list organizations.</p>
+<h3 id="organization-model">Organization Model<a class="headerlink" href="#organization-model" title="Permanent link">#</a></h3>
+<p>An organization (org) is defined by the following attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Copy of the org's name (see next row)</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Name</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Status (<code>Active</code> or <code>Locked</code>)</td>
+<td>writable</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Description</td>
+<td>writable</td>
+</tr>
+<tr>
+<td><code>createdAt</code></td>
+<td>Creation date</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>createdBy</code></td>
+<td>User who created the org</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>updatedAt</code></td>
+<td>Last update</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>updatedBy</code></td>
+<td>User who last updated the org</td>
+<td>computed</td>
+</tr>
+</tbody>
+</table>
+<p>Please note that <code>id</code> and <code>name</code> are essentially the same. Also, <code>createdAt</code> and <code>updatedAt</code> are in <em>epoch</em>.</p>
+<h3 id="list">List<a class="headerlink" href="#list" title="Permanent link">#</a></h3>
+<p>It is possible to list all the organizations using the following API call, which requires the API key associated with a <code>superAdmin</code> account:</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/organization&#39;</span>
+</code></pre></div>
+<p>You can also search/filter organizations using the following query:</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/organization/_search&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;query&quot;: {&quot;status&quot;: &quot;Active&quot;}</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<p>Both APIs supports the <code>range</code> and <code>sort</code> query parameters described in <a href="#paging-and-sorting">paging and sorting details</a>.</p>
+<h3 id="create">Create<a class="headerlink" href="#create" title="Permanent link">#</a></h3>
+<p>It is possible to create an organization using the following API call, which requires the API key associated with a <code>superAdmin</code> account:</p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/organization&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;name&quot;: &quot;demo&quot;,</span>
+<span class="s1">  &quot;description&quot;: &quot;Demo organization&quot;,</span>
+<span class="s1">  &quot;status&quot;: &quot;Active&quot;</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<h3 id="update">Update<a class="headerlink" href="#update" title="Permanent link">#</a></h3>
+<p>You can update an organization's description and status (<code>Active</code> or <code>Locked</code>) using the following API call. This requires the API key associated with a <code>superAdmin</code> account:</p>
+<div class="highlight"><pre><span></span><code>curl -XPATCH -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/organization/ORG_ID&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;description&quot;: &quot;New Demo organization&quot;,</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><code>curl -XPATCH -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/organization/ORG_ID&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;status&quot;: &quot;Active&quot;,</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<h3 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link">#</a></h3>
+<p>Deleting an organization just marks it as <code>Locked</code> and doesn't remove the associated data from the DB. To "delete" an organization, you can use the API call shown below. It requires the API key associated with a <code>superAdmin</code> account.</p>
+<div class="highlight"><pre><span></span><code>curl -XDELETE -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/organization/ORG_ID&#39;</span>
+</code></pre></div>
+<h3 id="obtain-details">Obtain Details<a class="headerlink" href="#obtain-details" title="Permanent link">#</a></h3>
+<p>This API call returns the details of an organization as described in the <a href="#organization-model">Organization model</a> section.</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/organization/ORG_ID&#39;</span>
+</code></pre></div>
+<p>Let's assume that the organization we are seeking to obtain details about is called <em>demo</em>. The <code>curl</code> command would be:</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/organization/demo&#39;</span>
+</code></pre></div>
+<p>and it should return:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Active&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Demo organization&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1520258040437</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;createdBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;superadmin&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;superadmin&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1522077420693</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="list-users">List Users<a class="headerlink" href="#list-users" title="Permanent link">#</a></h3>
+<p>As mentioned above, you can use the API to return the list of <strong>all</strong> the users declared withing an organization. For that purpose, use the API call shown below with the API key of an <code>orgAdmin</code> or <code>superAdmin</code> account. It supports the <code>range</code> and <code>sort</code> query parameters declared in <a href="#paging-and-sorting">paging and sorting details</a>.</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/organization/ORG_ID/user&#39;</span>
+</code></pre></div>
+<p>and should return a list of <a href="#user-model">users</a>.</p>
+<p>If one wants to filter/search for some users (active ones for example), there is a search API to use as below:</p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/organization/ORG_ID/user/_search&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;query&quot;: {}</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<p>It also supports the <code>range</code> and <code>sort</code> query parameters declared in <a href="#paging-and-sorting">paging and sorting details</a>.</p>
+<h3 id="list-enabled-analyzers">List Enabled Analyzers<a class="headerlink" href="#list-enabled-analyzers" title="Permanent link">#</a></h3>
+<p>To list the analyzers that have been enabled within an organization, use the following API call with the API key of an <code>orgAdmin</code> user:</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/analyzer&#39;</span>
+</code></pre></div>
+<p>It should return a list of <a href="#analyzer-model">Analyzers</a>.</p>
+<p>Please note that this API call does not display analyzers that are disabled. It supports the <code>range</code> and <code>sort</code> query parameters declared in <a href="#paging-and-sorting">paging and sorting details</a>.</p>
+<h2 id="user-apis">User APIs<a class="headerlink" href="#user-apis" title="Permanent link">#</a></h2>
+<p>The following section describes the APIs that allow creating, updating and listing users within an organization.</p>
+<h3 id="user-model">User Model<a class="headerlink" href="#user-model" title="Permanent link">#</a></h3>
+<p>A user is defined by the following attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>ID/login</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Name</td>
+<td>writable</td>
+</tr>
+<tr>
+<td><code>roles</code></td>
+<td>Roles. Possible values are: <code>read</code>, <code>read,analyze</code>, <code>read,analyze,orgadmin</code> and <code>superadmin</code></td>
+<td>writable</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Status (<code>Active</code> or <code>Locked</code>)</td>
+<td>writable</td>
+</tr>
+<tr>
+<td><code>organization</code></td>
+<td>organization to which the user belongs (set upon account creation)</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>createdAt</code></td>
+<td>Creation date</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>createdBy</code></td>
+<td>User who created the account</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>updatedAt</code></td>
+<td>Last update date</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>updatedBy</code></td>
+<td>User who last updated the account</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>hasKey</code></td>
+<td>true when the user has an API key</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>hasPassword</code></td>
+<td>true if the user has a password</td>
+<td>computed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-all">List All<a class="headerlink" href="#list-all" title="Permanent link">#</a></h3>
+<p>This API call allows a <code>superAdmin</code> to list and search all the users of all defined organizations:</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/user&#39;</span>
+</code></pre></div>
+<p>This call supports the <code>range</code> and <code>sort</code> query parameters declared in <a href="#paging-and-sorting">paging and sorting details</a>.</p>
+<h3 id="list-users-within-an-organization">List Users within an Organization<a class="headerlink" href="#list-users-within-an-organization" title="Permanent link">#</a></h3>
+<p>This call is described in <a href="#organization-apis">organization APIs</a>.</p>
+<h3 id="search">Search<a class="headerlink" href="#search" title="Permanent link">#</a></h3>
+<p>This API call allows a <code>superAdmin</code> to perform search on the user accounts created in a Cortex instance:</p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/user/_search&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;query&quot;: {}</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<p>This call supports the <code>range</code> and <code>sort</code> query parameters declared in <a href="#paging-and-sorting">paging and sorting details</a></p>
+<h3 id="create_1">Create<a class="headerlink" href="#create_1" title="Permanent link">#</a></h3>
+<p>This API calls allows you to programmatically create user creation. If the call is made by a <code>superAdmin</code> user, the request must specify the organization to which the user belong in the <code>organization</code> field.</p>
+<p>If the call is made by an <code>orgAdmin</code> user, the value of <code>organization</code> field must be the same as the user who makes the call: <code>orgAdmin</code> users are allowed to create users only in their organization.</p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/user&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;name&quot;: &quot;Demo org Admin&quot;,</span>
+<span class="s1">  &quot;roles&quot;: [</span>
+<span class="s1">    &quot;read&quot;,</span>
+<span class="s1">    &quot;analyze&quot;,</span>
+<span class="s1">    &quot;orgadmin&quot;</span>
+<span class="s1">  ],</span>
+<span class="s1">  &quot;organization&quot;: &quot;demo&quot;,</span>
+<span class="s1">  &quot;login&quot;: &quot;demo&quot;</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<p>If successful, the call returns a JSON object representing the created user as described <a href="#user-model">above</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;organization&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Demo org Admin&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;roles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;read&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;analyze&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;orgadmin&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ok&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1526050123286</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;createdBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;superadmin&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;hasKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;hasPassword&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="update_1">Update<a class="headerlink" href="#update_1" title="Permanent link">#</a></h3>
+<p>This API call allows updating the writable attributed of a user account. It's available to users with <code>superAdmin</code> or <code>orgAdmin</code> roles. Any user can also use it to update their own information (but obviously not their roles).</p>
+<div class="highlight"><pre><span></span><code>curl -XPATCH -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/user/USER_LOGIN&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;name&quot;: &quot;John Doe&quot;,</span>
+<span class="s1">  &quot;roles&quot;: [</span>
+<span class="s1">    &quot;read&quot;,</span>
+<span class="s1">    &quot;analyze&quot;</span>
+<span class="s1">  ],</span>
+<span class="s1">  &quot;status&quot;: &quot;Locked&quot;</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<p>It returns a JSON object representing the updated user as described <a href="#user-model">above</a>.</p>
+<h3 id="get-details">Get Details<a class="headerlink" href="#get-details" title="Permanent link">#</a></h3>
+<p>This call returns the user details. It's available to users with <code>superAdmin</code> roles and to users in the same organization. Every user can also use it to read their own details.</p>
+<p><div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/user/USER_LOGIN&#39;</span>
+</code></pre></div>
+It returns a JSON object representing the user as described <a href="#user-model">previously</a>.</p>
+<h3 id="set-a-password">Set a Password<a class="headerlink" href="#set-a-password" title="Permanent link">#</a></h3>
+<p>This call sets the user's password. It's available to users with <code>superAdmin</code> or <code>orgAdmin</code> roles. Please note that the request needs to be made using HTTPS with a valid certificate on the server's end to prevent credential sniffing or other PITM (Person-In-The-Middle) attacks.</p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/user/USER_LOGIN/password/set&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;password&quot;: &quot;SOMEPASSWORD&quot;</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<p>If successful, the call returns 204 (success / no content).</p>
+<h3 id="change-a-password">Change a password<a class="headerlink" href="#change-a-password" title="Permanent link">#</a></h3>
+<p>This call allows a given user to change only <strong>their own</strong> existing password. It is available to all users including <code>superAdmin</code> and <code>orgAdmin</code> ones. Please note that if a <code>superAdmin</code> or an <code>orgAdmin</code> needs to update the password of another user, they must use the <code>/password/set</code> call described in the previous subsection.</p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/user/USER_LOGIN/password/change&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;currentPassword&quot;: &quot;password&quot;,</span>
+<span class="s1">  &quot;password&quot;: &quot;new-password&quot;</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<p>If successful, the call returns 204 (success / no content).</p>
+<h3 id="set-and-renew-an-api-key">Set and Renew an API Key<a class="headerlink" href="#set-and-renew-an-api-key" title="Permanent link">#</a></h3>
+<p>This calls allows setting and renewing the API key of a user. It's available to users with <code>superAdmin</code> or <code>orgAdmin</code> roles. Any user can also use it to renew their own API key. Again, the request needs to be made using HTTPS with a valid certificate on the server's end to prevent credential sniffing or other PITM (Person-In-The-Middle) attacks. You know the drill ;-)</p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/user/USER_LOGIN/key/renew&#39;</span>
+</code></pre></div>
+<p>If successful, it returns the generated API key in a <code>text/plain</code>response.</p>
+<h3 id="get-an-api-key">Get an API Key<a class="headerlink" href="#get-an-api-key" title="Permanent link">#</a></h3>
+<p>This calls allows getting a user's API key. It's available to users with <code>superAdmin</code> or <code>orgAdmin</code> roles. Any user can also use it to obtain their own API key.</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/user/USER_LOGIN/key&#39;</span>
+</code></pre></div>
+<p>If successful, the generated API key is returned in <code>text/plain</code>response</p>
+<h3 id="revoke-an-api-key">Revoke an API Key<a class="headerlink" href="#revoke-an-api-key" title="Permanent link">#</a></h3>
+<p>This calls allow revoking a user's API key. This calls allow revoking a user's API key.</p>
+<div class="highlight"><pre><span></span><code>curl -XDELETE -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/user/USER_LOGIN/key&#39;</span>
+</code></pre></div>
+<p>A successful request returns nothing (HTTP 200 OK).</p>
+<h2 id="job-apis">Job APIs<a class="headerlink" href="#job-apis" title="Permanent link">#</a></h2>
+<p>The following section describes the APIs that allow manipulating jobs. Jobs are basically submissions made to analyzers and the resulting reports.</p>
+<h3 id="job-model">Job Model<a class="headerlink" href="#job-model" title="Permanent link">#</a></h3>
+<p>A job is defined by the following attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Job ID</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>organization</code></td>
+<td>The organization to which the job belongs</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>analyzerDefinitionId</code></td>
+<td>Analyzer definition name</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>analyzerId</code></td>
+<td>Instance ID of the analyzer to which the job is associated</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>organization</code></td>
+<td>Organization to which the user belongs (set upon account creation)</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>analyzerName</code></td>
+<td>Name of the analyzer to which the job is associated</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>dataType</code></td>
+<td>the datatype of the analyzed observable</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Status of the job (<code>Waiting</code>, <code>InProgress</code>, <code>Success</code>, <code>Failure</code>, <code>Deleted</code>)</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>Value of the analyzed observable (does not apply to <code>file</code> observables)</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>attachment</code></td>
+<td>JSON object representing <code>file</code> observables (does not apply to non-<code>file</code> observables). It  defines the<code>name</code>, <code>hashes</code>, <code>size</code>, <code>contentType</code> and <code>id</code> of the <code>file</code> observable</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>parameters</code></td>
+<td>JSON object of key/value pairs set during job creation</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>A free text field to set additional text/context for a job</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>tlp</code></td>
+<td>The TLP of the analyzed observable</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>startDate</code></td>
+<td>Start date</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>endDate</code></td>
+<td>End date</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>createdAt</code></td>
+<td>Creation date. Please note that a job can be requested but not immediately honored. The actual time at which it is started is the value of <code>startDate</code></td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>createdBy</code></td>
+<td>User who created the job</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>updatedAt</code></td>
+<td>Last update date (only Cortex updates a job when it finishes)</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>updatedBy</code></td>
+<td>User who submitted the job and which identity is used by Cortex to update the job once it is finished</td>
+<td>computed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-and-search">List and Search<a class="headerlink" href="#list-and-search" title="Permanent link">#</a></h3>
+<p>This call allows a user with <code>read</code>,<code>analyze</code> or <code>orgAdmin</code> role to list and search all the analysis jobs made by their organization.</p>
+<p>If you want to list all the jobs:
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/job/_search?range=all&#39;</span>
+</code></pre></div></p>
+<p>If you want to list 10 jobs:
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/job/_search&#39;</span>
+</code></pre></div></p>
+<p>If you want to list 100 jobs:
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/job/_search?range=0-100&#39;</span>
+</code></pre></div></p>
+<p>If you want to search jobs according to various criteria:
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/job/_search&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;query&quot;: {</span>
+<span class="s1">    &quot;_and&quot;: [</span>
+<span class="s1">      {&quot;status&quot;: &quot;Success&quot;},</span>
+<span class="s1">      {&quot;dataType&quot;: &quot;ip&quot;}</span>
+<span class="s1">    ]</span>
+<span class="s1">  }</span>
+<span class="s1">}&#39;</span>
+</code></pre></div></p>
+<p>This call supports the <code>range</code> and <code>sort</code> query parameters declared in <a href="#paging-and-sorting">paging and sorting details</a></p>
+<h3 id="get-details_1">Get Details<a class="headerlink" href="#get-details_1" title="Permanent link">#</a></h3>
+<p>This call allows a user with <code>read</code>,<code>analyze</code> or <code>orgAdmin</code> role to get the details of a job. It does not fetch the job report.</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/job/JOB_ID&#39;</span>
+</code></pre></div>
+<p>It returns a JSON response with the following structure:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AWNei4vH3rJ8unegCPB9&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;analyzerDefinitionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Abuse_Finder_2_0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;analyzerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;220483fde9608c580fb6a2508ff3d2d3&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;analyzerName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Abuse_Finder_2_0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8.8.8.8&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;tlp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;dataType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ip&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;organization&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1526299593923</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1526299597064</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1526299593633</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1526299593633</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;createdBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1526299597066</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="get-details-and-report">Get Details and Report<a class="headerlink" href="#get-details-and-report" title="Permanent link">#</a></h3>
+<p>This call allows a user with <code>read</code>,<code>analyze</code> or <code>orgAdmin</code> role to get the details of a job including its report.</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/job/JOB_ID/report&#39;</span>
+</code></pre></div>
+<p>It returns a JSON response with the structure below. If the job is not yet completed, the <code>report</code> field contains a string representing the job status:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AWNei4vH3rJ8unegCPB9&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;analyzerDefinitionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Abuse_Finder_2_0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;analyzerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;220483fde9608c580fb6a2508ff3d2d3&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;analyzerName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Abuse_Finder_2_0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8.8.8.8&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;tlp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;dataType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ip&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;organization&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1526299593923</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1526299597064</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1526299593633</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1526299593633</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;createdBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1526299597066</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;taxonomies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;predicate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Address&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Abuse_Finder&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;network-abuse@google.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;info&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;full&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;abuse_finder&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;raw&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;abuse&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="s2">&quot;network-abuse@google.com&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;names&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="s2">&quot;Google LLC&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="s2">&quot;Level 3 Parent, LLC&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8.8.8.8&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;artifacts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="wait-and-get-job-report">Wait and Get Job Report<a class="headerlink" href="#wait-and-get-job-report" title="Permanent link">#</a></h3>
+<p>This call is similar the one described above but allows the user to provide a timeout to wait for the report in case it is not available at the time the query was made:</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/job/JOB_ID/waitreport?atMost=1minute&#39;</span>
+</code></pre></div>
+<p>The <code>atMost</code> is a duration using the format <code>Xhour</code>, <code>Xminute</code> or <code>Xsecond</code>.</p>
+<h3 id="get-artifacts">Get Artifacts<a class="headerlink" href="#get-artifacts" title="Permanent link">#</a></h3>
+<p>This call allows a user with <code>read</code>,<code>analyze</code> or <code>orgAdmin</code> role to get the extracted artifacts from a job if such extraction has been enabled in the corresponding analyzer configuration. Please note that extraction is imperfect and you might have inconsistent or incorrect data.</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/job/JOB_ID/artifacts&#39;</span>
+</code></pre></div>
+<p>It returns a JSON array with the following structure:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;dataType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ip&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;createdBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8.8.8.8&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;tlp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1525432900553</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AWMq4tvLjidKq_asiwcl&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<h3 id="delete_1">Delete<a class="headerlink" href="#delete_1" title="Permanent link">#</a></h3>
+<p>This API allows a user with <code>analyze</code> or <code>orgAdmin</code> role to delete a job:</p>
+<div class="highlight"><pre><span></span><code>curl -XDELETE -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/job/JOB_ID&#39;</span>
+</code></pre></div>
+<p>This marks the job as <code>Deleted</code>. However the job's data is not removed from the  database.</p>
+<h2 id="analyzer-apis">Analyzer APIs<a class="headerlink" href="#analyzer-apis" title="Permanent link">#</a></h2>
+<p>The following section describes the APIs that allow manipulating analyzers.</p>
+<h3 id="analyzer-model">Analyzer Model<a class="headerlink" href="#analyzer-model" title="Permanent link">#</a></h3>
+<p>An analyzer is defined by the following attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Analyzer ID once enabled within an organization</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>analyzerDefinitionId</code></td>
+<td>Analyzer definition name</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Name of the analyzer</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>Version of the analyzer</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Description of the analyzer</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>Author of the analyzer</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>URL where the analyzer has been published</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>license</code></td>
+<td>License of the analyzer</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>dataTypeList</code></td>
+<td>Allowed datatypes</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>baseConfig</code></td>
+<td>Base configuration name. This identifies the shared set of configuration with all the analyzer's flavors</td>
+<td>readonly</td>
+</tr>
+<tr>
+<td><code>jobCache</code></td>
+<td>Report cache timeout in minutes, visible for <code>orgAdmin</code> users only</td>
+<td>writable</td>
+</tr>
+<tr>
+<td><code>rate</code></td>
+<td>Numeric amount of analyzer calls authorized for the specified <code>rateUnit</code>, visible for <code>orgAdmin</code> users only</td>
+<td>writable</td>
+</tr>
+<tr>
+<td><code>rateUnit</code></td>
+<td>Period of availability of the rate limite: <code>Day</code> or <code>Month</code>, visible for <code>orgAdmin</code> users only</td>
+<td>writable</td>
+</tr>
+<tr>
+<td><code>configuration</code></td>
+<td>A JSON object where key/value pairs represent the config names, and their values. It includes the default properties <code>proxy_http</code>, <code>proxy_https</code>, <code>auto_extract_artifacts</code>, <code>check_tlp</code>, and <code>max_tlp</code>, visible for <code>orgAdmin</code> users only</td>
+<td>writable</td>
+</tr>
+<tr>
+<td><code>createdBy</code></td>
+<td>User who enabled the analyzer</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>updatedAt</code></td>
+<td>Last update date</td>
+<td>computed</td>
+</tr>
+<tr>
+<td><code>updatedBy</code></td>
+<td>User who last updated the analyzer</td>
+<td>computed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enable">Enable<a class="headerlink" href="#enable" title="Permanent link">#</a></h3>
+<p>This call allows a user with an <code>orgAdmin</code> role to enable an analyzer.</p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/organization/analyzer/:analyzerId&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;name&quot;: &quot;Censys_1_0&quot;,</span>
+<span class="s1">  &quot;configuration&quot;: {</span>
+<span class="s1">    &quot;uid&quot;: &quot;XXXX&quot;,</span>
+<span class="s1">    &quot;key&quot;: &quot;XXXXXXXXXXXXXXXXXXXX&quot;,</span>
+<span class="s1">    &quot;proxy_http&quot;: &quot;http://proxy:9999&quot;,</span>
+<span class="s1">    &quot;proxy_https&quot;: &quot;http://proxy:9999&quot;,</span>
+<span class="s1">    &quot;auto_extract_artifacts&quot;: false,</span>
+<span class="s1">    &quot;check_tlp&quot;: true,</span>
+<span class="s1">    &quot;max_tlp&quot;: 2</span>
+<span class="s1">  },</span>
+<span class="s1">  &quot;rate&quot;: 1000,</span>
+<span class="s1">  &quot;rateUnit&quot;: &quot;Day&quot;,</span>
+<span class="s1">  &quot;jobCache&quot;: 5</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<h3 id="list-and-search_1">List and Search<a class="headerlink" href="#list-and-search_1" title="Permanent link">#</a></h3>
+<p>These calls allow a user with a <code>analyze</code> or <code>orgAdmin</code> role to list and search all the enabled analyzers within the organization.</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/analyzer&#39;</span>
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/analyzer/_search&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;query&quot;: {}</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<p>Both calls supports the <code>range</code> and <code>sort</code> query parameters declared in <a href="#paging-and-sorting">paging and sorting details</a>, and both return a JSON array of analyzer objects as described in <a href="#analyzer-model">Analyzer Model section</a>.</p>
+<p>If called by a user with only an <code>nalyzer</code> role, the <code>configuration</code> attribute is not included on the JSON objects.</p>
+<h3 id="get-details_2">Get Details<a class="headerlink" href="#get-details_2" title="Permanent link">#</a></h3>
+<p>This call allows a user with a <code>analyze</code> or <code>orgAdmin</code> role to get an analyzer's details.</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/analyzer/ANALYZER_ID&#39;</span>
+</code></pre></div>
+<p>It returns a analyzer JSON object as described in <a href="#analyzer-model">Analyzer Model section</a>.</p>
+<p>If called by a user with only an <code>nalyzer</code> role, the <code>configuration</code> attribute is not included on the JSON objects.</p>
+<h3 id="get-by-type">Get By Type<a class="headerlink" href="#get-by-type" title="Permanent link">#</a></h3>
+<p>This call is mostly used by TheHive and allows to quickly get the list of analyzers that can run on the given datatype. It requires an <code>analyze</code> or <code>orgAdmin</code> role.</p>
+<div class="highlight"><pre><span></span><code>curl -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/analyzer/type/DATA_TYPE&#39;</span>
+</code></pre></div>
+<p>It returns a JSON array of analyzer objects as described in <a href="#analyzer-model">Analyzer Model section</a> without the <code>configuration</code> attribute, which could contain sensitive data.</p>
+<h3 id="update_2">Update<a class="headerlink" href="#update_2" title="Permanent link">#</a></h3>
+<p>This call allows an <code>orgAdmin</code> user to update the <code>name</code>, <code>configuration</code> and <code>jobCache</code> of an enabled analyzer.</p>
+<div class="highlight"><pre><span></span><code>curl -XPATCH -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/analyzer/ANALYZER_ID&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;configuration&quot;: {</span>
+<span class="s1">    &quot;key&quot;: &quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;,</span>
+<span class="s1">    &quot;polling_interval&quot;: 60,</span>
+<span class="s1">    &quot;proxy_http&quot;: &quot;http://localhost:8080&quot;,</span>
+<span class="s1">    &quot;proxy_https&quot;: &quot;http://localhost:8080&quot;,</span>
+<span class="s1">    &quot;auto_extract_artifacts&quot;: true,</span>
+<span class="s1">    &quot;check_tlp&quot;: true,</span>
+<span class="s1">    &quot;max_tlp&quot;: 1</span>
+<span class="s1">  },</span>
+<span class="s1">  &quot;name&quot;: &quot;Shodan_Host_1_0&quot;,</span>
+<span class="s1">  &quot;rate&quot;: 1000,</span>
+<span class="s1">  &quot;rateUnit&quot;: &quot;Day&quot;,</span>
+<span class="s1">  &quot;jobCache&quot;: null</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<p>It returns a JSON object describing the analyzer as defined in <a href="#analyzer-model">Analyzer Model section</a>.</p>
+<h3 id="run">Run<a class="headerlink" href="#run" title="Permanent link">#</a></h3>
+<p>This API allows a user with a <code>analyze</code> or <code>orgAdmin</code> role to run analyzers on observables of different datatypes.</p>
+<p>For <code>file</code> observables, the API call must be made as described below:</p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/analyzer/ANALYZER_ID/run&#39;</span> <span class="se">\</span>
+  -F <span class="s1">&#39;attachment=@/path/to/observable-file&#39;</span> <span class="se">\</span>
+  -F <span class="s1">&#39;_json=&lt;-;type=application/json&#39;</span> <span class="s">&lt;&lt; _EOF_</span>
+<span class="s">  {</span>
+<span class="s">    &quot;dataType&quot;:&quot;file&quot;,</span>
+<span class="s">    &quot;tlp&quot;:0</span>
+<span class="s">  }</span>
+<span class="s">_EOF_</span>
+</code></pre></div>
+<p>for all the other types of observerables, the request is:</p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/analyzer/ANALYZER_ID/run&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;data&quot;:&quot;8.8.8.8&quot;,</span>
+<span class="s1">  &quot;dataType&quot;:&quot;ip&quot;,</span>
+<span class="s1">  &quot;tlp&quot;:0,</span>
+<span class="s1">  &quot;message&quot;: &quot;A message that can be accessed from the analyzer&quot;,</span>
+<span class="s1">  &quot;parameters&quot;: {</span>
+<span class="s1">    &quot;key1&quot;: &quot;value1&quot;,</span>
+<span class="s1">    &quot;key2&quot;: &quot;value2&quot;</span>
+<span class="s1">  }</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<p>This call will fetch a similar job from the cache, and if it finds one, it returns it from the cache, based on the duration defined in <code>jobCache</code> attribute of the analyzer.</p>
+<p>To force bypassing the cache, one can add the following query parameter: <code>force=1</code></p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/analyzer/ANALYZER_ID/run?force=1&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;data&quot;:&quot;8.8.8.8&quot;,</span>
+<span class="s1">  &quot;dataType&quot;:&quot;ip&quot;,</span>
+<span class="s1">  &quot;tlp&quot;:0,</span>
+<span class="s1">  &quot;message&quot;: &quot;A message that can be accessed from the analyzer&quot;,</span>
+<span class="s1">  &quot;parameters&quot;: {</span>
+<span class="s1">    &quot;key1&quot;: &quot;value1&quot;,</span>
+<span class="s1">    &quot;key2&quot;: &quot;value2&quot;</span>
+<span class="s1">  }</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+<h3 id="disable">Disable<a class="headerlink" href="#disable" title="Permanent link">#</a></h3>
+<p>This API allows an <code>orgAdmin</code> to disable an existing analyzer in their organization and delete the corresponding configuration.</p>
+<div class="highlight"><pre><span></span><code>curl -XDELETE -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> <span class="s1">&#39;https://CORTEX_APP_URL:9001/api/analyzer/ANALYZER_ID&#39;</span>
+</code></pre></div>
+<h2 id="miscellaneous-apis">Miscellaneous APIs<a class="headerlink" href="#miscellaneous-apis" title="Permanent link">#</a></h2>
+<h3 id="paging-and-sorting">Paging and Sorting<a class="headerlink" href="#paging-and-sorting" title="Permanent link">#</a></h3>
+<p>All the <code>search</code> API calls allow sorting and paging parameters, in addition to a query in the request's body. These calls usually have URLs ending with the <code>_search</code> keyword but that's not always the case.</p>
+<p>The followings are query parameters:</p>
+<ul>
+<li><code>range</code>: <code>all</code> or <code>x-y</code> where <code>x</code> and <code>y</code> are numbers (ex: 0-10).</li>
+<li><code>sort</code>: you can provide multiple sort criteria such as: <code>-createdAt</code> or <code>+status</code>.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>curl -XPOST -H <span class="s1">&#39;Authorization: Bearer **API_KEY**&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;http://CORTEX_APP_URL:9001/api/organization/ORG_ID/user?range=0-10&amp;sort=-createdAt&amp;sort=+status&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;query&quot;: {}</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 5, 2022 12:21:12</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../operations/upgrade_to_cortex_3_1_and_es7_x/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Upgrade to Cortex 3.1" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Upgrade to Cortex 3.1
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../how-to-create-a-responder/" class="md-footer__link md-footer__link--next" aria-label="Next: How to Write and Submit a Responder" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              How to Write and Submit a Responder
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://www.thehive-project.org" target="_blank" rel="noopener" title="www.thehive-project.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.1c0 2.8-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2-.9-3.3-.1-1.4-.8-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.09 0-40-17.9-40-40V360c0-.9.03-1.9.09-2.8v-69.6H32.05C14.02 287.6 0 273.5 0 255.5c0-9 3.004-17 10.01-24L266.4 8.016c7-7.014 15-8.016 22-8.016s15 2.004 21.1 7.014L564.8 231.5c8 7 12.1 15 11 24z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://blog.thehive-project.org" target="_blank" rel="noopener" title="blog.thehive-project.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m61.7 169.4 101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/TheHive_Project" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/TheHive-Project" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://chat.thehive-project.org" target="_blank" rel="noopener" title="chat.thehive-project.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>

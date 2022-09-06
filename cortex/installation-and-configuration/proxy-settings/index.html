@@ -8,26 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://thehive-project.github.io/docs/download/">
+        <link rel="canonical" href="https://thehive-project.github.io/docs/cortex/installation-and-configuration/proxy-settings/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.4.0">
     
     
       
-        <title>Index - TheHive Project Documentation</title>
+        <title>Using Cortex behind a proxy - TheHive Project Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
           
           
           <meta name="theme-color" content="#2094f3">
         
+      
       
     
     
@@ -41,11 +42,11 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../custom.css">
+      <link rel="stylesheet" href="../../../custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#proxy-settings" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -80,13 +86,13 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="TheHive Project Documentation" class="md-header__button md-logo" aria-label="TheHive Project Documentation" data-md-component="logo">
+    <a href="../../.." title="TheHive Project Documentation" class="md-header__button md-logo" aria-label="TheHive Project Documentation" data-md-component="logo">
       
-  <img src="../images/thehive.png" alt="logo">
+  <img src="../../../images/thehive.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -98,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Using Cortex behind a proxy
             
           </span>
         </div>
@@ -108,7 +114,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -116,13 +122,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -142,10 +148,10 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/TheHive-Project/docs/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/TheHive-Project/docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     TheHive-Project/docs
@@ -167,7 +173,7 @@
 
 
   <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -182,7 +188,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../thehive/" class="md-tabs__link">
+      <a href="../../../thehive/" class="md-tabs__link">
         TheHive
       </a>
     </li>
@@ -192,13 +198,19 @@
         
   
   
+    
+  
 
 
-  <li class="md-tabs__item">
-    <a href="https://github.com/TheHive-Project/CortexDocs" target="_blank" class="md-tabs__link">
-      Cortex
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Cortex
+      </a>
+    </li>
+  
 
       
         
@@ -251,7 +263,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../resources/Keynotes/list/" class="md-tabs__link">
+      <a href="../../../resources/Keynotes/list/" class="md-tabs__link">
         Resources
       </a>
     </li>
@@ -287,19 +299,19 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="TheHive Project Documentation" class="md-nav__button md-logo" aria-label="TheHive Project Documentation" data-md-component="logo">
+    <a href="../../.." title="TheHive Project Documentation" class="md-nav__button md-logo" aria-label="TheHive Project Documentation" data-md-component="logo">
       
-  <img src="../images/thehive.png" alt="logo">
+  <img src="../../../images/thehive.png" alt="logo">
 
     </a>
     TheHive Project Documentation
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/TheHive-Project/docs/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/TheHive-Project/docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     TheHive-Project/docs
@@ -317,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -357,7 +369,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../thehive/">TheHive</a>
+          <a href="../../../thehive/">TheHive</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -405,7 +417,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../thehive/installation-and-configuration/">Installation and configuration</a>
+          <a href="../../../thehive/installation-and-configuration/">Installation and configuration</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -460,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/installation/step-by-step-guide/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/installation/step-by-step-guide/" class="md-nav__link">
         Step by step guide
       </a>
     </li>
@@ -474,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/installation/build-sources/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/installation/build-sources/" class="md-nav__link">
         Build sources
       </a>
     </li>
@@ -549,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/secret/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/secret/" class="md-nav__link">
         Secret key
       </a>
     </li>
@@ -563,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/service/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/service/" class="md-nav__link">
         Service
       </a>
     </li>
@@ -577,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/ssl/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/ssl/" class="md-nav__link">
         SSL
       </a>
     </li>
@@ -591,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/proxy/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/proxy/" class="md-nav__link">
         Proxy
       </a>
     </li>
@@ -605,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/database/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/database/" class="md-nav__link">
         Database & indexes
       </a>
     </li>
@@ -619,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/file-storage/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/file-storage/" class="md-nav__link">
         File Storage
       </a>
     </li>
@@ -633,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/akka/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/akka/" class="md-nav__link">
         Cluster
       </a>
     </li>
@@ -647,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/authentication/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/authentication/" class="md-nav__link">
         Authentication
       </a>
     </li>
@@ -661,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/connectors-cortex/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/connectors-cortex/" class="md-nav__link">
         Cortex connector
       </a>
     </li>
@@ -675,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/connectors-misp/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/connectors-misp/" class="md-nav__link">
         MISP connector
       </a>
     </li>
@@ -689,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/webhooks/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/webhooks/" class="md-nav__link">
         Webhooks
       </a>
     </li>
@@ -703,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/logs/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/logs/" class="md-nav__link">
         Logs
       </a>
     </li>
@@ -717,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/configuration/manage-configuration/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/configuration/manage-configuration/" class="md-nav__link">
         Manage Configuration
       </a>
     </li>
@@ -768,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/installation-and-configuration/architecture/3_nodes_cluster/" class="md-nav__link">
+      <a href="../../../thehive/installation-and-configuration/architecture/3_nodes_cluster/" class="md-nav__link">
         Use TheHive as a cluster
       </a>
     </li>
@@ -823,7 +835,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../thehive/user-guides/">User guides</a>
+          <a href="../../../thehive/user-guides/">User guides</a>
           
             <label for="__nav_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -846,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/quick-start/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/quick-start/" class="md-nav__link">
         Quick start with TheHive
       </a>
     </li>
@@ -904,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/administrators/analyzer-templates/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/administrators/analyzer-templates/" class="md-nav__link">
         Manage analyzer template
       </a>
     </li>
@@ -918,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/administrators/custom-fields/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/administrators/custom-fields/" class="md-nav__link">
         Manage custom fields
       </a>
     </li>
@@ -932,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/administrators/observable-types/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/administrators/observable-types/" class="md-nav__link">
         Manage observable types
       </a>
     </li>
@@ -946,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/administrators/organisations/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/administrators/organisations/" class="md-nav__link">
         Organisations
       </a>
     </li>
@@ -960,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/administrators/plateform-status/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/administrators/plateform-status/" class="md-nav__link">
         Plateform status
       </a>
     </li>
@@ -974,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/administrators/profiles/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/administrators/profiles/" class="md-nav__link">
         User Profiles management
       </a>
     </li>
@@ -988,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/administrators/tactics-techniques-procedures/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/administrators/tactics-techniques-procedures/" class="md-nav__link">
         Tactics, Techniques & Procedures
       </a>
     </li>
@@ -1002,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/administrators/tags-and-taxonomies/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/administrators/tags-and-taxonomies/" class="md-nav__link">
         Taxonomies and Tags
       </a>
     </li>
@@ -1061,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/organisation-managers/case-templates/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/organisation-managers/case-templates/" class="md-nav__link">
         Case Templates
       </a>
     </li>
@@ -1075,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/organisation-managers/custom-tags/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/organisation-managers/custom-tags/" class="md-nav__link">
         Custom tags
       </a>
     </li>
@@ -1089,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/organisation-managers/organisations-users-sharing/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/organisation-managers/organisations-users-sharing/" class="md-nav__link">
         Organisations, Users and sharing
       </a>
     </li>
@@ -1103,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/organisation-managers/ui-configuration/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/organisation-managers/ui-configuration/" class="md-nav__link">
         UI configuration
       </a>
     </li>
@@ -1117,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/organisation-managers/users-management/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/organisation-managers/users-management/" class="md-nav__link">
         Users management
       </a>
     </li>
@@ -1188,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/analysts/create-alerts/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/analysts/create-alerts/" class="md-nav__link">
         Create Alerts
       </a>
     </li>
@@ -1202,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/analysts/create-case/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/analysts/create-case/" class="md-nav__link">
         Create Cases
       </a>
     </li>
@@ -1216,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/analysts/create-tasks/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/analysts/create-tasks/" class="md-nav__link">
         Manage Case Tasks
       </a>
     </li>
@@ -1230,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/analysts/create-observables/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/analysts/create-observables/" class="md-nav__link">
         Create Case Observables
       </a>
     </li>
@@ -1244,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/analysts/ttps/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/analysts/ttps/" class="md-nav__link">
         Tactics, Techniques and Procedures
       </a>
     </li>
@@ -1258,7 +1270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/analysts/run-responders/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/analysts/run-responders/" class="md-nav__link">
         Run Responders
       </a>
     </li>
@@ -1272,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/analysts/run-analyzers/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/analysts/run-analyzers/" class="md-nav__link">
         Run Analyzers
       </a>
     </li>
@@ -1286,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/analysts/sharing/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/analysts/sharing/" class="md-nav__link">
         Sharing Cases, Tasks and Observables
       </a>
     </li>
@@ -1300,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/analysts/close-case/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/analysts/close-case/" class="md-nav__link">
         Close Cases
       </a>
     </li>
@@ -1314,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/analysts/export-case/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/analysts/export-case/" class="md-nav__link">
         Export Cases to MISP
       </a>
     </li>
@@ -1328,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/user-guides/analysts/user-settings/" class="md-nav__link">
+      <a href="../../../thehive/user-guides/analysts/user-settings/" class="md-nav__link">
         User settings configuration
       </a>
     </li>
@@ -1400,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/operations/update/" class="md-nav__link">
+      <a href="../../../thehive/operations/update/" class="md-nav__link">
         Howto update
       </a>
     </li>
@@ -1414,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/operations/migration/" class="md-nav__link">
+      <a href="../../../thehive/operations/migration/" class="md-nav__link">
         Migration from TheHive 3.x
       </a>
     </li>
@@ -1428,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/operations/backup-restore/" class="md-nav__link">
+      <a href="../../../thehive/operations/backup-restore/" class="md-nav__link">
         Backup & restore
       </a>
     </li>
@@ -1442,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/operations/https/" class="md-nav__link">
+      <a href="../../../thehive/operations/https/" class="md-nav__link">
         Configure HTTPS
       </a>
     </li>
@@ -1456,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/operations/fail2ban/" class="md-nav__link">
+      <a href="../../../thehive/operations/fail2ban/" class="md-nav__link">
         Use fail2ban
       </a>
     </li>
@@ -1470,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/operations/cassandra-security/" class="md-nav__link">
+      <a href="../../../thehive/operations/cassandra-security/" class="md-nav__link">
         Cassandra & security
       </a>
     </li>
@@ -1484,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/operations/troubleshooting/" class="md-nav__link">
+      <a href="../../../thehive/operations/troubleshooting/" class="md-nav__link">
         Troubleshooting
       </a>
     </li>
@@ -1540,7 +1552,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../thehive/api/">APIs</a>
+          <a href="../../../thehive/api/">APIs</a>
           
             <label for="__nav_2_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1588,7 +1600,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../thehive/api/organisation/">Organisation</a>
+          <a href="../../../thehive/api/organisation/">Organisation</a>
           
             <label for="__nav_2_5_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1611,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/organisation/create/" class="md-nav__link">
+      <a href="../../../thehive/api/organisation/create/" class="md-nav__link">
         Create
       </a>
     </li>
@@ -1625,7 +1637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/organisation/update/" class="md-nav__link">
+      <a href="../../../thehive/api/organisation/update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -1639,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/organisation/list/" class="md-nav__link">
+      <a href="../../../thehive/api/organisation/list/" class="md-nav__link">
         List/Search
       </a>
     </li>
@@ -1653,7 +1665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/organisation/list-links/" class="md-nav__link">
+      <a href="../../../thehive/api/organisation/list-links/" class="md-nav__link">
         List links
       </a>
     </li>
@@ -1709,7 +1721,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../thehive/api/user/">User</a>
+          <a href="../../../thehive/api/user/">User</a>
           
             <label for="__nav_2_5_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1732,7 +1744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/user/list/" class="md-nav__link">
+      <a href="../../../thehive/api/user/list/" class="md-nav__link">
         List
       </a>
     </li>
@@ -1746,7 +1758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/user/create/" class="md-nav__link">
+      <a href="../../../thehive/api/user/create/" class="md-nav__link">
         Create
       </a>
     </li>
@@ -1760,7 +1772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/user/update/" class="md-nav__link">
+      <a href="../../../thehive/api/user/update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -1774,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/user/set-password/" class="md-nav__link">
+      <a href="../../../thehive/api/user/set-password/" class="md-nav__link">
         Set password
       </a>
     </li>
@@ -1788,7 +1800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/user/generate-api-key/" class="md-nav__link">
+      <a href="../../../thehive/api/user/generate-api-key/" class="md-nav__link">
         Generate API key
       </a>
     </li>
@@ -1802,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/user/revoke-api-key/" class="md-nav__link">
+      <a href="../../../thehive/api/user/revoke-api-key/" class="md-nav__link">
         Revoke API key
       </a>
     </li>
@@ -1816,7 +1828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/user/get-api-key/" class="md-nav__link">
+      <a href="../../../thehive/api/user/get-api-key/" class="md-nav__link">
         Get API key
       </a>
     </li>
@@ -1830,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/user/lock/" class="md-nav__link">
+      <a href="../../../thehive/api/user/lock/" class="md-nav__link">
         Lock / Unlock
       </a>
     </li>
@@ -1844,7 +1856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/user/delete/" class="md-nav__link">
+      <a href="../../../thehive/api/user/delete/" class="md-nav__link">
         Delete
       </a>
     </li>
@@ -1894,7 +1906,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../thehive/api/custom-field/">Custom field</a>
+          <a href="../../../thehive/api/custom-field/">Custom field</a>
           
             <label for="__nav_2_5_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1917,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/custom-field/list/" class="md-nav__link">
+      <a href="../../../thehive/api/custom-field/list/" class="md-nav__link">
         List
       </a>
     </li>
@@ -1931,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/custom-field/create/" class="md-nav__link">
+      <a href="../../../thehive/api/custom-field/create/" class="md-nav__link">
         Create
       </a>
     </li>
@@ -1945,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/custom-field/update/" class="md-nav__link">
+      <a href="../../../thehive/api/custom-field/update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -1959,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/custom-field/delete/" class="md-nav__link">
+      <a href="../../../thehive/api/custom-field/delete/" class="md-nav__link">
         Delete
       </a>
     </li>
@@ -1973,7 +1985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/custom-field/get/" class="md-nav__link">
+      <a href="../../../thehive/api/custom-field/get/" class="md-nav__link">
         Get
       </a>
     </li>
@@ -1987,7 +1999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/custom-field/getUse/" class="md-nav__link">
+      <a href="../../../thehive/api/custom-field/getUse/" class="md-nav__link">
         Use count
       </a>
     </li>
@@ -2033,7 +2045,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../thehive/api/case-template/">Case template</a>
+          <a href="../../../thehive/api/case-template/">Case template</a>
           
             <label for="__nav_2_5_5">
               <span class="md-nav__icon md-icon"></span>
@@ -2056,7 +2068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case-template/list/" class="md-nav__link">
+      <a href="../../../thehive/api/case-template/list/" class="md-nav__link">
         Get / List
       </a>
     </li>
@@ -2070,7 +2082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case-template/create/" class="md-nav__link">
+      <a href="../../../thehive/api/case-template/create/" class="md-nav__link">
         Create
       </a>
     </li>
@@ -2084,7 +2096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case-template/update/" class="md-nav__link">
+      <a href="../../../thehive/api/case-template/update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -2098,7 +2110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case-template/delete/" class="md-nav__link">
+      <a href="../../../thehive/api/case-template/delete/" class="md-nav__link">
         Delete
       </a>
     </li>
@@ -2164,7 +2176,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../thehive/api/alert/">Alert</a>
+          <a href="../../../thehive/api/alert/">Alert</a>
           
             <label for="__nav_2_5_6">
               <span class="md-nav__icon md-icon"></span>
@@ -2187,7 +2199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/list/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/list/" class="md-nav__link">
         List / Search
       </a>
     </li>
@@ -2201,7 +2213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/create/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/create/" class="md-nav__link">
         Create
       </a>
     </li>
@@ -2215,7 +2227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/update/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -2229,7 +2241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/read/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/read/" class="md-nav__link">
         Mark as Read/Unread
       </a>
     </li>
@@ -2243,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/delete/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/delete/" class="md-nav__link">
         Delete
       </a>
     </li>
@@ -2257,7 +2269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/promote-as-case/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/promote-as-case/" class="md-nav__link">
         Promote
       </a>
     </li>
@@ -2271,7 +2283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/merge/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/merge/" class="md-nav__link">
         Merge
       </a>
     </li>
@@ -2285,7 +2297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/similar-cases/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/similar-cases/" class="md-nav__link">
         List similar Cases
       </a>
     </li>
@@ -2299,7 +2311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/list-observables/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/list-observables/" class="md-nav__link">
         List Observables
       </a>
     </li>
@@ -2313,7 +2325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/add-observable/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/add-observable/" class="md-nav__link">
         Add observables
       </a>
     </li>
@@ -2327,7 +2339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/update-observable/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/update-observable/" class="md-nav__link">
         Update observable
       </a>
     </li>
@@ -2341,7 +2353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/delete-observable/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/delete-observable/" class="md-nav__link">
         Add observables
       </a>
     </li>
@@ -2355,7 +2367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/run-responder/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/run-responder/" class="md-nav__link">
         Run Responder
       </a>
     </li>
@@ -2369,7 +2381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/alert/list-responder-jobs/" class="md-nav__link">
+      <a href="../../../thehive/api/alert/list-responder-jobs/" class="md-nav__link">
         List responder actions
       </a>
     </li>
@@ -2427,7 +2439,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../thehive/api/case/">Case</a>
+          <a href="../../../thehive/api/case/">Case</a>
           
             <label for="__nav_2_5_7">
               <span class="md-nav__icon md-icon"></span>
@@ -2450,7 +2462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case/create/" class="md-nav__link">
+      <a href="../../../thehive/api/case/create/" class="md-nav__link">
         Create
       </a>
     </li>
@@ -2464,7 +2476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case/update/" class="md-nav__link">
+      <a href="../../../thehive/api/case/update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -2478,7 +2490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case/delete/" class="md-nav__link">
+      <a href="../../../thehive/api/case/delete/" class="md-nav__link">
         Delete
       </a>
     </li>
@@ -2492,7 +2504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case/merge/" class="md-nav__link">
+      <a href="../../../thehive/api/case/merge/" class="md-nav__link">
         Merge
       </a>
     </li>
@@ -2506,7 +2518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case/export/" class="md-nav__link">
+      <a href="../../../thehive/api/case/export/" class="md-nav__link">
         Export Case to MISP
       </a>
     </li>
@@ -2520,7 +2532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case/related-cases/" class="md-nav__link">
+      <a href="../../../thehive/api/case/related-cases/" class="md-nav__link">
         List related Cases
       </a>
     </li>
@@ -2534,7 +2546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case/related-alerts/" class="md-nav__link">
+      <a href="../../../thehive/api/case/related-alerts/" class="md-nav__link">
         List related Alerts
       </a>
     </li>
@@ -2548,7 +2560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case/attachments/" class="md-nav__link">
+      <a href="../../../thehive/api/case/attachments/" class="md-nav__link">
         List related Alerts
       </a>
     </li>
@@ -2562,7 +2574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case/run-responder/" class="md-nav__link">
+      <a href="../../../thehive/api/case/run-responder/" class="md-nav__link">
         Run responder
       </a>
     </li>
@@ -2576,7 +2588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/case/responder-jobs/" class="md-nav__link">
+      <a href="../../../thehive/api/case/responder-jobs/" class="md-nav__link">
         List responder actions
       </a>
     </li>
@@ -2638,7 +2650,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../thehive/api/task/">Task</a>
+          <a href="../../../thehive/api/task/">Task</a>
           
             <label for="__nav_2_5_8">
               <span class="md-nav__icon md-icon"></span>
@@ -2661,7 +2673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/task/create/" class="md-nav__link">
+      <a href="../../../thehive/api/task/create/" class="md-nav__link">
         Create
       </a>
     </li>
@@ -2675,7 +2687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/task/update/" class="md-nav__link">
+      <a href="../../../thehive/api/task/update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -2689,7 +2701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/task/get/" class="md-nav__link">
+      <a href="../../../thehive/api/task/get/" class="md-nav__link">
         Get case task
       </a>
     </li>
@@ -2703,7 +2715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/task/list/" class="md-nav__link">
+      <a href="../../../thehive/api/task/list/" class="md-nav__link">
         List case tasks
       </a>
     </li>
@@ -2717,7 +2729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/task/run-responder/" class="md-nav__link">
+      <a href="../../../thehive/api/task/run-responder/" class="md-nav__link">
         Run responder
       </a>
     </li>
@@ -2731,7 +2743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/task/responder-jobs/" class="md-nav__link">
+      <a href="../../../thehive/api/task/responder-jobs/" class="md-nav__link">
         List responder jobs
       </a>
     </li>
@@ -2745,7 +2757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/task/create-log/" class="md-nav__link">
+      <a href="../../../thehive/api/task/create-log/" class="md-nav__link">
         Add log
       </a>
     </li>
@@ -2759,7 +2771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/task/delete-log/" class="md-nav__link">
+      <a href="../../../thehive/api/task/delete-log/" class="md-nav__link">
         Delete log
       </a>
     </li>
@@ -2773,7 +2785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/task/log-run-responder/" class="md-nav__link">
+      <a href="../../../thehive/api/task/log-run-responder/" class="md-nav__link">
         Run responder
       </a>
     </li>
@@ -2787,7 +2799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/task/log-responder-jobs/" class="md-nav__link">
+      <a href="../../../thehive/api/task/log-responder-jobs/" class="md-nav__link">
         List responder jobs on log
       </a>
     </li>
@@ -2801,7 +2813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/task/logs/" class="md-nav__link">
+      <a href="../../../thehive/api/task/logs/" class="md-nav__link">
         List task logs
       </a>
     </li>
@@ -2815,7 +2827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/task/waiting-tasks/" class="md-nav__link">
+      <a href="../../../thehive/api/task/waiting-tasks/" class="md-nav__link">
         List waiting tasks
       </a>
     </li>
@@ -2865,7 +2877,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../thehive/api/observable/">Observable</a>
+          <a href="../../../thehive/api/observable/">Observable</a>
           
             <label for="__nav_2_5_9">
               <span class="md-nav__icon md-icon"></span>
@@ -2888,7 +2900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/observable/create/" class="md-nav__link">
+      <a href="../../../thehive/api/observable/create/" class="md-nav__link">
         Create
       </a>
     </li>
@@ -2902,7 +2914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/observable/update/" class="md-nav__link">
+      <a href="../../../thehive/api/observable/update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -2916,7 +2928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/observable/delete/" class="md-nav__link">
+      <a href="../../../thehive/api/observable/delete/" class="md-nav__link">
         Delete
       </a>
     </li>
@@ -2930,7 +2942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/observable/list/" class="md-nav__link">
+      <a href="../../../thehive/api/observable/list/" class="md-nav__link">
         List / Search
       </a>
     </li>
@@ -2944,7 +2956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/observable/analyzer/" class="md-nav__link">
+      <a href="../../../thehive/api/observable/analyzer/" class="md-nav__link">
         Analyzer
       </a>
     </li>
@@ -2958,7 +2970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thehive/api/observable/responder/" class="md-nav__link">
+      <a href="../../../thehive/api/observable/responder/" class="md-nav__link">
         Responder
       </a>
     </li>
@@ -2992,11 +3004,620 @@
 
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">Cortex</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Cortex" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Cortex
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../download/">Download</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Download" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Download
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Installation & configuration</a>
+          
+            <label for="__nav_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Installation & configuration" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Installation & configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
-      <a href="https://github.com/TheHive-Project/CortexDocs" target="_blank" class="md-nav__link">
-        Cortex
+      <a href="../step-by-step-guide/" class="md-nav__link">
+        Step by step guide
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../secret/" class="md-nav__link">
+        Set up a secret key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication/" class="md-nav__link">
+        Authentication options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database/" class="md-nav__link">
+        Database configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analyzers-responders/" class="md-nav__link">
+        Configure Analyzers & Responders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        Docker parameters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Using Cortex behind a proxy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Using Cortex behind a proxy
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#make-cortex-use-a-http-proxy-server" class="md-nav__link">
+    Make Cortex use a HTTP proxy server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operating-system" class="md-nav__link">
+    Operating System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    pip
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    Git
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssl/" class="md-nav__link">
+        SSL configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-configuration/" class="md-nav__link">
+        Advanced configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run-cortex-with-docker/" class="md-nav__link">
+        Run Cortex with Docker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          User guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User guides" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          User guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/first-start/" class="md-nav__link">
+        First start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guides/roles/" class="md-nav__link">
+        User roles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Operations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Operations" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Operations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/backup-restore/" class="md-nav__link">
+        Backup & Restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/input-output/" class="md-nav__link">
+        Analyzers/Responders input and output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/upgrade_to_cortex_3_1_and_es7_x/" class="md-nav__link">
+        Upgrade to Cortex 3.1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/api-guide/" class="md-nav__link">
+        API Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/how-to-create-a-responder/" class="md-nav__link">
+        How to Write and Submit a Responder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/how-to-create-an-analyzer/" class="md-nav__link">
+        How to Write and Submit an Analyzer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -3118,7 +3739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resources/Keynotes/list/" class="md-nav__link">
+      <a href="../../../resources/Keynotes/list/" class="md-nav__link">
         Additional Resources
       </a>
     </li>
@@ -3171,7 +3792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resources/Virtual%20Machine/demo/" class="md-nav__link">
+      <a href="../../../resources/Virtual%20Machine/demo/" class="md-nav__link">
         Demo VM
       </a>
     </li>
@@ -3199,34 +3820,148 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#make-cortex-use-a-http-proxy-server" class="md-nav__link">
+    Make Cortex use a HTTP proxy server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operating-system" class="md-nav__link">
+    Operating System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    pip
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    Git
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/TheHive-Project/docs/edit/master/docs/download/index.md" title="Edit this page" class="md-content__button md-icon">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-</a>
+  <a href="https://github.com/TheHive-Project/docs/edit/master/docs/cortex/installation-and-configuration/proxy-settings.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
 
 
 
-  <h1>Index</h1>
-
-
+<h1 id="proxy-settings">Proxy settings<a class="headerlink" href="#proxy-settings" title="Permanent link">#</a></h1>
+<h2 id="make-cortex-use-a-http-proxy-server">Make Cortex use a HTTP proxy server<a class="headerlink" href="#make-cortex-use-a-http-proxy-server" title="Permanent link">#</a></h2>
+<p>Basically, Cortex required to connect to Internet, especially to gather  catalogs of docker images of public Analyzers &amp; Responders.</p>
+<div class="admonition example">
+<div class="highlight"><span class="filename">/etc/cortex/application.conf</span><pre><span></span><code><span class="p p-Indicator">[</span><span class="nv">..</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">play.ws.proxy {</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">host = http://PROXYSERVERADDRESS:PORT</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">port = http://PROXYSERVERADDRESS:PORT</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">}</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">[..]</span><span class="w"></span>
+</code></pre></div>
+</div>
+<h2 id="operating-system">Operating System<a class="headerlink" href="#operating-system" title="Permanent link">#</a></h2>
+<div class="admonition example">
+<div class="highlight"><span class="filename">/etc/environment</span><pre><span></span><code>export http_proxy=http://PROXYSERVERADDRESS:PORT
+export https_proxy=http://PROXYSERVERADDRESS:PORT  
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Specific configuration for Debian <em>apt</em> application</p>
+<div class="highlight"><span class="filename">/etc/apt/apt.conf.d/80proxy</span><pre><span></span><code>  HTTP::proxy &quot;http://PROXYSERVERADDRESS:PORT&quot;;
+  HTTPS::proxy &quot;http://PROXYSERVERADDRESS:PORT&quot;;
+</code></pre></div>
+</div>
+<h2 id="pip">pip<a class="headerlink" href="#pip" title="Permanent link">#</a></h2>
+<p>If Analyzers and Responders requirements have to be installed on the host, and the host is behind a proxy server, configure the <em>pip</em> command to use the proxy server ; use the option <code>--proxy http://PROXYSERVERADDRESS:PORT"</code>, and <code>--cert path/to/cacert.pem</code> if a custom certificate is used by the proxy.</p>
+<div class="admonition example">
+<div class="highlight"><pre><span></span><code>pip3 install --proxy http://PROXYSERVERADDRESS:PORT&quot; -r analyzers/*/requirements.txt
+</code></pre></div>
+<p>or </p>
+<div class="highlight"><pre><span></span><code>pip3 install --proxy http://PROXYSERVERADDRESS:PORT&quot; --cert path/to/cacert.pem -r analyzers/*/requirements.txt
+</code></pre></div>
+</div>
+<h2 id="git">Git<a class="headerlink" href="#git" title="Permanent link">#</a></h2>
+<div class="admonition example">
+<div class="highlight"><pre><span></span><code>sudo git config --global http.proxy http://PROXYSERVERADDRESS:PORT
+sudo git config --global https.proxy http://PROXYSERVERADDRESS:PORT
+</code></pre></div>
+</div>
+<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">#</a></h2>
+<p>If using Analyzers &amp; Responders as docker images, setting up proxy parameters could be required to download images.</p>
+<div class="admonition example">
+<p>Update Docker engine configuration by editing/creating the file <code>/etc/systemd/system/docker.service.d/http-proxy.conf</code>: </p>
+<div class="highlight"><span class="filename">/etc/systemd/system/docker.service.d/http-proxy.conf</span><pre><span></span><code>[Service]
+Environment=http://PROXYSERVERADDRESS:PORT&quot;
+Environment=&quot;http://PROXYSERVERADDRESS:PORT&quot;
+</code></pre></div>
+<p>Then run: </p>
+<div class="highlight"><pre><span></span><code>sudo systemctl daemon-reload
+sudo systemctl restart docker
+</code></pre></div>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 14, 2021 12:25:56</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 5, 2022 12:21:12</span>
       
     
   </small>
 </div>
 
+
+
+
               
             </article>
+            
           </div>
         </div>
         
@@ -3234,36 +3969,37 @@
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+        <a href="../docker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker parameters" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Previous
               </span>
-              Home
+              Docker parameters
             </div>
           </div>
         </a>
       
       
         
-        <a href="../resources/Keynotes/list/" class="md-footer__link md-footer__link--next" aria-label="Next: Additional Resources" rel="next">
+        <a href="../ssl/" class="md-footer__link md-footer__link--next" aria-label="Next: SSL configuration" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Additional Resources
+              SSL configuration
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -3289,7 +4025,7 @@
       
     
     <a href="https://www.thehive-project.org" target="_blank" rel="noopener" title="www.thehive-project.org" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.1c0 2.8-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2-.9-3.3-.1-1.4-.8-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.09 0-40-17.9-40-40V360c0-.9.03-1.9.09-2.8v-69.6H32.05C14.02 287.6 0 273.5 0 255.5c0-9 3.004-17 10.01-24L266.4 8.016c7-7.014 15-8.016 22-8.016s15 2.004 21.1 7.014L564.8 231.5c8 7 12.1 15 11 24z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.1c0 2.8-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2-.9-3.3-.1-1.4-.8-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.09 0-40-17.9-40-40V360c0-.9.03-1.9.09-2.8v-69.6H32.05C14.02 287.6 0 273.5 0 255.5c0-9 3.004-17 10.01-24L266.4 8.016c7-7.014 15-8.016 22-8.016s15 2.004 21.1 7.014L564.8 231.5c8 7 12.1 15 11 24z"/></svg>
     </a>
   
     
@@ -3298,7 +4034,7 @@
       
     
     <a href="https://blog.thehive-project.org" target="_blank" rel="noopener" title="blog.thehive-project.org" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m61.7 169.4 101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m61.7 169.4 101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg>
     </a>
   
     
@@ -3307,7 +4043,7 @@
       
     
     <a href="https://twitter.com/TheHive_Project" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
     
@@ -3316,7 +4052,7 @@
       
     
     <a href="https://github.com/TheHive-Project" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
     
@@ -3325,7 +4061,7 @@
       
     
     <a href="https://chat.thehive-project.org" target="_blank" rel="noopener" title="chat.thehive-project.org" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541zM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
     </a>
   
 </div>
@@ -3338,10 +4074,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
       
     
   </body>
