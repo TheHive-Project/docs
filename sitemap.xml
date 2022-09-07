@@ -2,992 +2,992 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://thehive-project.github.io/docs/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/code-of-conduct/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/api/api-guide/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/api/how-to-create-a-responder/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/api/how-to-create-an-analyzer/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/download/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/installation-and-configuration/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/installation-and-configuration/advanced-configuration/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/installation-and-configuration/analyzers-responders/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/installation-and-configuration/authentication/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/installation-and-configuration/database/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/installation-and-configuration/docker/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/installation-and-configuration/proxy-settings/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/installation-and-configuration/run-cortex-with-docker/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/installation-and-configuration/secret/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/installation-and-configuration/ssl/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/installation-and-configuration/step-by-step-guide/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/operations/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/operations/backup-restore/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/operations/input-output/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/operations/upgrade_to_cortex_3_1_and_es7_x/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/user-guides/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/user-guides/first-start/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/cortex/user-guides/roles/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/resources/Keynotes/list/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/resources/Virtual%20Machine/demo/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/code-of-conduct/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/add-observable/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/create/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/delete-observable/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/delete/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/list-observables/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/list-responder-jobs/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/list/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/merge/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/promote-as-case/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/read/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/run-responder/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/similar-cases/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/update-observable/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/alert/update/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case/attachments/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case/create/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case/delete/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case/export/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case/merge/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case/related-alerts/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case/related-cases/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case/responder-jobs/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case/run-responder/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case/update/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case-template/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case-template/create/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case-template/delete/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case-template/list/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/case-template/update/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/custom-field/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/custom-field/create/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/custom-field/delete/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/custom-field/get/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/custom-field/getUse/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/custom-field/list/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/custom-field/update/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/dashboard/create/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/dashboard/update/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/observable/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/observable/analyzer/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/observable/create/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/observable/delete/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/observable/list/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/observable/responder/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/observable/update/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/organisation/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/organisation/create/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/organisation/list-links/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/organisation/list/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/organisation/update-links/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/organisation/update/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/search/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/search/filters/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/search/pagination/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/search/query/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/search/sorting/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/create-log/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/create/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/delete-log/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/get/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/list/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/log-responder-jobs/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/log-run-responder/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/logs/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/responder-jobs/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/run-responder/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/update/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/task/waiting-tasks/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/ttp/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/ttp/create/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/ttp/delete/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/ttp/list/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/ttp/update/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/user/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/user/create/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/user/delete/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/user/generate-api-key/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/user/get-api-key/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/user/list/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/user/lock/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/user/revoke-api-key/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/user/set-password/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/api/user/update/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/architecture/3_nodes_cluster/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/akka/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/authentication/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/connectors-cortex/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/connectors-misp/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/database/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/file-storage/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/logs/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/manage-configuration/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/proxy/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/secret/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/service/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/ssl/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/configuration/webhooks/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/installation/build-sources/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/installation/hadoop/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/installation/minio/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/installation-and-configuration/installation/step-by-step-guide/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/feature-set/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/migration-guide/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/admin-guide/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/backup-restore/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/certauth/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/cluster/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/configuration/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/default-configuration/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/schema_version/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/updating/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/upgrade_to_thehive_3_4_and_es_6_x/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/upgrade_to_thehive_3_5_and_es_7_x/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/admin/webhooks/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/alert/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/artifact/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/authentication/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/case/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/log/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/model/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/request/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/task/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/user/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/connectors/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/connectors/cortex/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/connectors/cortex/analyzer/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/connectors/cortex/job/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/api/connectors/misp/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/legacy/thehive3/installation/install-guide/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/operations/backup-restore/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/operations/cassandra-security/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/operations/fail2ban/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/operations/https/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/operations/migration/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/operations/troubleshooting/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/operations/update/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/quick-start/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/administrators/analyzer-templates/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/administrators/custom-fields/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/administrators/observable-types/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/administrators/organisations/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/administrators/plateform-status/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/administrators/profiles/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/administrators/tactics-techniques-procedures/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/administrators/tags-and-taxonomies/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/analysts/close-case/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/analysts/create-alerts/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/analysts/create-case/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/analysts/create-observables/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/analysts/create-tasks/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/analysts/export-case/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/analysts/run-analyzers/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/analysts/run-responders/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/analysts/sharing/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/analysts/ttps/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/analysts/user-settings/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/organisation-managers/case-templates/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/organisation-managers/custom-tags/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/organisation-managers/organisations-users-sharing/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/organisation-managers/ui-configuration/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://thehive-project.github.io/docs/thehive/user-guides/organisation-managers/users-management/</loc>
-         <lastmod>2022-09-06</lastmod>
+         <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
