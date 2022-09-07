@@ -26,7 +26,7 @@ Cortex has been tested and is supported on the following operating systems:
     If you are using [one of the supported](#operating-systems) operating systems, use our all-in-one **installation script**: 
 
     ``` bash
-    wget -q -O /tmp/install-thehive.sh https://archives.strangebee.com/scripts/install.sh ; sudo -v ; bash /tmp/install.sh
+    wget -q -O /tmp/install.sh https://archives.strangebee.com/scripts/install.sh ; sudo -v ; bash /tmp/install.sh
     ```
 
 For each release, DEB, RPM and ZIP binary packages are built and provided.
