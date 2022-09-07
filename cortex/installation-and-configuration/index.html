@@ -3873,6 +3873,15 @@
 <p>If you are using <a href="#operating-systems">one of the supported</a> operating systems, use our all-in-one <strong>installation script</strong>: </p>
 <div class="highlight"><pre><span></span><code>wget -q -O /tmp/install.sh https://archives.strangebee.com/scripts/install.sh <span class="p">;</span> sudo -v <span class="p">;</span> bash /tmp/install.sh
 </code></pre></div>
+<p>This script helps with the installation process on a fresh and <a href="#operating-systems">supported OS</a> ; the program also run successfully if the conditions in terms of hardware requirements are met.</p>
+<p><img alt="" src="../images/install-sh.png" /></p>
+<p>Once executed, several options are available: </p>
+<ol>
+<li>Setup proxy settings ; will configure everything on the host to work with a HTTP proxy, and custom CA certificate.</li>
+<li>Install TheHive ; use this option to install TheHive 5 and its dependancies</li>
+<li>Install Cortex and all its dependencies to run Analyzers &amp; Responders as Docker Iiages</li>
+<li>Install Cortex and all its dependencies to run Analyzers &amp; Responders on the host (Debian and Ubuntu <strong>ONLY</strong>)</li>
+</ol>
 </div>
 <p>For each release, DEB, RPM and ZIP binary packages are built and provided.</p>
 <p>The <a href="step-by-step-guide/">following Guide</a> let you <strong>prepare</strong>, <strong>install</strong> and <strong>configure</strong> Cortex and its prerequisites for Debian and RPM packages based Operating Systems, as well as for other systems and using our binary packages. </p>
