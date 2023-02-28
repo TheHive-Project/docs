@@ -26,7 +26,7 @@ This page is a step by step installation and configuration guide to get a Cortex
     === "Debian"
 
         ``` bash
-        apt install -y openjdk-8-jre-headless
+        apt install -y openjdk-11-jre-headless
         echo JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64" >> /etc/environment
         export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
         ```
@@ -34,14 +34,14 @@ This page is a step by step installation and configuration guide to get a Cortex
     === "RPM"
 
         ``` bash
-        sudo yum install -y java-1.8.0-openjdk-headless.x86_64
+        sudo yum install -y java-11-openjdk-headless.x86_64
         echo JAVA_HOME="/usr/lib/jvm/jre-1.8.0" | sudo tee -a /etc/environment
         export JAVA_HOME="/usr/lib/jvm/jre-1.8.0"
         ```
 
     === "Other"
 
-        The installation requires Java 8, so refer to your system documentation to install it.
+        The installation requires Java 11, so refer to your system documentation to install it.
 
 
 
@@ -163,6 +163,15 @@ All packages are published on our packages repository. We support Debian and RPM
         ```bash
         yum install cortex
         ```
+
+
+Once installed, if running _Analyzers & Responders_ with Docker, ensure _cortex_ service account can use it: 
+
+!!! Example ""
+
+    ```
+    sudo usermod -a -G docker cortex
+    ```
 
 ### Configuration
 

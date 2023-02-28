@@ -14,7 +14,7 @@ Setup a secret key for this instance:
 
       ```yaml title="/etc/cortex/application.conf"
       [..]
-      include /etc/cortex/secret.conf
+      include "/etc/cortex/secret.conf"
       [..]
       ```
 

@@ -7,9 +7,9 @@ By default, the docker image generate a configuration file for Cortex with:
  - a generated secret (used to protect the user sessions).
 The behaviour of the Cortex Docker image can be customized using environment variables or parameters:
 
-| Parameter | Env variable | Description |
-| ------ | ------------ | ----------- |
-| `--no-config` | `no_config=1` | Do not configure Cortex |
+| Parameter            | Env variable         | Description                                       |
+|----------------------|----------------------|---------------------------------------------------|
+| `--no-config`        | `no_config=1`        | Do not configure Cortex                           |
 | `--no-config-secret` | `no_config_secret=1` | Do not add the random secret to the configuration |
 | `--no-config-es` | `no_config_es=1` | do not add elasticsearch hosts to configuration
 | `--es-uri <uri>` | `es_uri=<uri>` | use this string to configure elasticsearch hosts (format: http(s)://host:port,host:port(/prefix)?querystring)
@@ -27,7 +27,7 @@ At the end of the generated configuration, the file `/etc/cortex/application.con
 
 !!! Example ""
     ```
-    docker run --volume /path/to/my/application.conf:/etc/cortex/application.conf thehiveproject/cortex:3.1.0-1 --es-uri http://elasticsearch.local:9200
+    docker run --volume /path/to/my/application.conf:/etc/cortex/application.conf thehiveproject/cortex:latest --es-uri http://elasticsearch.local:9200
     ```
 
 Cortex uses docker to run analyzers and responders. If you run Cortex inside a docker, you can:
@@ -40,7 +40,7 @@ In order to use docker service the docker socket must be bound into Cortex conta
 
 !!! Example ""
     ```
-    docker run --volume /var/run/docker.sock:/var/run/docker.sock --volume /var/run/cortex/jobs:/tmp/cortex-jobs thehiveproject/cortex:3.1.0-1 --job-directory /tmp/cortex-jobs --docker-job-directory /var/run/cortex/jobs
+    docker run --volume /var/run/docker.sock:/var/run/docker.sock --volume /var/run/cortex/jobs:/tmp/cortex-jobs thehiveproject/cortex:latest --job-directory /tmp/cortex-jobs --docker-job-directory /var/run/cortex/jobs
     ```
 
 Cortex can instantiate docker container by using the docker socket `/var/run/docker.sock`. The folder `/var/run/cortex/jobs` is used to store temporary file of jobs. The folder `/tmp/cortex-jobs` is job folder inside the docker. In order to make job file visible to analyzer docker, Cortex needs to know both folders (parameters `--job-directory` and `-docker-job-directory`). On most cases, job directories are the same and `--docker-job-directory` can be omitted.
@@ -57,7 +57,7 @@ You can also run docker service inside Cortex container, a docker in a docker wi
 
 !!! Example ""
     ```
-    docker run --privileged thehiveproject/cortex:3.1.0-1 --start-docker
+    docker run --privileged thehiveproject/cortex:latest --start-docker
     ```
 In this case you don't need to bind job directory.
 
