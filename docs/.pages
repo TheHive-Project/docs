@@ -1,9 +1,5 @@
 Title: Home
 nav:
   - Home: README.md
-  - TheHive: thehive
-  - Cortex: cortex
-  - "Cortex Neurons": https://thehive-project.github.io/Cortex-Analyzers/" target="_blank
-  - TheHive4py: https://thehive-project.github.io/TheHive4py/" target="_blank
-  - Cortex4py: https://github.com/TheHive-Project/Cortex4py" target="_blank
-  - Resources: resources
+  - TheHive 4: thehive
+  - TheHive 5: 'https://docs.strangebee.com/thehive/setup/'

@@ -6,23 +6,24 @@ site_url: https://thehive-project.github.io/docs
 #   name: "material"
 theme:
   name: material
+  custom_dir: ./overrides/
   palette:
     scheme: default
   logo: 'images/thehive.png'
   features:
+    - header.autohide
     - navigation.instant
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
-    # - navigation.expand
+    - navigation.expand
     - navigation.indexes
   palette:
-    primary: 'blue'
-    accent: blue
+    primary: 'red'
+    # accent: red
 
 
 plugins:
-  - search
   - git-revision-date-localized:
       type: datetime
   - awesome-pages
@@ -36,23 +37,19 @@ plugins:
       # watch:
       #   - thehive4py
 
-extra_css:
-  - custom.css
+# extra_css:
+#   - custom.css
 
 extra:
   social:
     - icon: fontawesome/solid/house
-      link: "https://www.thehive-project.org"
+      link: "https://www.strangebee.com"
     - icon: fontawesome/brands/wordpress
-      link: "https://blog.thehive-project.org"
-    - icon: fontawesome/brands/twitter
-      link: "https://twitter.com/TheHive_Project"
-    - icon: fontawesome/brands/github
-      link: "https://github.com/TheHive-Project"
+      link: "https://blog.strangebee.com"
     - icon: fontawesome/brands/discord
       link: "https://chat.thehive-project.org"
-repo_name: "TheHive-Project/docs"
-repo_url: "https://github.com/TheHive-Project/docs"
+# repo_name: "StrrangeBee/docs"
+# repo_url: "https://github.com/strangebee.com/docs"
 markdown_extensions:
     - toc:
         permalink: "#"
