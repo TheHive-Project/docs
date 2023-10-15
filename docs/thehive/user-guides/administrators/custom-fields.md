@@ -31,7 +31,7 @@ You need to set:
 - a display name
 - a name (automatically pre-filled by the UI based on the display name)
 - a description
-- a type: on of `string`, `intger`, `booleen`, `date` and `float` (new type added by TheHive 4)
+- a type: on of `string`, `integer`, `boolean`, `date` and `float` (new type added by TheHive 4)
 - possible values (not available for `date` and `boolean` fields)
 - wether the field is mandatory or not (will be prompted when you close a *Case* without setting its value)
 
