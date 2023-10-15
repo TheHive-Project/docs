@@ -329,7 +329,7 @@ To allow users to login without previously creating them, you can enable autocre
       user.profileFieldName: profile
       user.organisationFieldName: organisation
       user.defaults.profile: analyst
-      user.defaults.organisation: cert
+      user.defaults.organisation: ORGANISATION_NAME
     ```
 
 ## Multi-Factor Authentication
